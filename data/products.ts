@@ -46,11 +46,11 @@ export const products: Product[] = [
       "A focused medium-voltage range built around Huanyu's practical order experience, with emphasis on three-core, large cross-section and armoured project cables.",
     imagePath: "products/mv-power-cable.webp",
     fallbackImage: "/images/product-mv.svg",
-    voltage: "Common focus: 8.7/15 kV; project capability up to 35 kV subject to confirmation",
+    voltage: "Common focus: 8.7/15 kV; other voltage ratings are reviewed against the applicable specification.",
     standards: ["IEC 60502-2", "Project specification", "Factory test requirements"],
     construction: ["Copper conductor", "Conductor screen", "XLPE insulation", "Insulation screen", "Metallic screen", "Armoured or unarmoured sheath"],
     applications: ["Substations", "Industrial power distribution", "Utilities", "Mining and infrastructure"],
-    featuredModels: ["8.7/15 kV three-core cable", "Armoured MV cable", "Unarmoured MV cable", "35 kV project variants"],
+    featuredModels: ["8.7/15 kV three-core cable", "Armoured MV cable", "Unarmoured MV cable"],
     note: "Voltage rating, conductor size, screen construction, armour and test requirements are confirmed before quotation.",
   },
   {

@@ -78,7 +78,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
         {status === "sending" ? "Sending…" : "Send Project Requirements"}
       </button>
       {message && <p className={`form-message ${status}`}>{message}</p>}
-      <p className="form-note">For detailed quotations, attach the BOQ or specification by replying to the confirmation email.</p>
+      <p className="form-note">For detailed quotations, please email your BOQ or specification to sales@huanyucable.com after submitting the form.</p>
     </form>
   );
 }

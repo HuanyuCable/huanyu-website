@@ -39,7 +39,7 @@ export default function HomePage() {
             <h2>Not every cable. The right cables for the projects we know best.</h2>
           </div>
           <div>
-            <p className="lead">Huanyu&apos;s website is structured around real manufacturing and order experience, rather than an oversized catalogue. Our priority is to help buyers identify a suitable construction, confirm technical requirements and obtain a practical quotation.</p>
+            <p className="lead">Huanyu&apos;s export offering is built around practical manufacturing and order experience. Our priority is to help buyers identify a suitable construction, confirm technical requirements and obtain a practical quotation.</p>
             <Link className="text-link" href="/about">Learn about Huanyu <span>→</span></Link>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function HomePage() {
       <section className="section section-muted">
         <div className="container">
           <div className="section-heading">
-            <div><span className="eyebrow">Core product strategy</span><h2>Three Core Cable Families</h2></div>
+            <div><span className="eyebrow">Focused Product Portfolio</span><h2>Three Core Cable Families</h2></div>
             <p>Our product portfolio is organized around three core cable families, supported by selected complementary ranges for project supply.</p>
           </div>
           <div className="product-grid core-grid">
@@ -76,7 +76,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading">
             <div><span className="eyebrow">Complete project supply</span><h2>Supporting products without diluting the focus</h2></div>
-            <p>These ranges help complete quotations while remaining secondary to the three core product positions.</p>
+            <p>These selected ranges support broader project packages and consolidated supply requirements.</p>
           </div>
           <div className="support-grid">
             {supportingProducts.map((product) => (
