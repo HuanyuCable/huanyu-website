@@ -27,7 +27,6 @@ export function Footer() {
           <Link href="/about">About Huanyu</Link>
           <Link href="/quality">Quality & Testing</Link>
           <Link href="/applications">Applications</Link>
-          <Link href="/resources">Resources</Link>
         </div>
         <div>
           <h3>Contact</h3>
@@ -37,7 +36,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} {site.legalName} All rights reserved.</span>
         <span>Technical data is subject to final confirmation.</span>
       </div>
     </footer>

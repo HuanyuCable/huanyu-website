@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroVideo } from "@/components/HeroVideo";
 import { InquiryForm } from "@/components/InquiryForm";
 import { ProductCard } from "@/components/ProductCard";
 import { coreProducts, supportingProducts } from "@/data/products";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
@@ -21,8 +26,8 @@ export default function HomePage() {
         </div>
         <div className="hero-stats">
           <div><strong>30+</strong><span>Years in cable manufacturing</span></div>
-          <div><strong>3</strong><span>Core product positions</span></div>
-          <div><strong>35 kV</strong><span>Project capability subject to confirmation</span></div>
+          <div><strong>Focused Portfolio</strong><span>LV Armoured · MV Power · LSZH & Fire-safe</span></div>
+          <div><strong>Technical Review</strong><span>Construction and standards confirmed before quotation</span></div>
           <div><strong>OEM</strong><span>Specification-based production</span></div>
         </div>
       </section>
@@ -34,7 +39,7 @@ export default function HomePage() {
             <h2>Not every cable. The right cables for the projects we know best.</h2>
           </div>
           <div>
-            <p className="lead">Huanyu's website is structured around real manufacturing and order experience, rather than an oversized catalogue. Our priority is to help buyers identify a suitable construction, confirm technical requirements and obtain a practical quotation.</p>
+            <p className="lead">Huanyu&apos;s website is structured around real manufacturing and order experience, rather than an oversized catalogue. Our priority is to help buyers identify a suitable construction, confirm technical requirements and obtain a practical quotation.</p>
             <Link className="text-link" href="/about">Learn about Huanyu <span>→</span></Link>
           </div>
         </div>
@@ -43,8 +48,8 @@ export default function HomePage() {
       <section className="section section-muted">
         <div className="container">
           <div className="section-heading">
-            <div><span className="eyebrow">Core product strategy</span><h2>Three product families lead the site</h2></div>
-            <p>These categories receive the strongest homepage placement, product detail depth and SEO investment.</p>
+            <div><span className="eyebrow">Core product strategy</span><h2>Three Core Cable Families</h2></div>
+            <p>Our product portfolio is organized around three core cable families, supported by selected complementary ranges for project supply.</p>
           </div>
           <div className="product-grid core-grid">
             {coreProducts.map((product) => <ProductCard key={product.slug} product={product} numbered />)}
@@ -104,11 +109,11 @@ export default function HomePage() {
 
       <section className="section quality-preview">
         <div className="container split quality-grid">
-          <div className="quality-image"><img src="/images/quality-lab.svg" alt="Cable testing and quality control placeholder" /></div>
+          {/* <div className="quality-image"><img src="/images/quality-lab.svg" alt="Cable testing and quality control placeholder" /></div> */}
           <div>
-            <span className="eyebrow">Quality & verification</span>
-            <h2>Show test evidence, not generic claims.</h2>
-            <p className="lead">The final site should connect each claim to a relevant certificate, test report, production process or inspection record. This section is intentionally designed to be populated with Huanyu's real documents and factory media.</p>
+            <span className="eyebrow">Quality Control</span>
+            <h2>Inspection from raw materials to final release.</h2>
+            <p className="lead">Quality control covers incoming materials, in-process checks, routine testing and shipment documentation. Test and document requirements are confirmed according to the applicable product standard and project specification.</p>
             <ul className="check-list">
               <li>Incoming material inspection</li>
               <li>In-process dimensional and electrical checks</li>

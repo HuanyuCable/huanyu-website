@@ -42,7 +42,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .text-link { display: inline-flex; gap: 10px; align-items: center; color: var(--navy); font-weight: 800; }
 .text-link span { color: var(--orange); transition: transform .2s ease; }
 .text-link:hover span { transform: translateX(4px); }
-.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 48px; margin-bottom: 46px; }
+.section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; margin-bottom: 46px; }
 .section-heading > div { max-width: 760px; }
 .section-heading > p { max-width: 430px; margin: 0; }
 
@@ -135,7 +135,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .form-message.error { color: #a52f24; }
 .form-note { margin: 14px 0 0; font-size: 12px; }
 
-.page-hero { min-height: 530px; padding: 180px 0 90px; display: flex; align-items: end; color: white; background: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.85)), url('/images/factory-poster.svg') center/cover; }
+.page-hero { min-height: 530px; padding: 180px 0 90px; display: flex; align-items: flex-end; color: white; background: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.85)), url('/images/factory-poster.svg') center/cover; }
 .page-hero h1 { max-width: 920px; font-size: clamp(44px, 6vw, 72px); }
 .page-hero p { max-width: 760px; color: rgba(255,255,255,.72); font-size: 20px; }
 .page-hero-products { background-image: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.82)), url('/images/product-lv.svg'); }

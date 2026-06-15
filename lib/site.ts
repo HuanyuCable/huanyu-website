@@ -3,8 +3,8 @@ export const site = {
   legalName: "Hefei Huanyu Cable Co., Ltd.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.huanyucable.com",
   email: "sales@huanyucable.com",
-  phone: "+86 551 0000 0000",
-  whatsapp: "+86 000 0000 0000",
+  phone: null,
+  whatsapp: null,
   address: "Hefei, Anhui, China",
   founded: "1995",
   description:

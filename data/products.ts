@@ -33,7 +33,7 @@ export const products: Product[] = [
     construction: ["Copper conductor", "XLPE or PVC insulation", "STA or SWA armour", "PVC or LSZH outer sheath"],
     applications: ["Underground distribution", "Industrial plants", "Commercial complexes", "Infrastructure projects"],
     featuredModels: ["YJV22", "ZC-YJV22", "ZR-YJV22", "SWA / STA project variants"],
-    note: "Final standard, rating and model availability must be confirmed against Huanyu's current production and test capability.",
+    note: "Available constructions and technical data are confirmed against the applicable standard and project specification before quotation.",
   },
   {
     slug: "medium-voltage-power-cables",
@@ -51,7 +51,7 @@ export const products: Product[] = [
     construction: ["Copper conductor", "Conductor screen", "XLPE insulation", "Insulation screen", "Metallic screen", "Armoured or unarmoured sheath"],
     applications: ["Substations", "Industrial power distribution", "Utilities", "Mining and infrastructure"],
     featuredModels: ["8.7/15 kV three-core cable", "Armoured MV cable", "Unarmoured MV cable", "35 kV project variants"],
-    note: "Voltage, conductor size, screen construction and test requirements must be validated before quotation.",
+    note: "Voltage rating, conductor size, screen construction, armour and test requirements are confirmed before quotation.",
   },
   {
     slug: "lszh-fire-safe-cables",
@@ -69,7 +69,7 @@ export const products: Product[] = [
     construction: ["Copper conductor", "XLPE or fire-resistant insulation system", "LSZH sheath", "Optional armour"],
     applications: ["Hospitals", "Rail and transit", "Data centres", "Public buildings", "Fire protection systems"],
     featuredModels: ["WDZ-YJY", "WDZB series", "Flame-retardant power cable", "Fire-resistant cable", "Flexible fireproof cable"],
-    note: "Do not publish a fire-performance claim until the relevant test report and product construction are verified.",
+    note: "Fire-performance claims are confirmed against the specified test standard and the corresponding product construction.",
   },
   {
     slug: "low-voltage-unarmoured-power-cables",
@@ -86,6 +86,7 @@ export const products: Product[] = [
     construction: ["Copper conductor", "XLPE or PVC insulation", "PVC or LSZH sheath"],
     applications: ["Cable trays", "Ducts", "Indoor distribution", "Protected outdoor installation"],
     featuredModels: ["YJV", "YJY", "Flame-retardant variants"],
+    note: "Availability is confirmed according to the requested construction and project requirements.",
   },
   {
     slug: "building-wires-flexible-cables",
@@ -102,6 +103,7 @@ export const products: Product[] = [
     construction: ["Copper conductor", "PVC or LSZH insulation", "Solid, stranded or flexible conductor options"],
     applications: ["Building wiring", "Panels", "Internal circuits", "Project accessories"],
     featuredModels: ["BV", "BVR", "RV", "RVV", "LSZH building wire"],
+    note: "Availability is confirmed according to the requested construction and project requirements.",
   },
   {
     slug: "control-instrumentation-cables",
@@ -118,6 +120,7 @@ export const products: Product[] = [
     construction: ["Copper conductor", "PVC or XLPE insulation", "Optional screen", "Optional armour", "Outer sheath"],
     applications: ["Industrial control", "Instrumentation", "Panels", "Process facilities"],
     featuredModels: ["KVV", "KVV22", "Screened control cable", "Instrumentation variants"],
+    note: "Availability is confirmed according to the requested construction and project requirements.",
   },
   {
     slug: "overhead-rubber-cables",
@@ -134,7 +137,7 @@ export const products: Product[] = [
     construction: ["Product-dependent conductor", "Insulation and sheath selected by application"],
     applications: ["Overhead distribution", "Mobile equipment", "Temporary power", "Industrial applications"],
     featuredModels: ["Overhead insulated cable", "Rubber sheathed cable", "Project variants"],
-    note: "Only publish individual products after confirming stable manufacturing and test capability.",
+    note: "Availability is confirmed according to the requested construction and project requirements.",
   },
 ];
 

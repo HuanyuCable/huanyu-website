@@ -5,6 +5,7 @@ import { coreProducts, supportingProducts } from "@/data/products";
 export const metadata: Metadata = {
   title: "Cable Products",
   description: "Explore Huanyu Cable's core LV armoured, MV power and LSZH fire-safe cable ranges, plus supporting project products.",
+  alternates: { canonical: "/products" },
 };
 
 export default function ProductsPage() {
@@ -21,7 +22,7 @@ export default function ProductsPage() {
       </section>
       <section className="section section-muted">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">Complementary supply</span><h2>Supporting products</h2></div><p>Only individual products with confirmed manufacturing and test capability should be published.</p></div>
+          <div className="section-heading"><div><span className="eyebrow">Complementary supply</span><h2>Supporting products</h2></div><p>Product availability is confirmed according to the requested construction, applicable standard and project requirements.</p></div>
           <div className="product-grid supporting-product-grid">{supportingProducts.map((product) => <ProductCard key={product.slug} product={product} />)}</div>
         </div>
       </section>

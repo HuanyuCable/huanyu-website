@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     template: "%s | Huanyu Cable",
   },
   description: site.description,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: site.name,
