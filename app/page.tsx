@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { HeroVideo } from "@/components/HeroVideo";
 import { InquiryForm } from "@/components/InquiryForm";
@@ -123,6 +124,50 @@ export default function HomePage() {
               <li>Traceable packing and shipment documentation</li>
             </ul>
             <Link className="text-link" href="/quality">Review quality structure <span>→</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Manufacturing & Delivery</span>
+              <h2>Built in Hefei. Prepared for Project Supply.</h2>
+            </div>
+            <p>Huanyu Cable combines in-house cable manufacturing with practical order preparation and shipment coordination. Construction, standards, packaging and delivery requirements are reviewed before quotation.</p>
+          </div>
+          <div className="evidence-grid">
+            {[
+              {
+                image: "/media/manufacturing/workshop-overview.webp",
+                alt: "Huanyu Cable production workshop",
+                title: "Production Workshop",
+                text: "Dedicated production areas support conductor processing, cabling, insulation and related cable-manufacturing stages.",
+              },
+              {
+                image: "/media/manufacturing/copper-conductor-line.webp",
+                alt: "Copper conductor processing line at Huanyu Cable",
+                title: "Conductor & Cable Processing",
+                text: "Production details are reviewed against the requested construction, applicable standard and project conditions.",
+              },
+              {
+                image: "/media/delivery/cable-drum-shipment.webp",
+                alt: "Cable drums prepared for shipment",
+                title: "Order Preparation & Shipment",
+                text: "Cable drums, coils, identification and shipment arrangements are prepared according to confirmed order requirements.",
+              },
+            ].map((item) => (
+              <article className="evidence-card" key={item.title}>
+                <div className="evidence-image">
+                  <Image src={item.image} alt={item.alt} width={720} height={480} sizes="(max-width: 760px) 100vw, 33vw" />
+                </div>
+                <div className="evidence-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

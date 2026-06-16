@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -19,7 +20,7 @@ export function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand" aria-label="Huanyu Cable home">
-          <span className="brand-mark">H</span>
+          <Image className="brand-trademark" src="/media/brand/guose-trademark.png" alt="Guose registered trademark of Huanyu Cable" width={42} height={42} priority />
           <span>
             <strong>HUANYU CABLE</strong>
             <small>Powering Projects Since 1995</small>
