@@ -7,6 +7,8 @@ export type Product = {
   tagline: string;
   description: string;
   imagePath: string;
+  detailImagePath: string;
+  imageAlt: string;
   fallbackImage: string;
   voltage: string;
   standards: string[];
@@ -26,7 +28,9 @@ export const products: Product[] = [
     tagline: "Project-ready steel tape and steel wire armoured power cables.",
     description:
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
-    imagePath: "products/lv-armoured-power-cable.webp",
+    imagePath: "/media/products/categories/lv-armoured-power-cable.webp",
+    detailImagePath: "/media/products/hero/lv-armoured-power-cable-hero.webp",
+    imageAlt: "Illustrative product-family rendering of a low-voltage armoured power cable",
     fallbackImage: "/images/product-lv.svg",
     voltage: "0.6/1 kV and project-specific LV ratings",
     standards: ["IEC 60502-1", "BS 5467 where applicable", "Customer specification"],
@@ -44,7 +48,9 @@ export const products: Product[] = [
     tagline: "XLPE insulated MV cables for utility and industrial distribution.",
     description:
       "A focused medium-voltage range built around Huanyu's practical order experience, with emphasis on three-core, large cross-section and armoured project cables.",
-    imagePath: "products/mv-power-cable.webp",
+    imagePath: "/media/products/categories/mv-power-cable.webp",
+    detailImagePath: "/media/products/hero/mv-power-cable-hero.webp",
+    imageAlt: "Illustrative product-family rendering of a medium-voltage power cable",
     fallbackImage: "/images/product-mv.svg",
     voltage: "Common focus: 8.7/15 kV; other voltage ratings are reviewed against the applicable specification.",
     standards: ["IEC 60502-2", "Project specification", "Factory test requirements"],
@@ -62,7 +68,9 @@ export const products: Product[] = [
     tagline: "Low-smoke, flame-retardant and fire-resistant solutions for critical buildings.",
     description:
       "Cable solutions for projects where smoke emission, halogen content, flame spread or circuit integrity are part of the design requirement.",
-    imagePath: "products/lszh-fire-safe-cable.webp",
+    imagePath: "/media/products/categories/lszh-fire-safe-cable.webp",
+    detailImagePath: "/media/products/hero/lszh-fire-safe-cable-hero.webp",
+    imageAlt: "Illustrative product-family rendering of an LSZH and fire-safe cable",
     fallbackImage: "/images/product-fire.svg",
     voltage: "Building wire and power cable voltage classes",
     standards: ["IEC 60332 series", "IEC 60754 series", "IEC 61034 series", "IEC 60331 where applicable"],
@@ -79,7 +87,9 @@ export const products: Product[] = [
     priority: 4,
     tagline: "General distribution cables for trays, ducts and protected installations.",
     description: "A supporting range for complete project supply and standard low-voltage distribution requirements.",
-    imagePath: "products/lv-unarmoured-power-cable.webp",
+    imagePath: "/media/products/categories/lv-unarmoured-power-cable.webp",
+    detailImagePath: "/media/products/categories/lv-unarmoured-power-cable.webp",
+    imageAlt: "Illustrative product-family rendering of a low-voltage unarmoured power cable",
     fallbackImage: "/images/product-support.svg",
     voltage: "0.6/1 kV and related LV ratings",
     standards: ["IEC 60502-1", "Customer specification"],
@@ -96,7 +106,9 @@ export const products: Product[] = [
     priority: 4,
     tagline: "Frequently ordered supporting wires for project packages.",
     description: "Single-core building wires and flexible cables supplied as complementary items to power cable packages.",
-    imagePath: "products/building-wire.webp",
+    imagePath: "/media/products/categories/building-wire.webp",
+    detailImagePath: "/media/products/categories/building-wire.webp",
+    imageAlt: "Illustrative product-family rendering of building wires and flexible conductors",
     fallbackImage: "/images/product-support.svg",
     voltage: "300/500 V and 450/750 V families",
     standards: ["IEC 60227 family where applicable", "Customer specification"],
@@ -113,7 +125,9 @@ export const products: Product[] = [
     priority: 4,
     tagline: "Supporting control cables for industrial project packages.",
     description: "Control, screened and armoured variants can be assessed for project-based supply.",
-    imagePath: "products/control-cable.webp",
+    imagePath: "/media/products/categories/control-cable.webp",
+    detailImagePath: "/media/products/categories/control-cable.webp",
+    imageAlt: "Illustrative product-family rendering of a multicore control cable",
     fallbackImage: "/images/product-support.svg",
     voltage: "Common control cable voltage classes",
     standards: ["IEC or customer specification", "Project-specific construction"],
@@ -130,7 +144,9 @@ export const products: Product[] = [
     priority: 4,
     tagline: "Selected complementary products subject to project review.",
     description: "Selected overhead insulated and rubber-sheathed cable solutions can be reviewed for project-based supply according to the required construction and application.",
-    imagePath: "products/overhead-rubber-cable.webp",
+    imagePath: "/media/products/categories/overhead-rubber-cable.webp",
+    detailImagePath: "/media/products/categories/overhead-rubber-cable.webp",
+    imageAlt: "Illustrative product-family rendering of overhead conductors and rubber-sheathed cable solutions",
     fallbackImage: "/images/product-support.svg",
     voltage: "Product-dependent",
     standards: ["Project specification", "Product-dependent standards"],

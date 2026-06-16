@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/InquiryForm";
 import { getProduct, products } from "@/data/products";
-import { mediaUrl } from "@/lib/media";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -45,7 +45,19 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <p>{product.description}</p>
             <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><a className="button button-ghost" href="mailto:sales@huanyucable.com">Email Specification</a></div>
           </div>
-          <div className="product-detail-image"><img src={mediaUrl(product.imagePath, product.fallbackImage)} alt={product.name} /></div>
+          <div>
+            <div className="product-detail-image">
+              <Image
+                src={product.detailImagePath}
+                alt={product.imageAlt}
+                width={1000}
+                height={750}
+                sizes="(max-width: 980px) 100vw, 45vw"
+                priority
+              />
+            </div>
+            <p className="product-image-note">Illustrative product-family rendering. Final construction is confirmed against the applicable specification before quotation.</p>
+          </div>
         </div>
       </section>
 
