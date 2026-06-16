@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroVideo } from "@/components/HeroVideo";
 import { InquiryForm } from "@/components/InquiryForm";
+import { CompanyUpdateCard } from "@/components/CompanyUpdateCard";
 import { ProductCard } from "@/components/ProductCard";
+import { companyUpdates } from "@/data/companyUpdates";
 import { coreProducts, supportingProducts } from "@/data/products";
 
 export const metadata: Metadata = {
@@ -121,6 +123,18 @@ export default function HomePage() {
               <li>Traceable packing and shipment documentation</li>
             </ul>
             <Link className="text-link" href="/quality">Review quality structure <span>→</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-muted">
+        <div className="container">
+          <div className="section-heading">
+            <div><span className="eyebrow">Latest Company Updates</span><h2>Company development and quality responsibility.</h2></div>
+            <Link className="text-link" href="/company-updates">View all updates <span>→</span></Link>
+          </div>
+          <div className="update-grid">
+            {companyUpdates.map((update) => <CompanyUpdateCard key={update.slug} update={update} />)}
           </div>
         </div>
       </section>
