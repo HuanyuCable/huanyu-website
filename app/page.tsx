@@ -75,7 +75,7 @@ export default function HomePage() {
       <section className="section section-muted">
         <div className="container">
           <div className="section-heading">
-            <div><span className="eyebrow">Complete project supply</span><h2>Supporting products without diluting the focus</h2></div>
+            <div><span className="eyebrow">Complete project supply</span><h2>Supporting Products for Broader Project Supply</h2></div>
             <p>These selected ranges support broader project packages and consolidated supply requirements.</p>
           </div>
           <div className="support-grid">

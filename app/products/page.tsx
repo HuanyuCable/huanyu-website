@@ -12,7 +12,7 @@ export default function ProductsPage() {
   return (
     <>
       <section className="page-hero page-hero-products">
-        <div className="container"><span className="eyebrow light">Products</span><h1>A focused product portfolio for project buyers</h1><p>Three core product families receive the deepest technical content. Supporting products complete project packages without obscuring the main positioning.</p></div>
+        <div className="container"><span className="eyebrow light">Products</span><h1>A focused product portfolio for project buyers</h1><p>Our export portfolio is centered on three core cable families, supported by selected complementary products for consolidated project supply.</p></div>
       </section>
       <section className="section">
         <div className="container">

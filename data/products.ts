@@ -129,7 +129,7 @@ export const products: Product[] = [
     category: "Supporting",
     priority: 4,
     tagline: "Selected complementary products subject to project review.",
-    description: "A controlled supporting category that demonstrates broader capability without diluting the website's three core product positions.",
+    description: "Selected overhead insulated and rubber-sheathed cable solutions can be reviewed for project-based supply according to the required construction and application.",
     imagePath: "products/overhead-rubber-cable.webp",
     fallbackImage: "/images/product-support.svg",
     voltage: "Product-dependent",
