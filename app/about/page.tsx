@@ -12,9 +12,9 @@ export default function AboutPage() {
   return (
     <>
       <section className="page-hero"><div className="container"><span className="eyebrow light">About Huanyu</span><h1>Cable manufacturing experience since 1995.</h1><p>Huanyu Cable is based in Hefei, Anhui, China. We focus on low-voltage armoured cables, medium-voltage power cables, and LSZH & fire-safe cable solutions for overseas engineering and project buyers.</p></div></section>
-      <section className="section"><div className="container split about-grid"><div><span className="eyebrow">Company position</span><h2>A focused product and project approach</h2></div><div><p className="lead">Rather than presenting an oversized product catalogue, Huanyu organizes its export offering around selected cable families supported by practical manufacturing and order experience.</p></div></div></section>
-      <section className="section"><div className="container timeline"><div><strong>1995</strong><span>Company foundation</span></div><div><strong>30+ Years</strong><span>Of industry expertise and focus</span></div></div></section>
-      <section className="section section-muted">
+      <section className="section about-position-section"><div className="container split about-grid"><div><span className="eyebrow">Company position</span><h2>A focused product and project approach</h2></div><div><p className="lead">Rather than presenting an oversized product catalogue, Huanyu organizes its export offering around selected cable families supported by practical manufacturing and order experience.</p></div></div></section>
+      <section className="section about-timeline-section"><div className="container timeline"><div><strong>1995</strong><span>Company foundation</span></div><div><strong>30+ Years</strong><span>Of industry expertise and focus</span></div></div></section>
+      <section className="section section-muted about-manufacturing-section">
         <div className="container split manufacturing-base">
           <div>
             <span className="eyebrow">Manufacturing Base</span>
@@ -27,7 +27,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section about-trademark-section">
         <div className="container trademark-panel">
           <div className="trademark-image">
             <Image src="/media/brand/guose-trademark.png" alt="Guose registered trademark of Huanyu Cable" width={160} height={160} sizes="160px" />
@@ -39,7 +39,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="section section-muted">
+      <section className="section section-muted about-workshop-section">
         <div className="container">
           <div className="section-heading">
             <div><span className="eyebrow">Inside the Workshop</span><h2>Inside the Workshop</h2></div>
@@ -60,7 +60,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section about-culture-section">
         <div className="container split culture-section">
           <div className="culture-image">
             <Image src="/media/about/team-culture.webp" alt="Huanyu Cable team culture activity" width={760} height={500} sizes="(max-width: 760px) 100vw, 45vw" />
@@ -72,7 +72,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="section section-muted">
+      <section className="section section-muted about-responsible-section">
         <div className="container split responsible-manufacturing">
           <div>
             <span className="eyebrow">Responsible Manufacturing</span>
@@ -92,7 +92,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="section section-muted"><div className="container update-callout"><div><span className="eyebrow">Company Updates</span><h2>Follow Huanyu&apos;s company development.</h2><p>Read selected updates related to manufacturing development, operations and quality responsibility.</p></div><Link className="button" href="/company-updates">View Company Updates</Link></div></section>
+      <section className="section section-muted about-updates-section"><div className="container update-callout"><div><span className="eyebrow">Company Updates</span><h2>Follow Huanyu&apos;s company development.</h2><p>Read selected updates related to manufacturing development, operations and quality responsibility.</p></div><Link className="button" href="/company-updates">View Company Updates</Link></div></section>
       <section className="section cta-simple"><div className="container"><h2>Review Huanyu&apos;s product capability.</h2><Link className="button" href="/products">View Products</Link></div></section>
     </>
   );

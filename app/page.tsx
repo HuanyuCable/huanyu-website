@@ -39,11 +39,11 @@ export default function HomePage() {
         <div className="container split intro-grid">
           <div>
             <span className="eyebrow">A focused cable partner</span>
-            <h2>Not every cable. The right cables for the projects we know best.</h2>
+            <h2>Built around the cable projects we know best.</h2>
           </div>
           <div>
             <p className="lead">Huanyu&apos;s export offering is built around practical manufacturing and order experience. Our priority is to help buyers identify a suitable construction, confirm technical requirements and obtain a practical quotation.</p>
-            <Link className="text-link" href="/about">Learn about Huanyu <span>→</span></Link>
+            <Link className="text-link" href="/about">About Huanyu <span>→</span></Link>
           </div>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function HomePage() {
       <section className="section section-muted">
         <div className="container">
           <div className="section-heading">
-            <div><span className="eyebrow">Focused Product Portfolio</span><h2>Three Core Cable Families</h2></div>
+            <div><span className="eyebrow">Focused Product Portfolio</span><h2>A focused power cable portfolio.</h2></div>
             <p>Our product portfolio is organized around three core cable families, supported by selected complementary ranges for project supply.</p>
           </div>
           <div className="product-grid core-grid">
@@ -94,7 +94,7 @@ export default function HomePage() {
       <section className="section applications-section">
         <div className="container">
           <div className="section-heading light-heading">
-            <div><span className="eyebrow light">Applications</span><h2>Built around project environments</h2></div>
+            <div><span className="eyebrow light">Applications</span><h2>Built around real project requirements.</h2></div>
             <Link className="button button-ghost" href="/applications">View Applications</Link>
           </div>
           <div className="application-grid">
@@ -111,11 +111,10 @@ export default function HomePage() {
       </section>
 
       <section className="section quality-preview">
-        <div className="container split quality-grid">
-          {/* <div className="quality-image"><img src="/images/quality-lab.svg" alt="Cable testing and quality control placeholder" /></div> */}
+        <div className="container quality-preview-grid">
           <div>
             <span className="eyebrow">Quality Control</span>
-            <h2>Inspection from raw materials to final release.</h2>
+            <h2>Quality control at every stage of production.</h2>
             <p className="lead">Quality control covers incoming materials, in-process checks, routine testing and shipment documentation. Test and document requirements are confirmed according to the applicable product standard and project specification.</p>
             <ul className="check-list">
               <li>Incoming material inspection</li>
@@ -169,6 +168,9 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+          <div className="quality-preview-media">
+            <Image src="/media/manufacturing/drawing-line-operation.webp" alt="Production-line operation for cable manufacturing" width={720} height={480} sizes="(max-width: 760px) 100vw, 42vw" />
+          </div>
         </div>
       </section>
 
@@ -188,7 +190,7 @@ export default function HomePage() {
         <div className="container quote-grid">
           <div>
             <span className="eyebrow light">Start with the specification</span>
-            <h2>Send your BOQ or cable requirement.</h2>
+            <h2>Start with your BOQ or cable specification.</h2>
             <p>Include voltage, conductor size, number of cores, standard, quantity, destination and required delivery date.</p>
           </div>
           <InquiryForm compact />
