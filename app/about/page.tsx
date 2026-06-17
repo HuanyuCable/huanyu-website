@@ -1,99 +1,227 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { SelectedCredentialsCarousel } from "@/components/SelectedCredentialsCarousel";
 
 export const metadata: Metadata = {
   title: "About Huanyu Cable",
-  description: "Learn about Huanyu Cable's focused manufacturing position, history and project-oriented approach.",
+  description: "Learn about Huanyu Cable's manufacturing base, company development and quality-oriented approach.",
   alternates: { canonical: "/about" },
 };
+
+const strengths = [
+  {
+    title: "Focused export portfolio",
+    copy: "Low-voltage armoured cables, medium-voltage power cables and LSZH fire-safe cable solutions remain the core public product families.",
+  },
+  {
+    title: "Project-based review",
+    copy: "Cable selection, documentation and packing details are reviewed against project requirements before order confirmation.",
+  },
+  {
+    title: "Manufacturing evidence",
+    copy: "Workshop, equipment and production-site materials are presented to help buyers review the operating base behind the offer.",
+  },
+  {
+    title: "Documented quality process",
+    copy: "Quality control, release documents and available certificates are organized for practical project communication.",
+  },
+  {
+    title: "Responsible operation",
+    copy: "Management-system and green-manufacturing credentials support a structured approach to quality, safety, environment and energy use.",
+  },
+  {
+    title: "Long-term local presence",
+    copy: "Huanyu Cable is based in Hefei, Anhui, China, with continuous wire and cable industry experience since 1995.",
+  },
+];
+
+const capabilityImages = [
+  ["/media/manufacturing/workshop-overview.webp", "Workshop overview", "Huanyu Cable workshop overview"],
+  ["/media/manufacturing/cabling-line.webp", "Cable processing equipment", "Cable processing equipment in the workshop"],
+  ["/media/manufacturing/copper-conductor-line.webp", "Copper conductor processing", "Copper conductor processing area"],
+  ["/media/manufacturing/drawing-line-operation.webp", "Production-line operation", "Production-line operation at Huanyu Cable"],
+];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="page-hero"><div className="container"><span className="eyebrow light">About Huanyu</span><h1>Cable manufacturing experience since 1995.</h1><p>Huanyu Cable is based in Hefei, Anhui, China. We focus on low-voltage armoured cables, medium-voltage power cables, and LSZH & fire-safe cable solutions for overseas engineering and project buyers.</p></div></section>
-      <section className="section about-position-section"><div className="container split about-grid"><div><span className="eyebrow">Company position</span><h2>A focused product and project approach</h2></div><div><p className="lead">Rather than presenting an oversized product catalogue, Huanyu organizes its export offering around selected cable families supported by practical manufacturing and order experience.</p></div></div></section>
-      <section className="section about-timeline-section"><div className="container timeline"><div><strong>1995</strong><span>Company foundation</span></div><div><strong>30+ Years</strong><span>Of industry expertise and focus</span></div></div></section>
-      <section className="section section-muted about-manufacturing-section">
+      <section className="about-hero">
+        <Image
+          src="/media/video/huanyu-factory-poster.webp"
+          alt="Huanyu Cable manufacturing base"
+          fill
+          priority
+          sizes="100vw"
+        />
+        <div className="about-hero-overlay" />
+        <div className="container about-hero-content">
+          <span className="eyebrow light">About Huanyu Cable</span>
+          <h1>About Huanyu Cable</h1>
+          <p>
+            Huanyu Cable is a Hefei-based wire and cable manufacturer focused on practical project supply,
+            documented quality control and export communication for overseas engineering buyers.
+          </p>
+        </div>
+      </section>
+
+      <section className="section about-company-section" id="company-overview">
+        <div className="container split company-overview">
+          <div>
+            <span className="eyebrow">Company Overview</span>
+            <h2>Cable manufacturing experience since 1995.</h2>
+            <p className="lead">
+              Huanyu Cable is based in Hefei, Anhui, China. The company presents its international offering around
+              selected cable families, practical manufacturing evidence and project-oriented documentation.
+            </p>
+            <p>
+              For overseas buyers, the public website is structured to make the main product position, manufacturing
+              base, quality process and verified credentials easier to review before detailed inquiry discussion.
+            </p>
+          </div>
+          <Image
+            src="/media/about/office-building.webp"
+            alt="Huanyu Cable office building in Hefei"
+            width={760}
+            height={500}
+            sizes="(max-width: 760px) 100vw, 45vw"
+          />
+        </div>
+      </section>
+
+      <section className="section section-muted about-strengths-section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Why Huanyu</span>
+              <h2>Practical evidence for project buyers.</h2>
+            </div>
+            <p>Huanyu Cable keeps the About page focused on buyer-relevant trust signals rather than broad claims.</p>
+          </div>
+          <div className="why-huanyu-grid">
+            {strengths.map((item) => (
+              <article key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section about-manufacturing-section" id="manufacturing-base">
         <div className="container split manufacturing-base">
           <div>
             <span className="eyebrow">Manufacturing Base</span>
-            <h2>A Manufacturing Base in Hefei, China</h2>
-            <p className="lead">Huanyu Cable operates from Hefei, Anhui, with office, production and order-preparation areas supporting wire and cable manufacturing. The site combines practical production equipment with experienced operating teams and project-based technical review.</p>
+            <h2>A manufacturing base in Hefei, China.</h2>
+            <p className="lead">
+              Huanyu Cable operates from a site that includes office, production and order-preparation areas supporting
+              wire and cable manufacturing. The factory-gate and office images provide a direct view of the company site.
+            </p>
           </div>
           <div className="about-image-pair">
-            <Image src="/media/about/factory-gate.webp" alt="Huanyu Cable factory gate in Hefei" width={720} height={480} sizes="(max-width: 760px) 100vw, 45vw" />
-            <Image src="/media/about/office-building.webp" alt="Huanyu Cable office building" width={720} height={480} sizes="(max-width: 760px) 100vw, 45vw" />
+            <Image
+              src="/media/about/factory-gate.webp"
+              alt="Huanyu Cable factory gate in Hefei"
+              width={720}
+              height={480}
+              sizes="(max-width: 760px) 100vw, 45vw"
+            />
+            <Image
+              src="/media/about/office-building.webp"
+              alt="Huanyu Cable office building"
+              width={720}
+              height={480}
+              sizes="(max-width: 760px) 100vw, 45vw"
+            />
           </div>
         </div>
       </section>
-      <section className="section about-trademark-section">
-        <div className="container trademark-panel">
-          <div className="trademark-image">
-            <Image src="/media/brand/guose-trademark.png" alt="Guose registered trademark of Huanyu Cable" width={160} height={160} sizes="160px" />
-          </div>
-          <div>
-            <span className="eyebrow">Registered Trademark</span>
-            <h2>HUANYU CABLE and the Guose Registered Trademark</h2>
-            <p>HUANYU CABLE is the company-facing name used in international communication. The Guose symbol is a registered trademark used across applicable company and product materials.</p>
-          </div>
-        </div>
-      </section>
-      <section className="section section-muted about-workshop-section">
+
+      <section className="section section-muted about-capability-section">
         <div className="container">
           <div className="section-heading">
-            <div><span className="eyebrow">Inside the Workshop</span><h2>Inside the Workshop</h2></div>
-            <p>Selected views from Huanyu Cable production areas, shown as practical manufacturing evidence.</p>
+            <div>
+              <span className="eyebrow">Manufacturing and Technical Capability</span>
+              <h2>Workshop evidence connected with quality review.</h2>
+            </div>
+            <p>
+              Production areas, process control and release documentation are reviewed together with the selected cable
+              standard and order requirements.
+            </p>
           </div>
           <div className="factory-gallery">
-            {[
-              ["/media/manufacturing/workshop-overview.webp", "Workshop overview", "Huanyu Cable workshop overview"],
-              ["/media/manufacturing/cabling-line.webp", "Cable processing equipment", "Cable processing equipment in the workshop"],
-              ["/media/manufacturing/copper-conductor-line.webp", "Copper conductor processing", "Copper conductor processing area"],
-              ["/media/manufacturing/drawing-line-operation.webp", "Production-line operation", "Production-line operation at Huanyu Cable"],
-            ].map(([src, caption, alt]) => (
+            {capabilityImages.map(([src, caption, alt]) => (
               <figure key={src}>
                 <Image src={src} alt={alt} width={640} height={430} sizes="(max-width: 760px) 100vw, 25vw" />
                 <figcaption>{caption}</figcaption>
               </figure>
             ))}
           </div>
+          <Link className="text-link about-quality-link" href="/quality">
+            Review quality control and documentation <span>-&gt;</span>
+          </Link>
         </div>
       </section>
-      <section className="section about-culture-section">
-        <div className="container split culture-section">
+
+      <section className="section about-people-section" id="people-culture">
+        <div className="container split people-responsible">
           <div className="culture-image">
-            <Image src="/media/about/team-culture.webp" alt="Huanyu Cable team culture activity" width={760} height={500} sizes="(max-width: 760px) 100vw, 45vw" />
+            <Image
+              src="/media/about/team-culture.webp"
+              alt="Huanyu Cable team culture activity"
+              width={760}
+              height={500}
+              sizes="(max-width: 760px) 100vw, 45vw"
+            />
           </div>
-          <div>
-            <span className="eyebrow">People & Culture</span>
-            <h2>A Stable Team with Long-Term Commitment</h2>
-            <p className="lead">Huanyu Cable supports employee welfare through annual staff activities, opportunities for family participation and seasonal workplace care. During hot-weather periods, the company provides heat allowances and refreshments for employees.</p>
-          </div>
-        </div>
-      </section>
-      <section className="section section-muted about-responsible-section">
-        <div className="container split responsible-manufacturing">
-          <div>
-            <span className="eyebrow">Responsible Manufacturing</span>
-            <h2>Management systems, green development and technical recognition.</h2>
-            <p className="lead">Huanyu Cable continues to strengthen its manufacturing base through certified management systems, energy-management practices, green and digital manufacturing initiatives, and official technical-development recognition. These credentials support a more structured approach to quality, environmental responsibility, workplace safety, operational improvement and supply-chain management.</p>
-            <Link className="text-link" href="/quality#credentials">View Credentials and Certifications <span>→</span></Link>
-          </div>
-          <div className="responsible-summary">
-            {[
-              "Quality, Environmental and Safety Management",
-              "ISO 50001 Energy Management",
-              "Green and Digital Manufacturing Development",
-              "Government and Technical Recognition",
-            ].map((item) => (
-              <div key={item}>{item}</div>
-            ))}
+          <div id="responsible-manufacturing">
+            <span className="eyebrow">People & Responsible Manufacturing</span>
+            <h2>A stable team and structured operating discipline.</h2>
+            <p className="lead">
+              Huanyu Cable supports employee welfare through staff activities, family participation opportunities and
+              seasonal workplace care. These people-focused practices sit alongside management-system, energy-management
+              and green-manufacturing credentials.
+            </p>
+            <p>
+              The credentials are presented according to their stated scope and category, including management-system
+              certifications, third-party green and digital manufacturing evaluations, official recognitions and selected
+              domestic product compliance documents.
+            </p>
+            <Link className="text-link" href="/quality#credentials">
+              View credentials and certificates <span>-&gt;</span>
+            </Link>
           </div>
         </div>
       </section>
-      <section className="section section-muted about-updates-section"><div className="container update-callout"><div><span className="eyebrow">Company Updates</span><h2>Follow Huanyu&apos;s company development.</h2><p>Read selected updates related to manufacturing development, operations and quality responsibility.</p></div><Link className="button" href="/company-updates">View Company Updates</Link></div></section>
-      <section className="section cta-simple"><div className="container"><h2>Review Huanyu&apos;s product capability.</h2><Link className="button" href="/products">View Products</Link></div></section>
+
+      <section className="section section-muted selected-credentials-section" id="selected-credentials">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Selected Credentials</span>
+              <h2>Verified documents presented by category.</h2>
+            </div>
+            <Link className="button button-small" href="/quality#credentials">
+              View All Credentials
+            </Link>
+          </div>
+          <SelectedCredentialsCarousel />
+        </div>
+      </section>
+
+      <section className="section about-updates-section">
+        <div className="container update-callout">
+          <div>
+            <span className="eyebrow">Company Updates</span>
+            <h2>Follow Huanyu&apos;s company development.</h2>
+            <p>Read selected updates related to manufacturing development, operations and quality responsibility.</p>
+          </div>
+          <Link className="button" href="/company-updates">
+            View Company Updates
+          </Link>
+        </div>
+      </section>
     </>
   );
 }

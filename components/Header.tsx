@@ -6,10 +6,54 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const nav = [
-  { href: "/products", label: "Products" },
-  { href: "/applications", label: "Applications" },
-  { href: "/quality", label: "Quality" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Home" },
+  {
+    href: "/about",
+    label: "About Us",
+    items: [
+      { href: "/about#company-overview", label: "Company Overview" },
+      { href: "/about#manufacturing-base", label: "Manufacturing Base" },
+      { href: "/about#people-culture", label: "People & Culture" },
+      { href: "/about#responsible-manufacturing", label: "Responsible Manufacturing" },
+      { href: "/about", label: "View About Huanyu" },
+    ],
+  },
+  {
+    href: "/products",
+    label: "Products",
+    items: [
+      { href: "/products/low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
+      { href: "/products/medium-voltage-power-cables", label: "Medium Voltage Power Cables" },
+      { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
+      { href: "/products", label: "Complementary Ranges" },
+      { href: "/products", label: "View All Products" },
+    ],
+  },
+  {
+    href: "/applications",
+    label: "Applications",
+    items: [
+      { href: "/applications", label: "Power Distribution" },
+      { href: "/applications", label: "Industrial Facilities" },
+      { href: "/applications", label: "Commercial Buildings" },
+      { href: "/applications", label: "Infrastructure" },
+      { href: "/applications", label: "View All Applications" },
+    ],
+  },
+  {
+    href: "/quality",
+    label: "Quality",
+    items: [
+      { href: "/quality", label: "Quality Overview" },
+      { href: "/quality#credentials", label: "Credentials & Certificates" },
+    ],
+  },
+  {
+    href: "/company-updates",
+    label: "Resources",
+    items: [{ href: "/company-updates", label: "News & Updates" }],
+  },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -40,16 +84,25 @@ export function Header() {
         </button>
 
         <nav className={open ? "main-nav open" : "main-nav"} aria-label="Primary navigation">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={pathname.startsWith(item.href) ? "active" : ""}
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {nav.map((item) => {
+            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            return (
+              <div className={item.items ? "nav-item has-dropdown" : "nav-item"} key={item.label}>
+                <Link href={item.href} className={active ? "active" : ""} onClick={() => setOpen(false)}>
+                  {item.label}
+                </Link>
+                {item.items && (
+                  <div className="nav-dropdown">
+                    {item.items.map((child) => (
+                      <Link href={child.href} key={`${item.label}-${child.label}`} onClick={() => setOpen(false)}>
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
           <Link className="button button-small" href="/contact" onClick={() => setOpen(false)}>
             Request a Quote
           </Link>
