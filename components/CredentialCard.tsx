@@ -15,7 +15,7 @@ export function CredentialCard({ credential }: { credential: Credential }) {
           alt={credential.imageAlt}
           width={credential.imageWidth}
           height={credential.imageHeight}
-          sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          sizes="(max-width: 560px) 140px, 150px"
         />
       </div>
       <div className="credential-card-body">
@@ -31,8 +31,14 @@ export function CredentialCard({ credential }: { credential: Credential }) {
             ))}
           </dl>
         )}
-        <p>{credential.summary}</p>
-        <p className="credential-relevance">{credential.buyerRelevance}</p>
+        <div className="credential-copy-block">
+          <strong>Scope</strong>
+          <p>{credential.summary}</p>
+        </div>
+        <div className="credential-copy-block">
+          <strong>Why it matters</strong>
+          <p>{credential.buyerRelevance}</p>
+        </div>
         {(credential.issued || credential.validThrough) && (
           <div className="credential-validity">
             {credential.issued && <span>Issued: {credential.issued}</span>}
@@ -41,7 +47,7 @@ export function CredentialCard({ credential }: { credential: Credential }) {
         )}
         {credential.scopeNote && <p className="credential-scope">{credential.scopeNote}</p>}
         <a className="text-link credential-link" href={credential.imagePath} target="_blank" rel="noreferrer">
-          View Document <span>→</span>
+          View Original Document <span>-&gt;</span>
         </a>
       </div>
     </article>

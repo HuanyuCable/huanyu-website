@@ -31,7 +31,13 @@ export interface Credential {
 
 export interface CredentialGroup {
   id: CredentialCategory;
+  slug: string;
   title: string;
+  shortTitle: string;
+  eyebrow: string;
+  summary: string;
+  detailIntroduction: string;
+  highlights: string[];
   introduction?: string;
   notice?: string;
 }
@@ -39,23 +45,55 @@ export interface CredentialGroup {
 export const credentialGroups: CredentialGroup[] = [
   {
     id: "management",
+    slug: "management-systems",
     title: "Management Systems",
+    shortTitle: "Certified Management Systems",
+    eyebrow: "04 VERIFIED SYSTEMS",
+    summary:
+      "Quality, environmental, occupational health and safety, and energy-management systems supporting structured manufacturing operations.",
+    detailIntroduction:
+      "Huanyu Cable maintains certified management systems covering quality, environmental management, occupational health and safety, and energy performance within the scope stated in each certificate.",
+    highlights: ["ISO 9001", "ISO 14001", "ISO 45001", "ISO 50001"],
   },
   {
     id: "green-digital",
+    slug: "green-digital-manufacturing",
     title: "Green and Digital Manufacturing",
+    shortTitle: "Green and Digital Development",
+    eyebrow: "05 THIRD-PARTY EVALUATIONS",
+    summary:
+      "Selected evaluations covering green-factory practices, supply-chain management, low-carbon operations, digital workshops and intelligent manufacturing.",
+    detailIntroduction:
+      "These third-party certificates document Huanyu Cable's ongoing work in green manufacturing, supply-chain management, digital operations and intelligent manufacturing. They are presented according to the scope and ratings shown in the original documents.",
+    highlights: ["Green Factory", "Green Supply Chain", "Digital Operations"],
     introduction:
       "These third-party certificates document Huanyu Cable's ongoing work in green manufacturing, supply-chain management, digital operations and intelligent manufacturing. They are presented according to the scope and ratings shown in the original documents.",
   },
   {
     id: "recognition",
+    slug: "recognition",
     title: "Government and Innovation Recognition",
+    shortTitle: "Technical and Regional Recognition",
+    eyebrow: "04 OFFICIAL RECOGNITIONS",
+    summary:
+      "Selected official recognitions related to technical development, specialization and the company's role in the regional manufacturing sector.",
+    detailIntroduction:
+      "Selected official recognitions provide additional context on Huanyu Cable's technical development and role in the local manufacturing sector. These recognitions are not product certifications.",
+    highlights: ["High-Tech Enterprise", "Specialized SME", "Technology Center"],
     introduction:
       "Selected official recognitions provide additional context on Huanyu Cable's technical development and role in the local manufacturing sector. These recognitions are not product certifications and must not be presented as such.",
   },
   {
     id: "product-compliance",
+    slug: "product-compliance",
     title: "Domestic Product Compliance",
+    shortTitle: "Manufacturing Authorization and CCC",
+    eyebrow: "03 DOMESTIC DOCUMENTS",
+    summary:
+      "A current domestic manufacturing authorization and selected China Compulsory Certification documents for specifically listed building-wire models.",
+    detailIntroduction:
+      "These documents relate to domestic manufacturing authorization and selected product models listed in the original certificates. They do not represent export-market certification for every Huanyu Cable product family.",
+    highlights: ["Production License", "CCC", "Model-Specific Scope"],
     notice:
       "The following China Compulsory Certification documents apply only to the product models and voltage ranges listed in the original certificates. They do not represent export-market certification for every Huanyu Cable product family.",
   },
@@ -337,4 +375,8 @@ export const credentials: Credential[] = [
 
 export function getCredentialsByCategory(category: CredentialCategory): Credential[] {
   return credentials.filter((credential) => credential.category === category);
+}
+
+export function getCredentialGroupBySlug(slug: string): CredentialGroup | undefined {
+  return credentialGroups.find((group) => group.slug === slug);
 }
