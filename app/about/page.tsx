@@ -72,6 +72,26 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      <section className="section section-muted">
+        <div className="container split responsible-manufacturing">
+          <div>
+            <span className="eyebrow">Responsible Manufacturing</span>
+            <h2>Management systems, green development and technical recognition.</h2>
+            <p className="lead">Huanyu Cable continues to strengthen its manufacturing base through certified management systems, energy-management practices, green and digital manufacturing initiatives, and official technical-development recognition. These credentials support a more structured approach to quality, environmental responsibility, workplace safety, operational improvement and supply-chain management.</p>
+            <Link className="text-link" href="/quality#credentials">View Credentials and Certifications <span>→</span></Link>
+          </div>
+          <div className="responsible-summary">
+            {[
+              "Quality, Environmental and Safety Management",
+              "ISO 50001 Energy Management",
+              "Green and Digital Manufacturing Development",
+              "Government and Technical Recognition",
+            ].map((item) => (
+              <div key={item}>{item}</div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="section section-muted"><div className="container update-callout"><div><span className="eyebrow">Company Updates</span><h2>Follow Huanyu&apos;s company development.</h2><p>Read selected updates related to manufacturing development, operations and quality responsibility.</p></div><Link className="button" href="/company-updates">View Company Updates</Link></div></section>
       <section className="section cta-simple"><div className="container"><h2>Review Huanyu&apos;s product capability.</h2><Link className="button" href="/products">View Products</Link></div></section>
     </>

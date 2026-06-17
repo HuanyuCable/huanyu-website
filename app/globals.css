@@ -205,6 +205,32 @@ p { margin: 0 0 22px; color: var(--muted); }
 .license-image { padding: 18px; border: 1px solid var(--line); background: white; box-shadow: 0 10px 30px rgba(7,24,40,.05); }
 .license-image img { width: 100%; height: auto; object-fit: contain; }
 .document-note { margin-top: 22px; padding: 16px; background: var(--soft); border-left: 3px solid var(--orange); font-size: 14px; }
+.credentials-intro { max-width: 920px; margin-bottom: 56px; }
+.credentials-boundary { padding: 18px 20px; background: white; border-left: 3px solid var(--orange); color: #40505d; }
+.credential-groups { display: grid; gap: 60px; }
+.credential-group-heading { max-width: 900px; margin-bottom: 26px; }
+.credential-group-heading h3 { font-size: 34px; }
+.credential-group-heading p { margin-bottom: 0; }
+.credential-notice { padding: 16px 18px; background: #fff6ed; border: 1px solid #f1c7a9; color: #70401e; }
+.credential-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.credential-card { display: flex; flex-direction: column; background: white; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(7,24,40,.05); }
+.credential-document { display: flex; align-items: center; justify-content: center; min-height: 250px; padding: 18px; background: #eef3f6; border-bottom: 1px solid var(--line); }
+.credential-document img { width: auto; max-width: 100%; height: auto; max-height: 420px; object-fit: contain; }
+.credential-card-body { display: flex; flex: 1; flex-direction: column; padding: 26px; }
+.credential-tag { display: inline-flex; align-self: flex-start; margin-bottom: 14px; padding: 6px 9px; background: var(--soft); color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.credential-card h3 { font-size: 23px; }
+.credential-facts { display: grid; gap: 9px; margin: 0 0 18px; }
+.credential-facts div { display: grid; grid-template-columns: 82px 1fr; gap: 12px; }
+.credential-facts dt { color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
+.credential-facts dd { margin: 0; color: var(--ink); font-size: 13px; font-weight: 750; }
+.credential-relevance { color: #40505d; }
+.credential-validity { display: flex; flex-wrap: wrap; gap: 8px; margin: auto 0 16px; color: var(--blue); font-size: 12px; font-weight: 800; }
+.credential-validity span { padding: 6px 8px; background: var(--soft); }
+.credential-scope { padding: 13px 14px; background: #fff6ed; border-left: 3px solid var(--orange); color: #70401e; font-size: 13px; }
+.credential-link { margin-top: 6px; }
+.responsible-manufacturing { align-items: start; }
+.responsible-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.responsible-summary div { min-height: 116px; padding: 24px; background: white; border: 1px solid var(--line); color: var(--navy); font-weight: 800; }
 .application-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .application-detail-grid article { padding: 42px; border: 1px solid var(--line); }
 .application-detail-grid article > span { color: var(--orange); font-weight: 900; }
@@ -269,6 +295,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .core-grid { grid-template-columns: 1fr 1fr; }
   .capability-band { grid-template-columns: 1fr; padding: 40px; }
   .process-grid, .support-grid, .application-grid, .update-grid { grid-template-columns: 1fr 1fr; }
+  .credential-grid { grid-template-columns: 1fr 1fr; }
   .product-spec-layout { grid-template-columns: 1fr; }
   .spec-aside { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -288,7 +315,9 @@ p { margin: 0 0 22px; color: var(--muted); }
   .hero-stats span { font-size: 11px; }
   .video-control { right: 14px; bottom: 218px; }
   .section-heading, .cta-simple .container, .update-callout { align-items: start; flex-direction: column; }
-  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel { grid-template-columns: 1fr; }
+  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-grid, .responsible-summary { grid-template-columns: 1fr; }
+  .credential-card-body { padding: 22px; }
+  .credential-facts div { grid-template-columns: 1fr; gap: 2px; }
   .capability-band { width: 100%; padding: 30px 22px; }
   .application-grid article { min-height: 220px; }
   .application-grid h3 { margin-top: 35px; }
