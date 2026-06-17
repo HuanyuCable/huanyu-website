@@ -40,7 +40,7 @@ export default function QualityPage() {
           <div className="credentials-intro">
             <span className="eyebrow">Credentials</span>
             <h2>Verified credentials, organized by purpose.</h2>
-            <p className="lead">Review Huanyu Cable&apos;s management systems, green and digital manufacturing development, official technical recognition and selected domestic compliance documents. Each category is separated to avoid confusing management certification, recognition and product-specific compliance.</p>
+            <p className="lead">Explore Huanyu Cable&apos;s certified management systems, green and digital manufacturing credentials, official technical recognition and selected domestic compliance documents. Each category is presented separately so buyers can understand what each document demonstrates and where its stated scope applies.</p>
           </div>
           <div className="credential-overview-grid">
             {credentialGroups.map((group, index) => (

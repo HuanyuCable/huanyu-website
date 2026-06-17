@@ -38,12 +38,15 @@ export default async function CredentialCategoryPage({ params }: CategoryPagePro
       <section className="credential-category-hero">
         <div className="container">
           <Link className="credential-breadcrumb" href="/quality#credentials">Quality / Credentials</Link>
-          <span className="eyebrow light">{group.eyebrow}</span>
+          <span className="credential-category-eyebrow">{group.eyebrow}</span>
           <h1>{group.title}</h1>
           <p>{group.detailIntroduction}</p>
           <div className="credential-category-meta">
             <span>{documentCount} documents</span>
           </div>
+          {group.id === "product-compliance" && (
+            <p className="credential-document-count">3 documents: 1 manufacturing license and 2 CCC certificates</p>
+          )}
           {group.notice && <p className="credential-category-notice">{group.notice}</p>}
         </div>
       </section>
@@ -81,19 +84,14 @@ function ProductionLicenseCard() {
       <div className="product-license-body">
         <span className="credential-tag">Domestic manufacturing authorization</span>
         <h2>China Industrial Product Production License</h2>
+        <p className="credential-meta-line">Valid through 3 June 2028</p>
+        <p className="credential-summary">Huanyu Cable holds a current industrial product production license covering wire and cable manufacturing within the scope stated in the original document.</p>
         <div className="credential-copy-block">
-          <strong>Scope</strong>
-          <p>Huanyu Cable holds a current industrial product production license covering wire and cable manufacturing within the scope stated in the original document.</p>
-        </div>
-        <div className="credential-copy-block">
-          <strong>Why it matters</strong>
-          <p>This document confirms the company&apos;s domestic manufacturing authorization. Product construction, standards and project documentation are still confirmed separately during technical review.</p>
-        </div>
-        <div className="credential-validity">
-          <span>Valid through 3 June 2028</span>
+          <strong>For project buyers</strong>
+          <p>This document confirms the company&apos;s domestic manufacturing authorization. Product construction, applicable standards and project documentation are confirmed separately during technical review.</p>
         </div>
         <a className="text-link credential-link" href="/media/quality/china-industrial-product-production-license.webp" target="_blank" rel="noreferrer">
-          View Original Document <span>-&gt;</span>
+          View license <span>-&gt;</span>
         </a>
       </div>
     </article>

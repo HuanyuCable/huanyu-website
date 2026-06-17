@@ -207,41 +207,41 @@ p { margin: 0 0 22px; color: var(--muted); }
 .document-note { margin-top: 22px; padding: 16px; background: var(--soft); border-left: 3px solid var(--orange); font-size: 14px; }
 .credentials-intro { max-width: 900px; margin-bottom: 38px; }
 .credential-overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-.credential-group-card { position: relative; display: flex; flex-direction: column; min-height: 290px; padding: 30px; background: white; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(7,24,40,.05); transition: border-color .2s, transform .2s, box-shadow .2s; }
-.credential-group-card:hover { border-color: var(--orange); transform: translateY(-3px); box-shadow: var(--shadow); }
-.credential-group-card:focus-visible { outline: 3px solid rgba(232,111,44,.45); outline-offset: 3px; }
-.credential-group-marker { position: absolute; right: 26px; top: 24px; color: rgba(7,24,40,.14); font-size: 36px; font-weight: 900; line-height: 1; }
-.credential-group-eyebrow { margin-bottom: 18px; color: var(--orange-dark); font-size: 12px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.credential-group-card { position: relative; display: flex; flex-direction: column; min-height: 290px; padding: 32px; background: white; border: 1px solid var(--line); box-shadow: 0 10px 28px rgba(7,24,40,.045); transition: border-color .2s, transform .2s, box-shadow .2s; }
+.credential-group-card:hover { border-color: rgba(7,24,40,.32); transform: translateY(-3px); box-shadow: 0 18px 42px rgba(7,24,40,.11); }
+.credential-group-card:focus-visible { outline: 3px solid rgba(12,95,145,.32); outline-offset: 3px; }
+.credential-group-marker { position: absolute; right: 26px; top: 24px; color: rgba(7,24,40,.12); font-size: 34px; font-weight: 800; line-height: 1; }
+.credential-group-eyebrow { margin-bottom: 18px; color: var(--orange-dark); font-size: 13px; font-weight: 750; letter-spacing: 0; }
 .credential-group-card h3 { max-width: 420px; font-size: 28px; }
-.credential-group-card p { max-width: 540px; }
+.credential-group-card p { max-width: 540px; line-height: 1.68; color: #526171; }
 .credential-highlights { display: flex; flex-wrap: wrap; gap: 8px; margin: auto 0 24px; }
-.credential-highlights span { padding: 7px 10px; background: var(--soft); color: var(--blue); font-size: 12px; font-weight: 800; }
+.credential-highlights span { padding: 6px 0; border-bottom: 1px solid rgba(12,95,145,.22); color: var(--blue); font-size: 13px; font-weight: 750; }
 .credential-group-link { margin-top: auto; }
 .credential-category-hero { padding: 138px 0 58px; background: linear-gradient(125deg, var(--navy), #124966); color: white; }
+.credential-category-eyebrow { display: inline-block; margin-bottom: 14px; color: #ffad7c; font-size: 13px; font-weight: 750; }
 .credential-category-hero h1 { max-width: 900px; font-size: clamp(38px, 5vw, 62px); }
 .credential-category-hero p { max-width: 850px; color: rgba(255,255,255,.74); font-size: 18px; }
 .credential-breadcrumb { display: inline-block; margin-bottom: 26px; color: rgba(255,255,255,.72); font-weight: 750; }
 .credential-category-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-.credential-category-meta span { padding: 7px 10px; background: rgba(255,255,255,.1); color: #ffad7c; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
-.credential-category-notice { margin-top: 22px; padding: 16px 18px; border: 1px solid rgba(255,255,255,.25); background: rgba(255,255,255,.08); color: rgba(255,255,255,.78); }
+.credential-category-meta span { padding: 0; color: #ffad7c; font-size: 13px; font-weight: 750; }
+.credential-document-count { margin: 12px 0 0; color: rgba(255,255,255,.78); font-size: 15px; }
+.credential-category-notice { margin-top: 18px; max-width: 780px; padding: 13px 16px; border-left: 3px solid rgba(255,173,124,.75); background: rgba(255,255,255,.07); color: rgba(255,255,255,.78); font-size: 15px; }
 .credential-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-.credential-card, .product-license-card { display: grid; grid-template-columns: 150px 1fr; gap: 22px; align-items: start; background: white; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(7,24,40,.05); padding: 18px; }
+.credential-card, .product-license-card { display: grid; grid-template-columns: 145px 1fr; gap: 24px; align-items: start; background: white; border: 1px solid rgba(220,227,232,.9); box-shadow: 0 10px 26px rgba(7,24,40,.045); padding: 22px; }
 .product-license-card { margin-bottom: 22px; }
-.credential-document, .product-license-document { display: flex; align-items: center; justify-content: center; min-height: 190px; padding: 10px; background: #eef3f6; border: 1px solid var(--line); }
-.credential-document img, .product-license-document img { width: auto; max-width: 100%; height: auto; max-height: 170px; object-fit: contain; }
+.credential-document, .product-license-document { display: flex; align-items: center; justify-content: center; min-height: 178px; padding: 10px; background: #f7f9fb; border: 1px solid #e7edf1; }
+.credential-document img, .product-license-document img { width: auto; max-width: 100%; height: auto; max-height: 158px; object-fit: contain; }
 .credential-card-body, .product-license-body { min-width: 0; }
-.credential-tag { display: inline-flex; margin-bottom: 12px; padding: 6px 9px; background: var(--soft); color: var(--blue); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-.credential-card h3, .product-license-card h2 { font-size: 22px; }
-.credential-facts { display: grid; gap: 7px; margin: 0 0 14px; }
-.credential-facts div { display: grid; grid-template-columns: 78px 1fr; gap: 10px; }
-.credential-facts dt { color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
-.credential-facts dd { margin: 0; color: var(--ink); font-size: 13px; font-weight: 750; }
-.credential-copy-block { margin-bottom: 13px; }
-.credential-copy-block strong { display: block; margin-bottom: 4px; color: var(--navy); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; }
-.credential-copy-block p { margin-bottom: 0; font-size: 14px; line-height: 1.62; }
-.credential-validity { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; color: var(--blue); font-size: 12px; font-weight: 800; }
-.credential-validity span { padding: 6px 8px; background: var(--soft); }
-.credential-scope { margin-bottom: 14px; padding: 12px 13px; background: #fff6ed; border-left: 3px solid var(--orange); color: #70401e; font-size: 13px; }
+.credential-tag { display: block; margin-bottom: 8px; color: var(--orange-dark); font-size: 13px; font-weight: 750; }
+.credential-short-title { margin-bottom: 6px; color: var(--blue); font-size: 13px; font-weight: 750; }
+.credential-card h3, .product-license-card h2 { margin-bottom: 9px; color: var(--navy); font-size: 22px; }
+.credential-meta-line { margin-bottom: 16px; color: #5e6c79; font-size: 13px; line-height: 1.55; }
+.credential-summary { margin-bottom: 16px; color: #354453; font-size: 15px; line-height: 1.65; }
+.credential-copy-block { margin-bottom: 14px; }
+.credential-copy-block strong { display: block; margin-bottom: 5px; color: var(--navy); font-size: 13px; font-weight: 750; }
+.credential-copy-block p { margin-bottom: 0; color: #526171; font-size: 14px; line-height: 1.66; }
+.credential-subtle { margin-bottom: 10px; color: #7a8792; font-size: 13px; }
+.credential-scope { margin-bottom: 14px; color: #6f5b4f; font-size: 13px; line-height: 1.55; }
 .credential-link { margin-top: 2px; }
 .credential-category-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 36px; padding-top: 26px; border-top: 1px solid var(--line); }
 .responsible-manufacturing { align-items: start; }
@@ -334,7 +334,6 @@ p { margin: 0 0 22px; color: var(--muted); }
   .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary { grid-template-columns: 1fr; }
   .credential-category-hero { padding-top: 118px; }
   .credential-group-card { min-height: 0; padding: 24px; }
-  .credential-facts div { grid-template-columns: 1fr; gap: 2px; }
   .credential-category-footer { align-items: start; flex-direction: column; }
   .capability-band { width: 100%; padding: 30px 22px; }
   .application-grid article { min-height: 220px; }

@@ -1,11 +1,15 @@
 import Image from "next/image";
-import type { Credential } from "@/data/credentials";
+import type { Credential, CredentialIssuerType } from "@/data/credentials";
+
+const issuerLabels: Record<CredentialIssuerType, string> = {
+  "management-system certification": "Management system",
+  "third-party evaluation": "Independent evaluation",
+  "government recognition": "Official recognition",
+  "domestic product certification": "Domestic product certification",
+};
 
 export function CredentialCard({ credential }: { credential: Credential }) {
-  const details = [
-    credential.standard && ["Standard", credential.standard],
-    credential.level && ["Level", credential.level],
-  ].filter(Boolean) as [string, string][];
+  const metadata = [credential.standard, credential.level, credential.validThrough && `Valid through ${credential.validThrough}`].filter(Boolean);
 
   return (
     <article className="credential-card">
@@ -19,35 +23,19 @@ export function CredentialCard({ credential }: { credential: Credential }) {
         />
       </div>
       <div className="credential-card-body">
-        <span className="credential-tag">{credential.issuerType}</span>
+        <span className="credential-tag">{issuerLabels[credential.issuerType]}</span>
+        {credential.shortTitle !== credential.title && <p className="credential-short-title">{credential.shortTitle}</p>}
         <h3>{credential.title}</h3>
-        {details.length > 0 && (
-          <dl className="credential-facts">
-            {details.map(([label, value]) => (
-              <div key={label}>
-                <dt>{label}</dt>
-                <dd>{value}</dd>
-              </div>
-            ))}
-          </dl>
-        )}
+        {metadata.length > 0 && <p className="credential-meta-line">{metadata.join(" | ")}</p>}
+        <p className="credential-summary">{credential.summary}</p>
         <div className="credential-copy-block">
-          <strong>Scope</strong>
-          <p>{credential.summary}</p>
-        </div>
-        <div className="credential-copy-block">
-          <strong>Why it matters</strong>
+          <strong>For project buyers</strong>
           <p>{credential.buyerRelevance}</p>
         </div>
-        {(credential.issued || credential.validThrough) && (
-          <div className="credential-validity">
-            {credential.issued && <span>Issued: {credential.issued}</span>}
-            {credential.validThrough && <span>Valid: {credential.validThrough}</span>}
-          </div>
-        )}
+        {credential.issued && <p className="credential-subtle">Issued {credential.issued}</p>}
         {credential.scopeNote && <p className="credential-scope">{credential.scopeNote}</p>}
         <a className="text-link credential-link" href={credential.imagePath} target="_blank" rel="noreferrer">
-          View Original Document <span>-&gt;</span>
+          View certificate <span>-&gt;</span>
         </a>
       </div>
     </article>

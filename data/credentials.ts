@@ -48,23 +48,23 @@ export const credentialGroups: CredentialGroup[] = [
     slug: "management-systems",
     title: "Management Systems",
     shortTitle: "Certified Management Systems",
-    eyebrow: "04 VERIFIED SYSTEMS",
+    eyebrow: "4 management systems",
     summary:
-      "Quality, environmental, occupational health and safety, and energy-management systems supporting structured manufacturing operations.",
+      "Certified systems that support consistent manufacturing, environmental responsibility, workplace safety and energy performance.",
     detailIntroduction:
-      "Huanyu Cable maintains certified management systems covering quality, environmental management, occupational health and safety, and energy performance within the scope stated in each certificate.",
+      "These certifications show how Huanyu Cable structures quality control, environmental management, workplace safety and energy performance across its wire and cable operations, within the scope stated in each certificate.",
     highlights: ["ISO 9001", "ISO 14001", "ISO 45001", "ISO 50001"],
   },
   {
     id: "green-digital",
     slug: "green-digital-manufacturing",
     title: "Green and Digital Manufacturing",
-    shortTitle: "Green and Digital Development",
-    eyebrow: "05 THIRD-PARTY EVALUATIONS",
+    shortTitle: "Green and Digital Manufacturing",
+    eyebrow: "5 green and digital credentials",
     summary:
-      "Selected evaluations covering green-factory practices, supply-chain management, low-carbon operations, digital workshops and intelligent manufacturing.",
+      "Independent evaluations reflecting continued investment in resource efficiency, responsible supply chains, digital operations and intelligent manufacturing.",
     detailIntroduction:
-      "These third-party certificates document Huanyu Cable's ongoing work in green manufacturing, supply-chain management, digital operations and intelligent manufacturing. They are presented according to the scope and ratings shown in the original documents.",
+      "Together, these independent evaluations provide additional evidence of ongoing improvements in resource efficiency, supply-chain management, digital workshops and intelligent manufacturing.",
     highlights: ["Green Factory", "Green Supply Chain", "Digital Operations"],
     introduction:
       "These third-party certificates document Huanyu Cable's ongoing work in green manufacturing, supply-chain management, digital operations and intelligent manufacturing. They are presented according to the scope and ratings shown in the original documents.",
@@ -74,11 +74,11 @@ export const credentialGroups: CredentialGroup[] = [
     slug: "recognition",
     title: "Government and Innovation Recognition",
     shortTitle: "Technical and Regional Recognition",
-    eyebrow: "04 OFFICIAL RECOGNITIONS",
+    eyebrow: "4 official recognitions",
     summary:
-      "Selected official recognitions related to technical development, specialization and the company's role in the regional manufacturing sector.",
+      "Official recognitions providing context on technical capability, specialization and contribution to the regional manufacturing sector.",
     detailIntroduction:
-      "Selected official recognitions provide additional context on Huanyu Cable's technical development and role in the local manufacturing sector. These recognitions are not product certifications.",
+      "These official recognitions provide context on Huanyu Cable's technical development, specialization and contribution to the regional manufacturing sector. They are not product certifications.",
     highlights: ["High-Tech Enterprise", "Specialized SME", "Technology Center"],
     introduction:
       "Selected official recognitions provide additional context on Huanyu Cable's technical development and role in the local manufacturing sector. These recognitions are not product certifications and must not be presented as such.",
@@ -88,14 +88,14 @@ export const credentialGroups: CredentialGroup[] = [
     slug: "product-compliance",
     title: "Domestic Product Compliance",
     shortTitle: "Manufacturing Authorization and CCC",
-    eyebrow: "03 DOMESTIC DOCUMENTS",
+    eyebrow: "3 domestic compliance documents",
     summary:
-      "A current domestic manufacturing authorization and selected China Compulsory Certification documents for specifically listed building-wire models.",
+      "Current domestic manufacturing authorization and model-specific CCC documentation for selected building-wire products.",
     detailIntroduction:
-      "These documents relate to domestic manufacturing authorization and selected product models listed in the original certificates. They do not represent export-market certification for every Huanyu Cable product family.",
+      "These documents cover domestic manufacturing authorization and selected building-wire models listed in the original certificates. Export compliance and project-specific standards are confirmed separately during technical review.",
     highlights: ["Production License", "CCC", "Model-Specific Scope"],
     notice:
-      "The following China Compulsory Certification documents apply only to the product models and voltage ranges listed in the original certificates. They do not represent export-market certification for every Huanyu Cable product family.",
+      "CCC coverage is limited to the product models and voltage ranges stated in the original certificates.",
   },
 ];
 
@@ -108,9 +108,9 @@ export const credentials: Credential[] = [
     shortTitle: "ISO 9001",
     standard: "GB/T 19001-2016 / ISO 9001:2015",
     summary:
-      "A certified quality-management framework covering the production and sales of wire and cable within the stated certification scope.",
+      "Certified quality management system for the production and sales of wire and cable within the stated certification scope.",
     buyerRelevance:
-      "Supports defined process control, documentation and continual improvement across manufacturing operations.",
+      "Provides project buyers with clearer evidence of documented process control, consistent operating procedures and continual improvement.",
     issued: "29 May 2025",
     validThrough: "1 July 2028",
     imagePath: "/media/credentials/management/iso-9001-quality-management.webp",
@@ -126,9 +126,9 @@ export const credentials: Credential[] = [
     shortTitle: "ISO 14001",
     standard: "GB/T 24001-2016 / ISO 14001:2015",
     summary:
-      "A certified environmental-management framework covering the production and sales of wire and cable within the stated certification scope.",
+      "Certified environmental management system for the production and sales of wire and cable within the stated certification scope.",
     buyerRelevance:
-      "Supports structured identification, control and review of environmental aspects in manufacturing operations.",
+      "Demonstrates a structured approach to identifying, managing and reviewing environmental aspects in manufacturing operations.",
     issued: "29 May 2025",
     validThrough: "1 July 2028",
     imagePath: "/media/credentials/management/iso-14001-environmental-management.webp",
@@ -144,9 +144,9 @@ export const credentials: Credential[] = [
     shortTitle: "ISO 45001",
     standard: "GB/T 45001-2020 / ISO 45001:2018",
     summary:
-      "A certified occupational health and safety management framework covering the production and sales of wire and cable within the stated certification scope.",
+      "Certified occupational health and safety management system for the production and sales of wire and cable within the stated certification scope.",
     buyerRelevance:
-      "Supports systematic workplace-risk management and occupational health and safety controls.",
+      "Supports systematic workplace-risk control and more disciplined occupational health and safety management.",
     issued: "29 May 2025",
     validThrough: "1 July 2028",
     imagePath: "/media/credentials/management/iso-45001-occupational-health-safety.webp",
@@ -162,9 +162,9 @@ export const credentials: Credential[] = [
     shortTitle: "ISO 50001",
     standard: "GB/T 23331-2020 / ISO 50001:2018",
     summary:
-      "A certified energy-management system covering energy-management activities involved in the production and sales of wire and cable.",
+      "Certified energy management system covering energy-management activities involved in the production and sales of wire and cable.",
     buyerRelevance:
-      "Supports systematic monitoring and improvement of energy performance within the certified operating scope.",
+      "Shows a structured approach to monitoring energy use and improving energy performance within the certified operating scope.",
     issued: "16 June 2025",
     validThrough: "15 June 2028",
     imagePath: "/media/credentials/management/iso-50001-energy-management.webp",
@@ -182,9 +182,9 @@ export const credentials: Credential[] = [
     standard: "GB/T 36132-2018 and Q/GDZR 0006-2023",
     level: "AAAAA",
     summary:
-      "A third-party green-factory evaluation covering the production and sales of wire and cable within the licensed scope.",
+      "AAAAA-rated third-party green-factory evaluation covering wire and cable production and sales within the stated scope.",
     buyerRelevance:
-      "Reflects a structured approach to resource efficiency, environmental management and green-manufacturing practices.",
+      "Provides additional evidence of Huanyu Cable's ongoing work in resource efficiency, environmental management and greener manufacturing practices.",
     issued: "20 May 2025",
     validThrough: "19 May 2028",
     imagePath: "/media/credentials/green/green-factory-evaluation.webp",
@@ -201,9 +201,9 @@ export const credentials: Credential[] = [
     standard: "GB/T 33635-2017 and Q/GDZR 066-2023",
     level: "Five-Star",
     summary:
-      "A third-party certification covering green supply-chain management activities connected with the production and sales of wire and cable.",
+      "Five-star third-party certification covering green supply-chain management activities connected with wire and cable production and sales.",
     buyerRelevance:
-      "Extends environmental-management attention beyond factory operations to relevant procurement and supply-chain activities.",
+      "Shows that green-management considerations extend beyond factory operations to relevant procurement and supply-chain activities.",
     issued: "20 May 2025",
     validThrough: "19 May 2028",
     imagePath: "/media/credentials/green/green-supply-chain.webp",
@@ -219,9 +219,9 @@ export const credentials: Credential[] = [
     shortTitle: "Digital Green and Low-Carbon Management",
     standard: "Q/GDZR 01084-2023",
     summary:
-      "A third-party management-system certification covering digitalized green and low-carbon management activities involved in wire and cable production and sales.",
+      "Third-party certification covering digitalized green and low-carbon management activities involved in wire and cable production and sales.",
     buyerRelevance:
-      "Shows the integration of digital management tools with resource, energy and lower-carbon operating objectives.",
+      "Highlights the integration of digital management with resource efficiency, energy use and lower-carbon operating objectives.",
     issued: "20 May 2025",
     validThrough: "19 May 2028",
     imagePath: "/media/credentials/green/digital-green-low-carbon-management.webp",
@@ -238,9 +238,9 @@ export const credentials: Credential[] = [
     standard: "Q/GDZR 01100-2024 Digital Workshop Certification Technical Specification",
     level: "AAAAA",
     summary:
-      "A third-party certification evaluating digital-workshop development within the stated production and sales scope.",
+      "AAAAA-rated third-party evaluation of digital-workshop development within the stated production and sales scope.",
     buyerRelevance:
-      "Reflects continued development of digital production management and operational data application.",
+      "Provides context on the company's continued development of digital production management and operational data use.",
     issued: "20 May 2025",
     validThrough: "19 May 2028",
     imagePath: "/media/credentials/green/digital-leadership-enterprise.webp",
@@ -257,9 +257,9 @@ export const credentials: Credential[] = [
     standard: "Q/GDZR 01094-2024",
     level: "AAAA",
     summary:
-      "A third-party certification evaluating intelligent-manufacturing development within the stated production and sales scope.",
+      "AAAA-rated third-party evaluation of intelligent-manufacturing development within the stated production and sales scope.",
     buyerRelevance:
-      "Reflects ongoing investment in production equipment, process management and manufacturing digitalization.",
+      "Provides context on continued investment in production equipment, process control and manufacturing digitalization.",
     issued: "20 May 2025",
     validThrough: "19 May 2028",
     imagePath: "/media/credentials/green/intelligent-manufacturing-demonstration-factory.webp",
@@ -274,9 +274,9 @@ export const credentials: Credential[] = [
     title: "High and New Technology Enterprise",
     shortTitle: "High-Tech Enterprise",
     summary:
-      "A government-recognized High and New Technology Enterprise designation issued by the relevant Anhui provincial authorities.",
+      "Official High and New Technology Enterprise recognition issued by the relevant Anhui provincial authorities.",
     buyerRelevance:
-      "Provides context on the company's technical-development, innovation and enterprise-management capabilities.",
+      "Provides additional context on Huanyu Cable's technical development, innovation capability and enterprise management.",
     issued: "28 October 2025",
     validThrough: "Valid for three years",
     imagePath: "/media/credentials/recognition/high-and-new-technology-enterprise.webp",
@@ -290,9 +290,9 @@ export const credentials: Credential[] = [
     issuerType: "government recognition",
     title: "Specialized and Innovative SME of Anhui Province",
     shortTitle: "Specialized and Innovative SME",
-    summary: "An official provincial recognition of specialization, refined management and innovation capability.",
+    summary: "Official Anhui provincial recognition of specialization, refined management and innovation capability.",
     buyerRelevance:
-      "Highlights the company's focused manufacturing development and continued technical specialization.",
+      "Highlights the company's focused manufacturing development, technical specialization and continued improvement.",
     issued: "August 2023",
     imagePath: "/media/credentials/recognition/anhui-specialized-innovative-sme.webp",
     imageAlt: "Anhui Province specialized and innovative SME plaque awarded to Huanyu Cable",
@@ -305,9 +305,9 @@ export const credentials: Credential[] = [
     issuerType: "government recognition",
     title: "Hefei Municipal Enterprise Technology Center",
     shortTitle: "Enterprise Technology Center",
-    summary: "A municipal recognition of the company's enterprise technology-center capabilities.",
+    summary: "Official municipal recognition of Huanyu Cable's enterprise technology-center capabilities.",
     buyerRelevance:
-      "Provides evidence of structured technical development and organizational support for product and process improvement.",
+      "Shows that the company has established organizational support for technical development and process improvement.",
     issued: "June 2023",
     imagePath: "/media/credentials/recognition/hefei-enterprise-technology-center.webp",
     imageAlt: "Hefei Municipal Enterprise Technology Center plaque awarded to Huanyu Cable",
@@ -320,9 +320,9 @@ export const credentials: Credential[] = [
     issuerType: "government recognition",
     title: "2022 Top 10 Enterprise in High-Quality Industrial Development",
     shortTitle: "Top 10 Industrial Enterprise",
-    summary: "A Luyang District recognition for high-quality industrial development in 2022.",
+    summary: "Luyang District recognition for high-quality industrial development in 2022.",
     buyerRelevance:
-      "Provides regional context on the company's manufacturing contribution and industrial development.",
+      "Provides regional context on the company's industrial contribution and manufacturing development.",
     issued: "January 2023",
     imagePath: "/media/credentials/recognition/luyang-top-10-high-quality-development.webp",
     imageAlt: "Luyang District top 10 enterprise in high-quality industrial development plaque awarded to Huanyu Cable",
@@ -337,9 +337,9 @@ export const credentials: Credential[] = [
     shortTitle: "CCC Building Wire Certificate",
     standard: "JB/T 8734.2-2016",
     summary:
-      "Domestic compulsory product certification for the listed PVC-insulated sheathed wire models and voltage ranges shown in the original certificate.",
+      "China Compulsory Certification for the listed PVC-insulated sheathed wire models and voltage ranges shown in the original certificate.",
     buyerRelevance:
-      "Provides product-specific compliance evidence for the listed domestic building-wire models.",
+      "Provides model-specific domestic compliance evidence. Refer to the original certificate for the complete product scope.",
     issued: "15 May 2026",
     validThrough: "14 May 2031",
     imagePath: "/media/credentials/product/ccc-building-wire-1.webp",
@@ -358,9 +358,9 @@ export const credentials: Credential[] = [
     shortTitle: "CCC Single-Core Wire Certificate",
     standard: "GB/T 5023.3-2008 / IEC 60227-3:1997 and JB/T 8734.2-2016",
     summary:
-      "Domestic compulsory product certification for the listed single-core PVC-insulated wire models and voltage ranges shown in the original certificate.",
+      "China Compulsory Certification for the listed single-core PVC-insulated wire models and voltage ranges shown in the original certificate.",
     buyerRelevance:
-      "Provides product-specific compliance evidence for the listed domestic building-wire models.",
+      "Provides model-specific domestic compliance evidence. Refer to the original certificate for the complete product scope.",
     issued: "15 May 2026",
     validThrough: "14 May 2031",
     imagePath: "/media/credentials/product/ccc-building-wire-2.webp",
