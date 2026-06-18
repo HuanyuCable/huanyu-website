@@ -48,8 +48,8 @@ export default function AboutPage() {
     <>
       <section className="about-hero">
         <Image
-          src="/media/video/huanyu-factory-poster.webp"
-          alt="Huanyu Cable manufacturing base"
+          src="/media/about/factory-gate.webp"
+          alt="Huanyu Cable factory entrance and production building in Hefei, China"
           fill
           priority
           sizes="100vw"

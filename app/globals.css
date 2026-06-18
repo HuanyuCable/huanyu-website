@@ -159,12 +159,14 @@ p { margin: 0 0 22px; color: var(--muted); }
 .form-message.error { color: #a52f24; }
 .form-note { margin: 14px 0 0; font-size: 12px; }
 
-.page-hero { min-height: 530px; padding: 180px 0 90px; display: flex; align-items: flex-end; color: white; background: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.85)), url('/images/factory-poster.svg') center/cover; }
+.page-hero { min-height: 530px; padding: 180px 0 90px; display: flex; align-items: flex-end; color: white; background: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.68)), url('/media/about/factory-gate.webp') center/cover; }
 .page-hero h1 { max-width: 920px; font-size: clamp(44px, 6vw, 72px); }
 .page-hero p { max-width: 760px; color: rgba(255,255,255,.72); font-size: 20px; }
-.page-hero-products { background-image: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.82)), url('/images/product-lv.svg'); }
-.page-hero-quality { background-image: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.82)), url('/images/quality-lab.svg'); }
-.quality-hero { padding: 156px 0 72px; color: white; background: linear-gradient(120deg, rgba(4,20,33,.98), rgba(12,38,60,.94)); border-bottom: 1px solid rgba(255,255,255,.12); }
+.page-hero-products { background-image: linear-gradient(115deg, rgba(4,20,33,.92), rgba(8,58,87,.7)), url('/media/manufacturing/workshop-overview.webp'); background-position: center 58%; }
+.page-hero-applications { background-image: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.62)), url('/media/delivery/cable-drum-shipment.webp'); background-position: center 52%; }
+.page-hero-resources { background-image: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.7)), url('/media/about/factory-gate.webp'); background-position: center 54%; }
+.page-hero-contact { background-image: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.66)), url('/media/about/office-building.webp'); background-position: center 62%; }
+.quality-hero { padding: 156px 0 72px; color: white; background: linear-gradient(120deg, rgba(4,20,33,.92), rgba(12,38,60,.68)), url('/media/manufacturing/drawing-line-operation.webp') center 56%/cover; border-bottom: 1px solid rgba(255,255,255,.12); }
 .quality-hero h1 { max-width: 820px; font-size: clamp(40px, 4.6vw, 62px); line-height: 1.08; }
 .quality-hero p { max-width: 720px; color: rgba(255,255,255,.76); font-size: 18px; line-height: 1.62; }
 .product-detail-hero { padding: 165px 0 85px; color: white; background: linear-gradient(125deg, var(--navy), #124966); }
@@ -291,7 +293,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .responsible-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .responsible-summary div { min-height: 96px; padding: 22px; background: white; border: 1px solid var(--line); color: var(--navy); font-weight: 800; }
 .about-hero { position: relative; min-height: 540px; padding: 170px 0 80px; display: flex; align-items: flex-end; overflow: hidden; color: white; }
-.about-hero > img { object-fit: cover; }
+.about-hero > img { object-fit: cover; object-position: center 54%; }
 .about-hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(3,15,25,.91), rgba(3,15,25,.62) 48%, rgba(3,15,25,.22)); }
 .about-hero-content { position: relative; z-index: 1; }
 .about-hero h1 { max-width: 820px; font-size: clamp(44px, 5.4vw, 70px); }
