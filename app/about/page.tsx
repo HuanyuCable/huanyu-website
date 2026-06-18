@@ -37,10 +37,10 @@ const strengths = [
 ];
 
 const capabilityImages = [
-  ["/media/manufacturing/workshop-overview.webp", "Workshop overview", "Huanyu Cable workshop overview"],
-  ["/media/manufacturing/cabling-line.webp", "Cable processing equipment", "Cable processing equipment in the workshop"],
-  ["/media/manufacturing/copper-conductor-line.webp", "Copper conductor processing", "Copper conductor processing area"],
-  ["/media/manufacturing/drawing-line-operation.webp", "Production-line operation", "Production-line operation at Huanyu Cable"],
+  ["/images/site/supporting/factory-production-lines.webp", "Production line overview", "Cable manufacturing lines and copper reels in Huanyu Cable workshop"],
+  ["/images/site/supporting/factory-copper-aisle.webp", "Copper conductor area", "Copper conductors and production equipment inside Huanyu Cable workshop"],
+  ["/images/site/supporting/factory-conductor-process-detail.webp", "Conductor processing detail", "Copper conductor processing detail during cable manufacturing"],
+  ["/images/site/supporting/factory-cable-drum-lifting.webp", "Cable drum handling", "Large cable drum handled by overhead crane in Huanyu Cable workshop"],
 ];
 
 export default function AboutPage() {
@@ -48,8 +48,8 @@ export default function AboutPage() {
     <>
       <section className="about-hero">
         <Image
-          src="/media/video/huanyu-factory-poster.webp"
-          alt="Huanyu Cable manufacturing base"
+          src="/images/site/heroes/about-hero-factory-entrance.webp"
+          alt="Huanyu Cable factory entrance and production building in Hefei, China"
           fill
           priority
           sizes="100vw"
@@ -80,8 +80,8 @@ export default function AboutPage() {
             </p>
           </div>
           <Image
-            src="/media/about/office-building.webp"
-            alt="Huanyu Cable office building in Hefei"
+            src="/images/site/supporting/about-brand-wall-reception.webp"
+            alt="Huanyu Cable brand wall and office reception area"
             width={760}
             height={500}
             sizes="(max-width: 760px) 100vw, 45vw"
@@ -121,15 +121,15 @@ export default function AboutPage() {
           </div>
           <div className="about-image-pair">
             <Image
-              src="/media/about/factory-gate.webp"
-              alt="Huanyu Cable factory gate in Hefei"
+              src="/images/site/heroes/about-hero-factory-entrance.webp"
+              alt="Huanyu Cable factory entrance and production building in Hefei, China"
               width={720}
               height={480}
               sizes="(max-width: 760px) 100vw, 45vw"
             />
             <Image
-              src="/media/about/office-building.webp"
-              alt="Huanyu Cable office building"
+              src="/images/site/supporting/about-brand-wall-reception.webp"
+              alt="Huanyu Cable brand wall and office reception area"
               width={720}
               height={480}
               sizes="(max-width: 760px) 100vw, 45vw"
@@ -168,8 +168,8 @@ export default function AboutPage() {
         <div className="container split people-responsible">
           <div className="culture-image">
             <Image
-              src="/media/about/team-culture.webp"
-              alt="Huanyu Cable team culture activity"
+              src="/images/site/supporting/about-employee-canteen.webp"
+              alt="Employee dining area at Huanyu Cable factory"
               width={760}
               height={500}
               sizes="(max-width: 760px) 100vw, 45vw"

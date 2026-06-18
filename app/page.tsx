@@ -139,20 +139,20 @@ export default function HomePage() {
           <div className="evidence-grid">
             {[
               {
-                image: "/media/manufacturing/workshop-overview.webp",
-                alt: "Huanyu Cable production workshop",
+                image: "/images/site/supporting/home-workshop-overview.webp",
+                alt: "Overview of Huanyu Cable production workshop with multiple cable manufacturing lines",
                 title: "Production Workshop",
                 text: "Dedicated production areas support conductor processing, cabling, insulation and related cable-manufacturing stages.",
               },
               {
-                image: "/media/manufacturing/copper-conductor-line.webp",
-                alt: "Copper conductor processing line at Huanyu Cable",
+                image: "/images/site/supporting/factory-copper-aisle.webp",
+                alt: "Copper conductors and production equipment inside Huanyu Cable workshop",
                 title: "Conductor & Cable Processing",
                 text: "Production details are reviewed against the requested construction, applicable standard and project conditions.",
               },
               {
-                image: "/media/delivery/cable-drum-shipment.webp",
-                alt: "Cable drums prepared for shipment",
+                image: "/images/site/supporting/factory-cable-drum-lifting.webp",
+                alt: "Large cable drum handled by overhead crane in Huanyu Cable workshop",
                 title: "Order Preparation & Shipment",
                 text: "Cable drums, coils, identification and shipment arrangements are prepared according to confirmed order requirements.",
               },
@@ -169,7 +169,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="quality-preview-media">
-            <Image src="/media/manufacturing/drawing-line-operation.webp" alt="Production-line operation for cable manufacturing" width={720} height={480} sizes="(max-width: 760px) 100vw, 42vw" />
+            <Image src="/images/site/supporting/quality-control-panel.webp" alt="High-voltage and partial discharge testing control panel" width={720} height={480} sizes="(max-width: 760px) 100vw, 42vw" />
           </div>
         </div>
       </section>
