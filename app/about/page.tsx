@@ -80,8 +80,8 @@ export default function AboutPage() {
             </p>
           </div>
           <Image
-            src="/images/site/supporting/about-brand-wall-reception.webp"
-            alt="Huanyu Cable brand wall and office reception area"
+            src="/images/site/heroes/contact-hero-office-reception.webp"
+            alt="Huanyu Cable office and visitor reception area"
             width={760}
             height={500}
             sizes="(max-width: 760px) 100vw, 45vw"
@@ -166,10 +166,10 @@ export default function AboutPage() {
 
       <section className="section about-people-section" id="people-culture">
         <div className="container split people-responsible">
-          <div className="culture-image">
+          <div className="culture-image culture-image-wide">
             <Image
-              src="/images/site/supporting/about-employee-canteen.webp"
-              alt="Employee dining area at Huanyu Cable factory"
+              src="/images/site/heroes/resources-hero-employee-culture.webp"
+              alt="Huanyu Cable employees during the 2025 company welfare trip to Zhangjiajie"
               width={760}
               height={500}
               sizes="(max-width: 760px) 100vw, 45vw"
