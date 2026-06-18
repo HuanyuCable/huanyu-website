@@ -29,17 +29,7 @@ const nav = [
       { href: "/products", label: "View All Products" },
     ],
   },
-  {
-    href: "/applications",
-    label: "Applications",
-    items: [
-      { href: "/applications", label: "Power Distribution" },
-      { href: "/applications", label: "Industrial Facilities" },
-      { href: "/applications", label: "Commercial Buildings" },
-      { href: "/applications", label: "Infrastructure" },
-      { href: "/applications", label: "View All Applications" },
-    ],
-  },
+  { href: "/applications", label: "Applications" },
   {
     href: "/quality",
     label: "Quality",
