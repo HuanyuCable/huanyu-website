@@ -208,6 +208,10 @@ p { margin: 0 0 22px; color: var(--muted); }
 .xlpe-two-note-grid { grid-template-columns: 1fr 1fr; margin-top: 24px; }
 .xlpe-two-note-grid .xlpe-info-card { min-height: 0; }
 .xlpe-gallery-image img { object-fit: contain; padding: 10px; background: white; }
+.lszh-type-grid { grid-template-columns: repeat(3, 1fr); }
+.lszh-type-grid article { min-height: 280px; }
+.lszh-application-grid { grid-template-columns: repeat(5, 1fr); }
+.lszh-gallery-grid { grid-template-columns: repeat(5, 1fr); }
 .product-spec-layout { display: grid; grid-template-columns: 1fr 350px; gap: 70px; align-items: start; }
 .spec-main h2 { margin-top: 46px; font-size: 34px; }
 .spec-table { border-top: 1px solid var(--line); }
@@ -423,7 +427,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .split, .quote-grid, .contact-grid, .product-detail-grid, .quality-preview-grid { grid-template-columns: 1fr; gap: 42px; }
   .core-grid { grid-template-columns: 1fr 1fr; }
   .capability-band { grid-template-columns: 1fr; padding: 40px; }
-  .process-grid, .support-grid, .application-grid, .update-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid, .support-grid, .application-grid, .update-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid { grid-template-columns: 1fr 1fr; }
   .quality-dimension-grid { grid-template-columns: 1fr 1fr; }
   .about-image-pair { grid-template-columns: 1fr 1fr; }
   .about-image-pair img:first-child, .about-image-pair img:last-child { min-height: 300px; }
@@ -451,7 +455,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .video-control { right: 14px; bottom: 218px; }
   .section-heading, .cta-simple .container, .update-callout { align-items: start; flex-direction: column; }
   .intro-section, .quality-preview, .quote-section, .applications-section, .quality-dimensions-section, .process-evidence-section, .documents-section, .credentials-section, .about-position-section, .about-timeline-section, .about-manufacturing-section, .about-trademark-section, .about-workshop-section, .about-culture-section, .about-responsible-section, .about-company-section, .about-strengths-section, .about-capability-section, .about-people-section, .selected-credentials-section, .about-updates-section { padding: 58px 0; }
-  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid { grid-template-columns: 1fr; }
+  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid { grid-template-columns: 1fr; }
   .intro-grid { gap: 26px; padding: 0; border-top: 0; border-bottom: 0; }
   .section-heading { gap: 18px; margin-bottom: 26px; }
   .application-grid article { min-height: 190px; }
@@ -481,7 +485,14 @@ p { margin: 0 0 22px; color: var(--muted); }
   .xlpe-info-card, .xlpe-table-wrap { max-width: 100%; }
   .spec-table > div, .xlpe-spec-table > div { grid-template-columns: 1fr; gap: 5px; }
   .detail-list { grid-template-columns: 1fr; }
-  .xlpe-info-card, .xlpe-model-grid article { min-height: 0; padding: 24px; }
+  .xlpe-info-card, .xlpe-model-grid article, .lszh-type-grid article { min-height: 0; padding: 24px; }
+  .lszh-section-heading h2 { font-size: 27px; line-height: 1.15; letter-spacing: 0; overflow-wrap: anywhere; word-break: break-word; }
+  .lszh-model-table { min-width: 0; }
+  .lszh-model-table thead { display: none; }
+  .lszh-model-table, .lszh-model-table tbody, .lszh-model-table tr, .lszh-model-table td { display: block; width: 100%; }
+  .lszh-model-table tr { padding: 14px; border-bottom: 1px solid var(--line); }
+  .lszh-model-table td { padding: 5px 0; border-bottom: 0; }
+  .lszh-model-table td:first-child { color: var(--blue); font-size: 14px; }
   .xlpe-table th, .xlpe-table td { padding: 14px; }
   .timeline div { border-right: 0; border-bottom: 1px solid var(--line); }
   .footer-grid { grid-template-columns: 1fr; }

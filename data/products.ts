@@ -8,7 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
-  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -31,7 +31,7 @@ export const products: Product[] = [
     tagline: "Project-ready steel tape and steel wire armoured power cables.",
     description:
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
-    imagePath: "/media/products/categories/lv-armoured-power-cable.webp",
+    imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     detailImagePath: "/media/products/hero/lv-armoured-power-cable-hero.webp",
     imageAlt: "Illustrative product-family rendering of a low-voltage armoured power cable",
     fallbackImage: "/images/product-lv.svg",
@@ -68,23 +68,27 @@ export const products: Product[] = [
   },
   {
     slug: "lszh-fire-safe-cables",
-    name: "LSZH & Fire-safe Cables",
+    name: "LSZH & Fire-safe Power Cables",
     shortName: "LSZH & Fire-safe",
     category: "Core",
     priority: 3,
-    tagline: "Low-smoke, flame-retardant and fire-resistant solutions for critical buildings.",
+    tagline: "Low smoke zero halogen, flame retardant and fire resistant power cables for safer building, infrastructure and industrial power distribution.",
     description:
-      "Cable solutions for projects where smoke emission, halogen content, flame spread or circuit integrity are part of the design requirement.",
-    imagePath: "/media/products/categories/lszh-fire-safe-cable.webp",
-    detailImagePath: "/media/products/hero/lszh-fire-safe-cable-hero.webp",
-    imageAlt: "Illustrative product-family rendering of an LSZH and fire-safe cable",
+      "Low smoke zero halogen, flame retardant and fire resistant power cables for commercial buildings, public facilities, industrial distribution and emergency power circuits. Representative models include ZC-YJV, NH-YJV, NH-VV22, WDZ-YJY, WDZB-YJY, WDZN-YJY and WDZBN-YJY.",
+    metaTitle: "LSZH & Fire-safe Power Cables | HUANYU CABLE",
+    metaDescription:
+      "Low smoke zero halogen, flame retardant and fire resistant power cables for commercial buildings, public facilities, industrial distribution and emergency power circuits. Representative models include ZC-YJV, NH-YJV, NH-VV22, WDZ-YJY, WDZB-YJY, WDZN-YJY and WDZBN-YJY.",
+    detailVariant: "lszh-fire-safe",
+    imagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
+    detailImagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
+    imageAlt: "LSZH and fire-safe power cable product family",
     fallbackImage: "/images/product-fire.svg",
-    voltage: "Building wire and power cable voltage classes",
-    standards: ["IEC 60332 series", "IEC 60754 series", "IEC 61034 series", "IEC 60331 where applicable"],
-    construction: ["Copper conductor", "XLPE or fire-resistant insulation system", "LSZH sheath", "Optional armour"],
-    applications: ["Hospitals", "Rail and transit", "Data centres", "Public buildings", "Fire protection systems"],
-    featuredModels: ["WDZ-YJY", "WDZB series", "Flame-retardant power cable", "Fire-resistant cable", "Flexible fireproof cable"],
-    note: "Fire-performance claims are confirmed against the specified test standard and the corresponding product construction.",
+    voltage: "0.6/1 kV",
+    standards: ["Project-specified flame retardant, LSZH and fire resistant requirements", "Applicable cable construction standards"],
+    construction: ["Copper conductor", "PVC or XLPE insulation", "PVC or LSZH sheath", "Unarmoured or steel tape armoured options"],
+    applications: ["Commercial buildings", "Hospitals and public buildings", "Transport infrastructure", "Data centers", "Emergency power circuits"],
+    featuredModels: ["ZC-YJV", "NH-YJV", "NH-VV22", "WDZ-YJY", "WDZB-YJY", "WDZN-YJY", "WDZBN-YJY"],
+    note: "Safety-performance claims are confirmed against the specified test standard and the corresponding product construction.",
   },
   {
     slug: "yjv22-yjv23-low-voltage-armoured-power-cables",
@@ -142,7 +146,7 @@ export const products: Product[] = [
     priority: 4,
     tagline: "General distribution cables for trays, ducts and protected installations.",
     description: "A supporting range for complete project supply and standard low-voltage distribution requirements.",
-    imagePath: "/media/products/categories/lv-unarmoured-power-cable.webp",
+    imagePath: "/images/products/low-voltage-xlpe/xlpe-unarmoured-yjv-yjy-yjlv.png",
     detailImagePath: "/media/products/categories/lv-unarmoured-power-cable.webp",
     imageAlt: "Illustrative product-family rendering of a low-voltage unarmoured power cable",
     fallbackImage: "/images/product-support.svg",
