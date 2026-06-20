@@ -8,7 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
-  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -43,24 +43,28 @@ export const products: Product[] = [
     note: "Available constructions and technical data are confirmed against the applicable standard and project specification before quotation.",
   },
   {
-    slug: "medium-voltage-power-cables",
-    name: "Medium Voltage Power Cables",
-    shortName: "MV Power Cables",
+    slug: "medium-voltage-xlpe-power-cables",
+    name: "Medium Voltage XLPE Power Cables",
+    shortName: "MV XLPE Power Cables",
     category: "Core",
     priority: 2,
-    tagline: "XLPE insulated MV cables for utility and industrial distribution.",
+    tagline: "Screened XLPE insulated power cables with copper tape screen and optional armoured construction for distribution networks, substations and industrial projects.",
     description:
-      "A focused medium-voltage range built around Huanyu's practical order experience, with emphasis on three-core, large cross-section and armoured project cables.",
-    imagePath: "/media/products/categories/mv-power-cable.webp",
-    detailImagePath: "/media/products/hero/mv-power-cable-hero.webp",
-    imageAlt: "Illustrative product-family rendering of a medium-voltage power cable",
+      "Medium voltage XLPE insulated power cables with copper conductor, conductor screen, XLPE insulation, insulation screen, copper tape screen and PVC outer sheath for distribution networks, substations and industrial power systems.",
+    metaTitle: "Medium Voltage XLPE Power Cables up to 35 kV | HUANYU CABLE",
+    metaDescription:
+      "Medium voltage XLPE insulated power cables with copper conductor, conductor screen, XLPE insulation, insulation screen, copper tape screen and PVC outer sheath for distribution networks, substations and industrial power systems.",
+    detailVariant: "medium-voltage-xlpe",
+    imagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
+    detailImagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
+    imageAlt: "Medium voltage copper tape screened XLPE power cable",
     fallbackImage: "/images/product-mv.svg",
-    voltage: "Common focus: 8.7/15 kV; other voltage ratings are reviewed against the applicable specification.",
-    standards: ["IEC 60502-2", "Project specification", "Factory test requirements"],
-    construction: ["Copper conductor", "Conductor screen", "XLPE insulation", "Insulation screen", "Metallic screen", "Armoured or unarmoured sheath"],
-    applications: ["Substations", "Industrial power distribution", "Utilities", "Mining and infrastructure"],
-    featuredModels: ["8.7/15 kV three-core cable", "Armoured MV cable", "Unarmoured MV cable"],
-    note: "Voltage rating, conductor size, screen construction, armour and test requirements are confirmed before quotation.",
+    voltage: "6/10 kV to 26/35 kV subject to applicable project and standard requirements",
+    standards: ["IEC 60502-2", "GB/T 12706 series", "Project-specified standards"],
+    construction: ["Copper conductor", "Conductor screen", "XLPE insulation", "Insulation screen", "Copper tape screen", "PVC outer sheath", "Optional steel tape armour"],
+    applications: ["Distribution networks", "Substations", "Industrial plants", "Infrastructure projects"],
+    featuredModels: ["CU/XLPE/CTS/PVC", "CU/XLPE/CTS/STA/PVC", "8.7/15 kV 3 × 300 mm²"],
+    note: "Voltage grade, conductor size, screen construction, armour and test requirements are confirmed before quotation.",
   },
   {
     slug: "lszh-fire-safe-cables",

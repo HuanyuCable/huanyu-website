@@ -23,7 +23,7 @@ const nav = [
     label: "Products",
     items: [
       { href: "/products/low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
-      { href: "/products/medium-voltage-power-cables", label: "Medium Voltage Power Cables" },
+      { href: "/products/medium-voltage-xlpe-power-cables", label: "Medium Voltage XLPE Power Cables" },
       { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
       { href: "/products", label: "Complementary Ranges" },
       { href: "/products", label: "View All Products" },

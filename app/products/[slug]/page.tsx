@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/InquiryForm";
 import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
+import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProductPage";
 import { getProduct, products } from "@/data/products";
 
 export function generateStaticParams() {
@@ -32,6 +33,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (product.detailVariant === "low-voltage-xlpe-family") {
     return <LowVoltageXlpeFamilyProductPage />;
+  }
+
+  if (product.detailVariant === "medium-voltage-xlpe") {
+    return <MediumVoltageXlpeProductPage />;
   }
 
   const productSchema = {
