@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/InquiryForm";
+import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
 import { getProduct, products } from "@/data/products";
 
 export function generateStaticParams() {
@@ -14,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: product.name,
-    description: product.description,
+    title: product.metaTitle ?? product.name,
+    description: product.metaDescription ?? product.description,
     alternates: { canonical: `/products/${slug}` },
   };
 }
@@ -24,6 +25,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+
+  if (product.detailVariant === "yjv22-yjv23") {
+    return <Yjv22Yjv23ProductPage />;
+  }
+
+  if (product.detailVariant === "low-voltage-xlpe-family") {
+    return <LowVoltageXlpeFamilyProductPage />;
+  }
 
   const productSchema = {
     "@context": "https://schema.org",

@@ -178,6 +178,32 @@ p { margin: 0 0 22px; color: var(--muted); }
 .product-detail-image img { width: 100%; height: 100%; object-fit: cover; }
 .product-image-note { margin: 14px 0 0; color: rgba(255,255,255,.68); font-size: 13px; }
 .back-link { display: inline-block; margin-bottom: 25px; color: rgba(255,255,255,.7); }
+.xlpe-product-hero .product-detail-image img { object-fit: contain; background: white; }
+.xlpe-hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.xlpe-hero-badges span { padding: 9px 12px; border: 1px solid rgba(255,255,255,.24); background: rgba(255,255,255,.08); color: rgba(255,255,255,.86); font-size: 13px; font-weight: 800; }
+.xlpe-overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.xlpe-info-card { min-height: 280px; padding: 34px; border: 1px solid var(--line); background: white; box-shadow: 0 10px 30px rgba(7,24,40,.05); }
+.xlpe-info-card h2 { font-size: clamp(28px, 2.3vw, 38px); }
+.xlpe-table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); background: white; }
+.xlpe-table { width: 100%; min-width: 780px; border-collapse: collapse; background: white; }
+.xlpe-table th, .xlpe-table td { padding: 18px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.xlpe-table th { background: var(--navy); color: white; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+.xlpe-table td { color: var(--muted); }
+.xlpe-table td:first-child { color: var(--blue); font-weight: 900; }
+.xlpe-construction-grid, .xlpe-spec-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .86fr); gap: 54px; align-items: start; }
+.xlpe-image-stack { display: grid; gap: 18px; }
+.xlpe-image-stack img, .xlpe-feature-image img { width: 100%; aspect-ratio: 4/3; object-fit: contain; padding: 12px; border: 1px solid var(--line); background: white; box-shadow: 0 10px 30px rgba(7,24,40,.05); }
+.xlpe-feature-image { margin: 0; }
+.xlpe-spec-table > div { grid-template-columns: 210px 1fr; }
+.xlpe-application-cards article { background: white; }
+.xlpe-positioning { max-width: 900px; }
+.xlpe-positioning .lead strong { color: var(--blue); }
+.xlpe-model-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.xlpe-model-grid article { min-height: 250px; padding: 28px; border: 1px solid var(--line); background: white; box-shadow: 0 10px 30px rgba(7,24,40,.05); }
+.xlpe-model-grid article span { color: var(--orange-dark); font-size: 12px; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+.xlpe-model-grid article h3 { margin-top: 38px; color: var(--blue); font-size: 32px; }
+.xlpe-configuration-list { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.xlpe-configuration-list li { padding: 12px 14px; border-left: 3px solid var(--orange); background: var(--soft); color: var(--muted); }
 .product-spec-layout { display: grid; grid-template-columns: 1fr 350px; gap: 70px; align-items: start; }
 .spec-main h2 { margin-top: 46px; font-size: 34px; }
 .spec-table { border-top: 1px solid var(--line); }
@@ -393,7 +419,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .split, .quote-grid, .contact-grid, .product-detail-grid, .quality-preview-grid { grid-template-columns: 1fr; gap: 42px; }
   .core-grid { grid-template-columns: 1fr 1fr; }
   .capability-band { grid-template-columns: 1fr; padding: 40px; }
-  .process-grid, .support-grid, .application-grid, .update-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid, .support-grid, .application-grid, .update-grid, .xlpe-overview-grid, .xlpe-model-grid { grid-template-columns: 1fr 1fr; }
   .quality-dimension-grid { grid-template-columns: 1fr 1fr; }
   .about-image-pair { grid-template-columns: 1fr 1fr; }
   .about-image-pair img:first-child, .about-image-pair img:last-child { min-height: 300px; }
@@ -401,7 +427,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .selected-credentials-track { grid-auto-columns: calc((100% - 18px) / 2); }
   .process-evidence-images img { min-height: 220px; }
   .credential-detail-grid { grid-template-columns: 1fr; }
-  .product-spec-layout { grid-template-columns: 1fr; }
+  .product-spec-layout, .xlpe-construction-grid, .xlpe-spec-layout { grid-template-columns: 1fr; }
   .spec-aside { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -421,7 +447,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .video-control { right: 14px; bottom: 218px; }
   .section-heading, .cta-simple .container, .update-callout { align-items: start; flex-direction: column; }
   .intro-section, .quality-preview, .quote-section, .applications-section, .quality-dimensions-section, .process-evidence-section, .documents-section, .credentials-section, .about-position-section, .about-timeline-section, .about-manufacturing-section, .about-trademark-section, .about-workshop-section, .about-culture-section, .about-responsible-section, .about-company-section, .about-strengths-section, .about-capability-section, .about-people-section, .selected-credentials-section, .about-updates-section { padding: 58px 0; }
-  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid { grid-template-columns: 1fr; }
+  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid { grid-template-columns: 1fr; }
   .intro-grid { gap: 26px; padding: 0; border-top: 0; border-bottom: 0; }
   .section-heading { gap: 18px; margin-bottom: 26px; }
   .application-grid article { min-height: 190px; }
@@ -443,8 +469,10 @@ p { margin: 0 0 22px; color: var(--muted); }
   .credential-card-copy strong { min-height: 0; }
   .product-detail-hero { padding-top: 135px; }
   .product-detail-grid { gap: 35px; }
-  .spec-table > div { grid-template-columns: 1fr; gap: 5px; }
+  .spec-table > div, .xlpe-spec-table > div { grid-template-columns: 1fr; gap: 5px; }
   .detail-list { grid-template-columns: 1fr; }
+  .xlpe-info-card, .xlpe-model-grid article { min-height: 0; padding: 24px; }
+  .xlpe-table th, .xlpe-table td { padding: 14px; }
   .timeline div { border-right: 0; border-bottom: 1px solid var(--line); }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }

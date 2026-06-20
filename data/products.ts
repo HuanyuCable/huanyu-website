@@ -6,6 +6,9 @@ export type Product = {
   priority: 1 | 2 | 3 | 4;
   tagline: string;
   description: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -78,6 +81,54 @@ export const products: Product[] = [
     applications: ["Hospitals", "Rail and transit", "Data centres", "Public buildings", "Fire protection systems"],
     featuredModels: ["WDZ-YJY", "WDZB series", "Flame-retardant power cable", "Fire-resistant cable", "Flexible fireproof cable"],
     note: "Fire-performance claims are confirmed against the specified test standard and the corresponding product construction.",
+  },
+  {
+    slug: "yjv22-yjv23-low-voltage-armoured-power-cables",
+    name: "YJV22 / YJV23 Armoured Power Cables",
+    shortName: "YJV22 / YJV23 Armoured",
+    category: "Supporting",
+    priority: 4,
+    tagline: "Steel tape armoured XLPE power cables for fixed installation, underground routes and power distribution systems.",
+    description:
+      "YJV22 and YJV23 are 0.6/1 kV XLPE insulated steel tape armoured power cables for fixed installation and power distribution systems. YJV22 uses a PVC outer sheath, while YJV23 uses a PE outer sheath.",
+    metaTitle: "YJV22 / YJV23 Low Voltage Armoured Power Cables | HUANYU CABLE",
+    metaDescription:
+      "YJV22 and YJV23 are 0.6/1 kV XLPE insulated steel tape armoured power cables for fixed installation and power distribution systems. YJV22 uses a PVC outer sheath, while YJV23 uses a PE outer sheath.",
+    detailVariant: "yjv22-yjv23",
+    imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
+    detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
+    imageAlt: "YJV22 and YJV23 low-voltage steel tape armoured XLPE power cables",
+    fallbackImage: "/images/product-lv.svg",
+    voltage: "0.6/1 kV",
+    standards: ["GB/T 12706.1", "IEC 60502-1", "IEC 60228"],
+    construction: ["Copper conductor", "XLPE insulation", "Filler / bedding", "PVC inner sheath", "Steel tape armour", "PVC or PE outer sheath"],
+    applications: ["Power distribution", "Underground routes", "Cable trench installation", "Industrial infrastructure"],
+    featuredModels: ["YJV22", "YJV23"],
+    note: "YJV22 uses a PVC outer sheath, while YJV23 uses a PE outer sheath.",
+  },
+  {
+    slug: "low-voltage-xlpe-power-cables",
+    name: "Low Voltage XLPE Power Cables",
+    shortName: "LV XLPE Power Cables",
+    category: "Supporting",
+    priority: 4,
+    tagline: "Combined family of YJV, YJY, YJLV and YJLV22 low-voltage XLPE insulated power cables with copper or aluminium conductors.",
+    description:
+      "Combined product family page for low-voltage XLPE power cables including YJV, YJY, YJLV and YJLV22, covering copper and aluminium conductor options, PVC or PE sheath options, and unarmoured or steel tape armoured constructions.",
+    metaTitle: "Low Voltage XLPE Power Cables | YJV YJY YJLV YJLV22 | HUANYU CABLE",
+    metaDescription:
+      "Combined product family page for low-voltage XLPE power cables including YJV, YJY, YJLV and YJLV22, covering copper and aluminium conductor options, PVC or PE sheath options, and unarmoured or steel tape armoured constructions.",
+    detailVariant: "low-voltage-xlpe-family",
+    imagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
+    detailImagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
+    imageAlt: "YJV, YJY, YJLV and YJLV22 low-voltage XLPE power cable family",
+    fallbackImage: "/images/product-lv.svg",
+    voltage: "0.6/1 kV",
+    standards: ["GB/T 12706.1", "IEC 60502-1", "IEC 60228"],
+    construction: ["Copper or aluminium conductor", "XLPE insulation", "PVC or PE outer sheath", "Unarmoured or steel tape armoured structure"],
+    applications: ["Building distribution", "Industrial installation", "Cable trench and duct routes", "Protected underground installation"],
+    featuredModels: ["YJV", "YJY", "YJLV", "YJLV22"],
+    note: "The dedicated YJV22 / YJV23 copper armoured page remains separate for steel tape armoured copper constructions.",
   },
   {
     slug: "low-voltage-unarmoured-power-cables",
