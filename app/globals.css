@@ -64,6 +64,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .nav-item.dropdown-open .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
 .nav-dropdown a { display: block; padding: 10px 12px; color: rgba(255,255,255,.76); font-size: 13px; line-height: 1.3; }
 .nav-dropdown a:hover, .nav-dropdown a:focus-visible { color: white; background: rgba(255,255,255,.08); outline: 0; }
+.nav-dropdown-heading { display: block; padding: 12px 12px 6px; color: #ffad7c; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .menu-button { display: none; width: 42px; height: 42px; border: 0; background: transparent; }
 .menu-button span { display: block; height: 2px; background: white; margin: 6px; }
 
@@ -92,6 +93,26 @@ p { margin: 0 0 22px; color: var(--muted); }
 .product-grid { display: grid; gap: 24px; }
 .core-grid { grid-template-columns: repeat(3, 1fr); }
 .supporting-product-grid { grid-template-columns: repeat(2, 1fr); }
+.product-family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.product-category-grid { align-items: stretch; }
+.product-family-card { display: flex; flex-direction: column; background: white; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(7,24,40,.05); overflow: hidden; }
+.product-category-card { scroll-margin-top: 104px; }
+.product-family-image { position: relative; aspect-ratio: 4/3; background: #eef3f6; overflow: hidden; }
+.product-family-image img { width: 100%; height: 100%; object-fit: contain; padding: 12px; background: white; }
+.product-family-body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
+.product-family-body h3 { min-height: 60px; }
+.product-family-body p { min-height: 86px; }
+.product-family-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.product-family-tags span { margin: 0; }
+.model-link-list { display: grid; gap: 10px; margin: 0 0 22px; }
+.model-link-card { display: block; padding: 14px; border: 1px solid var(--line); background: var(--soft); }
+.model-link-card strong, .model-link-card em, .model-link-card span { display: block; }
+.model-link-card strong { color: var(--ink); font-size: 14px; line-height: 1.25; }
+.model-link-card em { margin-top: 6px; color: var(--blue); font-size: 12px; font-style: normal; font-weight: 800; }
+.model-link-card span { margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.45; }
+.model-link-card:hover, .model-link-card:focus-visible { border-color: var(--orange); outline: 0; }
+.model-link-card.no-link:hover { border-color: var(--line); }
+.product-family-body > .text-link { margin-top: auto; }
 .product-card { background: white; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(7,24,40,.05); overflow: hidden; transition: transform .25s, box-shadow .25s; }
 .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .product-image-wrap { position: relative; aspect-ratio: 4/3; background: #dbe3e9; overflow: hidden; }
@@ -290,6 +311,16 @@ p { margin: 0 0 22px; color: var(--muted); }
 .overhead-supporting-visual figcaption {
   padding: 16px 18px 18px;
 }
+.building-wire-hero-image { background: white; }
+.building-wire-hero-image img { object-fit: contain; }
+.building-wire-card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.building-wire-product-card { display: flex; flex-direction: column; gap: 22px; padding: 24px; background: white; border: 1px solid var(--line); }
+.building-wire-product-image { width: 100%; height: 250px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: white; border: 1px solid var(--line); }
+.building-wire-product-image img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+.compact-spec-table { border-top: 1px solid var(--line); }
+.compact-spec-table > div { grid-template-columns: 160px 1fr; }
+.building-wire-application-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+.building-wire-application-grid article { min-height: 180px; }
 .lszh-type-grid { grid-template-columns: repeat(3, 1fr); }
 .lszh-type-grid article { min-height: 280px; }
 .lszh-application-grid { grid-template-columns: repeat(5, 1fr); }
@@ -500,6 +531,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .nav-item > a::after { display: none; }
   .nav-dropdown { position: static; display: grid; gap: 0; min-width: 0; padding: 0 0 10px 12px; background: transparent; border: 0; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
   .nav-dropdown a { padding: 7px 0; color: rgba(255,255,255,.6); }
+  .nav-dropdown-heading { padding: 12px 0 5px; }
   .main-nav > .button { margin-top: 16px; width: 100%; }
   .menu-button { display: block; }
   .hero { min-height: 760px; height: auto; padding: 150px 0 180px; }
@@ -507,9 +539,9 @@ p { margin: 0 0 22px; color: var(--muted); }
   .hero-stats div { min-height: 90px; padding: 18px 24px; }
   .video-control { bottom: 205px; }
   .split, .quote-grid, .contact-grid, .product-detail-grid, .quality-preview-grid { grid-template-columns: 1fr; gap: 42px; }
-  .core-grid { grid-template-columns: 1fr 1fr; }
+  .core-grid, .product-family-grid { grid-template-columns: 1fr 1fr; }
   .capability-band { grid-template-columns: 1fr; padding: 40px; }
-  .process-grid, .support-grid, .application-grid, .update-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid, .support-grid, .application-grid, .update-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid, .building-wire-card-grid { grid-template-columns: 1fr 1fr; }
   .quality-dimension-grid { grid-template-columns: 1fr 1fr; }
   .about-image-pair { grid-template-columns: 1fr 1fr; }
   .about-image-pair img:first-child, .about-image-pair img:last-child { min-height: 300px; }
@@ -537,9 +569,12 @@ p { margin: 0 0 22px; color: var(--muted); }
   .video-control { right: 14px; bottom: 218px; }
   .section-heading, .cta-simple .container, .update-callout { align-items: start; flex-direction: column; }
   .intro-section, .quality-preview, .quote-section, .applications-section, .quality-dimensions-section, .process-evidence-section, .documents-section, .credentials-section, .about-position-section, .about-timeline-section, .about-manufacturing-section, .about-trademark-section, .about-workshop-section, .about-culture-section, .about-responsible-section, .about-company-section, .about-strengths-section, .about-capability-section, .about-people-section, .selected-credentials-section, .about-updates-section { padding: 58px 0; }
-  .core-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid { grid-template-columns: 1fr; }
+  .core-grid, .product-family-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid, .building-wire-card-grid, .building-wire-application-grid { grid-template-columns: 1fr; }
   .intro-grid { gap: 26px; padding: 0; border-top: 0; border-bottom: 0; }
   .section-heading { gap: 18px; margin-bottom: 26px; }
+  .product-family-body h3, .product-family-body p { min-height: 0; }
+  .product-family-body { padding: 22px; }
+  .building-wire-product-image { height: 230px; }
   .application-grid article { min-height: 190px; }
   .quality-preview-media { max-height: 320px; }
   .quality-hero { padding: 126px 0 58px; }

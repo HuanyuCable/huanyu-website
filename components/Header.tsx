@@ -5,7 +5,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const nav = [
+type NavDropdownItem =
+  | { kind: "group"; label: string }
+  | { href: string; label: string };
+
+type NavItem = {
+  href: string;
+  label: string;
+  items?: NavDropdownItem[];
+};
+
+const nav: NavItem[] = [
   { href: "/", label: "Home" },
   {
     href: "/about",
@@ -22,12 +32,11 @@ const nav = [
     href: "/products",
     label: "Products",
     items: [
-      { href: "/products/low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
-      { href: "/products/medium-voltage-xlpe-power-cables", label: "Medium Voltage XLPE Power Cables" },
+      { href: "/products#low-voltage-power-cables", label: "Low Voltage Power Cables" },
+      { href: "/products/medium-voltage-xlpe-power-cables", label: "Medium Voltage Power Cables" },
       { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Power Cables" },
-      { href: "/products/overhead-insulated-cables", label: "Overhead Insulated Cables" },
-      { href: "/products/acsr-bare-overhead-conductors", label: "ACSR Bare Overhead Conductors" },
-      { href: "/products", label: "Complementary Ranges" },
+      { href: "/products#overhead-line-products", label: "Overhead Line Products" },
+      { href: "/products/building-wires-flexible-cables", label: "Building Wires & Flexible Cables" },
       { href: "/products", label: "View All Products" },
     ],
   },
@@ -168,11 +177,17 @@ export function Header() {
                 </Link>
                 {item.items && (
                   <div className="nav-dropdown" id={dropdownId}>
-                    {item.items.map((child) => (
-                      <Link href={child.href} key={`${item.label}-${child.label}`} onClick={closeAllNavigation}>
-                        {child.label}
-                      </Link>
-                    ))}
+                    {item.items.map((child) =>
+                      "href" in child ? (
+                        <Link href={child.href} key={`${item.label}-${child.label}`} onClick={closeAllNavigation}>
+                          {child.label}
+                        </Link>
+                      ) : (
+                        <span className="nav-dropdown-heading" key={`${item.label}-${child.label}`}>
+                          {child.label}
+                        </span>
+                      ),
+                    )}
                   </div>
                 )}
               </div>

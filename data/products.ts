@@ -8,7 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
-  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -211,17 +211,21 @@ export const products: Product[] = [
     shortName: "Building Wires",
     category: "Supporting",
     priority: 4,
-    tagline: "Frequently ordered supporting wires for project packages.",
-    description: "Single-core building wires and flexible cables supplied as complementary items to power cable packages.",
-    imagePath: "/media/products/categories/building-wire.webp",
-    detailImagePath: "/media/products/categories/building-wire.webp",
-    imageAlt: "Illustrative product-family rendering of building wires and flexible conductors",
+    tagline: "BV and BVR copper conductor PVC insulated wires for building wiring and interior distribution.",
+    description: "PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected general-purpose installation applications.",
+    metaTitle: "Building Wires & Flexible Cables | BV BVR Copper PVC Wire | HUANYU CABLE",
+    metaDescription:
+      "BV and BVR copper conductor PVC insulated wires for residential wiring, lighting circuits, socket circuits, distribution boxes and flexible interior wiring routes.",
+    detailVariant: "building-wires-flexible-cables",
+    imagePath: "/images/products/building-wires-flexible/building-wires-bv-bvr-hero.png",
+    detailImagePath: "/images/products/building-wires-flexible/building-wires-bv-bvr-hero.png",
+    imageAlt: "BV and BVR copper PVC building wires with solid and stranded copper conductors",
     fallbackImage: "/images/product-support.svg",
-    voltage: "300/500 V and 450/750 V families",
-    standards: ["IEC 60227 family where applicable", "Customer specification"],
-    construction: ["Copper conductor", "PVC or LSZH insulation", "Solid, stranded or flexible conductor options"],
-    applications: ["Building wiring", "Panels", "Internal circuits", "Project accessories"],
-    featuredModels: ["BV", "BVR", "RV", "RVV", "LSZH building wire"],
+    voltage: "Common building wire voltage grades",
+    standards: ["Project-specified standards", "Applicable building wire requirements"],
+    construction: ["Copper conductor", "PVC insulation", "Solid or stranded conductor options"],
+    applications: ["Residential wiring", "Lighting circuits", "Socket connections", "Distribution board internal wiring"],
+    featuredModels: ["BV", "BVR", "RV", "RVV", "RVVB"],
     note: "Availability is confirmed according to the requested construction and project requirements.",
   },
   {
