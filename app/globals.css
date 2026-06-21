@@ -177,7 +177,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .product-detail-image { aspect-ratio: 4/3; background: white; padding: 12px; box-shadow: 0 30px 70px rgba(0,0,0,.28); }
 .product-detail-image img { width: 100%; height: 100%; object-fit: cover; }
 .product-image-note { margin: 14px 0 0; color: rgba(255,255,255,.68); font-size: 13px; }
-.back-link { display: inline-block; margin-bottom: 25px; color: rgba(255,255,255,.7); }
+.back-link { display: block; width: fit-content; margin-bottom: 25px; color: rgba(255,255,255,.7); }
 .xlpe-product-hero .product-detail-image img { object-fit: contain; background: white; }
 .xlpe-hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .xlpe-hero-badges span { padding: 9px 12px; border: 1px solid rgba(255,255,255,.24); background: rgba(255,255,255,.08); color: rgba(255,255,255,.86); font-size: 13px; font-weight: 800; }
@@ -191,6 +191,8 @@ p { margin: 0 0 22px; color: var(--muted); }
 .xlpe-table td { color: var(--muted); }
 .xlpe-table td:first-child { color: var(--blue); font-weight: 900; }
 .xlpe-construction-grid, .xlpe-spec-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .86fr); gap: 54px; align-items: start; }
+.xlpe-construction-grid .xlpe-table { min-width: 0; table-layout: fixed; }
+.xlpe-construction-grid .xlpe-table th, .xlpe-construction-grid .xlpe-table td { overflow-wrap: anywhere; }
 .xlpe-image-stack { display: grid; gap: 18px; }
 .xlpe-image-stack img, .xlpe-feature-image img { width: 100%; aspect-ratio: 4/3; object-fit: contain; padding: 12px; border: 1px solid var(--line); background: white; box-shadow: 0 10px 30px rgba(7,24,40,.05); }
 .xlpe-feature-image { margin: 0; }
@@ -208,6 +210,86 @@ p { margin: 0 0 22px; color: var(--muted); }
 .xlpe-two-note-grid { grid-template-columns: 1fr 1fr; margin-top: 24px; }
 .xlpe-two-note-grid .xlpe-info-card { min-height: 0; }
 .xlpe-gallery-image img { object-fit: contain; padding: 10px; background: white; }
+.product-card-overhead-acsr .product-image-wrap {
+  background: linear-gradient(135deg, #f7fafc 0%, #e7edf2 54%, #ffffff 100%);
+}
+.product-card-overhead-acsr .product-image-wrap img {
+  object-fit: contain;
+  padding: 12px;
+}
+.overhead-product-image,
+.overhead-card-image,
+.overhead-media-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(185, 199, 211, .95);
+  background:
+    linear-gradient(140deg, rgba(255,255,255,.96) 0%, rgba(238,243,247,.96) 52%, rgba(255,255,255,.98) 100%),
+    linear-gradient(45deg, rgba(12,95,145,.12), transparent 48%);
+}
+.overhead-product-image::before,
+.overhead-card-image::before,
+.overhead-media-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, transparent 0 42%, rgba(12,95,145,.08) 42% 48%, transparent 48%),
+    radial-gradient(circle at 78% 18%, rgba(232,111,44,.11), transparent 28%);
+  pointer-events: none;
+}
+.xlpe-product-hero .overhead-product-image img,
+.overhead-card-image img,
+.xlpe-image-stack.overhead-image-stack img,
+.overhead-feature-image img {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  filter: drop-shadow(0 14px 18px rgba(7,24,40,.12));
+}
+.overhead-media-frame {
+  display: grid;
+  align-items: stretch;
+  gap: 10px;
+  margin: 0;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(7,24,40,.05);
+}
+.xlpe-image-stack.overhead-image-stack img,
+.overhead-feature-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+.overhead-media-frame figcaption,
+.overhead-supporting-visual figcaption {
+  position: relative;
+  z-index: 1;
+  padding: 0 2px 2px;
+  color: #526171;
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+.overhead-feature-image {
+  align-self: start;
+}
+.overhead-compact-application-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.overhead-compact-application-grid article {
+  min-height: 210px;
+}
+.overhead-supporting-visual {
+  margin: 0;
+}
+.overhead-supporting-visual figcaption {
+  padding: 16px 18px 18px;
+}
 .lszh-type-grid { grid-template-columns: repeat(3, 1fr); }
 .lszh-type-grid article { min-height: 280px; }
 .lszh-application-grid { grid-template-columns: repeat(5, 1fr); }

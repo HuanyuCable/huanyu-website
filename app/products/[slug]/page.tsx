@@ -6,6 +6,7 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
 import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProductPage";
 import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
+import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
 import { getProduct, products } from "@/data/products";
 
 export function generateStaticParams() {
@@ -42,6 +43,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (product.detailVariant === "lszh-fire-safe") {
     return <LszhFireSafeProductPage />;
+  }
+
+  if (product.detailVariant === "overhead-insulated-cables") {
+    return <OverheadInsulatedCablesProductPage />;
+  }
+
+  if (product.detailVariant === "acsr-bare-overhead-conductors") {
+    return <AcsrBareOverheadConductorsProductPage />;
   }
 
   const productSchema = {

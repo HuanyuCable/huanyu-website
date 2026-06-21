@@ -3,8 +3,12 @@ import Link from "next/link";
 import type { Product } from "@/data/products";
 
 export function ProductCard({ product, numbered = false }: { product: Product; numbered?: boolean }) {
+  const isOverheadAcsr =
+    product.detailVariant === "overhead-insulated-cables" ||
+    product.detailVariant === "acsr-bare-overhead-conductors";
+
   return (
-    <article className="product-card">
+    <article className={`product-card${isOverheadAcsr ? " product-card-overhead-acsr" : ""}`}>
       <div className="product-image-wrap">
         <Image
           src={product.imagePath}

@@ -8,7 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
-  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -89,6 +89,54 @@ export const products: Product[] = [
     applications: ["Commercial buildings", "Hospitals and public buildings", "Transport infrastructure", "Data centers", "Emergency power circuits"],
     featuredModels: ["ZC-YJV", "NH-YJV", "NH-VV22", "WDZ-YJY", "WDZB-YJY", "WDZN-YJY", "WDZBN-YJY"],
     note: "Safety-performance claims are confirmed against the specified test standard and the corresponding product construction.",
+  },
+  {
+    slug: "overhead-insulated-cables",
+    name: "Overhead Insulated Cables",
+    shortName: "Overhead Insulated",
+    category: "Supporting",
+    priority: 4,
+    tagline: "JKYJ and JKLYJ XLPE insulated overhead cables for 1 kV and 10 kV urban and rural distribution lines.",
+    description:
+      "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for 1 kV and 10 kV overhead distribution lines.",
+    metaTitle: "Overhead Insulated Cables | JKYJ JKLYJ | HUANYU CABLE",
+    metaDescription:
+      "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for 1 kV and 10 kV overhead distribution lines.",
+    detailVariant: "overhead-insulated-cables",
+    imagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
+    detailImagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
+    imageAlt: "JKYJ and JKLYJ overhead insulated cable product family",
+    fallbackImage: "/images/product-support.svg",
+    voltage: "1 kV and 10 kV",
+    standards: ["Applicable GB/T standards", "Project-specified standards"],
+    construction: ["Copper conductor for JKYJ", "Aluminium conductor for JKLYJ", "XLPE insulation", "Single-core overhead construction"],
+    applications: ["Urban distribution lines", "Rural power networks", "Service connections", "Distribution network renovation"],
+    featuredModels: ["JKYJ", "JKLYJ"],
+    note: "ABC cable options can be discussed as related project requirements, while JKYJ and JKLYJ remain the primary promoted products on this page.",
+  },
+  {
+    slug: "acsr-bare-overhead-conductors",
+    name: "ACSR Bare Overhead Conductors",
+    shortName: "ACSR Conductors",
+    category: "Supporting",
+    priority: 4,
+    tagline: "LGJ / ACSR steel reinforced aluminium bare conductors for overhead transmission and distribution line projects.",
+    description:
+      "LGJ / ACSR aluminium conductor steel reinforced bare conductors for overhead transmission and distribution lines, using a steel core for mechanical strength and aluminium strands for electrical conductivity.",
+    metaTitle: "ACSR Bare Overhead Conductors | LGJ Steel Reinforced Aluminium Conductor | HUANYU CABLE",
+    metaDescription:
+      "LGJ / ACSR aluminium conductor steel reinforced bare conductors for overhead transmission and distribution lines, using a steel core for mechanical strength and aluminium strands for electrical conductivity.",
+    detailVariant: "acsr-bare-overhead-conductors",
+    imagePath: "/images/products/overhead-acsr/acsr-lgj-hero.png",
+    detailImagePath: "/images/products/overhead-acsr/acsr-lgj-hero.png",
+    imageAlt: "LGJ ACSR bare overhead conductor product view",
+    fallbackImage: "/images/product-support.svg",
+    voltage: "Project-specified overhead line conductor sizes",
+    standards: ["Applicable bare conductor standards", "Project-specified standards"],
+    construction: ["Steel core", "Aluminium strands", "Concentric stranded bare conductor"],
+    applications: ["Overhead transmission lines", "Distribution lines", "Long-span line sections", "Rural and grid projects"],
+    featuredModels: ["LGJ / ACSR"],
+    note: "AAC and AAAC can be discussed as related bare conductor options according to project requirements.",
   },
   {
     slug: "yjv22-yjv23-low-voltage-armoured-power-cables",
