@@ -143,6 +143,13 @@ p { margin: 0 0 22px; color: var(--muted); }
 .evidence-body p { margin-bottom: 0; }
 .home-factory-overview { margin: 0 0 28px; border: 1px solid var(--line); background: white; overflow: hidden; box-shadow: 0 10px 30px rgba(7,24,40,.05); }
 .home-factory-overview img { width: 100%; aspect-ratio: 16/7; object-fit: cover; object-position: center; }
+.home-section-heading > p { max-width: 570px; color: #526171; font-size: 18px; line-height: 1.7; }
+.home-product-grid .product-card-body p,
+.home-evidence-grid .evidence-body p { color: #526171; font-size: 16.5px; line-height: 1.65; }
+.home-application-grid p { color: rgba(255,255,255,.74); font-size: 16px; line-height: 1.65; }
+.home-capability-band h2 { font-size: clamp(34px, 2.7vw, 46px); }
+.home-capability-band .process-grid p { color: rgba(255,255,255,.74); font-size: 15.5px; line-height: 1.6; }
+.home-quality-preview .lead { color: #526171; font-size: 18.5px; line-height: 1.7; }
 
 .applications-section { background: var(--navy-2); color: white; }
 .light-heading h2 { color: white; }
@@ -585,6 +592,12 @@ p { margin: 0 0 22px; color: var(--muted); }
   .core-grid, .product-family-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid, .building-wire-card-grid, .building-wire-application-grid { grid-template-columns: 1fr; }
   .intro-grid { gap: 26px; padding: 0; border-top: 0; border-bottom: 0; }
   .section-heading { gap: 18px; margin-bottom: 26px; }
+  .home-section-heading > p { font-size: 16px; line-height: 1.65; }
+  .home-product-grid .product-card-body p,
+  .home-evidence-grid .evidence-body p,
+  .home-capability-band .process-grid p,
+  .home-application-grid p { font-size: 16px; line-height: 1.62; }
+  .home-quality-preview .lead { font-size: 16px; line-height: 1.68; }
   .product-family-body h3, .product-family-body p { min-height: 0; }
   .product-family-body { padding: 22px; }
   .building-wire-product-image { height: 230px; }

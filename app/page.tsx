@@ -35,72 +35,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section-muted">
-        <div className="container">
-          <div className="section-heading">
-            <div><span className="eyebrow">Focused Product Portfolio</span><h2>A focused power cable portfolio.</h2></div>
-            <p>Our product portfolio is organized around three core cable families, supported by selected complementary ranges for project supply.</p>
-          </div>
-          <div className="product-grid core-grid">
-            {coreProducts.map((product) => <ProductCard key={product.slug} product={product} numbered />)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container capability-band">
-          <div>
-            <span className="eyebrow light">From requirement to shipment</span>
-            <h2>A clearer path for engineering buyers</h2>
-          </div>
-          <div className="process-grid">
-            <div><span>01</span><h3>Review</h3><p>Voltage, standard, construction, quantity and destination.</p></div>
-            <div><span>02</span><h3>Confirm</h3><p>Technical deviations, testing, packaging and delivery terms.</p></div>
-            <div><span>03</span><h3>Produce</h3><p>Manufacturing and inspection against the agreed specification.</p></div>
-            <div><span>04</span><h3>Deliver</h3><p>Drum marking, documents, logistics and after-sales coordination.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section applications-section">
-        <div className="container">
-          <div className="section-heading light-heading">
-            <div><span className="eyebrow light">Applications</span><h2>Built around real project requirements.</h2></div>
-            <Link className="button button-ghost" href="/applications">View Applications</Link>
-          </div>
-          <div className="application-grid">
-            {[
-              ["Power Distribution", "Utility, substation and local distribution networks."],
-              ["Industrial Facilities", "Plants, mining, manufacturing and process infrastructure."],
-              ["Commercial Buildings", "Hospitals, data centres, public and high-occupancy buildings."],
-              ["Infrastructure", "Rail, airports, municipal and large construction projects."],
-            ].map(([title, text], index) => (
-              <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section quality-preview">
-        <div className="container quality-preview-grid">
-          <div>
-            <span className="eyebrow">Quality Control</span>
-            <h2>Quality control at every stage of production.</h2>
-            <p className="lead">Quality control covers incoming materials, in-process checks, routine testing and shipment documentation. Test and document requirements are confirmed according to the applicable product standard and project specification.</p>
-            <ul className="check-list">
-              <li>Incoming material inspection</li>
-              <li>In-process dimensional and electrical checks</li>
-              <li>Routine and project-specific testing</li>
-              <li>Traceable packing and shipment documentation</li>
-            </ul>
-            <Link className="text-link" href="/quality">Review quality structure <span>→</span></Link>
-          </div>
-        </div>
-      </section>
-
       <section className="section">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading home-section-heading">
             <div>
               <span className="eyebrow">Manufacturing & Delivery</span>
               <h2>Built in Hefei. Prepared for Project Supply.</h2>
@@ -116,7 +53,7 @@ export default function HomePage() {
               sizes="(max-width: 760px) 100vw, 1240px"
             />
           </div>
-          <div className="evidence-grid">
+          <div className="evidence-grid home-evidence-grid">
             {[
               {
                 image: "/images/site/supporting/home-workshop-overview.webp",
@@ -153,7 +90,70 @@ export default function HomePage() {
 
       <section className="section section-muted">
         <div className="container">
-          <div className="section-heading">
+          <div className="section-heading home-section-heading">
+            <div><span className="eyebrow">Focused Product Portfolio</span><h2>A focused power cable portfolio.</h2></div>
+            <p>Our product portfolio is organized around three core cable families, supported by selected complementary ranges for project supply.</p>
+          </div>
+          <div className="product-grid core-grid home-product-grid">
+            {coreProducts.map((product) => <ProductCard key={product.slug} product={product} numbered />)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section applications-section">
+        <div className="container">
+          <div className="section-heading light-heading home-section-heading">
+            <div><span className="eyebrow light">Applications</span><h2>Built around real project requirements.</h2></div>
+            <Link className="button button-ghost" href="/applications">View Applications</Link>
+          </div>
+          <div className="application-grid home-application-grid">
+            {[
+              ["Power Distribution", "Utility, substation and local distribution networks."],
+              ["Industrial Facilities", "Plants, mining, manufacturing and process infrastructure."],
+              ["Commercial Buildings", "Hospitals, data centres, public and high-occupancy buildings."],
+              ["Infrastructure", "Rail, airports, municipal and large construction projects."],
+            ].map(([title, text], index) => (
+              <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container capability-band home-capability-band">
+          <div>
+            <span className="eyebrow light">From requirement to shipment</span>
+            <h2>A clearer path for engineering buyers</h2>
+          </div>
+          <div className="process-grid">
+            <div><span>01</span><h3>Review</h3><p>Voltage, standard, construction, quantity and destination.</p></div>
+            <div><span>02</span><h3>Confirm</h3><p>Technical deviations, testing, packaging and delivery terms.</p></div>
+            <div><span>03</span><h3>Produce</h3><p>Manufacturing and inspection against the agreed specification.</p></div>
+            <div><span>04</span><h3>Deliver</h3><p>Drum marking, documents, logistics and after-sales coordination.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section quality-preview">
+        <div className="container quality-preview-grid home-quality-preview">
+          <div>
+            <span className="eyebrow">Quality Control</span>
+            <h2>Quality control at every stage of production.</h2>
+            <p className="lead">Quality control covers incoming materials, in-process checks, routine testing and shipment documentation. Test and document requirements are confirmed according to the applicable product standard and project specification.</p>
+            <ul className="check-list">
+              <li>Incoming material inspection</li>
+              <li>In-process dimensional and electrical checks</li>
+              <li>Routine and project-specific testing</li>
+              <li>Traceable packing and shipment documentation</li>
+            </ul>
+            <Link className="text-link" href="/quality">Review quality structure <span>→</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-muted">
+        <div className="container">
+          <div className="section-heading home-section-heading">
             <div><span className="eyebrow">Latest Company Updates</span><h2>Company development and quality responsibility.</h2></div>
             <Link className="text-link" href="/company-updates">View all updates <span>→</span></Link>
           </div>
