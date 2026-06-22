@@ -80,8 +80,8 @@ export default function AboutPage() {
             </p>
           </div>
           <Image
-            src="/images/site/heroes/contact-hero-office-reception.webp"
-            alt="Huanyu Cable office and visitor reception area"
+            src="/images/site/refinement/about-factory-gate.png"
+            alt="Huanyu Cable factory gate and company entrance in Hefei, China"
             width={760}
             height={500}
             sizes="(max-width: 760px) 100vw, 45vw"
@@ -121,8 +121,8 @@ export default function AboutPage() {
           </div>
           <div className="about-image-pair">
             <Image
-              src="/images/site/heroes/about-hero-factory-entrance.webp"
-              alt="Huanyu Cable factory entrance and production building in Hefei, China"
+              src="/images/site/heroes/contact-hero-office-reception.webp"
+              alt="Huanyu Cable office and visitor reception area"
               width={720}
               height={480}
               sizes="(max-width: 760px) 100vw, 45vw"

@@ -6,7 +6,7 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { CompanyUpdateCard } from "@/components/CompanyUpdateCard";
 import { ProductCard } from "@/components/ProductCard";
 import { companyUpdates } from "@/data/companyUpdates";
-import { coreProducts, supportingProducts } from "@/data/products";
+import { coreProducts } from "@/data/products";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -35,19 +35,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section intro-section">
-        <div className="container split intro-grid">
-          <div>
-            <span className="eyebrow">A focused cable partner</span>
-            <h2>Built around the cable projects we know best.</h2>
-          </div>
-          <div>
-            <p className="lead">Huanyu&apos;s export offering is built around practical manufacturing and order experience. Our priority is to help buyers identify a suitable construction, confirm technical requirements and obtain a practical quotation.</p>
-            <Link className="text-link" href="/about">About Huanyu <span>→</span></Link>
-          </div>
-        </div>
-      </section>
-
       <section className="section section-muted">
         <div className="container">
           <div className="section-heading">
@@ -71,22 +58,6 @@ export default function HomePage() {
             <div><span>02</span><h3>Confirm</h3><p>Technical deviations, testing, packaging and delivery terms.</p></div>
             <div><span>03</span><h3>Produce</h3><p>Manufacturing and inspection against the agreed specification.</p></div>
             <div><span>04</span><h3>Deliver</h3><p>Drum marking, documents, logistics and after-sales coordination.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-muted">
-        <div className="container">
-          <div className="section-heading">
-            <div><span className="eyebrow">Complete project supply</span><h2>Supporting Products for Broader Project Supply</h2></div>
-            <p>These selected ranges support broader project packages and consolidated supply requirements.</p>
-          </div>
-          <div className="support-grid">
-            {supportingProducts.map((product) => (
-              <Link key={product.slug} href={`/products/${product.slug}`} className="support-card">
-                <span>{product.shortName}</span><strong>→</strong>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
@@ -136,6 +107,15 @@ export default function HomePage() {
             </div>
             <p>Huanyu Cable combines in-house cable manufacturing with practical order preparation and shipment coordination. Construction, standards, packaging and delivery requirements are reviewed before quotation.</p>
           </div>
+          <div className="home-factory-overview">
+            <Image
+              src="/images/site/refinement/home-aerial-factory-overview.png"
+              alt="Aerial overview of Huanyu Cable manufacturing base in Hefei"
+              width={1440}
+              height={810}
+              sizes="(max-width: 760px) 100vw, 1240px"
+            />
+          </div>
           <div className="evidence-grid">
             {[
               {
@@ -167,9 +147,6 @@ export default function HomePage() {
                 </div>
               </article>
             ))}
-          </div>
-          <div className="quality-preview-media">
-            <Image src="/images/site/supporting/quality-control-panel.webp" alt="High-voltage and partial discharge testing control panel" width={720} height={480} sizes="(max-width: 760px) 100vw, 42vw" />
           </div>
         </div>
       </section>
