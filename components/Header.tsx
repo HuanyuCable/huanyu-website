@@ -17,17 +17,7 @@ type NavItem = {
 
 const nav: NavItem[] = [
   { href: "/", label: "Home" },
-  {
-    href: "/about",
-    label: "About Us",
-    items: [
-      { href: "/about#company-overview", label: "Company Overview" },
-      { href: "/about#manufacturing-base", label: "Manufacturing Base" },
-      { href: "/about#people-culture", label: "People & Culture" },
-      { href: "/about#responsible-manufacturing", label: "Responsible Manufacturing" },
-      { href: "/about", label: "View About Huanyu" },
-    ],
-  },
+  { href: "/about", label: "About Us" },
   {
     href: "/products",
     label: "Products",

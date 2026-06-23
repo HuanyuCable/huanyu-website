@@ -12,25 +12,25 @@ const applications = [
     title: "Power Distribution",
     products: "LV armoured and MV power cables",
     text: "Distribution feeders, substations and local power networks where construction and test requirements are clearly specified.",
-    image: "/images/site/refinement/applications-power-distribution-bg.png",
+    image: "/images/site/applications/power-distribution-bg.png",
   },
   {
     title: "Industrial Facilities",
     products: "Armoured, MV, control and fire-safe cables",
     text: "Manufacturing, mining, process plants and utility systems requiring mechanical protection and coordinated project supply.",
-    image: "/images/site/refinement/applications-industrial-facilities-bg.png",
+    image: "/images/site/applications/industrial-facilities-bg.png",
   },
   {
     title: "Commercial & Public Buildings",
     products: "LSZH, flame-retardant and fire-resistant cables",
     text: "Hospitals, data centres, transport hubs and high-occupancy buildings where fire performance is part of the design basis.",
-    image: "/images/site/refinement/applications-commercial-public-buildings-bg.png",
+    image: "/images/site/applications/commercial-public-buildings-bg.png",
   },
   {
     title: "Infrastructure Projects",
     products: "Project-specific power cable packages",
     text: "Rail, airport, municipal and construction projects requiring technical review, documents and shipment coordination.",
-    image: "/images/site/refinement/applications-infrastructure-projects-bg.png",
+    image: "/images/site/applications/infrastructure-projects-bg.png",
   },
 ];
 
