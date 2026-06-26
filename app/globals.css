@@ -671,3 +671,9 @@ p { margin: 0 0 22px; color: var(--muted); }
   content: none !important;
   display: none !important;
 }
+
+.page-hero.page-hero-company-updates::before,
+.page-hero.page-hero-company-updates::after {
+  content: none !important;
+  display: none !important;
+}
