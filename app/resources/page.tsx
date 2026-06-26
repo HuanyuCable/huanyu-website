@@ -12,6 +12,7 @@ export default function ResourcesPage() {
   return (
     <>
       <section className="page-hero page-hero-resources">
+        <div className="resources-hero-bg" aria-hidden="true" />
         <div className="container">
           <span className="eyebrow light">Resources</span>
           <h1>Technical Resources</h1>

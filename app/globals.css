@@ -662,8 +662,31 @@ p { margin: 0 0 22px; color: var(--muted); }
 }
 
 .page-hero.page-hero-resources {
-  background-image:
+  position: relative;
+  overflow: hidden;
+  background: #041421;
+  isolation: isolate;
+}
+
+.page-hero.page-hero-resources::before,
+.page-hero.page-hero-resources::after {
+  content: none !important;
+  display: none !important;
+}
+
+.resources-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
     linear-gradient(115deg, rgba(4, 20, 33, 0.9), rgba(8, 58, 87, 0.66)),
     url("/images/site/heroes/resources-hero-manufacturing-development-v2.webp");
   background-position: center 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-hero.page-hero-resources > :not(.resources-hero-bg) {
+  position: relative;
+  z-index: 1;
 }
