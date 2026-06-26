@@ -170,7 +170,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .quality-image, .quality-grid > div:first-child { background: var(--soft); }
 .check-list { list-style: none; padding: 0; margin: 25px 0 32px; }
 .check-list li { position: relative; padding: 9px 0 9px 30px; border-bottom: 1px solid var(--line); }
-.check-list li::before { content: "âœ“"; position: absolute; left: 0; color: var(--orange); font-weight: 900; }
+.check-list li::before { content: "âœ?; position: absolute; left: 0; color: var(--orange); font-weight: 900; }
 .quote-section { padding: 78px 0; background: linear-gradient(135deg, var(--navy), #103c58); color: white; }
 .quote-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 54px; align-items: start; }
 .quote-grid h2 { color: white; }
@@ -194,7 +194,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .page-hero p { max-width: 760px; color: rgba(255,255,255,.72); font-size: 20px; }
 .page-hero-products { background-image: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.66)), url('/images/site/heroes/products-hero-copper-production.webp'); background-position: center 55%; }
 .page-hero-applications { background-image: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.82)), url('/images/site/heroes/applications-hero-global-energy-bg.webp'); background-position: center 50%; }
-.page-hero-resources { background-image: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.66)), url('/images/site/heroes/resources-hero-manufacturing-development-bg.webp'); background-position: center 50%; }
+.page-hero-resources { background-image: linear-gradient(115deg, rgba(4,20,33,.9), rgba(8,58,87,.66)), url('/images/site/heroes/resources-hero-manufacturing-development-v2.webp'); background-position: center 50%; }
 .page-hero-contact { background-image: linear-gradient(115deg, rgba(4,20,33,.88), rgba(8,58,87,.62)), url('/images/site/heroes/contact-hero-project-cooperation-bg.webp'); background-position: center 54%; }
 .page-hero-quality { background-image: linear-gradient(115deg, rgba(4,20,33,.96), rgba(8,58,87,.82)), url('/images/quality-lab.svg'); }
 .quality-hero { padding: 156px 0 72px; color: white; background: linear-gradient(120deg, rgba(4,20,33,.88), rgba(12,38,60,.64)), url('/images/site/heroes/quality-hero-cable-testing-bg.webp') center 46%/cover; border-bottom: 1px solid rgba(255,255,255,.12); }
