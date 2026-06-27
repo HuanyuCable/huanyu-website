@@ -35,6 +35,8 @@ export function Footer() {
           <Link href="/about">About Huanyu</Link>
           <Link href="/applications">Applications</Link>
           <Link href="/quality">Quality & Testing</Link>
+          <Link href="/resources">Resources</Link>
+          <Link href="/company-updates">Company Updates</Link>
           <span>Luyang Industrial Park, Luyang District</span>
           <span>Hefei, Anhui, China</span>
         </div>

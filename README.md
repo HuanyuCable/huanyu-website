@@ -1,6 +1,6 @@
 # Huanyu Cable Website Package
 
-Deployable English B2B website starter for **Hefei Huanyu Cable Co., Ltd.**
+Deployable English B2B website starter for **Hefei Huanyu Wire & Cable Co., Ltd.**
 
 ## Strategy embodied in this package
 
@@ -15,7 +15,7 @@ Deployable English B2B website starter for **Hefei Huanyu Cable Co., Ltd.**
 
 ## Technology
 
-- Next.js 16 App Router
+- Next.js 15 App Router
 - TypeScript
 - Plain responsive CSS (no UI framework dependency)
 - Vercel deployment

@@ -39,9 +39,12 @@ const nav: NavItem[] = [
     ],
   },
   {
-    href: "/company-updates",
+    href: "/resources",
     label: "Resources",
-    items: [{ href: "/company-updates", label: "News & Updates" }],
+    items: [
+      { href: "/resources", label: "Technical Resources" },
+      { href: "/company-updates", label: "News & Updates" },
+    ],
   },
   { href: "/contact", label: "Contact" },
 ];

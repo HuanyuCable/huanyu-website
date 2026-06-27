@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { site } from "@/lib/site";
 
 export const runtime = "nodejs";
 
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
     const to = process.env.INQUIRY_TO_EMAIL;
     const from = process.env.INQUIRY_FROM_EMAIL;
     if (!apiKey || !to || !from) {
-      return NextResponse.json({ error: "The inquiry email service has not been configured. Please email sales@huanyucable.com directly." }, { status: 503 });
+      return NextResponse.json({ error: `The inquiry email service has not been configured. Please email ${site.email} directly.` }, { status: 503 });
     }
 
     const resend = new Resend(apiKey);
@@ -59,6 +60,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Inquiry submission error", error);
-    return NextResponse.json({ error: "Unable to send the inquiry. Please email sales@huanyucable.com directly." }, { status: 500 });
+    return NextResponse.json({ error: `Unable to send the inquiry. Please email ${site.email} directly.` }, { status: 500 });
   }
 }

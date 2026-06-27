@@ -23,7 +23,7 @@ export default function QualityPage() {
             <p className="lead">Quality control is supported by defined production stages, operating checks and review of the requested construction and standard before release. Project-specific inspection and documentation requirements are confirmed during technical review.</p>
           </div>
           <div className="process-evidence-images">
-            <Image src="/images/site/supporting/quality-control-panel.webp" alt="High-voltage and partial discharge testing control panel" width={720} height={480} sizes="(max-width: 760px) 100vw, 45vw" />
+            <Image src="/images/site/supporting/quality-control-panel.webp" alt="Electrical and partial discharge testing control panel" width={720} height={480} sizes="(max-width: 760px) 100vw, 45vw" />
             <Image src="/images/site/supporting/quality-high-voltage-test.webp" alt="Electrical testing equipment used for cable quality inspection" width={720} height={480} sizes="(max-width: 760px) 100vw, 45vw" />
           </div>
         </div>

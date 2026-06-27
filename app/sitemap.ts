@@ -4,7 +4,7 @@ import { products } from "@/data/products";
 import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = ["", "/products", "/applications", "/quality", "/about", "/company-updates", "/contact"];
+  const pages = ["", "/products", "/applications", "/quality", "/about", "/resources", "/company-updates", "/contact"];
   return [
     ...pages.map((path) => ({ url: `${site.url}${path}`, changeFrequency: path === "" ? "weekly" as const : "monthly" as const, priority: path === "" ? 1 : 0.7 })),
     ...products.map((product) => ({ url: `${site.url}/products/${product.slug}`, changeFrequency: "monthly" as const, priority: product.category === "Core" ? 0.9 : 0.6 })),

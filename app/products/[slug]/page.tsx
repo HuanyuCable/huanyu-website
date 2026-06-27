@@ -9,6 +9,7 @@ import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
 import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
 import { BuildingWiresFlexibleCablesPage } from "@/components/BuildingWiresFlexibleCablesPage";
 import { getProduct, products } from "@/data/products";
+import { site } from "@/lib/site";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -76,7 +77,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <span className="eyebrow light">{product.category} product family</span>
             <h1>{product.name}</h1>
             <p>{product.description}</p>
-            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><a className="button button-ghost" href="mailto:sales@huanyucable.com">Email Specification</a></div>
+            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><a className="button button-ghost" href={`mailto:${site.email}`}>Email Specification</a></div>
           </div>
           <div>
             <div className="product-detail-image">

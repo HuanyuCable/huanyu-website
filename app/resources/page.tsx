@@ -3,8 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Technical Resources",
-  description: "Our technical resource library is being prepared.",
-  robots: { index: false, follow: true },
+  description: "Request current Huanyu Cable product datasheets, specification review and company catalogue materials.",
   alternates: { canonical: "/resources" },
 };
 
