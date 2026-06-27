@@ -6,6 +6,16 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["resend"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "huanyucable.com" }],
+        destination: "https://www.huanyucable.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
