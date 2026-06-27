@@ -1,17 +1,34 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
-export const metadata: Metadata = { title: "Technical Resources", description: "Technical guides, catalogues and project resources from Huanyu Cable." };
+export const metadata: Metadata = {
+  title: "Technical Resources",
+  description: "Request current Huanyu Cable product datasheets, specification review and company catalogue materials.",
+  alternates: { canonical: "/resources" },
+};
 
 export default function ResourcesPage() {
   return (
     <>
-      <section className="page-hero"><div className="container"><span className="eyebrow light">Resources</span><h1>Build a useful technical library, not an AI article warehouse.</h1><p>Each resource should answer a buyer's real selection, specification, testing or installation question.</p></div></section>
-      <section className="section"><div className="container resource-grid">
-        <article><span className="resource-type">Guide</span><h2>How to Specify a Low Voltage Armoured Cable</h2><p>Planned content: conductor, insulation, armour, sheath, standard, installation and quotation checklist.</p></article>
-        <article><span className="resource-type">Guide</span><h2>8.7/15 kV Three-core Cable Selection Checklist</h2><p>Planned content: conductor size, screen, armour, sheath, test and drum requirements.</p></article>
-        <article><span className="resource-type">Comparison</span><h2>LSZH, Flame-retardant and Fire-resistant Cable</h2><p>Planned content: definitions, test standards, construction differences and appropriate claims.</p></article>
-        <article><span className="resource-type">Download</span><h2>Huanyu Cable Product Catalogue</h2><p>Upload the verified PDF to R2 and replace this placeholder with a direct download.</p></article>
-      </div></section>
+      <section
+        className="page-hero page-hero-resources"
+        style={{
+          backgroundImage:
+            'linear-gradient(115deg, rgba(4, 20, 33, 0.9), rgba(8, 58, 87, 0.66)), url("/images/site/heroes/resources-hero-manufacturing-development-v2.webp")',
+          backgroundPosition: "center 50%",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="container">
+          <span className="eyebrow light">Resources</span>
+          <h1>Technical Resources</h1>
+          <p>Our technical resource library is being prepared. For a current product datasheet, specification review or company catalogue, please send your requirements to our team.</p>
+          <div className="hero-actions">
+            <Link className="button" href="/contact">Request Technical Information</Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

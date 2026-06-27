@@ -1,12 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
-import { mediaUrl } from "@/lib/media";
 
 export function ProductCard({ product, numbered = false }: { product: Product; numbered?: boolean }) {
+  const isOverheadAcsr =
+    product.detailVariant === "overhead-insulated-cables" ||
+    product.detailVariant === "acsr-bare-overhead-conductors";
+
   return (
-    <article className="product-card">
+    <article className={`product-card${isOverheadAcsr ? " product-card-overhead-acsr" : ""}`}>
       <div className="product-image-wrap">
-        <img src={mediaUrl(product.imagePath, product.fallbackImage)} alt={product.name} loading="lazy" />
+        <Image
+          src={product.imagePath}
+          alt={product.imageAlt}
+          width={640}
+          height={480}
+          sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
+        />
         {numbered && <span className="priority-badge">0{product.priority}</span>}
       </div>
       <div className="product-card-body">

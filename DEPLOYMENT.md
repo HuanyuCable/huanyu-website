@@ -13,7 +13,7 @@
 - `www.huanyucable.com` → Vercel production website
 - `huanyucable.com` → redirect to `www.huanyucable.com`
 - `assets.huanyucable.com` → Cloudflare R2 public custom domain
-- `sales@huanyucable.com` → existing or chosen email provider
+- `ziheng@huanyucable.com` → existing or chosen email provider
 
 ## 3. DNS sequence
 
@@ -77,8 +77,8 @@ Required for production inquiry delivery:
 NEXT_PUBLIC_SITE_URL=https://www.huanyucable.com
 NEXT_PUBLIC_R2_BASE_URL=https://assets.huanyucable.com
 RESEND_API_KEY=<secret>
-INQUIRY_TO_EMAIL=sales@huanyucable.com
-INQUIRY_FROM_EMAIL=Huanyu Cable Website <website@huanyucable.com>
+INQUIRY_TO_EMAIL=ziheng@huanyucable.com
+INQUIRY_FROM_EMAIL=Huanyu Cable <inquiry@huanyucable.com>
 ```
 
 The sending domain must be verified in Resend by adding the requested DNS records in Cloudflare.

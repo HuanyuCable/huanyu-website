@@ -59,10 +59,12 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
           Product Required
           <select name="product" defaultValue="">
             <option value="">Select a product family</option>
-            <option>Low Voltage Armoured Power Cables</option>
+            <option>Low Voltage Power Cables</option>
             <option>Medium Voltage Power Cables</option>
-            <option>LSZH & Fire-safe Cables</option>
-            <option>Supporting cable products</option>
+            <option>LSZH & Fire-safe Power Cables</option>
+            <option>Overhead Line Products</option>
+            <option>Building Wires & Flexible Cables</option>
+            <option>Other / Project-dependent cable products</option>
           </select>
         </label>
       </div>
@@ -78,7 +80,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
         {status === "sending" ? "Sending…" : "Send Project Requirements"}
       </button>
       {message && <p className={`form-message ${status}`}>{message}</p>}
-      <p className="form-note">For detailed quotations, attach the BOQ or specification by replying to the confirmation email.</p>
+      <p className="form-note">For detailed quotations, please email your BOQ or specification to ziheng@huanyucable.com after submitting the form.</p>
     </form>
   );
 }

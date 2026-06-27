@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/InquiryForm";
+import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
+import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProductPage";
+import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
+import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
+import { BuildingWiresFlexibleCablesPage } from "@/components/BuildingWiresFlexibleCablesPage";
 import { getProduct, products } from "@/data/products";
-import { mediaUrl } from "@/lib/media";
+import { site } from "@/lib/site";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -13,13 +19,45 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) return {};
-  return { title: product.name, description: product.description };
+  return {
+    title: product.metaTitle ?? product.name,
+    description: product.metaDescription ?? product.description,
+    alternates: { canonical: `/products/${slug}` },
+  };
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+
+  if (product.detailVariant === "yjv22-yjv23") {
+    return <Yjv22Yjv23ProductPage />;
+  }
+
+  if (product.detailVariant === "low-voltage-xlpe-family") {
+    return <LowVoltageXlpeFamilyProductPage />;
+  }
+
+  if (product.detailVariant === "medium-voltage-xlpe") {
+    return <MediumVoltageXlpeProductPage />;
+  }
+
+  if (product.detailVariant === "lszh-fire-safe") {
+    return <LszhFireSafeProductPage />;
+  }
+
+  if (product.detailVariant === "overhead-insulated-cables") {
+    return <OverheadInsulatedCablesProductPage />;
+  }
+
+  if (product.detailVariant === "acsr-bare-overhead-conductors") {
+    return <AcsrBareOverheadConductorsProductPage />;
+  }
+
+  if (product.detailVariant === "building-wires-flexible-cables") {
+    return <BuildingWiresFlexibleCablesPage />;
+  }
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -39,9 +77,21 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <span className="eyebrow light">{product.category} product family</span>
             <h1>{product.name}</h1>
             <p>{product.description}</p>
-            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><a className="button button-ghost" href="mailto:sales@huanyucable.com">Email Specification</a></div>
+            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><a className="button button-ghost" href={`mailto:${site.email}`}>Email Specification</a></div>
           </div>
-          <div className="product-detail-image"><img src={mediaUrl(product.imagePath, product.fallbackImage)} alt={product.name} /></div>
+          <div>
+            <div className="product-detail-image">
+              <Image
+                src={product.detailImagePath}
+                alt={product.imageAlt}
+                width={1000}
+                height={750}
+                sizes="(max-width: 980px) 100vw, 45vw"
+                priority
+              />
+            </div>
+            <p className="product-image-note">Illustrative product-family rendering. Final construction is confirmed against the applicable specification before quotation.</p>
+          </div>
         </div>
       </section>
 
@@ -59,7 +109,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <ul className="detail-list">{product.construction.map((item) => <li key={item}>{item}</li>)}</ul>
             <h2>Typical applications</h2>
             <div className="application-chips">{product.applications.map((item) => <span key={item}>{item}</span>)}</div>
-            {product.note && <div className="review-note"><strong>Publication review required:</strong> {product.note}</div>}
+            {product.note && <div className="review-note">{product.note}</div>}
           </div>
           <aside className="spec-aside">
             <h3>What to send for quotation</h3>
@@ -72,17 +122,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             </ol>
             <a className="button full" href="#inquiry">Send requirements</a>
           </aside>
-        </div>
-      </section>
-
-      <section className="section section-muted technical-section">
-        <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">Technical content structure</span><h2>Pages should become useful procurement documents</h2></div><p>Replace generic marketing paragraphs with verified tables, cross-section diagrams, test references, drum data and downloadable datasheets.</p></div>
-          <div className="three-column-list">
-            <article><span>01</span><h3>Structure diagram</h3><p>Label conductor, screens, insulation, bedding, armour and sheath.</p></article>
-            <article><span>02</span><h3>Technical data</h3><p>Publish dimensions, weight, resistance and current data only after engineering verification.</p></article>
-            <article><span>03</span><h3>Documents</h3><p>Attach datasheet, test report, certificate or catalogue relevant to this exact product family.</p></article>
-          </div>
         </div>
       </section>
 
