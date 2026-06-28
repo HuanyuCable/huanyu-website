@@ -100,7 +100,7 @@ export function MediumVoltageXlpeProductPage() {
             <div className="product-detail-image xlpe-hero-image">
               <Image src={mvImages.hero} alt="Medium voltage copper tape screened XLPE power cable" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 45vw" priority />
             </div>
-            <p className="product-image-note">Product image from the approved Medium Voltage XLPE product asset package.</p>
+            <p className="product-image-note">Representative product image for structure and quotation discussion. Final construction is confirmed against the applicable specification before quotation.</p>
           </div>
         </div>
       </section>
