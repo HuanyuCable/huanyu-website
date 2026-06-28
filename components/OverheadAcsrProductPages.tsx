@@ -119,7 +119,7 @@ function ProductHero({
           <div className="product-detail-image xlpe-hero-image overhead-product-image">
             <Image src={image} alt={imageAlt} width={1200} height={900} sizes="(max-width: 980px) 100vw, 45vw" priority />
           </div>
-          <p className="product-image-note">Product image from the approved overhead and ACSR product asset package.</p>
+          <p className="product-image-note">Representative product image for structure and quotation discussion. Final construction is confirmed against the applicable specification before quotation.</p>
         </div>
       </div>
     </section>
@@ -428,7 +428,7 @@ export function AcsrBareOverheadConductorsProductPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Key features</span>
-              <h2>Website-friendly ACSR project discussion points</h2>
+              <h2>Key ACSR Points for Project Review</h2>
             </div>
           </div>
           <div className="xlpe-model-grid">
