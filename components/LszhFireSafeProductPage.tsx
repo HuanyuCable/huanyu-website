@@ -85,7 +85,7 @@ export function LszhFireSafeProductPage() {
             <div className="product-detail-image xlpe-hero-image">
               <Image src={lszhImages.hero} alt="LSZH and fire-safe power cable product family" width={1200} height={900} sizes="(max-width: 980px) 100vw, 45vw" priority />
             </div>
-            <p className="product-image-note">Product image from the approved LSZH & Fire-safe product asset package.</p>
+            <p className="product-image-note">Representative product image for structure and quotation discussion. Final construction is confirmed against the applicable specification before quotation.</p>
           </div>
         </div>
       </section>
@@ -114,7 +114,7 @@ export function LszhFireSafeProductPage() {
           <div className="section-heading lszh-section-heading">
             <div>
               <span className="eyebrow">Safety performance types</span>
-              <h2>Representative performance categories without excessive test claims</h2>
+              <h2>Safety Performance Categories</h2>
             </div>
           </div>
           <div className="xlpe-model-grid lszh-type-grid">
@@ -166,7 +166,7 @@ export function LszhFireSafeProductPage() {
         <div className="container xlpe-spec-layout">
           <div>
             <span className="eyebrow">Key technical parameters</span>
-            <h2>Concise project quotation parameters</h2>
+            <h2>Key Quotation Parameters</h2>
             <div className="spec-table xlpe-spec-table">
               {parameterRows.map(([label, value]) => (
                 <div key={label}>
