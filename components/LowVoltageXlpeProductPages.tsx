@@ -108,7 +108,7 @@ function ProductHero({
           <div className="product-detail-image xlpe-hero-image">
             <Image src={image} alt={imageAlt} width={1200} height={900} sizes="(max-width: 980px) 100vw, 45vw" priority />
           </div>
-          <p className="product-image-note">Product image from the approved Low Voltage XLPE product asset package.</p>
+          <p className="product-image-note">Representative product image for structure and quotation discussion. Final construction is confirmed against the applicable specification before quotation.</p>
         </div>
       </div>
     </section>
@@ -326,7 +326,7 @@ export function LowVoltageXlpeFamilyProductPage() {
 
       <section className="section">
         <div className="container xlpe-positioning">
-          <span className="eyebrow">Page positioning</span>
+          <span className="eyebrow">Product Family Positioning</span>
           <h2>Combined family page for general low-voltage XLPE cables.</h2>
           <p className="lead">
             This page acts as the combined introduction page for the general low-voltage XLPE cable family, while the dedicated armoured copper page for <strong>YJV22 / YJV23</strong> remains separate.
@@ -358,7 +358,7 @@ export function LowVoltageXlpeFamilyProductPage() {
         <div className="container xlpe-construction-grid">
           <div>
             <span className="eyebrow">Recommended English names</span>
-            <h2>Website naming and family positioning</h2>
+            <h2>Product Family Positioning</h2>
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
