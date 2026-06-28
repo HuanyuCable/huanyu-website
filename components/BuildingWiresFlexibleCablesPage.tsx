@@ -183,7 +183,7 @@ export function BuildingWiresFlexibleCablesPage() {
         <div className="container xlpe-spec-layout">
           <div>
             <span className="eyebrow">Key technical parameters</span>
-            <h2>Concise project quotation parameters</h2>
+            <h2>Key Quotation Parameters</h2>
             <div className="spec-table xlpe-spec-table">
               {parameterRows.map(([label, value]) => (
                 <div key={label}>
