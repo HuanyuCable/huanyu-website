@@ -60,7 +60,7 @@ export default function AboutPage() {
           <h1>About Huanyu Cable</h1>
           <p>
             Huanyu Cable is a Hefei-based wire and cable manufacturer focused on practical project supply,
-            documented quality control and export communication for overseas engineering buyers.
+            documented quality control and export documentation and communication for overseas engineering buyers.
           </p>
         </div>
       </section>
