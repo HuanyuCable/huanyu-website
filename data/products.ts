@@ -36,10 +36,10 @@ export const products: Product[] = [
     imageAlt: "Illustrative product-family rendering of a low-voltage armoured power cable",
     fallbackImage: "/images/product-lv.svg",
     voltage: "0.6/1 kV and project-specific LV ratings",
-    standards: ["IEC 60502-1", "BS 5467 where applicable", "Customer specification"],
-    construction: ["Copper conductor", "XLPE or PVC insulation", "STA or SWA armour", "PVC or LSZH outer sheath"],
+    standards: ["GB/T 12706.1", "IEC 60502-1", "Project-specific specifications reviewed before quotation"],
+    construction: ["Copper conductor", "XLPE or PVC insulation", "Project-specific armour reviewed before quotation", "PVC or LSZH outer sheath"],
     applications: ["Underground distribution", "Industrial plants", "Commercial complexes", "Infrastructure projects"],
-    featuredModels: ["YJV22", "ZC-YJV22", "ZR-YJV22", "SWA / STA project variants"],
+    featuredModels: ["YJV22", "ZC-YJV22", "ZR-YJV22", "project-specific armoured variants"],
     note: "Available constructions and technical data are confirmed against the applicable standard and project specification before quotation.",
   },
   {
