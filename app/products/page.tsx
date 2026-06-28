@@ -169,7 +169,7 @@ export default function ProductsPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Product category directory</span>
-              <h2>Five first-level product categories</h2>
+              <h2>Five Main Product Categories</h2>
             </div>
             <p>Each category shows its representative product families or models so buyers can move from a high-level category to the relevant detail page.</p>
           </div>
