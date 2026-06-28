@@ -33,7 +33,7 @@ export const companyUpdates: CompanyUpdate[] = [
   },
   {
     slug: "working-capital-support-program",
-    title: "Huanyu Cable Receives Working-Capital Support Through the Per-Mu Hero Loan Program",
+    title: "Huanyu Cable Completes Regional Industrial Finance Program Review",
     publishedAt: "2023-04-12",
     category: "Business Development",
     excerpt:
@@ -52,7 +52,7 @@ export const companyUpdates: CompanyUpdate[] = [
   },
   {
     slug: "world-consumer-rights-day-2023",
-    title: "World Consumer Rights Day: Our Commitment to Product Quality",
+    title: "Quality Responsibility Update: Our Commitment to Product Quality",
     publishedAt: "2023-03-15",
     category: "Quality & Responsibility",
     excerpt:
