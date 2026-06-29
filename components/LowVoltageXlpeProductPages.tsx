@@ -239,11 +239,14 @@ export function Yjv22Yjv23ProductPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Cable construction</span>
             <h2>Layer logic for armoured fixed installation cables</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <ul className="detail-list">
               {constructionItems.map((item) => (
                 <li key={item}>{item}</li>
@@ -253,23 +256,30 @@ export function Yjv22Yjv23ProductPage() {
               YJV22 and YJV23 share the same core structure. The main difference is the outer sheath material: YJV22 uses PVC, while YJV23 uses PE.
             </div>
           </div>
-          <div className="xlpe-image-stack">
+          <aside className="product-section-visuals xlpe-image-stack product-compact-stack">
             <Image src={yjv22Images.structure} alt="YJV22 and YJV23 structure comparison infographic" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
             <Image src={yjv22Images.angled} alt="Angled close-up of YJV23 low-voltage XLPE armoured power cable" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
+          </aside>
           </div>
         </div>
       </section>
 
-      <section className="section section-muted" id="specifications">
-        <div className="container xlpe-spec-layout">
-          <div>
+      <section className="section section-muted product-detail-section" id="specifications">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Specifications</span>
             <h2>Key technical parameters</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <SpecTable rows={yjv22Specs} />
           </div>
-          <figure className="xlpe-feature-image">
+          <aside className="product-section-visuals">
+          <figure className="xlpe-feature-image product-compact-feature">
             <Image src={yjv22Images.marking} alt="Sheath marking detail for YJV22 low-voltage XLPE armoured cable" width={1200} height={900} sizes="(max-width: 980px) 100vw, 34vw" />
           </figure>
+          </aside>
+          </div>
         </div>
       </section>
 
@@ -354,11 +364,14 @@ export function LowVoltageXlpeFamilyProductPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Recommended English names</span>
             <h2>Product Family Positioning</h2>
+          </div>
+          <div className="product-section-grid product-section-grid-wide">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
@@ -398,23 +411,30 @@ export function LowVoltageXlpeFamilyProductPage() {
               </table>
             </div>
           </div>
-          <div className="xlpe-image-stack">
+          <aside className="product-section-visuals xlpe-image-stack product-compact-stack">
             <Image src={familyImages.hero} alt="Low-voltage XLPE cable family product overview" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
             <Image src={familyImages.unarmoured} alt="YJV, YJY and YJLV unarmoured XLPE cable comparison" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
+          </aside>
           </div>
         </div>
       </section>
 
-      <section className="section section-muted" id="specifications">
-        <div className="container xlpe-spec-layout">
-          <div>
+      <section className="section section-muted product-detail-section" id="specifications">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Key technical parameters</span>
             <h2>Common supply parameters for the family</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <SpecTable rows={familySpecs} />
           </div>
-          <figure className="xlpe-feature-image">
+          <aside className="product-section-visuals">
+          <figure className="xlpe-feature-image product-compact-feature">
             <Image src={familyImages.yjlv22} alt="YJLV22 armoured aluminium low-voltage XLPE power cable" width={1200} height={900} sizes="(max-width: 980px) 100vw, 34vw" />
           </figure>
+          </aside>
+          </div>
         </div>
       </section>
 

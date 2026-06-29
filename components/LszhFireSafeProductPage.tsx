@@ -129,11 +129,14 @@ export function LszhFireSafeProductPage() {
         </div>
       </section>
 
-      <section className="section" id="representative-models">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section product-detail-section" id="representative-models">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Representative models</span>
             <h2>Common model names and website-friendly descriptions</h2>
+          </div>
+          <div className="product-section-grid product-section-grid-wide">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table lszh-model-table">
                 <thead>
@@ -155,18 +158,22 @@ export function LszhFireSafeProductPage() {
               </table>
             </div>
           </div>
-          <div className="xlpe-image-stack">
+          <aside className="product-section-visuals xlpe-image-stack product-compact-stack">
             <Image src={lszhImages.comparison} alt="WDZ-YJY and WDZB-YJY LSZH cable comparison" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
             <Image src={lszhImages.fireResistant} alt="Fire resistant NH-YJV and NH-VV22 power cable options" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
+          </aside>
           </div>
         </div>
       </section>
 
-      <section className="section section-muted" id="supporting-visuals">
-        <div className="container xlpe-spec-layout">
-          <div>
+      <section className="section section-muted product-detail-section" id="supporting-visuals">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Key technical parameters</span>
             <h2>Key Quotation Parameters</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <div className="spec-table xlpe-spec-table">
               {parameterRows.map(([label, value]) => (
                 <div key={label}>
@@ -176,9 +183,12 @@ export function LszhFireSafeProductPage() {
               ))}
             </div>
           </div>
-          <figure className="xlpe-feature-image">
+          <aside className="product-section-visuals">
+          <figure className="xlpe-feature-image product-compact-feature">
             <Image src={lszhImages.wdzn} alt="WDZN-YJY LSZH fire resistant XLPE power cable close-up" width={1200} height={900} sizes="(max-width: 980px) 100vw, 34vw" />
           </figure>
+          </aside>
+          </div>
         </div>
       </section>
 

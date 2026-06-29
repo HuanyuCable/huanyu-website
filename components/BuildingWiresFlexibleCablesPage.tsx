@@ -143,11 +143,14 @@ export function BuildingWiresFlexibleCablesPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Structure & construction</span>
             <h2>BV / BVR comparison</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
@@ -169,21 +172,27 @@ export function BuildingWiresFlexibleCablesPage() {
               </table>
             </div>
           </div>
-          <article className="xlpe-info-card">
+          <aside className="product-section-visuals">
+          <article className="xlpe-info-card product-support-card">
             <span className="eyebrow">Secondary options</span>
             <h2>Other flexible wire options</h2>
             <p>
               Additional flexible cable types such as RV, RVV, RVVB and other light-duty installation wires can be discussed according to project requirements.
             </p>
           </article>
+          </aside>
+          </div>
         </div>
       </section>
 
-      <section className="section section-muted">
-        <div className="container xlpe-spec-layout">
-          <div>
+      <section className="section section-muted product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Key technical parameters</span>
             <h2>Key Quotation Parameters</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <div className="spec-table xlpe-spec-table">
               {parameterRows.map(([label, value]) => (
                 <div key={label}>
@@ -193,7 +202,7 @@ export function BuildingWiresFlexibleCablesPage() {
               ))}
             </div>
           </div>
-          <div>
+          <aside className="product-section-visuals product-support-panel">
             <span className="eyebrow">Typical applications</span>
             <div className="application-grid building-wire-application-grid">
               {applications.map(([title, text], index) => (
@@ -204,6 +213,7 @@ export function BuildingWiresFlexibleCablesPage() {
                 </article>
               ))}
             </div>
+          </aside>
           </div>
         </div>
       </section>

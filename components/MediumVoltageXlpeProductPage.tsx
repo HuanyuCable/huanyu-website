@@ -124,11 +124,14 @@ export function MediumVoltageXlpeProductPage() {
         </div>
       </section>
 
-      <section className="section section-muted" id="cable-construction">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section section-muted product-detail-section" id="cable-construction">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Cable construction</span>
             <h2>Medium-voltage screened cable layers</h2>
+          </div>
+          <div className="product-section-grid product-section-grid-wide">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
@@ -151,9 +154,14 @@ export function MediumVoltageXlpeProductPage() {
               Unlike low-voltage YJV / YJV22 cables, medium-voltage XLPE cables must clearly show conductor screen, insulation screen and metallic screen layers.
             </div>
           </div>
-          <div className="xlpe-image-stack">
-            <Image src={mvImages.structure} alt="Medium voltage copper tape screened XLPE cable layer structure" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 46vw" />
-            <Image src={mvImages.angled} alt="Angled close-up of medium-voltage XLPE power cable" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 46vw" />
+          <aside className="product-section-visuals xlpe-image-stack mv-image-stack">
+            <figure className="mv-visual-card mv-structure-card">
+              <Image src={mvImages.structure} alt="Medium voltage copper tape screened XLPE cable layer structure" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 46vw" />
+            </figure>
+            <figure className="mv-visual-card mv-product-card">
+              <Image src={mvImages.angled} alt="Angled close-up of medium-voltage XLPE power cable" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 46vw" />
+            </figure>
+          </aside>
           </div>
         </div>
       </section>
@@ -190,11 +198,14 @@ export function MediumVoltageXlpeProductPage() {
         </div>
       </section>
 
-      <section className="section section-muted">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section section-muted product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Common product types</span>
             <h2>Representative configurations with CTS defined as Copper Tape Screen</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
@@ -216,7 +227,8 @@ export function MediumVoltageXlpeProductPage() {
               </table>
             </div>
           </div>
-          <article className="xlpe-info-card">
+          <aside className="product-section-visuals">
+          <article className="xlpe-info-card mv-examples-card">
             <span className="eyebrow">Typical specifications</span>
             <h2>Representative examples</h2>
             <ul className="xlpe-configuration-list">
@@ -225,14 +237,19 @@ export function MediumVoltageXlpeProductPage() {
               ))}
             </ul>
           </article>
+          </aside>
+          </div>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container xlpe-spec-layout">
-          <div>
+      <section className="section product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Screened vs armoured</span>
             <h2>Electrical screening and mechanical protection are separate design concepts</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <div className="xlpe-overview-grid xlpe-two-note-grid">
               <article className="xlpe-info-card">
                 <h3>Screened construction</h3>
@@ -244,9 +261,12 @@ export function MediumVoltageXlpeProductPage() {
               </article>
             </div>
           </div>
-          <figure className="xlpe-feature-image">
+          <aside className="product-section-visuals">
+          <figure className="xlpe-feature-image mv-feature-image">
             <Image src={mvImages.armoured} alt="Armoured medium-voltage XLPE power cable option" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 34vw" />
           </figure>
+          </aside>
+          </div>
         </div>
       </section>
 

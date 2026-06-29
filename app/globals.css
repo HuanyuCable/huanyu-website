@@ -239,6 +239,45 @@ p { margin: 0 0 22px; color: var(--muted); }
 .xlpe-two-note-grid { grid-template-columns: 1fr 1fr; margin-top: 24px; }
 .xlpe-two-note-grid .xlpe-info-card { min-height: 0; }
 .xlpe-gallery-image img { object-fit: contain; padding: 10px; background: white; }
+.mv-visual-card,
+.mv-feature-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: white;
+  box-shadow: 0 10px 30px rgba(7,24,40,.05);
+}
+.mv-visual-card img,
+.mv-feature-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  object-fit: contain;
+  object-position: center;
+}
+.mv-structure-card {
+  height: clamp(300px, 32vw, 420px);
+}
+.mv-product-card {
+  height: clamp(240px, 25vw, 330px);
+}
+.mv-feature-image {
+  height: clamp(260px, 27vw, 360px);
+}
+.mv-product-card img,
+.mv-feature-image img {
+  transform: scale(1.08);
+}
 .product-card-overhead-acsr .product-image-wrap {
   background: linear-gradient(135deg, #f7fafc 0%, #e7edf2 54%, #ffffff 100%);
 }
@@ -318,6 +357,61 @@ p { margin: 0 0 22px; color: var(--muted); }
 }
 .overhead-supporting-visual figcaption {
   padding: 16px 18px 18px;
+}
+.product-detail-section .product-section-intro {
+  max-width: 880px;
+  margin-bottom: 28px;
+}
+.product-detail-section .product-section-intro h2 {
+  margin-bottom: 0;
+}
+.product-section-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+  gap: 34px;
+  align-items: start;
+}
+.product-section-grid-wide {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr);
+}
+.product-section-main {
+  min-width: 0;
+}
+.product-section-visuals {
+  display: grid;
+  gap: 12px;
+  align-self: start;
+  min-width: 0;
+}
+.product-section-visuals > .xlpe-info-card {
+  min-height: 0;
+}
+.product-compact-stack {
+  gap: 12px;
+}
+.product-compact-stack > img {
+  width: 100%;
+  height: clamp(220px, 22vw, 300px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.product-compact-stack > .overhead-media-frame {
+  gap: 8px;
+  padding: 10px;
+}
+.product-compact-stack > .overhead-media-frame img {
+  height: clamp(210px, 21vw, 280px);
+  aspect-ratio: auto;
+}
+.product-compact-feature img {
+  height: clamp(240px, 24vw, 320px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.product-compact-feature.overhead-media-frame img {
+  height: clamp(230px, 24vw, 320px);
 }
 .building-wire-hero-image { background: white; }
 .building-wire-hero-image img { object-fit: contain; }
@@ -571,6 +665,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .selected-credentials-track { grid-auto-columns: calc((100% - 18px) / 2); }
   .process-evidence-images img { min-height: 220px; }
   .credential-detail-grid { grid-template-columns: 1fr; }
+  .product-section-grid, .product-section-grid-wide { grid-template-columns: 1fr; }
   .product-spec-layout, .xlpe-construction-grid, .xlpe-spec-layout { grid-template-columns: 1fr; }
   .spec-aside { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }

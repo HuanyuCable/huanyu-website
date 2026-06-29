@@ -225,11 +225,14 @@ export function OverheadInsulatedCablesProductPage() {
         </div>
       </section>
 
-      <section className="section" id="cable-construction">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section product-detail-section" id="cable-construction">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Structure & construction</span>
             <h2>Single-core overhead cable construction</h2>
+          </div>
+          <div className="product-section-grid product-section-grid-wide">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
@@ -251,7 +254,7 @@ export function OverheadInsulatedCablesProductPage() {
               </table>
             </div>
           </div>
-          <div className="xlpe-image-stack overhead-image-stack">
+          <aside className="product-section-visuals xlpe-image-stack overhead-image-stack product-compact-stack">
             <figure className="overhead-media-frame">
               <Image src={overheadImages.comparison} alt="JKYJ and JKLYJ overhead insulated cable comparison" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <figcaption>JKYJ and JKLYJ conductor comparison</figcaption>
@@ -260,17 +263,22 @@ export function OverheadInsulatedCablesProductPage() {
               <Image src={overheadImages.application} alt="Overhead insulated cable distribution line application" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <figcaption>Overhead insulated distribution line application</figcaption>
             </figure>
+          </aside>
           </div>
         </div>
       </section>
 
-      <section className="section section-muted">
-        <div className="container xlpe-spec-layout">
-          <div>
+      <section className="section section-muted product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Key technical parameters</span>
             <h2>Concise parameters for project quotation</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <SpecTable rows={overheadParameterRows} />
           </div>
+          <aside className="product-section-visuals">
           <article className="xlpe-info-card">
             <span className="eyebrow">Related option</span>
             <h2>Aerial bundled cable discussion</h2>
@@ -278,6 +286,8 @@ export function OverheadInsulatedCablesProductPage() {
               Related aerial bundled cable options can be discussed according to project requirements. Huanyu Cable places primary emphasis on JKYJ and JKLYJ overhead insulated cable supply.
             </p>
           </article>
+          </aside>
+          </div>
         </div>
       </section>
 
@@ -352,11 +362,14 @@ export function AcsrBareOverheadConductorsProductPage() {
         </div>
       </section>
 
-      <section className="section section-muted" id="structure">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section section-muted product-detail-section" id="structure">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Structure & construction</span>
             <h2>Concentric stranded bare conductor structure</h2>
+          </div>
+          <div className="product-section-grid product-section-grid-wide">
+            <div className="product-section-main">
             <div className="xlpe-table-wrap">
               <table className="xlpe-table">
                 <thead>
@@ -379,7 +392,7 @@ export function AcsrBareOverheadConductorsProductPage() {
               ACSR is not described as an insulated cable on this page. It is presented as a bare overhead conductor.
             </div>
           </div>
-          <div className="xlpe-image-stack overhead-image-stack">
+          <aside className="product-section-visuals xlpe-image-stack overhead-image-stack product-compact-stack">
             <figure className="overhead-media-frame">
               <Image src={acsrImages.structure} alt="ACSR steel core and aluminium strand structure" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <figcaption>Steel core and aluminium strand structure</figcaption>
@@ -388,6 +401,7 @@ export function AcsrBareOverheadConductorsProductPage() {
               <Image src={acsrImages.crossSection} alt="ACSR bare conductor cross section" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <figcaption>ACSR bare conductor cross section</figcaption>
             </figure>
+          </aside>
           </div>
         </div>
       </section>
@@ -446,17 +460,23 @@ export function AcsrBareOverheadConductorsProductPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container xlpe-construction-grid">
-          <div>
+      <section className="section product-detail-section">
+        <div className="container">
+          <div className="product-section-intro">
             <span className="eyebrow">Typical applications</span>
             <h2>Transmission and distribution line use cases</h2>
+          </div>
+          <div className="product-section-grid">
+            <div className="product-section-main">
             <ApplicationCards applications={acsrApplications} compact />
           </div>
-          <figure className="xlpe-feature-image overhead-media-frame overhead-feature-image">
+          <aside className="product-section-visuals">
+          <figure className="xlpe-feature-image overhead-media-frame overhead-feature-image product-compact-feature">
             <Image src={acsrImages.application} alt="ACSR bare overhead conductor transmission line application" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
             <figcaption>ACSR overhead transmission line application</figcaption>
           </figure>
+          </aside>
+          </div>
         </div>
       </section>
 
