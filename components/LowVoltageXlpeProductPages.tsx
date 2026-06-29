@@ -158,16 +158,6 @@ function InquirySection() {
 }
 
 export function Yjv22Yjv23ProductPage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "YJV22 / YJV23 XLPE Insulated Steel Tape Armoured Power Cables",
-    description:
-      "0.6/1 kV low-voltage power cables with copper conductors, XLPE insulation and steel tape armour, designed for fixed power transmission and distribution systems requiring mechanical protection.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "Low Voltage XLPE Power Cables",
-  };
-
   return (
     <>
       <ProductHero
@@ -296,7 +286,6 @@ export function Yjv22Yjv23ProductPage() {
       </section>
 
       <InquirySection />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }
@@ -308,16 +297,6 @@ export function LowVoltageXlpeFamilyProductPage() {
     ["YJLV", "Aluminium / Unarmoured", "Aluminium conductor XLPE insulated PVC sheathed power cable, used as a cost-effective alternative in fixed low-voltage power distribution projects."],
     ["YJLV22", "Aluminium / Armoured", "Aluminium conductor XLPE insulated steel tape armoured PVC sheathed power cable for fixed installations requiring additional mechanical protection."],
   ];
-
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "YJV / YJY / YJLV / YJLV22 Low Voltage XLPE Power Cables",
-    description:
-      "A combined introduction page for Huanyu Cable's low-voltage XLPE insulated power cable family, covering copper and aluminium conductor options, PVC or PE outer sheath options, and both unarmoured and armoured structures.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "Low Voltage XLPE Power Cables",
-  };
 
   return (
     <>
@@ -474,7 +453,6 @@ export function LowVoltageXlpeFamilyProductPage() {
       </section>
 
       <InquirySection />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }

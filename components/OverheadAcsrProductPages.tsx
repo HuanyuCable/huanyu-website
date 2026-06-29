@@ -154,16 +154,6 @@ function ApplicationCards({ applications, compact = false }: { applications: str
 }
 
 export function OverheadInsulatedCablesProductPage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Overhead Insulated Cables",
-    description:
-      "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for 1 kV and 10 kV overhead distribution lines.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "Overhead Insulated Cables",
-  };
-
   return (
     <>
       <ProductHero
@@ -313,23 +303,11 @@ export function OverheadInsulatedCablesProductPage() {
           <InquiryForm compact />
         </div>
       </section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }
 
 export function AcsrBareOverheadConductorsProductPage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "ACSR Bare Overhead Conductors",
-    description:
-      "LGJ / ACSR aluminium conductor steel reinforced bare conductors for overhead transmission and distribution lines, using a steel core for mechanical strength and aluminium strands for electrical conductivity.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "ACSR Bare Overhead Conductors",
-  };
-
   return (
     <>
       <ProductHero
@@ -515,8 +493,6 @@ export function AcsrBareOverheadConductorsProductPage() {
           <InquiryForm compact />
         </div>
       </section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }

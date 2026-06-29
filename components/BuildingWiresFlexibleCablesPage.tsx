@@ -51,16 +51,6 @@ const applications = [
 ];
 
 export function BuildingWiresFlexibleCablesPage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Building Wires & Flexible Cables",
-    description:
-      "PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected general-purpose installation applications.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "Building Wires & Flexible Cables",
-  };
-
   return (
     <>
       <section className="product-detail-hero xlpe-product-hero building-wire-hero">
@@ -228,8 +218,6 @@ export function BuildingWiresFlexibleCablesPage() {
           <InquiryForm compact />
         </div>
       </section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }

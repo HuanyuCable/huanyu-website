@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         destination: "https://www.huanyucable.com/:path*",
         permanent: true,
       },
+      {
+        source: "/products/medium-voltage-power-cables",
+        destination: "/products/medium-voltage-xlpe-power-cables",
+        permanent: true,
+      },
     ];
   },
   async headers() {

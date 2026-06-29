@@ -65,16 +65,6 @@ function ApplicationCards() {
 }
 
 export function MediumVoltageXlpeProductPage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Medium Voltage XLPE Power Cables",
-    description:
-      "Medium voltage XLPE insulated power cables with copper conductor, conductor screen, XLPE insulation, insulation screen, copper tape screen and PVC outer sheath for distribution networks, substations and industrial power systems.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "Medium Voltage XLPE Power Cables",
-  };
-
   return (
     <>
       <section className="product-detail-hero xlpe-product-hero">
@@ -316,8 +306,6 @@ export function MediumVoltageXlpeProductPage() {
           <InquiryForm compact />
         </div>
       </section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }

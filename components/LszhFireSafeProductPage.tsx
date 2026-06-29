@@ -50,16 +50,6 @@ const applications = [
 ];
 
 export function LszhFireSafeProductPage() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "LSZH & Fire-safe Power Cables",
-    description:
-      "Low smoke zero halogen, flame retardant and fire resistant power cables for commercial buildings, public facilities, industrial distribution and emergency power circuits.",
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-    category: "LSZH & Fire-safe Power Cables",
-  };
-
   return (
     <>
       <section className="product-detail-hero xlpe-product-hero">
@@ -248,8 +238,6 @@ export function LszhFireSafeProductPage() {
           <InquiryForm compact />
         </div>
       </section>
-
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     </>
   );
 }

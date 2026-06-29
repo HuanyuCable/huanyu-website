@@ -59,15 +59,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     return <BuildingWiresFlexibleCablesPage />;
   }
 
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.description,
-    category: product.category,
-    brand: { "@type": "Brand", name: "Huanyu Cable" },
-  };
-
   return (
     <>
       <section className="product-detail-hero">
@@ -128,7 +119,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
       <section className="section quote-section" id="inquiry">
         <div className="container quote-grid"><div><span className="eyebrow light">Technical review</span><h2>Request a product and quotation review.</h2><p>Our commercial and technical teams will assess the requested construction before confirming availability.</p></div><InquiryForm compact /></div>
       </section>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
     </>
   );
 }
