@@ -4,8 +4,9 @@ import Link from "next/link";
 import { SelectedCredentialsCarousel } from "@/components/SelectedCredentialsCarousel";
 
 export const metadata: Metadata = {
-  title: "About Huanyu Cable",
-  description: "Learn about Huanyu Cable's manufacturing base, company development and quality-oriented approach.",
+  title: { absolute: "About Huanyu Cable | Hefei Cable Manufacturer Since 1995" },
+  description:
+    "Learn about Huanyu Cable, a Hefei-based wire and cable manufacturer focused on practical project supply, quality control and export documentation for overseas engineering buyers.",
   alternates: { canonical: "/about" },
 };
 

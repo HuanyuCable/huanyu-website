@@ -685,7 +685,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .hero-content p { font-size: 18px; }
   .hero-stats strong { font-size: 23px; }
   .hero-stats span { font-size: 11px; }
-  .video-control { right: 14px; bottom: 218px; }
+  .video-control { display: none; }
   .section-heading, .cta-simple .container, .update-callout { align-items: start; flex-direction: column; }
   .intro-section, .quality-preview, .quote-section, .applications-section, .quality-dimensions-section, .process-evidence-section, .documents-section, .credentials-section, .about-position-section, .about-timeline-section, .about-manufacturing-section, .about-trademark-section, .about-workshop-section, .about-culture-section, .about-responsible-section, .about-company-section, .about-strengths-section, .about-capability-section, .about-people-section, .selected-credentials-section, .about-updates-section { padding: 58px 0; }
   .core-grid, .product-family-grid, .supporting-product-grid, .process-grid, .support-grid, .application-grid, .three-column-list, .application-detail-grid, .resource-grid, .timeline, .update-grid, .evidence-grid, .factory-gallery, .process-evidence-images, .license-panel, .trademark-panel, .credential-overview-grid, .credential-detail-grid, .responsible-summary, .quality-dimension-grid, .about-image-pair, .why-huanyu-grid, .xlpe-overview-grid, .xlpe-model-grid, .xlpe-four-card-grid, .xlpe-two-note-grid, .lszh-type-grid, .lszh-application-grid, .lszh-gallery-grid, .building-wire-card-grid, .building-wire-application-grid { grid-template-columns: 1fr; }

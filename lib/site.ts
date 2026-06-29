@@ -8,5 +8,5 @@ export const site = {
   address: "Located in Luyang Industrial Park, Luyang District, Hefei, Anhui Province, China",
   founded: "1995",
   description:
-    "Focused cable manufacturer in Hefei, China, supplying low-voltage armoured power cables, medium-voltage XLPE cables, LSZH & fire-safe cables, overhead line products and building wires for project supply.",
+    "Hefei Huanyu Wire & Cable Co., Ltd. supplies low voltage armoured cables, medium voltage XLPE power cables, LSZH and fire-safe cables, overhead line products and building wires for project buyers.",
 };

@@ -3,8 +3,9 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Request a Quote",
-  description: "Send your cable specification, BOQ and project requirements to Huanyu Cable.",
+  title: { absolute: "Contact Huanyu Cable | Request a Cable Quotation" },
+  description:
+    "Contact Huanyu Cable to request a quotation for low voltage cables, medium voltage XLPE cables, LSZH cables, overhead line products and building wires.",
   alternates: { canonical: "/contact" },
 };
 

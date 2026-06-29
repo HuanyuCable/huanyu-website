@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Technical Resources",
-  description: "Request current Huanyu Cable product datasheets, specification review and company catalogue materials.",
+  title: { absolute: "Cable Resources | Technical Notes and Company Updates" },
+  description:
+    "Read Huanyu Cable technical resources, product notes and company updates for cable buyers and engineering project teams.",
   alternates: { canonical: "/resources" },
 };
 

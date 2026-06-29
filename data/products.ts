@@ -51,9 +51,9 @@ export const products: Product[] = [
     tagline: "Screened XLPE insulated power cables with copper tape screen and optional armoured construction for distribution networks, substations and industrial projects.",
     description:
       "Medium voltage XLPE insulated power cables with copper conductor, conductor screen, XLPE insulation, insulation screen, copper tape screen and PVC outer sheath for distribution networks, substations and industrial power systems.",
-    metaTitle: "Medium Voltage XLPE Power Cables up to 35 kV | HUANYU CABLE",
+    metaTitle: "Medium Voltage XLPE Power Cables | HUANYU CABLE",
     metaDescription:
-      "Medium voltage XLPE insulated power cables with copper conductor, conductor screen, XLPE insulation, insulation screen, copper tape screen and PVC outer sheath for distribution networks, substations and industrial power systems.",
+      "Medium voltage XLPE power cables with screened construction for distribution and infrastructure projects, supplied according to applicable project specifications.",
     detailVariant: "medium-voltage-xlpe",
     imagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
     detailImagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
@@ -77,7 +77,7 @@ export const products: Product[] = [
       "Low smoke zero halogen, flame retardant and fire resistant power cables for commercial buildings, public facilities, industrial distribution and emergency power circuits. Representative models include ZC-YJV, NH-YJV, NH-VV22, WDZ-YJY, WDZB-YJY, WDZN-YJY and WDZBN-YJY.",
     metaTitle: "LSZH & Fire-safe Power Cables | HUANYU CABLE",
     metaDescription:
-      "Low smoke zero halogen, flame retardant and fire resistant power cables for commercial buildings, public facilities, industrial distribution and emergency power circuits. Representative models include ZC-YJV, NH-YJV, NH-VV22, WDZ-YJY, WDZB-YJY, WDZN-YJY and WDZBN-YJY.",
+      "LSZH, flame retardant and fire-resistant cable options for projects requiring low smoke, halogen-free or fire-safe cable performance.",
     detailVariant: "lszh-fire-safe",
     imagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
     detailImagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
@@ -99,9 +99,9 @@ export const products: Product[] = [
     tagline: "JKYJ and JKLYJ XLPE insulated overhead cables for 1 kV and 10 kV urban and rural distribution lines.",
     description:
       "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for 1 kV and 10 kV overhead distribution lines.",
-    metaTitle: "Overhead Insulated Cables | JKYJ JKLYJ | HUANYU CABLE",
+    metaTitle: "Overhead Line Products | Insulated Overhead Cables | HUANYU CABLE",
     metaDescription:
-      "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for 1 kV and 10 kV overhead distribution lines.",
+      "Overhead insulated cable products including JKYJ and JKLYJ options for urban and rural distribution line projects.",
     detailVariant: "overhead-insulated-cables",
     imagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
     detailImagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
@@ -171,9 +171,9 @@ export const products: Product[] = [
     tagline: "Combined family of YJV, YJY, YJLV and YJLV22 low-voltage XLPE insulated power cables with copper or aluminium conductors.",
     description:
       "Combined product family page for low-voltage XLPE power cables including YJV, YJY, YJLV and YJLV22, covering copper and aluminium conductor options, PVC or PE sheath options, and unarmoured or steel tape armoured constructions.",
-    metaTitle: "Low Voltage XLPE Power Cables | YJV YJY YJLV YJLV22 | HUANYU CABLE",
+    metaTitle: "Low Voltage XLPE Power Cables | HUANYU CABLE",
     metaDescription:
-      "Combined product family page for low-voltage XLPE power cables including YJV, YJY, YJLV and YJLV22, covering copper and aluminium conductor options, PVC or PE sheath options, and unarmoured or steel tape armoured constructions.",
+      "Low voltage XLPE insulated power cables including YJV, YJY, YJLV and YJLV22 options for project quotation and engineering supply.",
     detailVariant: "low-voltage-xlpe-family",
     imagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
     detailImagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
@@ -213,9 +213,9 @@ export const products: Product[] = [
     priority: 4,
     tagline: "BV and BVR copper conductor PVC insulated wires for building wiring and interior distribution.",
     description: "PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected general-purpose installation applications.",
-    metaTitle: "Building Wires & Flexible Cables | BV BVR Copper PVC Wire | HUANYU CABLE",
+    metaTitle: "Building Wires & Flexible Cables | BV and BVR | HUANYU CABLE",
     metaDescription:
-      "BV and BVR copper conductor PVC insulated wires for residential wiring, lighting circuits, socket circuits, distribution boxes and flexible interior wiring routes.",
+      "Building wires and flexible cable options including BV and BVR for fixed wiring, lighting, socket circuits and distribution box wiring.",
     detailVariant: "building-wires-flexible-cables",
     imagePath: "/images/products/building-wires-flexible/building-wires-bv-bvr-hero.png",
     detailImagePath: "/images/products/building-wires-flexible/building-wires-bv-bvr-hero.png",

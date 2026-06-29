@@ -9,6 +9,9 @@ import { companyUpdates } from "@/data/companyUpdates";
 import { coreProducts } from "@/data/products";
 
 export const metadata: Metadata = {
+  title: { absolute: "HUANYU CABLE | Power Cable Manufacturer in China" },
+  description:
+    "Hefei Huanyu Wire & Cable Co., Ltd. supplies low voltage armoured cables, medium voltage XLPE power cables, LSZH and fire-safe cables, overhead line products and building wires for project buyers.",
   alternates: { canonical: "/" },
 };
 

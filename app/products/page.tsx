@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cable Products",
-  description: "Explore Huanyu Cable's product categories for power cables, overhead line products, building wires and flexible cables.",
+  title: { absolute: "Cable Products | Low Voltage, Medium Voltage, LSZH and Overhead Cables" },
+  description:
+    "Explore Huanyu Cable product families including low voltage power cables, medium voltage XLPE cables, LSZH and fire-safe cables, overhead line products and building wires.",
   alternates: { canonical: "/products" },
 };
 

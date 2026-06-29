@@ -5,8 +5,9 @@ import { CredentialGroupCard } from "@/components/CredentialGroupCard";
 import { credentialGroups } from "@/data/credentials";
 
 export const metadata: Metadata = {
-  title: "Quality & Testing",
-  description: "Huanyu Cable quality-control, testing and document structure for overseas project buyers.",
+  title: { absolute: "Quality & Testing | HUANYU CABLE" },
+  description:
+    "Huanyu Cable provides project-oriented quality control, routine testing and documentation support for wire and cable supply.",
   alternates: { canonical: "/quality" },
 };
 

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: product.metaTitle ?? product.name,
+    title: { absolute: product.metaTitle ?? `${product.name} | HUANYU CABLE` },
     description: product.metaDescription ?? product.description,
     alternates: { canonical: `/products/${slug}` },
   };

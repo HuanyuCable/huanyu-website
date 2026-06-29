@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Cable Applications",
-  description: "Cable solutions for power distribution, industrial facilities, commercial buildings and infrastructure projects.",
+  title: { absolute: "Cable Applications | Power Distribution, Buildings and Infrastructure" },
+  description:
+    "Huanyu Cable supports cable supply for power distribution, buildings, industrial facilities, infrastructure and project-based engineering applications.",
   alternates: { canonical: "/applications" },
 };
 
