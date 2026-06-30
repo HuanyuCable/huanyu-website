@@ -22,16 +22,16 @@ const productCategories = [
     keywords: ["0.6/1 kV", "YJV / YJY / YJLV", "YJV22 / YJV23", "VV / VV22 options"],
     subItems: [
       {
-        title: "XLPE Insulated Power Cables",
+        title: "General LV XLPE Cables",
         models: "YJV / YJY / YJLV / YJLV22",
         href: "/products/low-voltage-xlpe-power-cables",
-        note: "Copper or aluminium conductor XLPE insulated low-voltage power cable family",
+        note: "YJV / YJY / YJLV / YJLV22 options for common low-voltage distribution projects.",
       },
       {
-        title: "Armoured Power Cables",
-        models: "YJV22 / YJV23",
-        href: "/products/yjv22-yjv23-low-voltage-armoured-power-cables",
-        note: "Steel tape armoured low-voltage power cables for fixed installation",
+        title: "Armoured LV Power Cables",
+        models: "YJV22 / YJV23 / YJV32 / YJV33",
+        href: "/products/low-voltage-armoured-power-cables",
+        note: "YJV22 / YJV23 / YJV32 / YJV33 options with steel tape or steel wire armour.",
       },
       {
         title: "PVC Insulated Power Cable Options",
