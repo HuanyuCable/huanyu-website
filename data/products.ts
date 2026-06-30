@@ -8,7 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
-  detailVariant?: "low-voltage-armoured" | "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -35,7 +35,6 @@ export const products: Product[] = [
     detailImagePath: "/media/products/hero/lv-armoured-power-cable-hero.webp",
     imageAlt: "Illustrative product-family rendering of a low-voltage armoured power cable",
     fallbackImage: "/images/product-lv.svg",
-    detailVariant: "low-voltage-armoured",
     voltage: "0.6/1 kV and project-specific LV ratings",
     standards: ["GB/T 12706.1", "IEC 60502-1", "Project-specific specifications reviewed before quotation"],
     construction: ["Copper conductor", "XLPE or PVC insulation", "Project-specific armour reviewed before quotation", "PVC or LSZH outer sheath"],
