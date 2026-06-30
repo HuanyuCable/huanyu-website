@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/InquiryForm";
+import { LowVoltageArmouredProductPage } from "@/components/LowVoltageArmouredProductPage";
 import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
 import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProductPage";
 import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
@@ -30,7 +31,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
-  const isLowVoltageArmoured = product.slug === "low-voltage-armoured-power-cables";
+
+  if (product.slug === "low-voltage-armoured-power-cables") {
+    return <LowVoltageArmouredProductPage />;
+  }
 
   if (product.detailVariant === "yjv22-yjv23") {
     return <Yjv22Yjv23ProductPage />;
@@ -82,9 +86,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 priority
               />
             </div>
-            {!isLowVoltageArmoured && (
-              <p className="product-image-note">Illustrative product-family rendering. Final construction is confirmed against the applicable specification before quotation.</p>
-            )}
+            <p className="product-image-note">Illustrative product-family rendering. Final construction is confirmed against the applicable specification before quotation.</p>
           </div>
         </div>
       </section>
