@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { InquiryForm } from "@/components/InquiryForm";
-import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
+import { LowVoltageArmouredProductPage, LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/components/LowVoltageXlpeProductPages";
 import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProductPage";
 import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
 import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
@@ -30,6 +30,10 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+
+  if (product.detailVariant === "low-voltage-armoured") {
+    return <LowVoltageArmouredProductPage />;
+  }
 
   if (product.detailVariant === "yjv22-yjv23") {
     return <Yjv22Yjv23ProductPage />;
