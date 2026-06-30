@@ -30,6 +30,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+  const isLowVoltageArmoured = product.slug === "low-voltage-armoured-power-cables";
 
   if (product.detailVariant === "yjv22-yjv23") {
     return <Yjv22Yjv23ProductPage />;
@@ -81,7 +82,9 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                 priority
               />
             </div>
-            <p className="product-image-note">Illustrative product-family rendering. Final construction is confirmed against the applicable specification before quotation.</p>
+            {!isLowVoltageArmoured && (
+              <p className="product-image-note">Illustrative product-family rendering. Final construction is confirmed against the applicable specification before quotation.</p>
+            )}
           </div>
         </div>
       </section>

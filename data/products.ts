@@ -32,8 +32,8 @@ export const products: Product[] = [
     description:
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
     imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
-    detailImagePath: "/media/products/hero/lv-armoured-power-cable-hero.webp",
-    imageAlt: "Illustrative product-family rendering of a low-voltage armoured power cable",
+    detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
+    imageAlt: "Low-voltage armoured power cable product family",
     fallbackImage: "/images/product-lv.svg",
     voltage: "0.6/1 kV and project-specific LV ratings",
     standards: ["GB/T 12706.1", "IEC 60502-1", "Project-specific specifications reviewed before quotation"],

@@ -303,7 +303,7 @@ export function LowVoltageXlpeFamilyProductPage() {
       <ProductHero
         eyebrow="Low Voltage XLPE Power Cables"
         title="YJV / YJY / YJLV / YJLV22 Product Family"
-        description="A combined introduction page for Huanyu Cable's low-voltage XLPE insulated power cable family, covering copper and aluminium conductor options, PVC or PE outer sheath options, and both unarmoured and armoured structures."
+        description="Low-voltage XLPE insulated power cables for fixed distribution systems, including copper or aluminium conductor options, PVC or PE sheath constructions and project-reviewed armoured variants."
         badges={["0.6/1 kV", "Copper / Aluminium", "PVC / PE Sheath", "Unarmoured / STA Armoured"]}
         image={familyImages.hero}
         imageAlt="YJV, YJY, YJLV and YJLV22 low-voltage XLPE power cable family"
@@ -315,10 +315,10 @@ export function LowVoltageXlpeFamilyProductPage() {
 
       <section className="section">
         <div className="container xlpe-positioning">
-          <span className="eyebrow">Product Family Positioning</span>
-          <h2>Combined family page for general low-voltage XLPE cables.</h2>
+          <span className="eyebrow">Product Scope</span>
+          <h2>General Low-Voltage XLPE Cable Families</h2>
           <p className="lead">
-            This page acts as the combined introduction page for the general low-voltage XLPE cable family, while the dedicated armoured copper page for <strong>YJV22 / YJV23</strong> remains separate.
+            Low-voltage XLPE insulated power cables for fixed distribution systems, including copper or aluminium conductor options and PVC or PE sheath constructions. Armoured variants are reviewed according to installation conditions and project specifications. For dedicated steel tape or steel wire armoured constructions, view <Link href="/products/low-voltage-armoured-power-cables">Armoured LV Power Cables</Link>.
           </p>
         </div>
       </section>
@@ -347,7 +347,7 @@ export function LowVoltageXlpeFamilyProductPage() {
         <div className="container">
           <div className="product-section-intro">
             <span className="eyebrow">Recommended English names</span>
-            <h2>Product Family Positioning</h2>
+            <h2>Common Low-Voltage XLPE Cable Types</h2>
           </div>
           <div className="product-section-grid product-section-grid-wide">
             <div className="product-section-main">
@@ -358,7 +358,7 @@ export function LowVoltageXlpeFamilyProductPage() {
                     <th>Chinese Type</th>
                     <th>Recommended English Name</th>
                     <th>Typical Structure</th>
-                    <th>Website Position</th>
+                    <th>Typical Application</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -366,25 +366,25 @@ export function LowVoltageXlpeFamilyProductPage() {
                     <td>YJV</td>
                     <td>Cu Conductor XLPE Insulated PVC Sheathed Power Cable</td>
                     <td>Copper conductor / XLPE insulation / filler / outer sheath</td>
-                    <td>Main general low-voltage product</td>
+                    <td>General low-voltage distribution projects</td>
                   </tr>
                   <tr>
                     <td>YJY</td>
                     <td>Cu Conductor XLPE Insulated PE Sheathed Power Cable</td>
                     <td>Copper conductor / XLPE insulation / filler / PE outer sheath</td>
-                    <td>General family variant with PE sheath</td>
+                    <td>Low-voltage projects requiring PE sheath construction</td>
                   </tr>
                   <tr>
                     <td>YJLV</td>
                     <td>Al Conductor XLPE Insulated PVC Sheathed Power Cable</td>
                     <td>Aluminium conductor / XLPE insulation / filler / outer sheath</td>
-                    <td>Economical aluminium option</td>
+                    <td>Project-reviewed aluminium conductor option</td>
                   </tr>
                   <tr>
                     <td>YJLV22</td>
                     <td>Al Conductor XLPE Insulated Steel Tape Armoured PVC Sheathed Power Cable</td>
                     <td>Al conductor / XLPE insulation / filler / inner sheath / steel tape armour / outer sheath</td>
-                    <td>Armoured aluminium variant in same family</td>
+                    <td>Fixed installations requiring additional mechanical protection</td>
                   </tr>
                 </tbody>
               </table>
@@ -420,7 +420,7 @@ export function LowVoltageXlpeFamilyProductPage() {
       <section className="section">
         <div className="container xlpe-overview-grid">
           <article className="xlpe-info-card">
-            <span className="eyebrow">Website copy</span>
+            <span className="eyebrow">Product Overview</span>
             <h2>Low-voltage XLPE insulated power cables for fixed installation</h2>
             <p>
               YJV, YJY, YJLV and YJLV22 are low-voltage XLPE insulated power cables for fixed installation and power distribution. They are available in copper and aluminium conductor options, with PVC or PE sheath options, and can be supplied in both unarmoured and steel tape armoured structures according to project requirements.
