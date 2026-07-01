@@ -8,7 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
-  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables" | "control-instrumentation-cables";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -101,23 +101,23 @@ export const products: Product[] = [
     shortName: "Overhead Insulated",
     category: "Supporting",
     priority: 4,
-    tagline: "JKYJ and JKLYJ XLPE insulated overhead cables for 1 kV and 10 kV urban and rural distribution lines.",
+    tagline: "JKYJ and JKLYJ XLPE insulated overhead cables for overhead distribution routes.",
     description:
-      "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for 1 kV and 10 kV overhead distribution lines.",
-    metaTitle: "Overhead Line Products | Insulated Overhead Cables | HUANYU CABLE",
+      "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for overhead distribution line projects.",
+    metaTitle: "Overhead Insulated Cables | JKYJ and JKLYJ | HUANYU CABLE",
     metaDescription:
-      "Overhead insulated cable products including JKYJ and JKLYJ options for urban and rural distribution line projects.",
+      "Overhead insulated cable products including JKYJ and JKLYJ options for distribution line projects, reviewed according to route and specification requirements.",
     detailVariant: "overhead-insulated-cables",
     imagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
     detailImagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
     imageAlt: "JKYJ and JKLYJ overhead insulated cable product family",
     fallbackImage: "/images/product-support.svg",
-    voltage: "1 kV and 10 kV",
+    voltage: "Common low-voltage and medium-voltage distribution grades",
     standards: ["Applicable GB/T standards", "Project-specified standards"],
     construction: ["Copper conductor for JKYJ", "Aluminium conductor for JKLYJ", "XLPE insulation", "Single-core overhead construction"],
     applications: ["Urban distribution lines", "Rural power networks", "Service connections", "Distribution network renovation"],
     featuredModels: ["JKYJ", "JKLYJ"],
-    note: "ABC cable options can be discussed as related project requirements, while JKYJ and JKLYJ remain the primary promoted products on this page.",
+    note: "ABC cable options can be discussed as related aerial bundled cable requirements, while JKYJ and JKLYJ remain the main insulated overhead products on this page.",
   },
   {
     slug: "acsr-bare-overhead-conductors",
@@ -125,9 +125,9 @@ export const products: Product[] = [
     shortName: "ACSR Conductors",
     category: "Supporting",
     priority: 4,
-    tagline: "LGJ / ACSR steel reinforced aluminium bare conductors for overhead transmission and distribution line projects.",
+    tagline: "LGJ / ACSR steel reinforced aluminium bare conductors for overhead line projects.",
     description:
-      "LGJ / ACSR aluminium conductor steel reinforced bare conductors for overhead transmission and distribution lines, using a steel core for mechanical strength and aluminium strands for electrical conductivity.",
+      "LGJ / ACSR aluminium conductor steel reinforced bare conductors for overhead line projects, using a steel core for mechanical strength and aluminium strands for electrical conductivity.",
     metaTitle: "ACSR Bare Overhead Conductors | LGJ Steel Reinforced Aluminium Conductor | HUANYU CABLE",
     metaDescription:
       "LGJ / ACSR aluminium conductor steel reinforced bare conductors for overhead transmission and distribution lines, using a steel core for mechanical strength and aluminium strands for electrical conductivity.",
@@ -216,8 +216,8 @@ export const products: Product[] = [
     shortName: "Building Wires",
     category: "Supporting",
     priority: 4,
-    tagline: "BV and BVR copper conductor PVC insulated wires for building wiring and interior distribution.",
-    description: "PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected general-purpose installation applications.",
+    tagline: "BV and BVR copper conductor PVC insulated wires for building wiring and interior distribution routes.",
+    description: "PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected light-duty installation applications.",
     metaTitle: "Building Wires & Flexible Cables | BV and BVR | HUANYU CABLE",
     metaDescription:
       "Building wires and flexible cable options including BV and BVR for fixed wiring, lighting, socket circuits and distribution box wiring.",
@@ -239,17 +239,21 @@ export const products: Product[] = [
     shortName: "Control Cables",
     category: "Supporting",
     priority: 4,
-    tagline: "Supporting control cables for industrial project packages.",
-    description: "Control, screened and armoured variants can be assessed for project-based supply.",
-    imagePath: "/media/products/categories/control-cable.webp",
-    detailImagePath: "/media/products/categories/control-cable.webp",
-    imageAlt: "Illustrative product-family rendering of a multicore control cable",
+    tagline: "Control cables, screened control cables and instrumentation cable options for equipment wiring and industrial project packages.",
+    description: "Control, screened, flexible and armoured variants are reviewed as supporting cable products for control circuits, panels, equipment wiring and instrumentation routes.",
+    metaTitle: "Control & Instrumentation Cables | KVV, KVVP, KVVR, KVV22 | HUANYU CABLE",
+    metaDescription:
+      "Control and instrumentation cable options including KVV, KVVP, KVVR, KVVRP and KVV22, reviewed according to control circuit, panel wiring and project package requirements.",
+    detailVariant: "control-instrumentation-cables",
+    imagePath: "/images/products/control-instrumentation/control-instrumentation-cable-hero.png",
+    detailImagePath: "/images/products/control-instrumentation/control-instrumentation-cable-hero.png",
+    imageAlt: "Multicore control and instrumentation cable close-up",
     fallbackImage: "/images/product-support.svg",
-    voltage: "Common control cable voltage classes",
-    standards: ["IEC or customer specification", "Project-specific construction"],
-    construction: ["Copper conductor", "PVC or XLPE insulation", "Optional screen", "Optional armour", "Outer sheath"],
-    applications: ["Industrial control", "Instrumentation", "Panels", "Process facilities"],
-    featuredModels: ["KVV", "KVV22", "Screened control cable", "Instrumentation variants"],
+    voltage: "Common low-voltage control cable classes",
+    standards: ["Project-specified standards", "Construction and test requirements reviewed before quotation"],
+    construction: ["Copper conductor", "PVC or XLPE insulation", "Optional screen", "Optional armour", "PVC or project-specified outer sheath"],
+    applications: ["Industrial control circuits", "Instrumentation routes", "Control panels", "Process facilities"],
+    featuredModels: ["KVV", "KVVP", "KVVR", "KVVRP", "KVV22"],
     note: "Availability is confirmed according to the requested construction and project requirements.",
   },
   {

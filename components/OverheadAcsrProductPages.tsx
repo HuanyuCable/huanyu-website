@@ -7,7 +7,6 @@ const overheadImages = {
   jkyj: "/images/products/overhead-acsr/jkyj-copper-conductor-closeup.png",
   jklyj: "/images/products/overhead-acsr/jklyj-aluminium-conductor-closeup.png",
   comparison: "/images/products/overhead-acsr/jkyj-jklyj-comparison.png",
-  application: "/images/products/overhead-acsr/overhead-insulated-application.png",
 };
 
 const acsrImages = {
@@ -58,7 +57,7 @@ const acsrConstructionRows = [
 ];
 
 const acsrTypeRows = [
-  ["LGJ / ACSR", "Aluminium Conductor Steel Reinforced", "Main promoted bare overhead conductor type"],
+  ["LGJ / ACSR", "Aluminium conductor steel reinforced", "Representative bare overhead conductor type"],
   ["JL", "Aluminium stranded conductor", "Related conductor type, subject to project confirmation"],
   ["LGJF", "Steel reinforced aluminium alloy conductor / anti-corrosion or project-specific variant", "Related option, subject to confirmation"],
   ["AAC / AAAC", "All aluminium or all aluminium alloy conductor", "Related bare conductor options can be discussed according to project requirements"],
@@ -191,7 +190,7 @@ export function OverheadInsulatedCablesProductPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Representative models</span>
-              <h2>JKYJ and JKLYJ are the primary promoted overhead insulated products</h2>
+              <h2>JKYJ and JKLYJ representative overhead insulated products</h2>
             </div>
           </div>
           <div className="evidence-grid">
@@ -201,13 +200,15 @@ export function OverheadInsulatedCablesProductPage() {
             ].map(([src, alt, row]) => {
               const [model, name, construction] = row as string[];
               return (
-                <article className="evidence-card" key={model}>
+                <article className="evidence-card overhead-model-card" key={model}>
                   <div className="evidence-image xlpe-gallery-image overhead-card-image">
                     <Image src={src as string} alt={alt as string} width={900} height={900} sizes="(max-width: 760px) 100vw, 33vw" />
                   </div>
-                  <h3>{model}</h3>
-                  <p><strong>{name}</strong></p>
-                  <p>{construction}</p>
+                  <div className="overhead-model-card-body">
+                    <h3>{model}</h3>
+                    <p><strong>{name}</strong></p>
+                    <p>{construction}</p>
+                  </div>
                 </article>
               );
             })}
@@ -249,10 +250,6 @@ export function OverheadInsulatedCablesProductPage() {
               <Image src={overheadImages.comparison} alt="JKYJ and JKLYJ overhead insulated cable comparison" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <figcaption>JKYJ and JKLYJ conductor comparison</figcaption>
             </figure>
-            <figure className="overhead-media-frame">
-              <Image src={overheadImages.application} alt="Overhead insulated cable distribution line application" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
-              <figcaption>Overhead insulated distribution line application</figcaption>
-            </figure>
           </aside>
           </div>
         </div>
@@ -273,7 +270,7 @@ export function OverheadInsulatedCablesProductPage() {
             <span className="eyebrow">Related option</span>
             <h2>Aerial bundled cable discussion</h2>
             <p>
-              Related aerial bundled cable options can be discussed according to project requirements. Huanyu Cable places primary emphasis on JKYJ and JKLYJ overhead insulated cable supply.
+              Related aerial bundled cable options can be discussed according to project requirements, while this page focuses on JKYJ and JKLYJ overhead insulated cable supply.
             </p>
           </article>
           </aside>
@@ -332,9 +329,9 @@ export function AcsrBareOverheadConductorsProductPage() {
           </article>
           <article className="xlpe-info-card">
             <span className="eyebrow">Designation note</span>
-            <h2>LGJ corresponds to ACSR</h2>
+            <h2>LGJ / ACSR designation note</h2>
             <p>
-              LGJ is the common Chinese product designation corresponding to ACSR, Aluminium Conductor Steel Reinforced. This page treats LGJ / ACSR as a bare overhead conductor product.
+              LGJ is commonly used as a Chinese project designation for aluminium conductor steel reinforced bare conductors. This page treats LGJ / ACSR as a bare overhead conductor product family for project review.
             </p>
           </article>
         </div>
@@ -370,7 +367,7 @@ export function AcsrBareOverheadConductorsProductPage() {
               ACSR is not described as an insulated cable on this page. It is presented as a bare overhead conductor.
             </div>
           </div>
-          <aside className="product-section-visuals xlpe-image-stack overhead-image-stack product-compact-stack">
+          <aside className="product-section-visuals xlpe-image-stack overhead-image-stack product-compact-stack acsr-structure-visuals">
             <figure className="overhead-media-frame">
               <Image src={acsrImages.structure} alt="ACSR steel core and aluminium strand structure" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <figcaption>Steel core and aluminium strand structure</figcaption>
@@ -389,7 +386,7 @@ export function AcsrBareOverheadConductorsProductPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Representative product types</span>
-              <h2>LGJ / ACSR is the primary promoted bare conductor type</h2>
+              <h2>LGJ / ACSR representative bare conductor type</h2>
             </div>
           </div>
           <div className="xlpe-table-wrap">
@@ -397,7 +394,7 @@ export function AcsrBareOverheadConductorsProductPage() {
               <thead>
                 <tr>
                   <th>Model / Type</th>
-                  <th>Recommended English Name</th>
+                  <th>English description</th>
                   <th>Notes</th>
                 </tr>
               </thead>

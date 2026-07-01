@@ -346,6 +346,43 @@ p { margin: 0 0 22px; color: var(--muted); }
 .overhead-feature-image {
   align-self: start;
 }
+.control-cable-hero-image img {
+  object-fit: cover;
+  object-position: center;
+}
+.overhead-model-card {
+  display: flex;
+  flex-direction: column;
+}
+.overhead-model-card .overhead-card-image {
+  width: calc(100% - 32px);
+  margin: 16px 16px 0;
+}
+.overhead-model-card-body {
+  padding: 22px 26px 28px;
+}
+.overhead-model-card-body h3 {
+  margin: 0 0 10px;
+  color: var(--blue);
+}
+.overhead-model-card-body p {
+  margin-bottom: 10px;
+}
+.overhead-model-card-body p:last-child {
+  margin-bottom: 0;
+}
+.acsr-structure-visuals {
+  gap: 16px;
+}
+.acsr-structure-visuals > .overhead-media-frame {
+  min-height: clamp(270px, 27vw, 360px);
+}
+.acsr-structure-visuals > .overhead-media-frame img {
+  height: clamp(220px, 22vw, 292px);
+}
+.acsr-structure-visuals figcaption {
+  min-height: 18px;
+}
 .overhead-compact-application-grid {
   grid-template-columns: 1fr 1fr;
 }

@@ -9,6 +9,7 @@ import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProd
 import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
 import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
 import { BuildingWiresFlexibleCablesPage } from "@/components/BuildingWiresFlexibleCablesPage";
+import { ControlCablesProductPage } from "@/components/ControlCablesProductPage";
 import { getProduct, products } from "@/data/products";
 import { site } from "@/lib/site";
 
@@ -64,12 +65,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
     return <BuildingWiresFlexibleCablesPage />;
   }
 
+  if (product.detailVariant === "control-instrumentation-cables") {
+    return <ControlCablesProductPage />;
+  }
+
   return (
     <>
       <section className="product-detail-hero">
         <div className="container product-detail-grid">
           <div>
-            <Link className="back-link" href="/products">← All products</Link>
+            <Link className="back-link" href="/products">Back to all products</Link>
             <span className="eyebrow light">{product.category} product family</span>
             <h1>{product.name}</h1>
             <p>{product.description}</p>
@@ -98,8 +103,8 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <h2>Typical configuration</h2>
             <div className="spec-table">
               <div><strong>Voltage</strong><span>{product.voltage}</span></div>
-              <div><strong>Featured models</strong><span>{product.featuredModels.join(" · ")}</span></div>
-              <div><strong>Reference standards</strong><span>{product.standards.join(" · ")}</span></div>
+              <div><strong>Featured models</strong><span>{product.featuredModels.join(" / ")}</span></div>
+              <div><strong>Reference standards</strong><span>{product.standards.join(" / ")}</span></div>
             </div>
             <h2>Construction options</h2>
             <ul className="detail-list">{product.construction.map((item) => <li key={item}>{item}</li>)}</ul>

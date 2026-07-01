@@ -110,7 +110,7 @@ export function BuildingWiresFlexibleCablesPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Representative products</span>
-              <h2>BV and BVR are the primary promoted building-wire products</h2>
+              <h2>BV and BVR representative building-wire products</h2>
             </div>
           </div>
           <div className="building-wire-card-grid">
@@ -179,7 +179,7 @@ export function BuildingWiresFlexibleCablesPage() {
         <div className="container">
           <div className="product-section-intro">
             <span className="eyebrow">Key technical parameters</span>
-            <h2>Key Quotation Parameters</h2>
+            <h2>Typical parameters for building wire review</h2>
           </div>
           <div className="product-section-grid">
             <div className="product-section-main">

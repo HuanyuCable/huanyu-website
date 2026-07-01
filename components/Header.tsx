@@ -27,6 +27,7 @@ const nav: NavItem[] = [
       { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
       { href: "/products/overhead-insulated-cables", label: "Overhead Line Products" },
       { href: "/products/building-wires-flexible-cables", label: "Building Wires & Flexible Cables" },
+      { href: "/products/control-instrumentation-cables", label: "Control & Instrumentation Cables" },
     ],
   },
   { href: "/applications", label: "Applications" },

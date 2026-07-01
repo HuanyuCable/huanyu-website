@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: { absolute: "Cable Products | Low Voltage, Medium Voltage, LSZH and Overhead Cables" },
+  title: { absolute: "Cable Products | Power, LSZH, Building, Control and Overhead Cables" },
   description:
-    "Explore Huanyu Cable product families including low voltage power cables, medium voltage XLPE cables, LSZH and fire-safe cables, overhead line products and building wires.",
+    "Explore Huanyu Cable product families including low voltage power cables, medium voltage XLPE cables, LSZH and fire-safe cables, building wires, control cables and overhead line products.",
   alternates: { canonical: "/products" },
 };
 
@@ -163,6 +163,37 @@ const productCategories = [
       },
     ],
   },
+  {
+    id: "control-instrumentation-cables",
+    title: "Control & Instrumentation Cables",
+    label: "Supporting category",
+    image: "/images/products/control-instrumentation/control-instrumentation-cable-hero.png",
+    imageAlt: "Multicore control and instrumentation cable close-up",
+    description: "Control, screened, flexible and armoured cable options for control circuits, panels and industrial project packages.",
+    href: "/products/control-instrumentation-cables",
+    cta: "View control cable page",
+    keywords: ["KVV", "KVVP", "KVVR", "KVVRP", "KVV22"],
+    subItems: [
+      {
+        title: "PVC Insulated Control Cable",
+        models: "KVV",
+        href: "/products/control-instrumentation-cables",
+        note: "Fixed control cable routes for panels, equipment and industrial circuits",
+      },
+      {
+        title: "Screened Control Cable",
+        models: "KVVP / KVVRP",
+        href: "/products/control-instrumentation-cables",
+        note: "Screened variants reviewed when the project specifies signal route protection",
+      },
+      {
+        title: "Armoured Control Cable",
+        models: "KVV22",
+        href: "/products/control-instrumentation-cables",
+        note: "Steel tape armoured control cable options for fixed routes requiring protection",
+      },
+    ],
+  },
 ];
 
 export default function ProductsPage() {
@@ -181,7 +212,7 @@ export default function ProductsPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Product category directory</span>
-              <h2>Five Main Product Categories</h2>
+              <h2>Primary and Supporting Product Categories</h2>
             </div>
             <p>Each category shows its representative product families or models so buyers can move from a high-level category to the relevant detail page.</p>
           </div>
