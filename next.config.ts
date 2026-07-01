@@ -15,8 +15,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/products/medium-voltage-power-cables",
-        destination: "/products/medium-voltage-xlpe-power-cables",
+        source: "/products/medium-voltage-xlpe-power-cables",
+        destination: "/products/medium-voltage-power-cables",
         permanent: true,
       },
     ];
