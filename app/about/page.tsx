@@ -211,6 +211,23 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section cta-simple">
+        <div className="container">
+          <div>
+            <h2>Review cable families for your project.</h2>
+            <p>See the main product categories or send your basic project requirements for review.</p>
+          </div>
+          <div className="hero-actions">
+            <Link className="button" href="/products">
+              View Products
+            </Link>
+            <Link className="button" href="/contact">
+              Contact Huanyu Cable
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="section about-updates-section">
         <div className="container update-callout">
           <div>

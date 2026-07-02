@@ -43,7 +43,7 @@ export default function QualityPage() {
           </div>
         </div>
       </section>
-      <section className="section cta-simple"><div className="container"><h2>Need a specific test or document?</h2><Link className="button" href="/contact">Send Requirements</Link></div></section>
+      <section className="section cta-simple"><div className="container"><div><h2>Need a specific test or document?</h2><p>Share your cable type, project standard, testing scope or required documents for review.</p></div><Link className="button" href="/contact">Send Testing or Document Requirements</Link></div></section>
     </>
   );
 }

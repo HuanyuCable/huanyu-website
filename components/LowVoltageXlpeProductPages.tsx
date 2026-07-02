@@ -320,6 +320,9 @@ export function LowVoltageXlpeFamilyProductPage() {
           <p className="lead">
             Low-voltage XLPE insulated power cables for fixed distribution systems, including copper or aluminium conductor options and PVC or PE sheath constructions. Armoured variants are reviewed according to installation conditions and project specifications. For dedicated steel tape or steel wire armoured constructions, view <Link href="/products/low-voltage-armoured-power-cables">Armoured LV Power Cables</Link>.
           </p>
+          <div className="review-note">
+            For quotation, Huanyu Cable reviews voltage rating, conductor material, core arrangement, sheath requirement, installation condition and required documents before confirming the final cable construction.
+          </div>
         </div>
       </section>
 
@@ -407,6 +410,9 @@ export function LowVoltageXlpeFamilyProductPage() {
           <div className="product-section-grid">
             <div className="product-section-main">
             <SpecTable rows={familySpecs} />
+            <div className="review-note">
+              Testing and document requirements can be reviewed according to the confirmed project specification.
+            </div>
           </div>
           <aside className="product-section-visuals">
           <figure className="xlpe-feature-image product-compact-feature">

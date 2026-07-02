@@ -73,7 +73,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
       </div>
       <label>
         Project requirements *
-        <textarea name="requirements" required rows={compact ? 4 : 6} placeholder="Please include voltage, cores, conductor size, standard, quantity, destination and required date if available." />
+        <textarea name="requirements" required rows={compact ? 4 : 6} placeholder="Please share any available details, such as cable type, voltage, cores, conductor size, quantity, destination or required date. Partial project information is also welcome." />
       </label>
       <label className="honeypot" aria-hidden="true">
         Website

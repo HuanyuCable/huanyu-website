@@ -626,6 +626,15 @@ p { margin: 0 0 22px; color: var(--muted); }
 .application-showcase-content strong { display: block; margin-bottom: 16px; color: #ffad7c; font-size: 15px; }
 .application-showcase-content p { color: rgba(255,255,255,.75); font-size: 18px; }
 .application-showcase-content .button { width: fit-content; margin-top: 8px; }
+.application-related-products { margin-top: 6px; }
+.application-related-title { margin-bottom: 10px; }
+.application-product-link-group { display: flex; flex-wrap: wrap; gap: 8px; max-width: 560px; }
+.application-product-chip { display: inline-flex; align-items: center; max-width: 100%; min-height: 34px; padding: 6px 10px; border: 1px solid rgba(255,255,255,.26); background: rgba(255,255,255,.08); color: rgba(255,255,255,.84); font-size: 12px; font-weight: 800; line-height: 1.25; white-space: normal; }
+.application-product-chip:hover, .application-product-chip:focus-visible { border-color: rgba(255,173,124,.58); background: rgba(255,255,255,.14); color: white; outline: 0; }
+.application-card-cta { margin-top: 18px; }
+.application-card-cta a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 1px solid rgba(255,173,124,.58); background: rgba(255,255,255,.12); color: white; font-weight: 850; }
+.application-card-cta a:hover, .application-card-cta a:focus-visible { background: rgba(255,255,255,.2); border-color: #ffad7c; outline: 0; }
+.application-card-cta span { color: #ffad7c; }
 .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .resource-grid article { min-height: 260px; padding: 36px; background: var(--soft); border-top: 4px solid var(--navy); }
 .resource-type { color: var(--orange-dark); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .12em; }
