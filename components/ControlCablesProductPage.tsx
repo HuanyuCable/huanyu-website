@@ -57,16 +57,16 @@ export function ControlCablesProductPage() {
           <div>
             <div className="product-detail-image xlpe-hero-image control-cable-hero-image">
               <Image
-                src="/images/products/control-instrumentation/control-instrumentation-cable-hero.png"
-                alt="Multicore control and instrumentation cable close-up"
-                width={1200}
-                height={900}
+                src="/images/products/control-instrumentation/control-cable-shielded-kyjvp.png"
+                alt="Representative control and instrumentation cable product image"
+                width={1254}
+                height={1254}
                 sizes="(max-width: 980px) 100vw, 45vw"
                 priority
               />
             </div>
             <p className="product-image-note">
-              Representative product-family image. Final cable construction is confirmed against the project specification before quotation.
+              Representative image for control and instrumentation cable discussion. Final cable construction is confirmed against the project specification before quotation.
             </p>
           </div>
         </div>

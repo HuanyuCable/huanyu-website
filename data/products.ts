@@ -248,9 +248,9 @@ export const products: Product[] = [
     metaDescription:
       "Control and instrumentation cable options including KVV, KVVP, KVVR, KVVRP and KVV22, reviewed according to control circuit, panel wiring and project package requirements.",
     detailVariant: "control-instrumentation-cables",
-    imagePath: "/images/products/control-instrumentation/control-instrumentation-cable-hero.png",
-    detailImagePath: "/images/products/control-instrumentation/control-instrumentation-cable-hero.png",
-    imageAlt: "Multicore control and instrumentation cable close-up",
+    imagePath: "/images/products/control-instrumentation/control-cable-shielded-kyjvp.png",
+    detailImagePath: "/images/products/control-instrumentation/control-cable-shielded-kyjvp.png",
+    imageAlt: "Representative control and instrumentation cable product image",
     fallbackImage: "/images/product-support.svg",
     voltage: "Common low-voltage control cable classes",
     standards: ["Project-specified standards", "Construction and test requirements reviewed before quotation"],
