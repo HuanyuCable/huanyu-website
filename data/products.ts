@@ -8,6 +8,7 @@ export type Product = {
   description: string;
   metaTitle?: string;
   metaDescription?: string;
+  excludeFromSitemap?: boolean;
   detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables" | "control-instrumentation-cables";
   imagePath: string;
   detailImagePath: string;
@@ -158,6 +159,7 @@ export const products: Product[] = [
     metaTitle: "YJV22 / YJV23 Low Voltage Armoured Power Cables | HUANYU CABLE",
     metaDescription:
       "YJV22 and YJV23 are 0.6/1 kV XLPE insulated steel tape armoured power cables for fixed installation and power distribution systems. YJV22 uses a PVC outer sheath, while YJV23 uses a PE outer sheath.",
+    excludeFromSitemap: true,
     detailVariant: "yjv22-yjv23",
     imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
@@ -202,6 +204,7 @@ export const products: Product[] = [
     priority: 4,
     tagline: "General distribution cables for trays, ducts and protected installations.",
     description: "A supporting range for complete project supply and standard low-voltage distribution requirements.",
+    excludeFromSitemap: true,
     imagePath: "/images/products/low-voltage-xlpe/xlpe-unarmoured-yjv-yjy-yjlv.png",
     detailImagePath: "/media/products/categories/lv-unarmoured-power-cable.webp",
     imageAlt: "Illustrative product-family rendering of a low-voltage unarmoured power cable",
@@ -267,6 +270,7 @@ export const products: Product[] = [
     priority: 4,
     tagline: "Selected complementary products subject to project review.",
     description: "Selected overhead insulated and rubber-sheathed cable solutions can be reviewed for project-based supply according to the required construction and application.",
+    excludeFromSitemap: true,
     imagePath: "/media/products/categories/overhead-rubber-cable.webp",
     detailImagePath: "/media/products/categories/overhead-rubber-cable.webp",
     imageAlt: "Illustrative product-family rendering of overhead conductors and rubber-sheathed cable solutions",
