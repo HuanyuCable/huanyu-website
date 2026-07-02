@@ -6,7 +6,7 @@ const footerProducts = [
   { href: "/products/low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
   { href: "/products/medium-voltage-power-cables", label: "Medium Voltage Power Cables" },
   { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
-  { href: "/products#overhead-line-products", label: "Overhead Line Products" },
+  { href: "/products/overhead-insulated-cables", label: "Overhead Line Products" },
   { href: "/products/building-wires-flexible-cables", label: "Building Wires & Flexible Cables" },
   { href: "/products/control-instrumentation-cables", label: "Control & Instrumentation Cables" },
 ];
@@ -43,8 +43,9 @@ export function Footer() {
         </div>
         <div className="footer-column footer-contact-column">
           <h3>Contact</h3>
+          <Link href="/contact">Contact Form</Link>
           <a href={`mailto:${site.email}`}>{site.email}</a>
-          <span>WhatsApp: {site.whatsapp}</span>
+          {site.whatsapp && <a href={site.whatsappUrl}>WhatsApp: {site.whatsapp}</a>}
         </div>
       </div>
       <div className="container footer-bottom">

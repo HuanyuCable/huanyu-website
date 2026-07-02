@@ -56,9 +56,9 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
           <input name="phone" autoComplete="tel" />
         </label>
         <label>
-          Product Required
+          Product Family / Interest
           <select name="product" defaultValue="">
-            <option value="">Select a product family</option>
+            <option value="">Select a product family if applicable</option>
             <option>Low Voltage Armoured Power Cables</option>
             <option>Low Voltage XLPE Power Cables</option>
             <option>Medium Voltage Power Cables</option>
@@ -73,7 +73,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
       </div>
       <label>
         Project requirements *
-        <textarea name="requirements" required rows={compact ? 4 : 6} placeholder="Please include voltage, cores, conductor size, standard, quantity, delivery destination and required date." />
+        <textarea name="requirements" required rows={compact ? 4 : 6} placeholder="Please include voltage, cores, conductor size, standard, quantity, destination and required date if available." />
       </label>
       <label className="honeypot" aria-hidden="true">
         Website
@@ -83,7 +83,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
         {status === "sending" ? "Sending…" : "Send Project Requirements"}
       </button>
       {message && <p className={`form-message ${status}`}>{message}</p>}
-      <p className="form-note">For detailed quotations, please email your BOQ or specification to ziheng@huanyucable.com after submitting the form.</p>
+      <p className="form-note">Partial project information is also welcome for initial review. If available, you can also email your BOQ or specification to ziheng@huanyucable.com.</p>
     </form>
   );
 }

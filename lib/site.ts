@@ -5,6 +5,7 @@ export const site = {
   email: "ziheng@huanyucable.com",
   phone: null,
   whatsapp: "+86 177 5657 2233",
+  whatsappUrl: "https://wa.me/8617756572233",
   address: "Located in Luyang Industrial Park, Luyang District, Hefei, Anhui Province, China",
   founded: "1995",
   description:
