@@ -3,7 +3,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const footerProducts = [
-  { href: "/products/yjv22-yjv23-low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
+  { href: "/products/low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
   { href: "/products/medium-voltage-power-cables", label: "Medium Voltage Power Cables" },
   { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
   { href: "/products#overhead-line-products", label: "Overhead Line Products" },

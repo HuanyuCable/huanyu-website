@@ -31,6 +31,9 @@ export const products: Product[] = [
     tagline: "Project-ready steel tape and steel wire armoured power cables.",
     description:
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
+    metaTitle: "Low Voltage Armoured Power Cables | STA & SWA LV Cable Manufacturer",
+    metaDescription:
+      "Low-voltage armoured power cables with STA and SWA options for distribution, industrial and project power supply applications. Specifications are reviewed per project.",
     imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     imageAlt: "Low-voltage armoured power cable product family",

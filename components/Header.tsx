@@ -22,7 +22,8 @@ const nav: NavItem[] = [
     href: "/products",
     label: "Products",
     items: [
-      { href: "/products/low-voltage-xlpe-power-cables", label: "Low Voltage Power Cables" },
+      { href: "/products/low-voltage-armoured-power-cables", label: "Low Voltage Armoured Power Cables" },
+      { href: "/products/low-voltage-xlpe-power-cables", label: "Low Voltage XLPE Power Cables" },
       { href: "/products/medium-voltage-power-cables", label: "Medium Voltage Power Cables" },
       { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
       { href: "/products/overhead-insulated-cables", label: "Overhead Line Products" },

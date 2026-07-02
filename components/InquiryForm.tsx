@@ -59,12 +59,15 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
           Product Required
           <select name="product" defaultValue="">
             <option value="">Select a product family</option>
-            <option>Low Voltage Power Cables</option>
+            <option>Low Voltage Armoured Power Cables</option>
+            <option>Low Voltage XLPE Power Cables</option>
             <option>Medium Voltage Power Cables</option>
-            <option>LSZH & Fire-safe Power Cables</option>
-            <option>Overhead Line Products</option>
+            <option>LSZH & Fire-safe Cables</option>
             <option>Building Wires & Flexible Cables</option>
-            <option>Other / Project-dependent cable products</option>
+            <option>Control & Instrumentation Cables</option>
+            <option>Overhead Insulated Cables</option>
+            <option>ACSR Bare Overhead Conductors</option>
+            <option>Other / Project-specific Requirement</option>
           </select>
         </label>
       </div>
