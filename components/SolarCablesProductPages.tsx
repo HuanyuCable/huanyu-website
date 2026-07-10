@@ -47,7 +47,7 @@ const solarDetails: Record<SolarDetailVariant, SolarDetail> = {
       "The cable typically uses cross-linked insulation and sheath compounds selected for outdoor applications. The construction is designed to support reliable performance under sunlight, weather exposure and temperature variation during normal photovoltaic operation.",
       "Available conductor sizes, colours and packing options can be selected according to installation and order requirements.",
     ],
-    image: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
+    image: "/images/products/solar-cables/pv1-f-solar-dc-cable-final.webp",
     imageAlt: "PV1-F red single-core solar DC cable with tinned copper conductor",
     features: [
       "Flexible single-core solar DC cable",
@@ -86,7 +86,7 @@ const solarDetails: Record<SolarDetailVariant, SolarDetail> = {
       "The cable is suitable for installation along solar module frames, cable trays, conduits and inverter connection routes. Its material system provides resistance to UV radiation, ozone, weather exposure and temperature variation.",
       "H1Z2Z2-K is the cable designation specified by EN 50618 for photovoltaic applications rated up to 1.5 kV DC.",
     ],
-    image: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
+    image: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable-final.webp",
     imageAlt: "H1Z2Z2-K black solar DC cable with halogen-free insulation and tinned copper conductor",
     features: [
       "Flexible single-core cable for PV DC systems",
