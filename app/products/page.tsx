@@ -203,7 +203,7 @@ const productCategories = [
     description: "Selected PV cable solutions for solar DC connections, including PV1-F and H1Z2Z2-K types for photovoltaic module, combiner box and inverter wiring.",
     href: "/products/solar-cables",
     cta: "View Solar Cables",
-    keywords: ["PV1-F", "H1Z2Z2-K", "Solar DC wiring", "Up to 1.5 kV DC"],
+    keywords: ["PV1-F", "H1Z2Z2-K", "Solar DC wiring", "Tinned Copper"],
     subItems: [
       {
         title: "PV1-F Solar DC Cable",
