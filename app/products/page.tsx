@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: { absolute: "Cable Products | Power, LSZH, Building, Control and Overhead Cables" },
+  title: { absolute: "Cable Products | Power, Solar, LSZH, Control and Overhead Cables" },
   description:
-    "Explore Huanyu Cable product families including low voltage power cables, medium voltage XLPE cables, LSZH and fire-safe cables, building wires, control cables and overhead line products.",
+    "Explore Huanyu Cable product families including low voltage and medium voltage power cables, solar cables, LSZH and fire-safe cables, building wires, control cables and overhead line products.",
   alternates: { canonical: "/products" },
 };
 
@@ -191,6 +191,31 @@ const productCategories = [
         models: "KVV22",
         href: "/products/control-instrumentation-cables",
         note: "Steel tape armoured control cable options for fixed routes requiring protection",
+      },
+    ],
+  },
+  {
+    id: "solar-cables",
+    title: "Solar Cables",
+    label: "Supporting category",
+    image: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
+    imageAlt: "PV1-F red single-core solar DC cable product view",
+    description: "Selected PV cable solutions for solar DC connections, including PV1-F and H1Z2Z2-K types for photovoltaic module, combiner box and inverter wiring.",
+    href: "/products/solar-cables",
+    cta: "View Solar Cables",
+    keywords: ["PV1-F", "H1Z2Z2-K", "Solar DC wiring", "Up to 1.5 kV DC"],
+    subItems: [
+      {
+        title: "PV1-F Solar DC Cable",
+        models: "PV1-F",
+        href: "/products/pv1-f-solar-dc-cable",
+        note: "Flexible solar DC cable for photovoltaic panel, string and inverter connections.",
+      },
+      {
+        title: "H1Z2Z2-K Solar DC Cable",
+        models: "H1Z2Z2-K",
+        href: "/products/h1z2z2-k-solar-dc-cable",
+        note: "Cross-linked halogen-free solar DC cable for long-term outdoor photovoltaic installations.",
       },
     ],
   },

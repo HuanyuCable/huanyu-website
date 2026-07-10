@@ -65,6 +65,7 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
             <option>LSZH & Fire-safe Cables</option>
             <option>Building Wires & Flexible Cables</option>
             <option>Control & Instrumentation Cables</option>
+            <option>Solar Cables / PV Cables</option>
             <option>Overhead Insulated Cables</option>
             <option>ACSR Bare Overhead Conductors</option>
             <option>Other / Project-specific Requirement</option>

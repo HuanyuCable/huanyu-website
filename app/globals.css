@@ -208,6 +208,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .product-image-note { margin: 14px 0 0; color: rgba(255,255,255,.68); font-size: 13px; }
 .back-link { display: block; width: fit-content; margin-bottom: 25px; color: rgba(255,255,255,.7); }
 .xlpe-product-hero .product-detail-image img { object-fit: contain; background: white; }
+.solar-product-hero .product-detail-image img { object-fit: contain; background: white; }
 .xlpe-hero-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .xlpe-hero-badges span { padding: 9px 12px; border: 1px solid rgba(255,255,255,.24); background: rgba(255,255,255,.08); color: rgba(255,255,255,.86); font-size: 13px; font-weight: 800; }
 .xlpe-overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }

@@ -4,11 +4,21 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: { absolute: "Cable Applications | Power Distribution, Buildings and Infrastructure" },
   description:
-    "Huanyu Cable supports cable supply for power distribution, buildings, industrial facilities, infrastructure and project-based engineering applications.",
+    "Huanyu Cable supports cable supply for power distribution, solar photovoltaic systems, buildings, industrial facilities, infrastructure and project-based engineering applications.",
   alternates: { canonical: "/applications" },
 };
 
-const applications = [
+type Application = {
+  title: string;
+  products: string;
+  text: string;
+  image: string;
+  relatedProducts: string[][];
+  ctaLabel?: string;
+  ctaHref?: string;
+};
+
+const applications: Application[] = [
   {
     title: "Power Distribution",
     products: "LV armoured and MV power cables",
@@ -51,6 +61,18 @@ const applications = [
       ["ACSR Bare Overhead Conductors", "/products/acsr-bare-overhead-conductors"],
     ],
   },
+  {
+    title: "Solar Photovoltaic Systems",
+    products: "PV1-F and H1Z2Z2-K solar DC cables",
+    text: "Solar DC cables for reliable connections between photovoltaic modules, combiner boxes and inverters in rooftop, commercial and utility-scale PV installations.",
+    image: "/images/site/applications/solar-photovoltaic-systems-bg.webp",
+    relatedProducts: [
+      ["PV1-F Solar DC Cable", "/products/pv1-f-solar-dc-cable"],
+      ["H1Z2Z2-K Solar DC Cable", "/products/h1z2z2-k-solar-dc-cable"],
+    ],
+    ctaLabel: "View Solar Cables",
+    ctaHref: "/products/solar-cables",
+  },
 ];
 
 export default function ApplicationsPage() {
@@ -77,7 +99,7 @@ export default function ApplicationsPage() {
                   </div>
                 </div>
                 <div className="application-card-cta">
-                  <Link href="/contact">Discuss a project <span>→</span></Link>
+                  <Link href={item.ctaHref ?? "/contact"}>{item.ctaLabel ?? "Discuss a project"} <span>→</span></Link>
                 </div>
               </div>
             </article>

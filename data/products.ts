@@ -9,7 +9,7 @@ export type Product = {
   metaTitle?: string;
   metaDescription?: string;
   excludeFromSitemap?: boolean;
-  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables" | "control-instrumentation-cables";
+  detailVariant?: "yjv22-yjv23" | "low-voltage-xlpe-family" | "medium-voltage-xlpe" | "lszh-fire-safe" | "overhead-insulated-cables" | "acsr-bare-overhead-conductors" | "building-wires-flexible-cables" | "control-instrumentation-cables" | "solar-cables" | "solar-pv1-f" | "solar-h1z2z2-k";
   imagePath: string;
   detailImagePath: string;
   imageAlt: string;
@@ -98,6 +98,78 @@ export const products: Product[] = [
     applications: ["Metro and railway facilities", "Hospitals and healthcare buildings", "Data centers", "Transport hubs", "Public buildings", "Emergency and critical circuits"],
     featuredModels: ["WDZ / WDZN references", "ZR flame-retardant references", "NH fire-resistant references", "LSZH MV review per project"],
     note: "LSZH, flame-retardant and fire-resistant requirements are separate performance items and are confirmed against the requested cable construction and project test scope.",
+  },
+  {
+    slug: "solar-cables",
+    name: "Solar Cables",
+    shortName: "Solar Cables",
+    category: "Supporting",
+    priority: 4,
+    tagline: "Selected PV cable solutions for photovoltaic DC connections.",
+    description:
+      "Huanyu Cable supplies selected solar cable solutions for photovoltaic DC connections, including PV1-F and H1Z2Z2-K cable types.",
+    metaTitle: "Solar Cables | PV1-F & H1Z2Z2-K | Huanyu Cable",
+    metaDescription:
+      "Selected PV1-F and H1Z2Z2-K solar cable solutions for photovoltaic module, combiner box and inverter DC connections.",
+    detailVariant: "solar-cables",
+    imagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
+    detailImagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
+    imageAlt: "Red and black single-core solar DC cable product view",
+    fallbackImage: "/images/product-support.svg",
+    voltage: "Typically up to 1.5 kV DC, subject to selected model",
+    standards: ["Applicable standards confirmed according to selected model and project requirements"],
+    construction: ["Flexible tinned copper conductor", "Cross-linked insulation", "Cross-linked outer sheath"],
+    applications: ["Photovoltaic module strings", "Combiner boxes", "Inverter connections", "Fixed outdoor PV wiring"],
+    featuredModels: ["PV1-F", "H1Z2Z2-K"],
+    note: "Available based on confirmed project specification.",
+  },
+  {
+    slug: "pv1-f-solar-dc-cable",
+    name: "PV1-F Solar DC Cable",
+    shortName: "PV1-F Solar Cable",
+    category: "Supporting",
+    priority: 4,
+    tagline: "Flexible solar DC cable for photovoltaic panel, string and inverter connections.",
+    description:
+      "PV1-F solar DC cable is supplied for photovoltaic panel connections, string wiring, combiner boxes and inverter interconnections.",
+    metaTitle: "PV1-F Solar DC Cable | Huanyu Cable",
+    metaDescription:
+      "PV1-F solar DC cable for photovoltaic panel, combiner box and inverter connections. Flexible tinned copper construction for reliable outdoor PV applications.",
+    detailVariant: "solar-pv1-f",
+    imagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
+    detailImagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
+    imageAlt: "PV1-F red single-core solar DC cable with tinned copper conductor",
+    fallbackImage: "/images/product-support.svg",
+    voltage: "Typically up to 1.5 kV DC",
+    standards: ["According to requested model / project requirement"],
+    construction: ["Flexible stranded tinned copper", "Cross-linked insulation", "Cross-linked sheath"],
+    applications: ["Solar panel interconnection", "String wiring", "Combiner box connection", "Inverter DC connection", "Fixed outdoor PV installations"],
+    featuredModels: ["PV1-F"],
+    note: "Available based on confirmed project specification.",
+  },
+  {
+    slug: "h1z2z2-k-solar-dc-cable",
+    name: "H1Z2Z2-K Solar DC Cable",
+    shortName: "H1Z2Z2-K Solar Cable",
+    category: "Supporting",
+    priority: 4,
+    tagline: "Cross-linked halogen-free solar DC cable for long-term outdoor photovoltaic installations.",
+    description:
+      "H1Z2Z2-K solar DC cable is supplied for photovoltaic module strings, combiner box wiring, inverter links and other fixed DC applications.",
+    metaTitle: "H1Z2Z2-K Solar DC Cable | Huanyu Cable",
+    metaDescription:
+      "H1Z2Z2-K solar DC cable supplied for photovoltaic module, combiner box and inverter connections, with flexible tinned copper conductor and outdoor PV suitability.",
+    detailVariant: "solar-h1z2z2-k",
+    imagePath: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
+    detailImagePath: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
+    imageAlt: "H1Z2Z2-K black solar DC cable with halogen-free insulation and tinned copper conductor",
+    fallbackImage: "/images/product-support.svg",
+    voltage: "Typically up to 1.5 kV DC",
+    standards: ["EN 50618 / IEC 62930, subject to supplied model"],
+    construction: ["Flexible stranded tinned copper", "Cross-linked halogen-free insulation", "Cross-linked halogen-free sheath"],
+    applications: ["Solar module string connections", "Combiner box wiring", "Inverter DC input connections", "PV farm DC-side cabling", "Fixed outdoor photovoltaic installations"],
+    featuredModels: ["H1Z2Z2-K"],
+    note: "Applicable standards, test reports and supporting technical documents can be confirmed according to the selected model and project requirements.",
   },
   {
     slug: "overhead-insulated-cables",

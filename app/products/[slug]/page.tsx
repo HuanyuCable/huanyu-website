@@ -10,6 +10,7 @@ import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
 import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
 import { BuildingWiresFlexibleCablesPage } from "@/components/BuildingWiresFlexibleCablesPage";
 import { ControlCablesProductPage } from "@/components/ControlCablesProductPage";
+import { SolarCableDetailPage, SolarCablesCategoryPage } from "@/components/SolarCablesProductPages";
 import { getProduct, products } from "@/data/products";
 import { site } from "@/lib/site";
 
@@ -21,10 +22,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) return {};
+  const title = product.metaTitle ?? `${product.name} | HUANYU CABLE`;
+  const description = product.metaDescription ?? product.description;
+  const isSolarPage = product.detailVariant?.startsWith("solar-");
   return {
-    title: { absolute: product.metaTitle ?? `${product.name} | HUANYU CABLE` },
-    description: product.metaDescription ?? product.description,
+    title: { absolute: title },
+    description,
     alternates: { canonical: `/products/${slug}` },
+    ...(isSolarPage ? {
+      openGraph: {
+        type: "website" as const,
+        title,
+        description,
+        url: `/products/${slug}`,
+        images: [{ url: product.detailImagePath, alt: product.imageAlt }],
+      },
+    } : {}),
   };
 }
 
@@ -67,6 +80,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
   if (product.detailVariant === "control-instrumentation-cables") {
     return <ControlCablesProductPage />;
+  }
+
+  if (product.detailVariant === "solar-cables") {
+    return <SolarCablesCategoryPage />;
+  }
+
+  if (product.detailVariant === "solar-pv1-f" || product.detailVariant === "solar-h1z2z2-k") {
+    return <SolarCableDetailPage variant={product.detailVariant} />;
   }
 
   return (

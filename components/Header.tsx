@@ -29,6 +29,7 @@ const nav: NavItem[] = [
       { href: "/products/overhead-insulated-cables", label: "Overhead Line Products" },
       { href: "/products/building-wires-flexible-cables", label: "Building Wires & Flexible Cables" },
       { href: "/products/control-instrumentation-cables", label: "Control & Instrumentation Cables" },
+      { href: "/products/solar-cables", label: "Solar Cables" },
     ],
   },
   { href: "/applications", label: "Applications" },
