@@ -47,7 +47,7 @@ export const products: Product[] = [
     note: "Available constructions and technical data are confirmed against the applicable standard and project specification before quotation.",
   },
   {
-    slug: "medium-voltage-power-cables",
+    slug: "medium-voltage-xlpe-power-cables",
     name: "Medium Voltage Power Cables",
     shortName: "MV Power Cables",
     category: "Core",

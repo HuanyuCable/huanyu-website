@@ -171,7 +171,7 @@ export function SolarCablesCategoryPage() {
             ))}
           </div>
           <div className="review-note">
-            Looking for LV or MV cables for solar-related power distribution? Explore our <Link href="/products/low-voltage-armoured-power-cables">low-voltage</Link>, <Link href="/products/medium-voltage-power-cables">medium-voltage</Link> and <Link href="/products/control-instrumentation-cables">control cable</Link> ranges.
+            Looking for LV or MV cables for solar-related power distribution? Explore our <Link href="/products/low-voltage-armoured-power-cables">low-voltage</Link>, <Link href="/products/medium-voltage-xlpe-power-cables">medium-voltage</Link> and <Link href="/products/control-instrumentation-cables">control cable</Link> ranges.
           </div>
         </div>
       </section>

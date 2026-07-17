@@ -47,7 +47,7 @@ const productCategories = [
     image: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
     imageAlt: "Medium voltage copper tape screened XLPE power cable",
     description: "XLPE insulated MV cables with unarmoured, STA and SWA options reviewed for medium-voltage distribution projects.",
-    href: "/products/medium-voltage-power-cables",
+    href: "/products/medium-voltage-xlpe-power-cables",
     cta: "View medium-voltage cable page",
     keywords: [
       "3.6/6 kV to 35 kV",
@@ -59,19 +59,19 @@ const productCategories = [
       {
         title: "Unarmoured MV Cable",
         models: "YJV / YJY",
-        href: "/products/medium-voltage-power-cables",
+        href: "/products/medium-voltage-xlpe-power-cables",
         note: "Screened XLPE construction for protected routes, distribution networks and substations",
       },
       {
         title: "STA MV Cable",
         models: "YJV22 / YJV23",
-        href: "/products/medium-voltage-power-cables",
+        href: "/products/medium-voltage-xlpe-power-cables",
         note: "Steel tape armour reviewed against installation requirements",
       },
       {
         title: "SWA MV Cable",
         models: "YJV32 / YJV33",
-        href: "/products/medium-voltage-power-cables",
+        href: "/products/medium-voltage-xlpe-power-cables",
         note: "Steel wire armour reviewed against route and mechanical protection requirements",
       },
     ],

@@ -130,7 +130,7 @@ const faqs = [
 
 const relatedProducts = [
   ["Low Voltage Armoured Power Cables", "/products/low-voltage-armoured-power-cables", "STA and SWA power cable structures that can be reviewed with LSZH or fire-safe requirements."],
-  ["Medium Voltage Power Cables", "/products/medium-voltage-power-cables", "MV cable requirements reviewed separately for voltage class, screen design, sheath and testing scope."],
+  ["Medium Voltage Power Cables", "/products/medium-voltage-xlpe-power-cables", "MV cable requirements reviewed separately for voltage class, screen design, sheath and testing scope."],
   ["Building Wires & Flexible Cables", "/products/building-wires-flexible-cables", "Building wire options for indoor distribution, lighting and panel wiring projects."],
   ["Contact Huanyu Cable", "/contact", "Send your route, structure, safety-performance and document requirements for specification review."],
 ];

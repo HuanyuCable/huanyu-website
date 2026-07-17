@@ -26,7 +26,7 @@ const applications: Application[] = [
     image: "/images/site/applications/power-distribution-bg.png",
     relatedProducts: [
       ["Low Voltage Armoured Power Cables", "/products/low-voltage-armoured-power-cables"],
-      ["Medium Voltage Power Cables", "/products/medium-voltage-power-cables"],
+      ["Medium Voltage Power Cables", "/products/medium-voltage-xlpe-power-cables"],
     ],
   },
   {
@@ -36,7 +36,7 @@ const applications: Application[] = [
     image: "/images/site/applications/industrial-facilities-bg.png",
     relatedProducts: [
       ["Low Voltage Armoured Power Cables", "/products/low-voltage-armoured-power-cables"],
-      ["Medium Voltage Power Cables", "/products/medium-voltage-power-cables"],
+      ["Medium Voltage Power Cables", "/products/medium-voltage-xlpe-power-cables"],
       ["Control & Instrumentation Cables", "/products/control-instrumentation-cables"],
     ],
   },
@@ -56,7 +56,7 @@ const applications: Application[] = [
     text: "Rail, airport, municipal and construction projects requiring technical review, documents and shipment coordination.",
     image: "/images/site/applications/infrastructure-projects-bg.png",
     relatedProducts: [
-      ["Medium Voltage Power Cables", "/products/medium-voltage-power-cables"],
+      ["Medium Voltage Power Cables", "/products/medium-voltage-xlpe-power-cables"],
       ["Overhead Insulated Cables", "/products/overhead-insulated-cables"],
       ["ACSR Bare Overhead Conductors", "/products/acsr-bare-overhead-conductors"],
     ],
