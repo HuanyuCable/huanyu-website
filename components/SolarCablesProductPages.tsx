@@ -173,17 +173,17 @@ function SolarCatalogCta() {
 }
 
 function CableConstructionVisual({ detail }: { detail: SolarDetail }) {
+  const isPv1F = detail.accent === "red";
+  const crossSectionImage = isPv1F
+    ? "/images/products/solar-cables/pv1-f-cross-section.webp"
+    : "/images/products/solar-cables/h1z2z2-k-cross-section.webp";
+  const crossSectionAlt = `${detail.title} cross-section with tinned copper conductor, white insulation and ${isPv1F ? "red" : "black"} outer sheath`;
+
   return (
     <div className="solar-construction-grid">
-      <div className={`solar-cable-visual solar-cable-visual-${detail.accent}`} aria-hidden="true">
-        <div className="solar-cable-sheath">
-          <div className="solar-cable-insulation">
-            <div className="solar-cable-conductor">
-              {Array.from({ length: 13 }, (_, index) => <span key={index} />)}
-            </div>
-          </div>
-        </div>
-      </div>
+      <figure className="solar-cable-visual">
+        <Image src={crossSectionImage} alt={crossSectionAlt} width={1254} height={1254} sizes="(max-width: 980px) 100vw, 38vw" />
+      </figure>
       <ol className="solar-layer-list">
         {detail.construction.map((layer, index) => (
           <li key={layer}>
