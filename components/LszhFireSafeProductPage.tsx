@@ -3,12 +3,12 @@ import Link from "next/link";
 import { InquiryForm } from "@/components/InquiryForm";
 
 const lszhImages = {
-  hero: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
+  hero: "/images/products/final-refined/lszh-detail-hero-clean.webp",
   flameRetardant: "/images/products/lszh-fire-safe/zc-yjv-flame-retardant-closeup.png",
-  fireResistant: "/images/products/lszh-fire-safe/fire-resistant-nh-yjv-vv22-options.png",
-  comparison: "/images/products/lszh-fire-safe/lszh-wdzyjy-wdzbyjy-comparison.png",
+  fireResistant: "/images/products/final-refined/lszh-detail-fire-resistant-pair-clean.webp",
+  comparison: "/images/products/final-refined/lszh-detail-model-pair-clean.webp",
   wdzn: "/images/products/lszh-fire-safe/wdzn-yjy-lszh-fire-resistant-closeup.png",
-  wdzbn: "/images/products/lszh-fire-safe/wdzbn-yjy-lszh-b-flame-fire-resistant-closeup.png",
+  wdzbn: "/images/products/final-refined/lszh-detail-parameter-closeup-clean.webp",
 };
 
 const requirementTypes = [
@@ -158,7 +158,7 @@ export function LszhFireSafeProductPage() {
             </div>
           </div>
           <div>
-            <div className="product-detail-image xlpe-hero-image">
+            <div className="product-detail-image xlpe-hero-image final-refined-hero-image">
               <Image src={lszhImages.hero} alt="LSZH and fire-safe cable options for project review" width={1200} height={900} sizes="(max-width: 980px) 100vw, 45vw" priority />
             </div>
             <p className="product-image-note">Representative cable image for LSZH and fire-safe specification review. Final construction is confirmed according to project voltage, route and fire performance requirements.</p>
@@ -258,7 +258,7 @@ export function LszhFireSafeProductPage() {
                 WDZ, WDZN, NH and ZR references are not universal overseas standard equivalents. They should be interpreted together with the final cable type, material design and project test requirements.
               </div>
             </div>
-            <aside className="product-section-visuals xlpe-image-stack product-compact-stack">
+            <aside className="product-section-visuals xlpe-image-stack product-compact-stack final-refined-stack">
               <Image src={lszhImages.comparison} alt="WDZ and WDZB LSZH cable reference comparison" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               <Image src={lszhImages.fireResistant} alt="Fire-resistant NH cable options for specification review" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
             </aside>
@@ -343,7 +343,7 @@ export function LszhFireSafeProductPage() {
               </div>
             </div>
             <aside className="product-section-visuals">
-              <figure className="xlpe-feature-image product-compact-feature">
+              <figure className="xlpe-feature-image product-compact-feature final-refined-feature">
                 <Image src={lszhImages.wdzbn} alt="Representative combined LSZH flame-retardant fire-resistant cable option" width={1200} height={900} sizes="(max-width: 980px) 100vw, 34vw" />
               </figure>
             </aside>

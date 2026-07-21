@@ -6,18 +6,19 @@ export function ProductCard({ product, numbered = false }: { product: Product; n
   const isOverheadAcsr =
     product.detailVariant === "overhead-insulated-cables" ||
     product.detailVariant === "acsr-bare-overhead-conductors";
+  const usesRefinedLszhImage = product.imagePath === "/images/products/final-refined/home-lszh-core-card.webp";
 
   return (
     <Link
-      className={`product-card${isOverheadAcsr ? " product-card-overhead-acsr" : ""}`}
+      className={`product-card${isOverheadAcsr ? " product-card-overhead-acsr" : ""}${usesRefinedLszhImage ? " product-card-refined-image" : ""}`}
       href={`/products/${product.slug}`}
     >
       <div className="product-image-wrap">
         <Image
           src={product.imagePath}
           alt={product.imageAlt}
-          width={640}
-          height={480}
+          width={usesRefinedLszhImage ? 1400 : 640}
+          height={usesRefinedLszhImage ? 980 : 480}
           sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
         />
         {numbered && <span className="priority-badge">0{product.priority}</span>}

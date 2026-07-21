@@ -5,7 +5,7 @@ import { InquiryForm } from "@/components/InquiryForm";
 const mvImages = {
   hero: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
   angled: "/images/products/medium-voltage-xlpe/mv-xlpe-angled-closeup.png",
-  structure: "/images/products/medium-voltage-xlpe/mv-xlpe-copper-tape-structure.png",
+  structure: "/images/products/final-refined/mv-detail-construction-clean.webp",
   brochure: "/images/products/medium-voltage-xlpe/mv-xlpe-overview-brochure.png",
   armoured: "/images/products/medium-voltage-xlpe/mv-xlpe-armoured-option.png",
 };
@@ -234,8 +234,8 @@ export function MediumVoltageXlpeProductPage() {
               </div>
             </div>
             <aside className="product-section-visuals xlpe-image-stack mv-image-stack">
-              <figure className="mv-visual-card mv-structure-card">
-                <Image src={mvImages.structure} alt="Typical screened structure of medium voltage XLPE power cable" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 46vw" />
+              <figure className="mv-visual-card mv-structure-card final-refined-media">
+                <Image src={mvImages.structure} alt="Typical screened structure of medium voltage XLPE power cable" width={1200} height={900} sizes="(max-width: 980px) 100vw, 46vw" />
               </figure>
               <figure className="mv-visual-card mv-product-card">
                 <Image src={mvImages.angled} alt="Close-up of medium voltage XLPE power cable" width={1200} height={1200} sizes="(max-width: 980px) 100vw, 46vw" />

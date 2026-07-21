@@ -99,6 +99,8 @@ p { margin: 0 0 22px; color: var(--muted); }
 .product-category-card { scroll-margin-top: 104px; }
 .product-family-image { position: relative; aspect-ratio: 4/3; background: #eef3f6; overflow: hidden; }
 .product-family-image img { width: 100%; height: 100%; object-fit: contain; padding: 12px; background: white; }
+.product-family-image-refined { background: white; }
+.product-family-image-refined img { object-position: center; padding: 16px; }
 .product-family-body { display: flex; flex: 1; flex-direction: column; padding: 24px; }
 .product-family-body h3 { min-height: 60px; }
 .product-family-body p { min-height: 86px; }
@@ -118,6 +120,9 @@ p { margin: 0 0 22px; color: var(--muted); }
 .product-image-wrap { position: relative; aspect-ratio: 4/3; background: #dbe3e9; overflow: hidden; }
 .product-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
 .product-card:hover img { transform: scale(1.035); }
+.product-card-refined-image .product-image-wrap { background: white; }
+.product-card-refined-image .product-image-wrap img { object-fit: contain; object-position: center; padding: 16px; background: white; }
+.product-card-refined-image:hover img { transform: none; }
 .priority-badge { position: absolute; left: 18px; top: 18px; width: 45px; height: 45px; display: grid; place-items: center; background: var(--orange); color: white; font-weight: 900; }
 .product-card-body { padding: 24px; }
 .product-card-body h3 { min-height: 52px; }
@@ -325,7 +330,8 @@ p { margin: 0 0 22px; color: var(--muted); }
   object-position: center;
 }
 .mv-structure-card {
-  height: clamp(300px, 32vw, 420px);
+  height: auto;
+  aspect-ratio: 4 / 3;
 }
 .mv-product-card {
   height: clamp(240px, 25vw, 330px);
@@ -505,6 +511,24 @@ p { margin: 0 0 22px; color: var(--muted); }
   aspect-ratio: auto;
   object-fit: contain;
   object-position: center;
+}
+.final-refined-hero-image,
+.final-refined-media,
+.final-refined-stack,
+.final-refined-feature { background: white; }
+.final-refined-hero-image img,
+.final-refined-media img,
+.final-refined-stack > img,
+.final-refined-feature img {
+  object-fit: contain;
+  object-position: center;
+  background: white;
+}
+.final-refined-stack > img,
+.final-refined-feature img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
 }
 .product-compact-feature.overhead-media-frame img {
   height: clamp(230px, 24vw, 320px);

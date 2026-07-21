@@ -14,7 +14,7 @@ const productCategories = [
     id: "low-voltage-power-cables",
     title: "Low Voltage Power Cables",
     label: "Primary category",
-    image: "/media/products/categories/lv-armoured-power-cable.webp",
+    image: "/images/products/final-refined/products-low-voltage-category-card.webp",
     imageAlt: "Low-voltage XLPE and armoured power cable product family",
     description: "Low-voltage armoured power cables and low-voltage XLPE cable families for distribution systems.",
     href: "/products/low-voltage-armoured-power-cables",
@@ -80,7 +80,7 @@ const productCategories = [
     id: "lszh-fire-safe-power-cables",
     title: "LSZH & Fire-safe Cables",
     label: "Primary category",
-    image: "/images/products/lszh-fire-safe/lszh-fire-safe-products-card.png",
+    image: "/images/products/final-refined/products-lszh-category-card.webp",
     imageAlt: "LSZH and fire-safe cable product options",
     description: "Low-smoke, halogen-free, flame-retardant and fire-resistant cable options reviewed with the required base cable structure.",
     href: "/products/lszh-fire-safe-cables",
@@ -245,8 +245,14 @@ export default function ProductsPage() {
           <div className="product-family-grid product-category-grid">
             {productCategories.map((category, index) => (
               <article className="product-family-card product-category-card" id={category.id} key={category.title}>
-                <div className="product-family-image">
-                  <Image src={category.image} alt={category.imageAlt} width={760} height={520} sizes="(max-width: 980px) 100vw, 33vw" />
+                <div className={`product-family-image${category.image.startsWith("/images/products/final-refined/") ? " product-family-image-refined" : ""}`}>
+                  <Image
+                    src={category.image}
+                    alt={category.imageAlt}
+                    width={category.image.startsWith("/images/products/final-refined/") ? 1600 : 760}
+                    height={category.image.startsWith("/images/products/final-refined/") ? 1200 : 520}
+                    sizes="(max-width: 980px) 100vw, 33vw"
+                  />
                   <span className="priority-badge">0{index + 1}</span>
                 </div>
                 <div className="product-family-body">
