@@ -88,7 +88,7 @@ export const products: Product[] = [
     metaDescription:
       "LSZH, flame-retardant and fire-resistant cable options for public buildings, transit systems, data centers and critical power circuits. Specifications reviewed per project.",
     detailVariant: "lszh-fire-safe",
-    imagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
+    imagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-products-card.png",
     detailImagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
     imageAlt: "LSZH and fire-safe cable options for project review",
     fallbackImage: "/images/product-fire.svg",

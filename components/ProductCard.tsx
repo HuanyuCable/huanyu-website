@@ -8,7 +8,10 @@ export function ProductCard({ product, numbered = false }: { product: Product; n
     product.detailVariant === "acsr-bare-overhead-conductors";
 
   return (
-    <article className={`product-card${isOverheadAcsr ? " product-card-overhead-acsr" : ""}`}>
+    <Link
+      className={`product-card${isOverheadAcsr ? " product-card-overhead-acsr" : ""}`}
+      href={`/products/${product.slug}`}
+    >
       <div className="product-image-wrap">
         <Image
           src={product.imagePath}
@@ -26,8 +29,8 @@ export function ProductCard({ product, numbered = false }: { product: Product; n
         <div className="tag-row">
           <span>{product.voltage}</span>
         </div>
-        <Link className="text-link" href={`/products/${product.slug}`}>View product capability <span>→</span></Link>
+        <span className="text-link">View product capability <span aria-hidden="true">→</span></span>
       </div>
-    </article>
+    </Link>
   );
 }

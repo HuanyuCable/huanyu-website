@@ -14,7 +14,7 @@ const productCategories = [
     id: "low-voltage-power-cables",
     title: "Low Voltage Power Cables",
     label: "Primary category",
-    image: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
+    image: "/media/products/categories/lv-armoured-power-cable.webp",
     imageAlt: "Low-voltage XLPE and armoured power cable product family",
     description: "Low-voltage armoured power cables and low-voltage XLPE cable families for distribution systems.",
     href: "/products/low-voltage-armoured-power-cables",
