@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
+import { Analytics } from "@/components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -12,6 +13,15 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icons/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   verification: {
     google: "GxvvRjzMuLGJgnCyegOwg545G0LUFLBFq8kYHZ9Q7Cg",
   },
@@ -34,14 +44,36 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const organization = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: site.legalName,
-    url: site.url,
-    foundingDate: site.founded,
-    address: { "@type": "PostalAddress", addressLocality: "Hefei", addressRegion: "Anhui", addressCountry: "CN" },
-    email: site.email,
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": site.organizationId,
+        name: site.legalName,
+        alternateName: "HUANYU CABLE",
+        url: site.url,
+        logo: site.logoUrl,
+        brand: { "@type": "Brand", name: "HUANYU CABLE" },
+        foundingDate: site.founded,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Luyang Industrial Park, Luyang District",
+          addressLocality: "Hefei",
+          addressRegion: "Anhui",
+          addressCountry: "CN",
+        },
+        email: site.email,
+        contactPoint: { "@type": "ContactPoint", contactType: "sales", email: site.email, availableLanguage: "English" },
+      },
+      {
+        "@type": "WebSite",
+        "@id": site.websiteId,
+        name: "HUANYU CABLE",
+        url: site.url,
+        publisher: { "@id": site.organizationId },
+      },
+    ],
   };
 
   return (
@@ -50,7 +82,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         <main>{children}</main>
         <Footer />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organization) }} />
+        <Analytics />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </body>
     </html>
   );

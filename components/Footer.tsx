@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { TrackedLink } from "@/components/TrackedLink";
 
 const footerProducts = [
   { href: "/products/low-voltage-armoured-power-cables", label: "LV Armoured Power Cables" },
@@ -44,8 +45,8 @@ export function Footer() {
         <div className="footer-column footer-contact-column">
           <h3>Contact</h3>
           <Link href="/contact">Contact Form</Link>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          {site.whatsapp && <a href={site.whatsappUrl}>WhatsApp: {site.whatsapp}</a>}
+          <TrackedLink href={`mailto:${site.email}`} eventName="email_click">{site.email}</TrackedLink>
+          {site.whatsapp && <TrackedLink href={site.whatsappUrl} eventName="whatsapp_click">WhatsApp: {site.whatsapp}</TrackedLink>}
         </div>
       </div>
       <div className="container footer-bottom">

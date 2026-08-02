@@ -13,6 +13,7 @@ import { ControlCablesProductPage } from "@/components/ControlCablesProductPage"
 import { SolarCableDetailPage, SolarCablesCategoryPage } from "@/components/SolarCablesProductPages";
 import { getProduct, products } from "@/data/products";
 import { site } from "@/lib/site";
+import { TrackedLink } from "@/components/TrackedLink";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -24,74 +25,90 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!product) return {};
   const title = product.metaTitle ?? `${product.name} | HUANYU CABLE`;
   const description = product.metaDescription ?? product.description;
-  const isSolarPage = product.detailVariant?.startsWith("solar-");
+  const url = `${site.url}/products/${slug}`;
   return {
     title: { absolute: title },
     description,
     alternates: { canonical: `/products/${slug}` },
-    ...(isSolarPage ? {
-      openGraph: {
-        type: "website" as const,
-        title,
-        description,
-        url: `/products/${slug}`,
-        images: [{ url: product.detailImagePath, alt: product.imageAlt }],
-      },
-    } : {}),
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url,
+      images: [{ url: product.detailImagePath, alt: product.imageAlt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [product.detailImagePath],
+    },
   };
+}
+
+function ProductBreadcrumbJsonLd({ name, slug }: { name: string; slug: string }) {
+  const itemListElement = [
+    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+    { "@type": "ListItem", position: 2, name: "Products", item: `${site.url}/products` },
+    { "@type": "ListItem", position: 3, name, item: `${site.url}/products/${slug}` },
+  ];
+
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement }) }} />;
 }
 
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
+  const breadcrumb = <ProductBreadcrumbJsonLd name={product.name} slug={product.slug} />;
 
   if (product.slug === "low-voltage-armoured-power-cables") {
-    return <LowVoltageArmouredProductPage />;
+    return <>{breadcrumb}<LowVoltageArmouredProductPage /></>;
   }
 
   if (product.detailVariant === "yjv22-yjv23") {
-    return <Yjv22Yjv23ProductPage />;
+    return <>{breadcrumb}<Yjv22Yjv23ProductPage /></>;
   }
 
   if (product.detailVariant === "low-voltage-xlpe-family") {
-    return <LowVoltageXlpeFamilyProductPage />;
+    return <>{breadcrumb}<LowVoltageXlpeFamilyProductPage /></>;
   }
 
   if (product.detailVariant === "medium-voltage-xlpe") {
-    return <MediumVoltageXlpeProductPage />;
+    return <>{breadcrumb}<MediumVoltageXlpeProductPage /></>;
   }
 
   if (product.detailVariant === "lszh-fire-safe") {
-    return <LszhFireSafeProductPage />;
+    return <>{breadcrumb}<LszhFireSafeProductPage /></>;
   }
 
   if (product.detailVariant === "overhead-insulated-cables") {
-    return <OverheadInsulatedCablesProductPage />;
+    return <>{breadcrumb}<OverheadInsulatedCablesProductPage /></>;
   }
 
   if (product.detailVariant === "acsr-bare-overhead-conductors") {
-    return <AcsrBareOverheadConductorsProductPage />;
+    return <>{breadcrumb}<AcsrBareOverheadConductorsProductPage /></>;
   }
 
   if (product.detailVariant === "building-wires-flexible-cables") {
-    return <BuildingWiresFlexibleCablesPage />;
+    return <>{breadcrumb}<BuildingWiresFlexibleCablesPage /></>;
   }
 
   if (product.detailVariant === "control-instrumentation-cables") {
-    return <ControlCablesProductPage />;
+    return <>{breadcrumb}<ControlCablesProductPage /></>;
   }
 
   if (product.detailVariant === "solar-cables") {
-    return <SolarCablesCategoryPage />;
+    return <>{breadcrumb}<SolarCablesCategoryPage /></>;
   }
 
   if (product.detailVariant === "solar-pv1-f" || product.detailVariant === "solar-h1z2z2-k") {
-    return <SolarCableDetailPage variant={product.detailVariant} />;
+    return <>{breadcrumb}<SolarCableDetailPage variant={product.detailVariant} /></>;
   }
 
   return (
     <>
+      {breadcrumb}
       <section className="product-detail-hero">
         <div className="container product-detail-grid">
           <div>
@@ -99,7 +116,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <span className="eyebrow light">{product.category} product family</span>
             <h1>{product.name}</h1>
             <p>{product.description}</p>
-            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><a className="button button-ghost" href={`mailto:${site.email}`}>Email Specification</a></div>
+            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: product.slug }}>Email Specification</TrackedLink></div>
           </div>
           <div>
             <div className="product-detail-image">

@@ -1,7 +1,10 @@
 export const site = {
   name: "Huanyu Cable",
   legalName: "Hefei Huanyu Wire & Cable Co., Ltd.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.huanyucable.com",
+  url: "https://www.huanyucable.com",
+  organizationId: "https://www.huanyucable.com/#organization",
+  websiteId: "https://www.huanyucable.com/#website",
+  logoUrl: "https://www.huanyucable.com/icons/icon-512.png",
   email: "ziheng@huanyucable.com",
   phone: null,
   whatsapp: "+86 177 5657 2233",

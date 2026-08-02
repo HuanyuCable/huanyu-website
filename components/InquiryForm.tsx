@@ -1,12 +1,15 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 type Status = "idle" | "sending" | "success" | "error";
 
 export function InquiryForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const pathname = usePathname();
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -25,6 +28,11 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
       if (!response.ok) throw new Error(result.error || "Unable to send inquiry.");
       form.reset();
       setStatus("success");
+      const productSlug = pathname.startsWith("/products/") ? pathname.split("/")[2] : undefined;
+      trackEvent(productSlug ? "product_inquiry_submit_success" : "contact_form_submit_success", {
+        form_type: productSlug ? "product_inquiry" : "contact_inquiry",
+        product_slug: productSlug,
+      });
       setMessage("Your request has been received. Our team will review the specification and respond by email.");
     } catch (error) {
       setStatus("error");

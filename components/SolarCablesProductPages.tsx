@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { InquiryForm } from "@/components/InquiryForm";
 import { site } from "@/lib/site";
+import { TrackedLink } from "@/components/TrackedLink";
 
 const catalogHref = "/downloads/huanyu-cable-solar-pv-catalog.pdf";
 
@@ -148,9 +149,9 @@ const solarDetails: Record<SolarDetailVariant, SolarDetail> = {
 
 function CatalogLink({ className = "button" }: { className?: string }) {
   return (
-    <a className={className} href={catalogHref} download>
+    <TrackedLink className={className} href={catalogHref} download eventName="catalog_download" eventParameters={{ download_file: "huanyu-cable-solar-pv-catalog.pdf" }}>
       Download Solar PV Cable Catalog
-    </a>
+    </TrackedLink>
   );
 }
 
@@ -314,7 +315,7 @@ export function SolarCableDetailPage({ variant }: { variant: SolarDetailVariant 
             <div className="xlpe-hero-badges solar-standard-badge"><span>{detail.reference}</span></div>
             <div className="hero-actions">
               <Link className="button" href="#inquiry">Request a Quote</Link>
-              <a className="button button-ghost" href={`mailto:${site.email}`}>Send Specifications</a>
+              <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: variant === "solar-pv1-f" ? "pv1-f-solar-dc-cable" : "h1z2z2-k-solar-dc-cable" }}>Send Specifications</TrackedLink>
             </div>
           </div>
           <div className="product-detail-image">

@@ -32,9 +32,9 @@ export const products: Product[] = [
     tagline: "Project-ready steel tape and steel wire armoured power cables.",
     description:
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
-    metaTitle: "Low Voltage Armoured Power Cables | STA & SWA LV Cable Manufacturer",
+    metaTitle: "Low Voltage Armoured Power Cables | STA & SWA | HUANYU CABLE",
     metaDescription:
-      "Low-voltage armoured power cables with STA and SWA options for distribution, industrial and project power supply applications. Specifications are reviewed per project.",
+      "Low-voltage armoured power cables with STA and SWA options for power distribution, industrial plants and infrastructure projects. Send specifications for review.",
     imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     imageAlt: "Low-voltage armoured power cable product family",
@@ -55,9 +55,9 @@ export const products: Product[] = [
     tagline: "XLPE insulated medium voltage power cables for distribution networks, substations and industrial projects from 3.6/6 kV up to 35 kV.",
     description:
       "Medium voltage XLPE power cables for distribution networks, substations and industrial projects, including unarmoured, steel tape armoured and steel wire armoured designs reviewed per project.",
-    metaTitle: "Medium Voltage Power Cables | 3.6/6 kV to 35 kV MV Cable Manufacturer",
+    metaTitle: "Medium Voltage XLPE Power Cables up to 35 kV | HUANYU CABLE",
     metaDescription:
-      "Huanyu Cable supplies medium voltage XLPE power cables for distribution networks, substations and industrial projects, including unarmoured, STA and SWA designs reviewed per project.",
+      "Medium-voltage XLPE power cables for utility, industrial and infrastructure projects, covering common voltage classes up to 35 kV. Submit project specifications.",
     detailVariant: "medium-voltage-xlpe",
     imagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
     detailImagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
@@ -108,9 +108,9 @@ export const products: Product[] = [
     tagline: "Selected PV cable solutions for photovoltaic DC connections.",
     description:
       "Huanyu Cable supplies H1Z2Z2-K and PV1-F solar DC cable for photovoltaic module, string, combiner box and inverter connections.",
-    metaTitle: "Solar Cables | PV1-F & H1Z2Z2-K | Huanyu Cable",
+    metaTitle: "Solar Cables | PV1-F & H1Z2Z2-K | HUANYU CABLE",
     metaDescription:
-      "H1Z2Z2-K and PV1-F solar DC cables with flexible tinned copper conductors for photovoltaic module, string, combiner box and inverter connections.",
+      "Solar cable solutions including PV1-F and H1Z2Z2-K for photovoltaic DC systems. Review standards, conductor options and project requirements.",
     detailVariant: "solar-cables",
     imagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
     detailImagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
@@ -131,9 +131,9 @@ export const products: Product[] = [
     tagline: "Flexible solar DC cable for photovoltaic panel, string and inverter connections.",
     description:
       "PV1-F solar DC cable is supplied for projects and markets specifically requesting the PV1-F designation.",
-    metaTitle: "PV1-F Solar DC Cable | Huanyu Cable",
+    metaTitle: "PV1-F Solar DC Cable | TÜV 2PfG 1169 | HUANYU CABLE",
     metaDescription:
-      "PV1-F solar DC cable to 2 PfG 1169/08.2007 with a flexible tinned copper conductor for specified photovoltaic DC projects.",
+      "PV1-F solar DC cable for photovoltaic installations, with tinned copper conductor options and project specification support. Send size and quantity for review.",
     detailVariant: "solar-pv1-f",
     imagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
     detailImagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
@@ -154,9 +154,9 @@ export const products: Product[] = [
     tagline: "Cross-linked halogen-free solar DC cable for long-term outdoor photovoltaic installations.",
     description:
       "H1Z2Z2-K solar DC cable is supplied for photovoltaic module strings, combiner box wiring, inverter links and other fixed DC applications.",
-    metaTitle: "H1Z2Z2-K Solar DC Cable | Huanyu Cable",
+    metaTitle: "H1Z2Z2-K Solar Cable | EN 50618 | HUANYU CABLE",
     metaDescription:
-      "H1Z2Z2-K solar DC cable to EN 50618:2014 with Class 5 tinned copper conductor for module, combiner box and inverter connections.",
+      "H1Z2Z2-K solar cable for photovoltaic DC applications in line with EN 50618 project requirements. Submit conductor size, length and delivery details.",
     detailVariant: "solar-h1z2z2-k",
     imagePath: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
     detailImagePath: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",

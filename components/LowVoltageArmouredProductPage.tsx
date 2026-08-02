@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { InquiryForm } from "@/components/InquiryForm";
+import { TrackedLink } from "@/components/TrackedLink";
 import { site } from "@/lib/site";
 
 const heroImage = "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png";
@@ -91,7 +92,7 @@ export function LowVoltageArmouredProductPage() {
             </div>
             <div className="hero-actions">
               <Link className="button" href="#inquiry">Request Technical Review</Link>
-              <a className="button button-ghost" href={`mailto:${site.email}`}>Email Specification</a>
+              <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-armoured-power-cables" }}>Email Specification</TrackedLink>
             </div>
           </div>
           <div className="xlpe-image-stack">
