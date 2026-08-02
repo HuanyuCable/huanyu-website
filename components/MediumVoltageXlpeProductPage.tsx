@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { InquiryForm } from "@/components/InquiryForm";
+import { TrackedLink } from "@/components/TrackedLink";
+import { site } from "@/lib/site";
 
 const mvImages = {
   hero: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
@@ -19,12 +21,12 @@ const productTypes = [
   [
     "YJV22 / YJV23",
     "STA MV cable",
-    "Steel tape armoured medium voltage power cable for routes requiring radial mechanical protection, with PVC or PE sheath options.",
+    "Steel tape armoured medium voltage power cable for applicable multicore constructions requiring radial mechanical protection, with PVC or PE sheath options.",
   ],
   [
     "YJV32 / YJV33",
     "SWA MV cable",
-    "Steel wire armoured medium voltage power cable for projects requiring higher mechanical or tensile protection, subject to route design.",
+    "Steel wire armoured medium voltage power cable for applicable multicore constructions requiring higher mechanical or tensile protection, subject to route and circuit design.",
   ],
   [
     "Project-specific designs",
@@ -180,6 +182,11 @@ export function MediumVoltageXlpeProductPage() {
             </p>
           </article>
         </div>
+        <div className="container">
+          <div className="review-note">
+            For an MV cable quotation, share the system voltage, cable designation, single-core or three-core construction, conductor size, screen design, armour, sheath and installation route. Applicable IEC 60502-2, GB/T or project-specific requirements, together with required tests and documents, are reviewed before the final construction is confirmed.
+          </div>
+        </div>
       </section>
 
       <section className="section section-muted">
@@ -271,6 +278,19 @@ export function MediumVoltageXlpeProductPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+          <div className="review-note">
+            <strong>RFQ Essentials</strong>
+            <ul className="detail-list">
+              <li>System voltage and cable designation</li>
+              <li>Single-core or three-core construction</li>
+              <li>Conductor material and cross-section</li>
+              <li>Conductor screen, insulation screen and metallic screen requirements</li>
+              <li>Armour requirement, reviewed against core configuration and circuit conditions</li>
+              <li>Outer sheath, cable length and packing</li>
+              <li>Required tests, standards and delivery documents</li>
+            </ul>
+            <p>For a project file or BOQ, <TrackedLink className="text-link" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "medium-voltage-xlpe-power-cables" }}>Email BOQ / Specs <span>-&gt;</span></TrackedLink></p>
           </div>
           <div className="review-note">
             Manufactured according to confirmed project specifications and applicable GB/T or IEC-based requirements. Third-party inspection or testing can be discussed when required by the project.

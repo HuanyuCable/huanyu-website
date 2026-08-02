@@ -64,6 +64,8 @@ type SolarDetail = {
   construction: string[];
   performance: [string, string][];
   applications: [string, string][];
+  procurementNote: string;
+  rfqEssentials: string[];
   guidance?: string;
   accent: "orange" | "red";
 };
@@ -105,13 +107,15 @@ const solarDetails: Record<SolarDetailVariant, SolarDetail> = {
       ["Combiner Boxes", "DC collection circuits"],
       ["Inverters", "DC input connections"],
     ],
+    procurementNote: "For H1Z2Z2-K enquiries, share the required conductor size, cable colour, total length, packing method and DC connection scope. Please also provide the EN 50618 project specification and identify any required test reports, certificates or delivery documents. Document availability is confirmed against the final product and supply arrangement before quotation.",
+    rfqEssentials: ["Requested conductor size, commonly 4 mm² or 6 mm²", "Required cable colour", "Connection point: module, string, combiner box or inverter", "EN 50618 project specification", "Total length and packing method", "Required test reports, certificates and delivery documents"],
     accent: "orange",
   },
   "solar-pv1-f": {
     title: "PV1-F Solar DC Cable",
     summary:
       "PV1-F is a flexible single-core solar DC cable for projects and markets specifically requesting the PV1-F designation.",
-    reference: "2 PfG 1169/08.2007",
+    reference: "Project reference: 2 PfG 1169/08.2007",
     overviewTitle: "PV1-F Construction for Specified Project Requirements",
     overview:
       "A Class 5 flexible tinned copper conductor with cross-linked insulation and outer sheath supports module, string, combiner box and inverter DC connections.",
@@ -142,6 +146,8 @@ const solarDetails: Record<SolarDetailVariant, SolarDetail> = {
       ["Combiner Boxes", "DC collection circuits"],
       ["Inverters", "DC input connections"],
     ],
+    procurementNote: "For PV1-F enquiries, share the required conductor size, cable colour, total length, packing method and DC connection scope. Please confirm whether the project references 2 PfG 1169/08.2007 and specify any required test reports, certificates or delivery documents. Document availability is confirmed against the final product and supply arrangement before quotation.",
+    rfqEssentials: ["Requested conductor size, commonly 4 mm² or 6 mm²", "Required cable colour", "Connection point: module, string, combiner box or inverter", "Project standard or 2 PfG 1169/08.2007 reference", "Total length and packing method", "Required test reports, certificates and delivery documents"],
     guidance: "For new projects following EN 50618, review H1Z2Z2-K Solar DC Cable.",
     accent: "red",
   },
@@ -315,7 +321,7 @@ export function SolarCableDetailPage({ variant }: { variant: SolarDetailVariant 
             <div className="xlpe-hero-badges solar-standard-badge"><span>{detail.reference}</span></div>
             <div className="hero-actions">
               <Link className="button" href="#inquiry">Request a Quote</Link>
-              <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: variant === "solar-pv1-f" ? "pv1-f-solar-dc-cable" : "h1z2z2-k-solar-dc-cable" }}>Send Specifications</TrackedLink>
+              <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: variant === "solar-pv1-f" ? "pv1-f-solar-dc-cable" : "h1z2z2-k-solar-dc-cable" }}>Email BOQ / Specs</TrackedLink>
             </div>
           </div>
           <div className="product-detail-image">
@@ -334,6 +340,17 @@ export function SolarCableDetailPage({ variant }: { variant: SolarDetailVariant 
             {detail.ratings.map(([label, value]) => <article key={label}><span>{label}</span><strong>{value}</strong></article>)}
           </div>
           {detail.ratingNote && <p className="solar-rating-note">{detail.ratingNote}</p>}
+          <div className="review-note">
+            <strong>Project quotation note</strong>
+            <p>{detail.procurementNote}</p>
+          </div>
+          <div className="product-section-intro">
+            <span className="eyebrow">RFQ Essentials</span>
+            <h3>Key details for solar DC cable review</h3>
+          </div>
+          <ul className="detail-list">
+            {detail.rfqEssentials.map((item) => <li key={item}>{item}</li>)}
+          </ul>
         </div>
       </section>
 

@@ -92,7 +92,7 @@ export function LowVoltageArmouredProductPage() {
             </div>
             <div className="hero-actions">
               <Link className="button" href="#inquiry">Request Technical Review</Link>
-              <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-armoured-power-cables" }}>Email Specification</TrackedLink>
+              <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-armoured-power-cables" }}>Email BOQ / Specs</TrackedLink>
             </div>
           </div>
           <div className="xlpe-image-stack">
@@ -132,6 +132,9 @@ export function LowVoltageArmouredProductPage() {
                 <p>{description}</p>
               </article>
             ))}
+          </div>
+          <div className="review-note">
+            Not sure which armour construction is suitable? Share the voltage, core configuration, conductor size, installation route and pulling conditions. The final armour and sheath combination is reviewed against the project specification before quotation.
           </div>
         </div>
       </section>
@@ -221,7 +224,7 @@ export function LowVoltageArmouredProductPage() {
       <section className="section" id="inquiry-preparation">
         <div className="container product-spec-layout">
           <div className="spec-main">
-            <span className="eyebrow">Inquiry Preparation</span>
+            <span className="eyebrow">RFQ Essentials</span>
             <h2>Information Needed for Technical Review and Quotation</h2>
             <p>
               For a faster technical review and quotation, please provide the main project requirements such as rated voltage, core configuration, conductor size, armour type, sheath material, installation environment and quantity.

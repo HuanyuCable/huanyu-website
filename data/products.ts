@@ -131,7 +131,7 @@ export const products: Product[] = [
     tagline: "Flexible solar DC cable for photovoltaic panel, string and inverter connections.",
     description:
       "PV1-F solar DC cable is supplied for projects and markets specifically requesting the PV1-F designation.",
-    metaTitle: "PV1-F Solar DC Cable | TÜV 2PfG 1169 | HUANYU CABLE",
+    metaTitle: "PV1-F Solar DC Cable | 2 PfG 1169 Reference | HUANYU CABLE",
     metaDescription:
       "PV1-F solar DC cable for photovoltaic installations, with tinned copper conductor options and project specification support. Send size and quantity for review.",
     detailVariant: "solar-pv1-f",

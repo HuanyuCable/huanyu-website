@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { InquiryForm } from "@/components/InquiryForm";
+import { TrackedLink } from "@/components/TrackedLink";
+import { site } from "@/lib/site";
 
 const yjv22Images = {
   hero: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
@@ -321,7 +323,7 @@ export function LowVoltageXlpeFamilyProductPage() {
             Low-voltage XLPE insulated power cables for fixed distribution systems, including copper or aluminium conductor options and PVC or PE sheath constructions. Armoured variants are reviewed according to installation conditions and project specifications. For dedicated steel tape or steel wire armoured constructions, view <Link href="/products/low-voltage-armoured-power-cables">Armoured LV Power Cables</Link>.
           </p>
           <div className="review-note">
-            For quotation, Huanyu Cable reviews voltage rating, conductor material, core arrangement, sheath requirement, installation condition and required documents before confirming the final cable construction.
+            For quotation, please confirm the voltage rating (0.6/1 kV or 1.8/3 kV), conductor material, core arrangement, cross-section, sheath, armour requirement and installation route. Applicable IEC 60502-1, GB/T or project-specific requirements, together with required tests and delivery documents, are reviewed before the final cable construction is confirmed. <TrackedLink className="text-link" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-xlpe-power-cables" }}>Email BOQ / Specs <span>-&gt;</span></TrackedLink>
           </div>
         </div>
       </section>
@@ -410,6 +412,16 @@ export function LowVoltageXlpeFamilyProductPage() {
           <div className="product-section-grid">
             <div className="product-section-main">
             <SpecTable rows={familySpecs} />
+            <h3>RFQ Essentials</h3>
+            <ul className="detail-list">
+              <li>Voltage rating: 0.6/1 kV or 1.8/3 kV</li>
+              <li>Copper or aluminium conductor</li>
+              <li>Number of cores and cross-section</li>
+              <li>Unarmoured or project-specified armour requirement</li>
+              <li>PVC or PE outer sheath</li>
+              <li>Required cable length and packing</li>
+              <li>Applicable standard, required tests and delivery documents</li>
+            </ul>
             <div className="review-note">
               Testing and document requirements can be reviewed according to the confirmed project specification.
             </div>
