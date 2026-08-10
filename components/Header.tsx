@@ -32,6 +32,7 @@ const nav: NavItem[] = [
     ],
   },
   { href: "/applications", label: "Applications" },
+  { href: "/projects", label: "Projects" },
   {
     href: "/quality",
     label: "Quality",
