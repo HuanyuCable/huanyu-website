@@ -1,0 +1,293 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { buyerGuides, getBuyerGuide } from "@/data/buyerGuides";
+import { site } from "@/lib/site";
+
+export function generateStaticParams() {
+  return buyerGuides.map((guide) => ({ slug: guide.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const guide = getBuyerGuide(slug);
+  if (!guide) return {};
+
+  const title = `${guide.shortTitle} | HUANYU CABLE`;
+  const url = `${site.url}/resources/${guide.slug}`;
+
+  return {
+    title: { absolute: title },
+    description: guide.description,
+    alternates: { canonical: `/resources/${guide.slug}` },
+    openGraph: {
+      type: "article",
+      title,
+      description: guide.description,
+      url,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description: guide.description,
+    },
+  };
+}
+
+function BuyerGuideBreadcrumbJsonLd({ title, slug }: { title: string; slug: string }) {
+  const itemListElement = [
+    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+    { "@type": "ListItem", position: 2, name: "Resources", item: `${site.url}/resources` },
+    { "@type": "ListItem", position: 3, name: title, item: `${site.url}/resources/${slug}` },
+  ];
+
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement }) }} />;
+}
+
+function GuideShell({ title, description, children }: { title: string; description: string; children: ReactNode }) {
+  return (
+    <article className="buyer-guide">
+      <section
+        className="page-hero page-hero-resources buyer-guide-hero"
+        style={{
+          backgroundImage:
+            'linear-gradient(115deg, rgba(4, 20, 33, 0.93), rgba(8, 58, 87, 0.72)), url("/images/site/heroes/resources-hero-manufacturing-development-v2.webp")',
+          backgroundPosition: "center 50%",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="container">
+          <Link className="back-link" href="/resources">Back to Resources</Link>
+          <span className="eyebrow light">Buyer Guide</span>
+          <h1>{title}</h1>
+          <p>{description}</p>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container buyer-guide-layout">{children}</div>
+      </section>
+    </article>
+  );
+}
+
+function StaVsSwaGuide() {
+  return (
+    <GuideShell
+      title="STA vs SWA Armoured Cable: Selection Guide for Underground Power Projects"
+      description="A practical comparison for project buyers reviewing armour type, installation route and RFQ information."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          STA and SWA are two common armour approaches for power cables, but the correct choice cannot be made from the three-letter abbreviation alone. The installation route, expected mechanical stress, pulling conditions, cable core configuration and project specification all affect the review. This guide explains what to confirm before requesting a quotation for an underground or industrial power cable project.
+        </p>
+
+        <h2>What is STA?</h2>
+        <p>
+          STA means steel tape armour. In a typical armoured power cable, overlapping steel tapes are applied over the bedding or inner sheath before the outer sheath. The armour provides radial mechanical protection against external pressure and impact. STA is commonly reviewed for multicore fixed-installation cables in underground routes, cable trenches and other locations where additional mechanical protection is specified.
+        </p>
+        <p>
+          This does not mean that STA is automatically suitable for every buried route. Soil conditions, duct or trench arrangement, installation method, bending, handling and the governing project specification still need to be checked. Chinese model references such as YJV22 or YJV23 indicate steel tape armoured constructions within their model system; they should be described internationally by the confirmed cable structure rather than treated as overseas certification designations.
+        </p>
+
+        <h2>What is SWA?</h2>
+        <p>
+          SWA means steel wire armour. Steel wires are applied around the cable bedding to provide mechanical protection and, depending on the confirmed design, can provide greater axial tensile capability than steel tape armour in suitable cable designs. SWA is typically considered where installation or pulling conditions create a defined tensile requirement, or where the project specification directly calls for steel wire armour.
+        </p>
+        <p>
+          SWA selection remains subject to the cable design and circuit conditions. Core configuration, conductor material, voltage class, installation method and applicable specification must be reviewed together. A supplier should not replace STA with SWA, or SWA with STA, simply because both are described as armoured cable.
+        </p>
+
+        <h2>STA and SWA at a glance</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table">
+            <thead>
+              <tr>
+                <th>Review point</th>
+                <th>STA</th>
+                <th>SWA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Armour form</td>
+                <td>Overlapping steel tapes</td>
+                <td>Steel wires around the cable</td>
+              </tr>
+              <tr>
+                <td>Typical review focus</td>
+                <td>Radial mechanical protection for applicable fixed routes</td>
+                <td>Mechanical and tensile protection where required by route and design</td>
+              </tr>
+              <tr>
+                <td>Selection basis</td>
+                <td colSpan={2}>Installation route, pulling conditions, core configuration and project specification</td>
+              </tr>
+              <tr>
+                <td>Quotation status</td>
+                <td colSpan={2}>Final construction is confirmed before quotation; the options are not automatically interchangeable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Five selection factors to confirm</h2>
+        <h3>1. Installation route</h3>
+        <p>
+          Identify whether the cable will run in a duct, trench, tunnel, tray, direct-burial route or another fixed installation. Note changes along the route, entry points and any exposed sections. The word “underground” is not enough to define the armour because underground routes can impose different handling and mechanical conditions.
+        </p>
+        <h3>2. Mechanical protection requirement</h3>
+        <p>
+          State the expected external pressure, impact or other mechanical exposure and follow the project designer’s requirement. STA is typically reviewed for radial protection, while SWA may be reviewed where the design calls for wire armour. The final choice remains subject to the complete cable construction and specification.
+        </p>
+        <h3>3. Pulling and tensile conditions</h3>
+        <p>
+          Provide the planned pulling method, route length, bends, elevation changes and any defined tensile requirement. These details help determine whether the proposed armour and overall construction are appropriate. They also affect drum length and installation planning, so they should be shared before the supplier confirms an offer.
+        </p>
+        <h3>4. Cable core configuration</h3>
+        <p>
+          Confirm single-core or multicore construction, conductor material, number of cores and cross-section. Armour selection must be reviewed together with the circuit design and applicable requirements. Do not assume that an armour arrangement used on a multicore cable can be transferred unchanged to every single-core circuit.
+        </p>
+        <h3>5. Project specification</h3>
+        <p>
+          The BOQ, cable schedule, drawings and technical specification take priority over a generic product description. Confirm voltage rating, applicable standard, insulation, bedding, armour, sheath, fire-performance requirement, tests and documents. If documents conflict, highlight the discrepancy rather than asking the supplier to guess.
+        </p>
+
+        <h2>Quotation and RFQ checklist</h2>
+        <ul className="buyer-guide-checklist">
+          <li>System voltage and required cable voltage rating</li>
+          <li>Single-core or multicore configuration</li>
+          <li>Copper or aluminium conductor and cross-section</li>
+          <li>Insulation, bedding and outer sheath requirement</li>
+          <li>Required armour: STA, SWA or supplier review against the route</li>
+          <li>Installation route, burial or duct details and pulling conditions</li>
+          <li>Applicable standard and project specification</li>
+          <li>Required tests, inspection and document scope</li>
+          <li>Quantity, drum length, delivery destination and schedule</li>
+        </ul>
+
+        <div className="buyer-guide-related">
+          <h2>Related product pages</h2>
+          <p>
+            Review Huanyu Cable’s <Link href="/products/low-voltage-armoured-power-cables">Low Voltage Armoured Power Cables</Link> for STA and SWA project options, or the <Link href="/products/medium-voltage-xlpe-power-cables">Medium Voltage Power Cables</Link> page for screened XLPE constructions up to 35 kV. Available designs are confirmed against the submitted specification before quotation.
+          </p>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Send BOQ / Specification</h2>
+        <p>Send the cable schedule, installation route, armour requirement, quantity and required document scope for a project-specific quotation review.</p>
+        <Link className="button" href="/contact">Send BOQ / Specification</Link>
+      </div>
+    </GuideShell>
+  );
+}
+
+function MediumVoltageSelectionGuide() {
+  return (
+    <GuideShell
+      title="Medium Voltage XLPE Cable Selection Guide: Voltage Rating, Armour and IEC 60502-2"
+      description="A practical RFQ checklist for EPC teams, project buyers and specification reviewers sourcing MV XLPE cable up to 35 kV."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          A medium voltage cable inquiry needs more than conductor size and total length. Voltage class, core configuration, conductor material, screen design, armour, sheath, installation route, testing and documentation must be reviewed as one cable design. The following sequence helps EPC and procurement teams prepare a clear RFQ for medium voltage XLPE power cables from 3.6/6 kV to 35 kV.
+        </p>
+
+        <h2>1. Identify the system voltage and cable voltage class</h2>
+        <p>
+          Start with the system nominal voltage, maximum system voltage where specified, earthing arrangement and the cable voltage designation required by the project. Common project classes can include 3.6/6 kV, 6/10 kV, 8.7/15 kV, 12/20 kV, 18/30 kV, 21/35 kV and 26/35 kV, but these designations are not automatically interchangeable. The cable rating must follow the confirmed system and project specification.
+        </p>
+        <p>
+          IEC 60502-2 is commonly referenced for medium-voltage power cable project specifications within its applicable scope. IEC 60502-2-based project requirements can be reviewed against the confirmed cable design, testing scope and documentation requirements. This is a specification-review statement, not a certification claim.
+        </p>
+
+        <h2>2. Confirm single-core or three-core construction</h2>
+        <p>
+          State whether the circuit requires single-core or three-core cable. The decision affects the physical construction, installation arrangement, armour review, drum planning and accessories. Provide the cable schedule or single-line diagram where available. If the BOQ and technical specification show different core configurations, resolve the conflict before the quotation is finalized.
+        </p>
+
+        <h2>3. Select copper or aluminium conductor</h2>
+        <p>
+          Copper and aluminium conductor options can be reviewed, depending on the project requirement. Confirm the required material explicitly and consider the project’s termination design, size, installation constraints and commercial evaluation. A quotation should not substitute one conductor material for the other without an agreed technical and commercial review.
+        </p>
+
+        <h2>4. Confirm conductor cross-section</h2>
+        <p>
+          Provide the specified nominal cross-section for each circuit. Cable sizing is normally determined by the project designer using load, voltage drop, short-circuit, installation and derating criteria. Huanyu Cable can review the requested construction for quotation, but unconfirmed project calculations should not be replaced by a generic size recommendation.
+        </p>
+
+        <h2>5. Define conductor, insulation and metallic screens</h2>
+        <p>
+          A screened MV XLPE cable typically includes a conductor screen, XLPE insulation, an insulation screen and a metallic screen. Confirm the metallic screen form and required area, such as a specified copper tape or other project-defined arrangement. Screen design influences the cable construction and must match the system, fault-current study, accessories and specification. Do not submit only “XLPE cable” if the screen details are stated elsewhere in the project documents.
+        </p>
+
+        <h2>6. Review unarmoured, STA or SWA construction</h2>
+        <p>
+          Unarmoured cable may be reviewed for protected routes. Steel tape armour, or STA, is typically considered for applicable multicore designs requiring radial mechanical protection. Steel wire armour, or SWA, may be reviewed where the route and specification require wire armour or defined mechanical and tensile protection. The choice depends on installation route, pulling conditions, core configuration and circuit design; the three options should not be treated as automatic substitutes.
+        </p>
+        <p>
+          For a focused comparison of the two armour approaches, see the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA Armoured Cable guide</Link>. Huanyu’s <Link href="/products/low-voltage-armoured-power-cables">Low Voltage Armoured Power Cables</Link> page is relevant only when the project package also includes LV armoured circuits.
+        </p>
+
+        <h2>7. Confirm PVC, PE or project-specific sheath requirements</h2>
+        <p>
+          Specify the outer sheath material, colour, marking and any route-specific environmental requirement. PVC and PE sheath options are reviewed according to the cable design and project conditions. If the route requires low-smoke, flame-retardant or fire-resistant performance, define each requirement separately rather than using “fire-safe” as a substitute for a test scope. The <Link href="/products/lszh-fire-safe-cables">LSZH &amp; Fire-safe Cables</Link> page explains these distinctions and the information required for review.
+        </p>
+
+        <h2>8. Describe the installation route</h2>
+        <p>
+          Identify ducts, trenches, tunnels, trays, direct-burial sections, substation entries, vertical runs and changes along the route. Include planned pulling conditions and relevant environmental information. Route details support the review of armour, sheath, cable dimensions, drum length and handling requirements. A single route label rarely provides enough information for final construction confirmation.
+        </p>
+
+        <h2>9. Confirm standards, testing and document scope</h2>
+        <p>
+          List the applicable standard and any project-specific additions. State the required routine, sample or type-test evidence, inspection arrangement, test reports, drawings, data sheets, packing records and marking requirements. Third-party inspection or testing can be discussed when specified, but the organization, witness scope, acceptance criteria, timing and cost responsibility should be confirmed before quotation.
+        </p>
+        <p>
+          Huanyu Cable reviews IEC 60502-2-based, applicable GB/T or project-specific requirements against the confirmed cable design. Final testing and document commitments should appear in the quotation or agreed technical file; a general reference to a standard should not be read as an unverified product certification.
+        </p>
+
+        <h2>BOQ and RFQ checklist</h2>
+        <ul className="buyer-guide-checklist">
+          <li>System voltage, cable voltage designation and earthing information where specified</li>
+          <li>Single-core or three-core construction</li>
+          <li>Copper or aluminium conductor and nominal cross-section</li>
+          <li>Conductor screen, insulation screen and metallic screen design</li>
+          <li>Unarmoured, STA or SWA requirement</li>
+          <li>PVC, PE or project-specific sheath and fire-performance requirements</li>
+          <li>Installation route and pulling conditions</li>
+          <li>Applicable standard, testing, inspection and document scope</li>
+          <li>Cable quantity, drum length, destination and required schedule</li>
+        </ul>
+
+        <div className="buyer-guide-related">
+          <h2>Review the medium voltage product range</h2>
+          <p>
+            See <Link href="/products/medium-voltage-xlpe-power-cables">Medium Voltage XLPE Power Cables</Link> for representative voltage classes, conductor and screen layers, unarmoured, STA and SWA options, applications and the project inquiry route. Final availability remains subject to the confirmed specification.
+          </p>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Send BOQ / Specification</h2>
+        <p>Share the cable schedule, technical specification, route, testing scope, quantity and document requirements for a specification-based quotation review.</p>
+        <Link className="button" href="/contact">Send BOQ / Specification</Link>
+      </div>
+    </GuideShell>
+  );
+}
+
+export default async function BuyerGuidePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const guide = getBuyerGuide(slug);
+  if (!guide) notFound();
+
+  return (
+    <>
+      <BuyerGuideBreadcrumbJsonLd title={guide.title} slug={guide.slug} />
+      {slug === "sta-vs-swa-armoured-cable-guide" ? <StaVsSwaGuide /> : <MediumVoltageSelectionGuide />}
+    </>
+  );
+}

@@ -747,6 +747,24 @@ p { margin: 0 0 22px; color: var(--muted); }
 .update-article-body p { font-size: 19px; line-height: 1.8; color: #33414d; }
 .update-article-cta { margin: 56px auto 0; max-width: 780px; padding: 34px; background: var(--soft); border-left: 4px solid var(--orange); }
 .update-article-cta h2 { font-size: 32px; }
+.buyer-guide-hero { min-height: 480px; }
+.buyer-guide-hero h1 { max-width: 1040px; font-size: clamp(40px, 5.2vw, 64px); }
+.buyer-guide-layout { max-width: 920px; }
+.buyer-guide-body { max-width: 780px; margin: 0 auto; }
+.buyer-guide-body > p { color: #33414d; font-size: 18px; line-height: 1.78; }
+.buyer-guide-body > h2 { margin-top: 52px; font-size: clamp(29px, 3.2vw, 40px); }
+.buyer-guide-body > h3 { margin: 30px 0 10px; font-size: 22px; }
+.buyer-guide-body a { color: var(--orange-dark); font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
+.buyer-guide-table-wrap { width: 100%; margin: 26px 0 42px; overflow-x: auto; border: 1px solid var(--line); }
+.buyer-guide-table { width: 100%; min-width: 700px; border-collapse: collapse; background: white; }
+.buyer-guide-table th, .buyer-guide-table td { padding: 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.buyer-guide-table th { background: var(--navy); color: white; }
+.buyer-guide-checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; padding: 0; list-style: none; }
+.buyer-guide-checklist li { padding: 14px 16px; background: var(--soft); border-left: 3px solid var(--orange); }
+.buyer-guide-related { margin-top: 48px; padding: 26px; background: #fff6ed; border: 1px solid #f1c7a9; }
+.buyer-guide-related h2 { margin-top: 0; font-size: 28px; }
+.buyer-guide-related p { margin-bottom: 0; }
+.buyer-guide-cta { margin-top: 58px; }
 .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
 .contact-checklist { padding-left: 25px; margin: 28px 0 40px; }
 .contact-checklist li { margin: 14px 0; }
@@ -932,6 +950,13 @@ p { margin: 0 0 22px; color: var(--muted); }
   .xlpe-info-card, .xlpe-table-wrap { max-width: 100%; }
   .spec-table > div, .xlpe-spec-table > div { grid-template-columns: 1fr; gap: 5px; }
   .detail-list { grid-template-columns: 1fr; }
+  .buyer-guide-checklist { grid-template-columns: 1fr; }
+  .buyer-guide-hero { min-height: 440px; }
+  .buyer-guide-hero h1 { font-size: 36px; line-height: 1.12; overflow-wrap: anywhere; }
+  .buyer-guide-body > p { font-size: 17px; }
+  .buyer-guide-body > h2 { margin-top: 42px; }
+  .buyer-guide-table { min-width: 640px; }
+  .buyer-guide-related, .buyer-guide-cta { padding: 24px; }
   .xlpe-info-card, .xlpe-model-grid article, .lszh-type-grid article { min-height: 0; padding: 24px; }
   .lszh-section-heading h2 { font-size: 27px; line-height: 1.15; letter-spacing: 0; overflow-wrap: anywhere; word-break: break-word; }
   .lszh-model-table { min-width: 0; }

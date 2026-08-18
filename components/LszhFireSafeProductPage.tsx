@@ -14,7 +14,7 @@ const lszhImages = {
 const requirementTypes = [
   [
     "LSZH / LSOH cable",
-    "Low-smoke, halogen-free sheath or compound options help reduce smoke density and acidic gas release in occupied or smoke-sensitive spaces. LSZH is a material characteristic, not the same as fire-resistant circuit integrity.",
+    "Low-smoke, halogen-free sheath material options help reduce smoke density and acidic gas release in occupied or smoke-sensitive spaces. LSZH is a material characteristic, not the same as fire-resistant circuit integrity.",
     "Material and sheath requirement",
   ],
   [
@@ -70,14 +70,14 @@ const structureRows = [
   ["Fire-resistant layer", "Applied where fire-resistant circuit integrity is required, with material and layer design confirmed by test scope."],
   ["Filling / bedding", "Used for multi-core or armoured construction where required by the cable design."],
   ["Armour", "Unarmoured, steel tape armour or steel wire armour selected according to installation requirements."],
-  ["LSZH outer sheath", "Low-smoke, halogen-free sheath compound reviewed where the project requires LSZH / LSOH performance."],
+  ["LSZH outer sheath", "Low-smoke, halogen-free sheath material reviewed where the project requires LSZH / LSOH performance."],
 ];
 
 const reviewRows = [
   ["Voltage rating", "Low voltage, building wire, control cable or project-specific medium voltage requirement."],
   ["Cable type or application", "Power cable, building wire, control cable, emergency circuit or other confirmed use case."],
   ["Conductor material and size", "Copper or aluminum conductor, core number and cross-section."],
-  ["LSZH / LSOH requirement", "Smoke, halogen and sheath compound requirements reviewed according to the project specification."],
+  ["LSZH / LSOH requirement", "Smoke, halogen and sheath material requirements reviewed according to the project specification."],
   ["Flame-retardant requirement", "Single-cable or bunched-cable flame spread requirement reviewed per project."],
   ["Fire-resistant requirement", "Circuit integrity requirement, fire condition and duration reviewed only where specified and tested."],
   ["Armour requirement", "Unarmoured, STA, SWA or other confirmed mechanical protection requirement."],
@@ -129,6 +129,7 @@ const faqs = [
 ];
 
 const relatedProducts = [
+  ["Medium Voltage XLPE Cable Selection Guide", "/resources/medium-voltage-xlpe-cable-selection-guide", "How to confirm sheath and fire-safety requirements together with an MV cable design and RFQ."],
   ["Low Voltage Armoured Power Cables", "/products/low-voltage-armoured-power-cables", "STA and SWA power cable structures that can be reviewed with LSZH or fire-safe requirements."],
   ["Medium Voltage Power Cables", "/products/medium-voltage-xlpe-power-cables", "MV cable requirements reviewed separately for voltage class, screen design, sheath and testing scope."],
   ["Building Wires & Flexible Cables", "/products/building-wires-flexible-cables", "Building wire options for indoor distribution, lighting and panel wiring projects."],
@@ -145,7 +146,7 @@ export function LszhFireSafeProductPage() {
             <span className="eyebrow light">LSZH & Fire-safe Cables</span>
             <h1>LSZH & Fire-safe Cables</h1>
             <p>
-              Low-smoke, halogen-free, flame-retardant and fire-resistant cable options for public buildings, transit systems, data centers and critical power circuits.
+              Finished LSZH power cables, armoured power cables, building wires and control cables, together with fire-resistant cable designs, are reviewed against the required route, construction and project specification.
             </p>
             <div className="xlpe-hero-badges">
               {["LSZH / LSOH sheath options", "Flame-retardant cable designs", "Fire-resistant circuit integrity options", "Reviewed against project specifications"].map((badge) => (
@@ -172,7 +173,7 @@ export function LszhFireSafeProductPage() {
             <span className="eyebrow">Product positioning</span>
             <h2>Safety requirements applied to proven cable structures</h2>
             <p>
-              LSZH and fire-safe requirements are reviewed together with the base cable design, such as low voltage power cables, medium voltage power cables, control cables and building wires. They are not a separate cable system outside the conductor, insulation, screen, armour and sheath structure.
+              This page covers finished cable products and cable design review, not raw LSZH compound supply. LSZH and fire-safe requirements are reviewed together with the base cable design, such as low voltage power cables, medium voltage power cables, control cables and building wires.
             </p>
           </article>
           <article className="xlpe-info-card">
@@ -212,7 +213,7 @@ export function LszhFireSafeProductPage() {
               <span className="eyebrow">Product family scope</span>
               <h2>LSZH and fire-safe options across cable families</h2>
             </div>
-            <p>Representative families are shown for initial selection. Exact voltage, construction, sheath compound and fire performance scope are confirmed by project specification.</p>
+            <p>Representative finished cable families are shown for initial selection. Exact voltage, construction, sheath requirement and fire performance scope are confirmed by project specification.</p>
           </div>
           <div className="xlpe-model-grid lszh-type-grid">
             {productFamilies.map(([title, text]) => (
@@ -375,7 +376,7 @@ export function LszhFireSafeProductPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Related products</span>
-              <h2>Related cable families for specification review</h2>
+              <h2>Related cable families and buyer guidance</h2>
             </div>
           </div>
           <div className="model-link-list">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buyerGuides } from "@/data/buyerGuides";
 
 export const metadata: Metadata = {
   title: { absolute: "Cable Resources | Technical Notes and Company Updates" },
@@ -24,9 +25,31 @@ export default function ResourcesPage() {
         <div className="container">
           <span className="eyebrow light">Resources</span>
           <h1>Technical Resources</h1>
-          <p>Our technical resource library is being prepared. For a current product datasheet, specification review or company catalogue, please send your requirements to our team.</p>
+          <p>Practical cable selection guides for project buyers, EPC teams and specification reviewers. For a current product datasheet or project-specific review, send your requirements to our team.</p>
           <div className="hero-actions">
             <Link className="button" href="/contact">Request Technical Information</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Buyer Guides</span>
+              <h2>Specification guidance for cable procurement</h2>
+            </div>
+            <p>Use these short guides to prepare the technical information required for cable selection and quotation review.</p>
+          </div>
+          <div className="resource-grid">
+            {buyerGuides.map((guide) => (
+              <article key={guide.slug}>
+                <span className="resource-type">Buyer Guide</span>
+                <h2>{guide.shortTitle}</h2>
+                <p>{guide.excerpt}</p>
+                <Link className="text-link" href={`/resources/${guide.slug}`}>Read guide <span>-&gt;</span></Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>

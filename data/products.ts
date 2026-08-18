@@ -57,7 +57,7 @@ export const products: Product[] = [
       "Medium voltage XLPE power cables for distribution networks, substations and industrial projects, including unarmoured, steel tape armoured and steel wire armoured designs reviewed per project.",
     metaTitle: "Medium Voltage XLPE Power Cables up to 35 kV | HUANYU CABLE",
     metaDescription:
-      "Medium-voltage XLPE power cables for utility, industrial and infrastructure projects, covering common voltage classes up to 35 kV. Submit project specifications.",
+      "Medium-voltage XLPE power cables from 3.6/6 kV to 35 kV for substations and industrial distribution. Send BOQ and specifications for project review.",
     detailVariant: "medium-voltage-xlpe",
     imagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
     detailImagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
@@ -84,9 +84,9 @@ export const products: Product[] = [
     tagline: "Low-smoke, halogen-free, flame-retardant and fire-resistant cable options reviewed with the required base cable construction.",
     description:
       "LSZH, flame-retardant and fire-resistant cable options for public buildings, transit systems, data centers and critical power circuits. Requirements are reviewed against the base cable structure and project specification.",
-    metaTitle: "LSZH & Fire-safe Cables | Low Smoke Halogen Free Cable Manufacturer",
+    metaTitle: "LSZH & Fire-safe Cable Products | HUANYU CABLE",
     metaDescription:
-      "LSZH, flame-retardant and fire-resistant cable options for public buildings, transit systems, data centers and critical power circuits. Specifications reviewed per project.",
+      "Finished LSZH, flame-retardant and fire-resistant power, building wire and control cable options reviewed against project specifications.",
     detailVariant: "lszh-fire-safe",
     imagePath: "/images/products/final-refined/home-lszh-core-card.webp",
     detailImagePath: "/images/products/lszh-fire-safe/lszh-fire-safe-hero.png",
@@ -250,9 +250,9 @@ export const products: Product[] = [
     tagline: "Combined family of YJV, YJY, YJLV and YJLV22 low-voltage XLPE insulated power cables with copper or aluminium conductors.",
     description:
       "Combined product family page for low-voltage XLPE power cables including YJV, YJY, YJLV and YJLV22, covering copper and aluminium conductor options, PVC or PE sheath options, and unarmoured or steel tape armoured constructions.",
-    metaTitle: "Low Voltage XLPE Power Cables | HUANYU CABLE",
+    metaTitle: "Low Voltage XLPE Power Cables 0.6/1 kV | HUANYU CABLE",
     metaDescription:
-      "Low voltage XLPE insulated power cables including YJV, YJY, YJLV and YJLV22 options for project quotation and engineering supply.",
+      "0.6/1 kV low-voltage XLPE power cables with Cu/Al conductors and PVC/PE sheath options, with cable constructions reviewed against applicable IEC 60502-1, GB/T or project requirements.",
     detailVariant: "low-voltage-xlpe-family",
     imagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
     detailImagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",

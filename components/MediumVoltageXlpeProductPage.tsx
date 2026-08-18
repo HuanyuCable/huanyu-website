@@ -114,6 +114,7 @@ const faqs = [
 ];
 
 const relatedProducts = [
+  ["Medium Voltage XLPE Cable Selection Guide", "/resources/medium-voltage-xlpe-cable-selection-guide", "Buyer guidance for confirming voltage class, cores, conductor, screens, armour, sheath and RFQ scope."],
   ["Low Voltage Armoured Power Cables", "/products/low-voltage-armoured-power-cables", "STA and SWA low-voltage power cable options for underground and industrial distribution."],
   ["Low Voltage XLPE Power Cables", "/products/low-voltage-xlpe-power-cables", "YJV, YJY, YJLV and related XLPE insulated power cable families."],
   ["LSZH & Fire-safe Cables", "/products/lszh-fire-safe-cables", "Low-smoke, flame-retardant and fire-resistant cable options reviewed per project."],
@@ -144,7 +145,7 @@ export function MediumVoltageXlpeProductPage() {
             <span className="eyebrow light">Medium Voltage Power Cables</span>
             <h1>Medium Voltage Power Cables</h1>
             <p>
-              Medium voltage XLPE power cables for 3.6/6 kV to 35 kV distribution networks, industrial substations, utility projects and fixed power supply systems.
+              Medium voltage XLPE power cables for 3.6/6 kV to 35 kV project power distribution in substations, industrial facilities and utility networks, reviewed against the project specification and BOQ before quotation.
             </p>
             <div className="xlpe-hero-badges">
               {["3.6/6 kV to 35 kV", "XLPE insulated MV cables", "Unarmoured / STA / SWA", "Project-based specification review"].map((badge) => (
@@ -386,7 +387,7 @@ export function MediumVoltageXlpeProductPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Related products</span>
-              <h2>Other cable families for project packages</h2>
+              <h2>Related cable families and selection guidance</h2>
             </div>
           </div>
           <div className="model-link-list">

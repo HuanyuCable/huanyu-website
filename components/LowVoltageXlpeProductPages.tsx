@@ -304,8 +304,8 @@ export function LowVoltageXlpeFamilyProductPage() {
     <>
       <ProductHero
         eyebrow="Low Voltage XLPE Power Cables"
-        title="YJV / YJY / YJLV / YJLV22 Product Family"
-        description="Low-voltage XLPE insulated power cables for fixed distribution systems, including copper or aluminium conductor options, PVC or PE sheath constructions and project-reviewed armoured variants."
+        title="Low Voltage XLPE Power Cables – 0.6/1 kV"
+        description="Low voltage XLPE power cables for 0.6/1 kV fixed power distribution, with copper or aluminium conductors and PVC or PE sheath options. Unarmoured and project-confirmed armoured constructions are reviewed against the applicable standard and project specification."
         badges={["0.6/1 kV", "Copper / Aluminium", "PVC / PE Sheath", "Unarmoured / STA Armoured"]}
         image={familyImages.hero}
         imageAlt="YJV, YJY, YJLV and YJLV22 low-voltage XLPE power cable family"
@@ -324,6 +324,7 @@ export function LowVoltageXlpeFamilyProductPage() {
           </p>
           <div className="review-note">
             For quotation, please confirm the voltage rating (0.6/1 kV or 1.8/3 kV), conductor material, core arrangement, cross-section, sheath, armour requirement and installation route. Applicable IEC 60502-1, GB/T or project-specific requirements, together with required tests and delivery documents, are reviewed before the final cable construction is confirmed. <TrackedLink className="text-link" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-xlpe-power-cables" }}>Email BOQ / Specs <span>-&gt;</span></TrackedLink>
+            <p>For a practical armour comparison, read the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA armoured cable selection guide</Link>.</p>
           </div>
         </div>
       </section>
@@ -332,8 +333,8 @@ export function LowVoltageXlpeFamilyProductPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Model family overview</span>
-              <h2>Copper and aluminium options across unarmoured and armoured structures</h2>
+              <span className="eyebrow">Model Family / Common Chinese Model References</span>
+              <h2>YJV, YJY, YJLV and YJLV22 reference families</h2>
             </div>
           </div>
           <div className="xlpe-model-grid">
@@ -351,7 +352,7 @@ export function LowVoltageXlpeFamilyProductPage() {
       <section className="section product-detail-section">
         <div className="container">
           <div className="product-section-intro">
-            <span className="eyebrow">Recommended English names</span>
+            <span className="eyebrow">Common Chinese Model References</span>
             <h2>Common Low-Voltage XLPE Cable Types</h2>
           </div>
           <div className="product-section-grid product-section-grid-wide">
