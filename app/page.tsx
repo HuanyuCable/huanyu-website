@@ -26,7 +26,7 @@ export default function HomePage() {
           <h1>Power Cables Built for Demanding Projects</h1>
           <p>Focused on low-voltage armoured cables, medium-voltage power cables and LSZH & fire-safe cable solutions.</p>
           <div className="hero-actions">
-            <Link className="button" href="/contact">Request a Quote</Link>
+            <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="home_hero">Request a Quote</Link>
             <Link className="button button-ghost" href="/products">Explore Products</Link>
           </div>
         </div>

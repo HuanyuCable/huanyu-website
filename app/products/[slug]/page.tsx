@@ -116,7 +116,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
             <span className="eyebrow light">{product.category} product family</span>
             <h1>{product.name}</h1>
             <p>{product.description}</p>
-            <div className="hero-actions"><Link className="button" href="#inquiry">Request Technical Review</Link><TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: product.slug }}>Email Specification</TrackedLink></div>
+            <div className="hero-actions"><Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug={product.slug}>Request Technical Review</Link><TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: product.slug }}>Email Specification</TrackedLink></div>
           </div>
           <div>
             <div className="product-detail-image">

@@ -178,7 +178,7 @@ function StaVsSwaGuide() {
       <div className="update-article-cta buyer-guide-cta">
         <h2>Send BOQ / Specification</h2>
         <p>Send the cable schedule, installation route, armour requirement, quantity and required document scope for a project-specific quotation review.</p>
-        <Link className="button" href="/contact">Send BOQ / Specification</Link>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta">Send BOQ / Specification</Link>
       </div>
     </GuideShell>
   );
@@ -273,7 +273,7 @@ function MediumVoltageSelectionGuide() {
       <div className="update-article-cta buyer-guide-cta">
         <h2>Send BOQ / Specification</h2>
         <p>Share the cable schedule, technical specification, route, testing scope, quantity and document requirements for a specification-based quotation review.</p>
-        <Link className="button" href="/contact">Send BOQ / Specification</Link>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta">Send BOQ / Specification</Link>
       </div>
     </GuideShell>
   );

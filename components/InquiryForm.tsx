@@ -29,8 +29,8 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
       form.reset();
       setStatus("success");
       const productSlug = pathname.startsWith("/products/") ? pathname.split("/")[2] : undefined;
-      trackEvent(productSlug ? "product_inquiry_submit_success" : "contact_form_submit_success", {
-        form_type: productSlug ? "product_inquiry" : "contact_inquiry",
+      trackEvent("contact_form_submit", {
+        form_name: productSlug ? "product_inquiry" : "contact_inquiry",
         product_slug: productSlug,
       });
       setMessage("Your request has been received. Our team will review the specification and respond by email.");

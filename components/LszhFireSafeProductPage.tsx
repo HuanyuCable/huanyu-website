@@ -154,7 +154,7 @@ export function LszhFireSafeProductPage() {
               ))}
             </div>
             <div className="hero-actions">
-              <Link className="button" href="#inquiry">Request Specification Review</Link>
+              <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="lszh-fire-safe-cables">Request Specification Review</Link>
               <Link className="button button-ghost" href="#performance-types">Compare Requirements</Link>
             </div>
           </div>

@@ -222,7 +222,7 @@ export default function ProjectsPage() {
             </p>
           </div>
           <div className="projects-cta-actions">
-            <Link className="button" href="/contact">Send Project Requirements</Link>
+            <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="projects_cta">Send Project Requirements</Link>
             <Link className="button button-ghost" href="/products">View Cable Products</Link>
           </div>
         </div>

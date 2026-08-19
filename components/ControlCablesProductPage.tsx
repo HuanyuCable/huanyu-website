@@ -50,7 +50,7 @@ export function ControlCablesProductPage() {
               ))}
             </div>
             <div className="hero-actions">
-              <Link className="button" href="#inquiry">Request Quote</Link>
+              <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="control-instrumentation-cables">Request Quote</Link>
               <Link className="button button-ghost" href="#representative-models">View Models</Link>
             </div>
           </div>

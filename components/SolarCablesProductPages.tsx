@@ -155,7 +155,7 @@ const solarDetails: Record<SolarDetailVariant, SolarDetail> = {
 
 function CatalogLink({ className = "button" }: { className?: string }) {
   return (
-    <TrackedLink className={className} href={catalogHref} download eventName="catalog_download" eventParameters={{ download_file: "huanyu-cable-solar-pv-catalog.pdf" }}>
+    <TrackedLink className={className} href={catalogHref} download eventName="catalog_download" eventParameters={{ file_name: "huanyu-cable-solar-pv-catalog.pdf", document_type: "solar_pv_catalog" }}>
       Download Solar PV Cable Catalog
     </TrackedLink>
   );
@@ -172,7 +172,7 @@ function SolarCatalogCta() {
         </div>
         <div className="solar-catalog-actions">
           <CatalogLink />
-          <Link className="button solar-button-outline" href="#inquiry">Request a Quote</Link>
+          <Link className="button solar-button-outline" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="solar_catalog_panel">Request a Quote</Link>
         </div>
       </div>
     </section>
@@ -216,7 +216,7 @@ export function SolarCablesCategoryPage() {
             <p>Available product constructions include flexible tinned copper conductors, cross-linked insulation and sheath materials, and designs for long-term outdoor photovoltaic service.</p>
             <div className="hero-actions">
               <Link className="button" href="#available-solar-cables">View Available Types</Link>
-              <Link className="button button-ghost" href="#inquiry">Request a Quote</Link>
+              <Link className="button button-ghost" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="solar-cables">Request a Quote</Link>
             </div>
           </div>
           <div className="product-detail-image">
@@ -320,7 +320,7 @@ export function SolarCableDetailPage({ variant }: { variant: SolarDetailVariant 
             <p>{detail.summary}</p>
             <div className="xlpe-hero-badges solar-standard-badge"><span>{detail.reference}</span></div>
             <div className="hero-actions">
-              <Link className="button" href="#inquiry">Request a Quote</Link>
+              <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug={variant === "solar-pv1-f" ? "pv1-f-solar-dc-cable" : "h1z2z2-k-solar-dc-cable"}>Request a Quote</Link>
               <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: variant === "solar-pv1-f" ? "pv1-f-solar-dc-cable" : "h1z2z2-k-solar-dc-cable" }}>Email BOQ / Specs</TrackedLink>
             </div>
           </div>

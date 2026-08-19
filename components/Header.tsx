@@ -189,7 +189,7 @@ export function Header() {
               </div>
             );
           })}
-          <Link className="button button-small" href="/contact" onClick={closeAllNavigation}>
+          <Link className="button button-small" href="/contact" onClick={closeAllNavigation} data-ga-event="rfq_click" data-ga-cta-location="header">
             Request a Quote
           </Link>
         </nav>

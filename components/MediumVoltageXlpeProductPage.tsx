@@ -153,7 +153,7 @@ export function MediumVoltageXlpeProductPage() {
               ))}
             </div>
             <div className="hero-actions">
-              <Link className="button" href="#inquiry">Request MV Cable Quote</Link>
+              <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="medium-voltage-xlpe-power-cables">Request MV Cable Quote</Link>
               <Link className="button button-ghost" href="#specifications">View Specifications</Link>
             </div>
           </div>

@@ -86,6 +86,7 @@ function ProductHero({
   imageAlt,
   secondaryHref,
   secondaryLabel,
+  productSlug,
 }: {
   eyebrow: string;
   title: string;
@@ -95,6 +96,7 @@ function ProductHero({
   imageAlt: string;
   secondaryHref: string;
   secondaryLabel: string;
+  productSlug: string;
 }) {
   return (
     <section className="product-detail-hero xlpe-product-hero">
@@ -110,7 +112,7 @@ function ProductHero({
             ))}
           </div>
           <div className="hero-actions">
-            <Link className="button" href="#inquiry">Request Quote</Link>
+            <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug={productSlug}>Request Quote</Link>
             <Link className="button button-ghost" href={secondaryHref}>{secondaryLabel}</Link>
           </div>
         </div>
@@ -164,6 +166,7 @@ export function OverheadInsulatedCablesProductPage() {
         imageAlt="JKYJ and JKLYJ overhead insulated cable product family"
         secondaryHref="#representative-models"
         secondaryLabel="View Models"
+        productSlug="overhead-insulated-cables"
       />
 
       <section className="section">
@@ -316,6 +319,7 @@ export function AcsrBareOverheadConductorsProductPage() {
         imageAlt="LGJ ACSR bare overhead conductor product view"
         secondaryHref="#structure"
         secondaryLabel="View Structure"
+        productSlug="acsr-bare-overhead-conductors"
       />
 
       <section className="section">

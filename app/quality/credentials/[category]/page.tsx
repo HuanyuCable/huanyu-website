@@ -61,7 +61,7 @@ export default async function CredentialCategoryPage({ params }: CategoryPagePro
           </div>
           <div className="credential-category-footer">
             <Link className="text-link" href="/quality#credentials">All Credentials <span>-&gt;</span></Link>
-            <Link className="button" href="/contact">Request a Quote</Link>
+            <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="credential_category_footer">Request a Quote</Link>
           </div>
         </div>
       </section>

@@ -91,7 +91,7 @@ export function LowVoltageArmouredProductPage() {
               ))}
             </div>
             <div className="hero-actions">
-              <Link className="button" href="#inquiry">Request Technical Review</Link>
+              <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="low-voltage-armoured-power-cables">Request Technical Review</Link>
               <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-armoured-power-cables" }}>Email BOQ / Specs</TrackedLink>
             </div>
           </div>

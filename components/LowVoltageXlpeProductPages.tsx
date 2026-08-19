@@ -76,6 +76,7 @@ function ProductHero({
   primaryLabel,
   secondaryHref,
   secondaryLabel,
+  productSlug,
 }: {
   eyebrow: string;
   title: string;
@@ -87,6 +88,7 @@ function ProductHero({
   primaryLabel: string;
   secondaryHref: string;
   secondaryLabel: string;
+  productSlug: string;
 }) {
   return (
     <section className="product-detail-hero xlpe-product-hero">
@@ -102,8 +104,8 @@ function ProductHero({
             ))}
           </div>
           <div className="hero-actions">
-            <Link className="button" href={primaryHref}>{primaryLabel}</Link>
-            <Link className="button button-ghost" href={secondaryHref}>{secondaryLabel}</Link>
+            <Link className="button" href={primaryHref} data-ga-event={primaryHref === "#inquiry" ? "rfq_click" : undefined} data-ga-cta-location={primaryHref === "#inquiry" ? "product_hero" : undefined} data-ga-product-slug={primaryHref === "#inquiry" ? productSlug : undefined}>{primaryLabel}</Link>
+            <Link className="button button-ghost" href={secondaryHref} data-ga-event={secondaryHref === "#inquiry" ? "rfq_click" : undefined} data-ga-cta-location={secondaryHref === "#inquiry" ? "product_hero" : undefined} data-ga-product-slug={secondaryHref === "#inquiry" ? productSlug : undefined}>{secondaryLabel}</Link>
           </div>
         </div>
         <div>
@@ -173,6 +175,7 @@ export function Yjv22Yjv23ProductPage() {
         primaryLabel="Request Quote"
         secondaryHref="#specifications"
         secondaryLabel="View Specifications"
+        productSlug="yjv22-yjv23-xlpe-armoured-power-cables"
       />
 
       <section className="section">
@@ -313,6 +316,7 @@ export function LowVoltageXlpeFamilyProductPage() {
         primaryLabel="View Model Family"
         secondaryHref="#inquiry"
         secondaryLabel="Request Quote"
+        productSlug="low-voltage-xlpe-power-cables"
       />
 
       <section className="section">

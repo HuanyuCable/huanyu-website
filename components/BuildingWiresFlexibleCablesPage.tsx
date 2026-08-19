@@ -68,7 +68,7 @@ export function BuildingWiresFlexibleCablesPage() {
               ))}
             </div>
             <div className="hero-actions">
-              <Link className="button" href="#inquiry">Request Quote</Link>
+              <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="building-wires-flexible-cables">Request Quote</Link>
               <Link className="button button-ghost" href="#representative-products">View BV / BVR</Link>
             </div>
           </div>
