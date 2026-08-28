@@ -134,7 +134,7 @@ export function LowVoltageArmouredProductPage() {
             ))}
           </div>
           <div className="review-note">
-            Not sure which armour construction is suitable? Share the voltage, core configuration, conductor size, installation route and pulling conditions. The final armour and sheath combination is reviewed against the project specification before quotation.
+            Not sure which armour construction is suitable? Share the voltage, core configuration, conductor size, installation route and pulling conditions. The final armour and sheath combination is reviewed against the project specification before quotation. YJV22, YJV23, YJV32 and YJV33 are Chinese model references used for construction comparison; final cable designation follows the applicable project specification.
           </div>
         </div>
       </section>
@@ -234,6 +234,9 @@ export function LowVoltageArmouredProductPage() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="review-note">
+              Preparing a 0.6/1 kV enquiry? Review the <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.
+            </div>
           </div>
           <aside className="spec-aside">
             <h3>Quotation focus</h3>

@@ -60,7 +60,7 @@ export function BuildingWiresFlexibleCablesPage() {
             <span className="eyebrow light">Building Wires & Flexible Cables</span>
             <h1>Building Wires & Flexible Cables</h1>
             <p>
-              PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected general-purpose installation applications.
+              PVC insulated building wires and flexible copper conductor cables for residential wiring, interior distribution and selected general-purpose installation applications. BV and BVR are shown as common Chinese model references; final cable designation follows the applicable project specification.
             </p>
             <div className="xlpe-hero-badges">
               {["BV", "BVR", "PVC Insulation", "Copper Conductor", "Common building wire voltage grades"].map((badge) => (
@@ -92,7 +92,7 @@ export function BuildingWiresFlexibleCablesPage() {
             <span className="eyebrow">Product overview</span>
             <h2>BV for fixed building wiring</h2>
             <p>
-              BV is a copper conductor PVC insulated wire used mainly for fixed building wiring, residential wiring, lighting circuits and socket circuits. It is positioned as the primary fixed wiring product on this page.
+              BV is a copper conductor PVC insulated wire used mainly for fixed building wiring, residential wiring, lighting circuits and socket circuits. It is commonly used for fixed wiring in buildings, subject to the applicable project and installation requirements.
             </p>
           </article>
           <article className="xlpe-info-card">

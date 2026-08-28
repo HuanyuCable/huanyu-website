@@ -25,7 +25,7 @@ const yjv22Specs = [
   ["Inner Sheath", "PVC inner sheath / bedding"],
   ["Outer Sheath", "PVC for YJV22; PE for YJV23"],
   ["Core Number", "Single-core, 2-core, 3-core, 4-core, 5-core, and multi-core with reduced neutral / earth conductor options"],
-  ["Cross-sectional Area", "Wide range available. Typical configurations include 3 × 70 mm² + 1 × 35 mm², 3 × 120 mm² + 1 × 70 mm², 4 × 50 mm² and more. Other sizes available upon request."],
+  ["Cross-sectional Area", "Typical configurations include 3 × 70 mm² + 1 × 35 mm², 3 × 120 mm² + 1 × 70 mm² and 4 × 50 mm². Additional sizes can be reviewed against the project requirement."],
   ["Standards", "GB/T 12706.1, IEC 60502-1, IEC 60228"],
   ["Frequency", "50 Hz"],
   ["Installation", "Indoor, outdoor, tunnel, cable trench, duct and underground fixed installation"],
@@ -38,7 +38,7 @@ const familySpecs = [
   ["Outer Sheath", "PVC for YJV / YJLV / YJLV22; PE for YJY"],
   ["Armour", "Unarmoured for YJV, YJY and YJLV; steel tape armoured for YJLV22"],
   ["Core Number", "Single-core, 2-core, 3-core, 4-core, 5-core, and multi-core with reduced neutral or earth conductor options"],
-  ["Cross-sectional Area", "Wide range available. Typical examples include 2 × 4 mm², 3 × 25 + 1 × 16 mm², 3 × 70 + 1 × 35 mm², 4 × 50 mm² and 5 × 120 mm²."],
+  ["Cross-sectional Area", "Typical examples include 2 × 4 mm², 3 × 25 + 1 × 16 mm², 3 × 70 + 1 × 35 mm², 4 × 50 mm² and 5 × 120 mm². Additional sizes can be reviewed against the project requirement."],
   ["Standards", "GB/T 12706.1, IEC 60502-1, IEC 60228"],
   ["Installation", "Indoor, outdoor, cable trench, duct, tunnel and underground fixed installation depending on cable structure"],
   ["Optional Variants", "Flame retardant, LSZH or fire-resistant variants can be introduced separately under related product pages"],
@@ -184,7 +184,7 @@ export function Yjv22Yjv23ProductPage() {
             <span className="eyebrow">Product overview</span>
             <h2>Fixed low-voltage distribution with mechanical protection</h2>
             <p>
-              YJV22 and YJV23 are low-voltage XLPE insulated steel tape armoured power cables for AC power lines with rated voltage up to 0.6/1 kV. They are used for transmitting electrical power in fixed installations where the cable requires additional mechanical protection.
+              YJV22 and YJV23 are Chinese model references for low-voltage XLPE insulated steel tape armoured power cables for AC power lines with rated voltage up to 0.6/1 kV. They are used for transmitting electrical power in fixed installations where the cable requires additional mechanical protection. Final cable construction, applicable standard and project designation should be confirmed against the buyer&apos;s specification.
             </p>
           </article>
           <article className="xlpe-info-card">
@@ -329,6 +329,7 @@ export function LowVoltageXlpeFamilyProductPage() {
           <div className="review-note">
             For quotation, please confirm the voltage rating (0.6/1 kV or 1.8/3 kV), conductor material, core arrangement, cross-section, sheath, armour requirement and installation route. Applicable IEC 60502-1, GB/T or project-specific requirements, together with required tests and delivery documents, are reviewed before the final cable construction is confirmed. <TrackedLink className="text-link" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-xlpe-power-cables" }}>Email BOQ / Specs <span>-&gt;</span></TrackedLink>
             <p>For a practical armour comparison, read the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA armoured cable selection guide</Link>.</p>
+            <p>Preparing a 0.6/1 kV enquiry? Review the <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.</p>
           </div>
         </div>
       </section>
@@ -457,7 +458,7 @@ export function LowVoltageXlpeFamilyProductPage() {
               <li>YJY 0.6/1 kV 4 × 50 mm²</li>
               <li>YJLV 0.6/1 kV 4 × 95 mm²</li>
               <li>YJLV22 0.6/1 kV 3 × 120 mm² + 1 × 70 mm²</li>
-              <li>Other sizes available upon request</li>
+              <li>Other sizes can be reviewed upon request</li>
             </ul>
           </article>
         </div>

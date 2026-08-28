@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const strengths = [
   {
     title: "Focused export portfolio",
-    copy: "Low-voltage armoured cables, medium-voltage power cables and LSZH fire-safe cable solutions remain the core public product families.",
+    copy: "Low-voltage armoured cables, medium-voltage power cables and LSZH fire-safe cable solutions remain the core product families.",
   },
   {
     title: "Project-based review",
@@ -76,8 +76,8 @@ export default function AboutPage() {
               selected cable families, practical manufacturing evidence and project-oriented documentation.
             </p>
             <p>
-              For overseas buyers, the public website is structured to make the main product position, manufacturing
-              base, quality process and verified credentials easier to review before detailed inquiry discussion.
+              For overseas projects, Huanyu Cable reviews cable construction, application, specifications and
+              quotation requirements against the buyer’s project documents.
             </p>
           </div>
           <Image
@@ -97,7 +97,7 @@ export default function AboutPage() {
               <span className="eyebrow">Why Huanyu</span>
               <h2>Practical evidence for project buyers.</h2>
             </div>
-            <p>Huanyu Cable keeps the About page focused on buyer-relevant trust signals rather than broad claims.</p>
+            <p>Project buyers can evaluate Huanyu Cable based on its product focus, manufacturing capability, quality process, credentials and operating experience.</p>
           </div>
           <div className="why-huanyu-grid">
             {strengths.map((item) => (

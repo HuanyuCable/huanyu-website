@@ -36,6 +36,26 @@ export const buyerGuides: BuyerGuide[] = [
     excerpt:
       "A practical guide for comparing solar DC cable designation, conductor, size, standards and RFQ information before quotation.",
   },
+  {
+    slug: "low-voltage-xlpe-cable-rfq-checklist",
+    title: "Low Voltage XLPE Cable RFQ Checklist for 0.6/1 kV Projects",
+    shortTitle: "Low Voltage XLPE Cable RFQ Checklist for 0.6/1 kV Projects",
+    metaTitle: "Low Voltage XLPE Cable RFQ Checklist: 0.6/1 kV, Conductor, Armour and Sheath | HUANYU CABLE",
+    description:
+      "A practical RFQ checklist for project buyers sourcing 0.6/1 kV XLPE power cables, covering conductor material, cable construction, armour, sheath, standards and quotation information.",
+    excerpt:
+      "A practical checklist for confirming 0.6/1 kV cable construction, conductor, armour, sheath, standards and quotation information.",
+  },
+  {
+    slug: "lszh-vs-flame-retardant-vs-fire-resistant-cable",
+    title: "LSZH vs Flame-Retardant vs Fire-Resistant Cable: What Project Buyers Should Specify",
+    shortTitle: "LSZH vs Flame-Retardant vs Fire-Resistant Cable",
+    metaTitle: "LSZH vs Flame-Retardant vs Fire-Resistant Cable: Procurement Guide | HUANYU CABLE",
+    description:
+      "A practical procurement guide explaining the difference between LSZH, flame-retardant and fire-resistant cable requirements, and what project buyers should confirm before requesting a quotation.",
+    excerpt:
+      "A procurement guide explaining the difference between smoke, flame-propagation and circuit-integrity requirements.",
+  },
 ];
 
 export function getBuyerGuide(slug: string): BuyerGuide | undefined {

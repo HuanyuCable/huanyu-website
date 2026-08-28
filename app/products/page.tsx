@@ -239,7 +239,7 @@ export default function ProductsPage() {
               <span className="eyebrow">Product category directory</span>
               <h2>Primary and Supporting Product Categories</h2>
             </div>
-            <p>Each category shows its representative product families or models so buyers can move from a high-level category to the relevant detail page.</p>
+            <p>Each category shows its representative product families or models so buyers can move from a high-level category to the relevant detail page. Where Chinese model references are shown, they are used for construction comparison. Final cable designation follows the applicable project specification.</p>
           </div>
 
           <div className="product-family-grid product-category-grid">

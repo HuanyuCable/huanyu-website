@@ -156,7 +156,7 @@ export const products: Product[] = [
       "H1Z2Z2-K solar DC cable is supplied for photovoltaic module strings, combiner box wiring, inverter links and other fixed DC applications.",
     metaTitle: "H1Z2Z2-K Solar Cable | EN 50618 | HUANYU CABLE",
     metaDescription:
-      "H1Z2Z2-K solar cable for photovoltaic DC applications in line with EN 50618 project requirements. Submit conductor size, length and delivery details.",
+      "H1Z2Z2-K solar cable for photovoltaic DC applications in projects referencing EN 50618. Submit conductor size, length and delivery details.",
     detailVariant: "solar-h1z2z2-k",
     imagePath: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
     detailImagePath: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
@@ -272,7 +272,7 @@ export const products: Product[] = [
     category: "Supporting",
     priority: 4,
     tagline: "General distribution cables for trays, ducts and protected installations.",
-    description: "A supporting range for complete project supply and standard low-voltage distribution requirements.",
+    description: "A supporting product range for project-specific and standard low-voltage distribution requirements.",
     excludeFromSitemap: true,
     imagePath: "/images/products/low-voltage-xlpe/xlpe-unarmoured-yjv-yjy-yjlv.png",
     detailImagePath: "/media/products/categories/lv-unarmoured-power-cable.webp",

@@ -279,6 +279,276 @@ function MediumVoltageSelectionGuide() {
   );
 }
 
+function LowVoltageXlpeRfqChecklistGuide() {
+  return (
+    <GuideShell
+      title="Low Voltage XLPE Cable RFQ Checklist for 0.6/1 kV Projects"
+      description="A practical checklist for confirming the cable construction and quotation information required for a 0.6/1 kV XLPE power cable enquiry."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          A request for “0.6/1 kV XLPE power cable” is usually not enough for an accurate quotation. Before pricing can be confirmed, the cable construction should be defined together with the conductor material, number of cores, conductor cross-section, armour requirement, outer sheath, applicable standard or project specification, quantity and delivery information.
+        </p>
+        <p>
+          Huanyu Cable reviews low-voltage cable enquiries against the submitted project specification and BOQ. Where information is incomplete, the final cable construction should be confirmed before quotation or order confirmation.
+        </p>
+
+        <h2>Quick answer</h2>
+        <p>
+          Before requesting a quotation for a low-voltage XLPE power cable, buyers should normally confirm the system voltage, conductor material, number of cores, conductor size, armour requirement, sheath material, applicable standard or project specification, total quantity and delivery destination.
+        </p>
+
+        <h2>1. Confirm the voltage class</h2>
+        <p>
+          For this product range, the typical project reference is 0.6/1 kV low-voltage power distribution. The cable voltage designation should follow the project document, cable schedule or technical specification.
+        </p>
+        <p>
+          If different voltage descriptions appear in the BOQ and technical specification, the discrepancy should be clarified before the cable construction is finalized.
+        </p>
+
+        <h2>2. Confirm copper or aluminium conductor</h2>
+        <p>
+          Copper and aluminium conductor options can both be reviewed depending on the project requirement. The conductor material should be stated clearly in the RFQ because it affects cable construction, dimensions, weight, termination arrangement and commercial comparison.
+        </p>
+        <p>
+          A quotation should not automatically substitute aluminium for copper, or copper for aluminium, unless the project buyer accepts the alternative.
+        </p>
+
+        <h2>3. Confirm number of cores and conductor cross-section</h2>
+        <p>
+          The RFQ should state the required number of cores and nominal conductor cross-section for each cable item. Common project configurations may include single-core and multicore designs, but the final construction should follow the cable schedule and project specification.
+        </p>
+        <p>
+          Where several cable sizes are required, each size should be listed separately with its corresponding quantity.
+        </p>
+
+        <h2>4. Confirm unarmoured or armoured construction</h2>
+        <p>
+          Unarmoured XLPE power cables are commonly reviewed for protected installation routes. Where additional mechanical protection is required, an armoured construction may be specified.
+        </p>
+        <p>
+          Steel tape armour, or STA, is one common armoured construction for applicable multicore low-voltage power cables. Steel wire armour, or SWA, should not be treated as an automatic substitute for STA. Armour selection should follow the installation route, cable construction and project specification. For a focused comparison, review the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA Armoured Cable guide</Link>.
+        </p>
+
+        <h2>5. Confirm PVC, PE or project-specific sheath</h2>
+        <p>
+          The outer sheath material should be stated in the project specification. PVC and PE sheath options can be reviewed for suitable cable constructions, while other sheath or fire-performance requirements should be confirmed separately.
+        </p>
+        <p>
+          LSZH, flame-retardant and fire-resistant requirements should not be assumed simply from the term “XLPE power cable”.
+        </p>
+
+        <h2>6. Confirm standards, testing and documentation</h2>
+        <p>
+          IEC 60502-1 is commonly referenced for low-voltage power cables within its applicable scope. Applicable GB/T requirements or project-specific specifications may also be reviewed when required.
+        </p>
+        <p>
+          The buyer should clearly state the required standard, routine or type-test documentation, inspection requirements, cable data sheets, drawings, packing documents and any project-specific approval procedure.
+        </p>
+        <p>
+          A reference to a standard should not be interpreted as a certification claim. Certification status should be confirmed separately where certification is required.
+        </p>
+
+        <h2>7. Quantity, packing and delivery information</h2>
+        <p>
+          For quotation preparation, provide the total cable length for each item, preferred drum or packing length where applicable, destination country or port and required delivery schedule.
+        </p>
+        <p>
+          Packing arrangements should be confirmed together with the final cable size and order quantity rather than assumed from a generic product listing.
+        </p>
+
+        <h2>Low Voltage XLPE Cable RFQ Checklist</h2>
+        <ul className="buyer-guide-checklist">
+          <li>Rated / system voltage</li>
+          <li>Copper or aluminium conductor</li>
+          <li>Number of cores</li>
+          <li>Conductor cross-section</li>
+          <li>Unarmoured / armour requirement</li>
+          <li>PVC / PE / specified sheath</li>
+          <li>Applicable standard / specification</li>
+          <li>Required testing / documents</li>
+          <li>Quantity and packing</li>
+          <li>Destination and schedule</li>
+        </ul>
+
+        <div className="buyer-guide-related">
+          <h2>Related product pages</h2>
+          <p>
+            Review <Link href="/products/low-voltage-xlpe-power-cables">Low Voltage XLPE Power Cables</Link> for the general low-voltage family, <Link href="/products/low-voltage-armoured-power-cables">Low Voltage Armoured Power Cables</Link> for project-specified armoured constructions, and the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA Armoured Cable guide</Link> for armour selection factors. To request a project review, use the <Link href="/contact">Contact / RFQ</Link> page.
+          </p>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Send Your LV Cable BOQ / Specification</h2>
+        <p>Provide the cable schedule, conductor requirement, armour and sheath requirement, applicable standard, quantity and project documents for review before quotation.</p>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="low-voltage-xlpe-power-cables">Send LV Cable Requirements</Link>
+      </div>
+    </GuideShell>
+  );
+}
+
+function LszhFlameFireComparisonGuide() {
+  return (
+    <GuideShell
+      title="LSZH vs Flame-Retardant vs Fire-Resistant Cable: What Project Buyers Should Specify"
+      description="A practical procurement guide for identifying separate LSZH, flame-retardant and fire-resistant cable requirements before quotation."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          LSZH, flame-retardant and fire-resistant are often used together in cable project enquiries, but they do not describe the same performance requirement.
+        </p>
+        <p>
+          A project may require one, two or all three characteristics depending on the installation environment and technical specification. Before quotation, each requirement should therefore be identified separately together with the applicable test method, cable construction and project documentation.
+        </p>
+
+        <h2>Quick answer</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table">
+            <thead>
+              <tr>
+                <th>Requirement</th>
+                <th>Main focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LSZH / LSOH</td>
+                <td>Smoke and halogen-related performance</td>
+              </tr>
+              <tr>
+                <td>Flame-retardant</td>
+                <td>Limiting flame propagation</td>
+              </tr>
+              <tr>
+                <td>Fire-resistant</td>
+                <td>Maintaining circuit integrity under specified fire-test conditions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>These terms are related to fire performance, but they are not interchangeable.</p>
+
+        <>
+          <h2>1. What does LSZH mean?</h2>
+          <p>
+            LSZH generally refers to cable constructions designed to meet low-smoke and halogen-free material requirements under the applicable project and test criteria.
+          </p>
+          <p>
+            For project buyers, the important point is that “LSZH” should not be treated as a complete cable specification. The cable voltage, conductor, insulation, sheath, armour and required fire-performance tests still need to be confirmed.
+          </p>
+          <p>
+            Huanyu Cable’s LSZH-related pages describe finished cable products and project-specific cable review. They are not raw LSZH compound supply pages.
+          </p>
+        </>
+
+        <>
+          <h2>2. What does flame-retardant mean?</h2>
+          <p>
+            Flame-retardant requirements focus on limiting the propagation of flame when cables are exposed to defined fire-test conditions.
+          </p>
+          <p>
+            A flame-retardant cable is not automatically an LSZH cable, and flame-retardant performance alone does not mean that the cable will maintain circuit operation during a fire.
+          </p>
+          <p>
+            The applicable flame test and project requirement should therefore be stated in the RFQ.
+          </p>
+        </>
+
+        <>
+          <h2>3. What does fire-resistant mean?</h2>
+          <p>
+            Fire-resistant cable requirements focus on maintaining circuit integrity for a defined period under specified fire-test conditions.
+          </p>
+          <p>
+            The required construction depends on the cable type, voltage class, circuit requirement and applicable project specification. A fire-resistant design should therefore be confirmed against the required test and cable construction rather than assumed from a general product name.
+          </p>
+        </>
+
+        <h2>4. Why they are not interchangeable</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table">
+            <thead>
+              <tr>
+                <th>Review point</th>
+                <th>LSZH</th>
+                <th>Flame-retardant</th>
+                <th>Fire-resistant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Core focus</td>
+                <td>Smoke / halogen performance</td>
+                <td>Flame propagation</td>
+                <td>Circuit integrity during fire</td>
+              </tr>
+              <tr>
+                <td>Automatically equivalent?</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+              </tr>
+              <tr>
+                <td>Test requirement must be confirmed?</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Can affect cable construction / quotation?</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          A project may specify LSZH materials but still require separate flame-propagation testing. Another project may require a fire-resistant circuit while also specifying LSZH materials.
+        </p>
+        <p>
+          For this reason, the buyer should list the requirements separately rather than using a single term such as “fire-safe cable”.
+        </p>
+
+        <h2>5. What buyers should include in the RFQ</h2>
+        <ul className="buyer-guide-checklist">
+          <li>Cable type and voltage class</li>
+          <li>Conductor material, number of cores and conductor size</li>
+          <li>LSZH / LSOH requirement, if applicable</li>
+          <li>Flame-retardant requirement, if applicable</li>
+          <li>Fire-resistant requirement, if applicable</li>
+          <li>Applicable standard, test method or project specification</li>
+          <li>Installation route and operating environment</li>
+          <li>Required test reports, inspection and documentation</li>
+          <li>Quantity and delivery requirements</li>
+        </ul>
+
+        <h2>6. Product scope for project review</h2>
+        <p>
+          Huanyu Cable reviews project requirements for finished cable products including LSZH power cables, armoured power cables, building wires, control cables and fire-resistant cable designs.
+        </p>
+        <p>
+          Final construction, test requirements and documentation are confirmed against the submitted project specification before quotation.
+        </p>
+
+        <div className="buyer-guide-related">
+          <h2>Related product pages</h2>
+          <p>
+            Review <Link href="/products/lszh-fire-safe-cables">LSZH &amp; Fire-safe Cables</Link>, <Link href="/products/low-voltage-xlpe-power-cables">Low Voltage XLPE Power Cables</Link>, <Link href="/products/low-voltage-armoured-power-cables">Low Voltage Armoured Power Cables</Link>, <Link href="/products/building-wires-flexible-cables">Building Wires &amp; Flexible Cables</Link>, and <Link href="/products/control-instrumentation-cables">Control &amp; Instrumentation Cables</Link>. To submit a project requirement, use the <Link href="/contact">Contact / RFQ</Link> page.
+          </p>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Send Your Fire-performance Cable Specification</h2>
+        <p>Provide the cable type, voltage, construction, fire-performance requirement, applicable standard, quantity and project documents for review.</p>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="lszh-fire-safe-cables">Send Cable Requirements</Link>
+      </div>
+    </GuideShell>
+  );
+}
+
 function SolarCableSelectionGuide() {
   return (
     <GuideShell
@@ -415,6 +685,8 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
       {slug === "sta-vs-swa-armoured-cable-guide" && <StaVsSwaGuide />}
       {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
       {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}
+      {slug === "low-voltage-xlpe-cable-rfq-checklist" && <LowVoltageXlpeRfqChecklistGuide />}
+      {slug === "lszh-vs-flame-retardant-vs-fire-resistant-cable" && <LszhFlameFireComparisonGuide />}
     </>
   );
 }

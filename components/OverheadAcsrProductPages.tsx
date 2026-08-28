@@ -175,7 +175,7 @@ export function OverheadInsulatedCablesProductPage() {
             <span className="eyebrow">Product overview</span>
             <h2>JKYJ and JKLYJ for insulated overhead distribution</h2>
             <p>
-              Huanyu Cable supplies JKYJ and JKLYJ overhead insulated cables with black XLPE insulation for urban and rural power distribution lines. These single-core overhead cables are used for reliable power distribution where insulated line construction is required.
+              JKYJ and JKLYJ are Chinese model references for overhead insulated cable construction families. Huanyu Cable supplies these single-core overhead cables with black XLPE insulation for urban and rural power distribution lines where insulated line construction is required. Final cable designation follows the applicable project specification.
             </p>
           </article>
           <article className="xlpe-info-card">

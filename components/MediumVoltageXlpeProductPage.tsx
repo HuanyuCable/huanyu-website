@@ -179,7 +179,7 @@ export function MediumVoltageXlpeProductPage() {
             <span className="eyebrow">Design options</span>
             <h2>Copper or aluminum, unarmoured, STA and SWA designs</h2>
             <p>
-              Typical MV cable designs include YJV, YJY, YJV22, YJV23, YJV32 and YJV33. Steel tape armour and steel wire armour are selected by installation conditions, while conductor and sheath options are confirmed project by project.
+              Typical Chinese model references for MV cable construction families include YJV, YJY, YJV22, YJV23, YJV32 and YJV33. Steel tape armour and steel wire armour are selected by installation conditions, while conductor, sheath and final project designation are confirmed project by project.
             </p>
           </article>
         </div>

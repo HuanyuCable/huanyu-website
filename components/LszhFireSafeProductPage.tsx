@@ -129,6 +129,7 @@ const faqs = [
 ];
 
 const relatedProducts = [
+  ["LSZH vs Flame-Retardant vs Fire-Resistant Cable", "/resources/lszh-vs-flame-retardant-vs-fire-resistant-cable", "Need to distinguish LSZH, flame-retardant and fire-resistant requirements? Review the procurement guide."],
   ["Medium Voltage XLPE Cable Selection Guide", "/resources/medium-voltage-xlpe-cable-selection-guide", "How to confirm sheath and fire-safety requirements together with an MV cable design and RFQ."],
   ["Low Voltage Armoured Power Cables", "/products/low-voltage-armoured-power-cables", "STA and SWA power cable structures that can be reviewed with LSZH or fire-safe requirements."],
   ["Medium Voltage Power Cables", "/products/medium-voltage-xlpe-power-cables", "MV cable requirements reviewed separately for voltage class, screen design, sheath and testing scope."],
@@ -381,7 +382,7 @@ export function LszhFireSafeProductPage() {
           </div>
           <div className="model-link-list">
             {relatedProducts.map(([title, href, note]) => (
-              <Link className="model-link-card" href={href} key={title}>
+              <Link className={`model-link-card${href === "/resources/lszh-vs-flame-retardant-vs-fire-resistant-cable" ? " related-guide-link" : ""}`} href={href} key={title}>
                 <strong>{title}</strong>
                 <span>{note}</span>
               </Link>

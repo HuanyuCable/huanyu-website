@@ -9,7 +9,7 @@ const catalogHref = "/downloads/huanyu-cable-solar-pv-catalog.pdf";
 const solarProducts = [
   {
     title: "H1Z2Z2-K Solar DC Cable",
-    description: "EN 50618 solar DC cable with a Class 5 tinned copper conductor and halogen-free cross-linked construction.",
+    description: "Solar DC cable for projects referencing EN 50618, with a Class 5 tinned copper conductor and halogen-free cross-linked construction.",
     href: "/products/h1z2z2-k-solar-dc-cable",
     image: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
     imageAlt: "H1Z2Z2-K black solar DC cable with halogen-free insulation and tinned copper conductor",
