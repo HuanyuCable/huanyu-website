@@ -293,6 +293,32 @@ export function OverheadInsulatedCablesProductPage() {
         </div>
       </section>
 
+      <section className="section section-muted">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Quotation preparation</span>
+              <h2>Project RFQ Checklist</h2>
+            </div>
+            <p>Before quotation, provide the line and cable requirements needed to review the requested construction.</p>
+          </div>
+          <ul className="detail-list">
+            <li>System voltage / cable voltage designation</li>
+            <li>Conductor material</li>
+            <li>Nominal cross-section</li>
+            <li>Insulation / covering requirement</li>
+            <li>Installation / application condition</li>
+            <li>Applicable standard / project specification</li>
+            <li>Required testing and document scope</li>
+            <li>Quantity, delivery destination and schedule</li>
+          </ul>
+          <div className="review-note">
+            <p>Final construction and quotation are confirmed against the submitted project specification.</p>
+            <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="overhead_rfq_checklist" data-ga-product-slug="overhead-insulated-cables">Send Cable Schedule / BOQ</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="section quote-section" id="inquiry">
         <div className="container quote-grid">
           <div>

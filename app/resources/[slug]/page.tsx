@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const guide = getBuyerGuide(slug);
   if (!guide) return {};
 
-  const title = `${guide.shortTitle} | HUANYU CABLE`;
+  const title = guide.metaTitle ?? `${guide.shortTitle} | HUANYU CABLE`;
   const url = `${site.url}/resources/${guide.slug}`;
 
   return {
@@ -279,6 +279,131 @@ function MediumVoltageSelectionGuide() {
   );
 }
 
+function SolarCableSelectionGuide() {
+  return (
+    <GuideShell
+      title="PV1-F vs H1Z2Z2-K Solar Cable: Selection Guide for PV Projects"
+      description="A practical procurement guide for comparing PV1-F and H1Z2Z2-K solar DC cable requirements before quotation."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          An enquiry that says only “solar cable” rarely provides enough information for an accurate quotation. PV projects may refer to PV1-F or H1Z2Z2-K, but the designation is only one part of the purchasing requirement. Before quotation, confirm the applicable standard or technical specification, conductor material and construction, cross-section, quantity, packing and project documents. These details allow the requested cable construction and supply arrangement to be reviewed without assuming that two solar cable references are automatically interchangeable.
+        </p>
+
+        <h2>1. What is PV1-F?</h2>
+        <p>
+          PV1-F is a solar DC cable designation used in project documents and enquiries for photovoltaic module, string, combiner-box and inverter connections. Buyers should treat it as a reference that helps identify the requested cable family, then confirm the governing specification and required documents. The designation alone does not establish that every PV1-F offer has the same construction, test evidence or certification status.
+        </p>
+
+        <h2>2. What is H1Z2Z2-K?</h2>
+        <p>
+          H1Z2Z2-K is another common solar DC cable designation used for photovoltaic project procurement. A quotation should be checked against the project’s applicable standard, technical data sheet, conductor requirement and document scope. Where a project specifically calls for H1Z2Z2-K, do not substitute another designation without written technical review and acceptance by the responsible project party.
+        </p>
+
+        <h2>3. PV1-F and H1Z2Z2-K at a glance</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table">
+            <thead>
+              <tr>
+                <th>Review point</th>
+                <th>PV1-F</th>
+                <th>H1Z2Z2-K</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Designation</td>
+                <td>PV project cable designation/reference</td>
+                <td>PV project cable designation/reference</td>
+              </tr>
+              <tr>
+                <td>Conductor</td>
+                <td>Confirm required conductor construction and material</td>
+                <td>Confirm required conductor construction and material</td>
+              </tr>
+              <tr>
+                <td>Common RFQ sizes</td>
+                <td>4 mm² / 6 mm² frequently requested</td>
+                <td>4 mm² / 6 mm² frequently requested</td>
+              </tr>
+              <tr>
+                <td>Project confirmation</td>
+                <td>Standard and technical specification required</td>
+                <td>Standard and technical specification required</td>
+              </tr>
+              <tr>
+                <td>Quotation basis</td>
+                <td>Final construction must be confirmed</td>
+                <td>Final construction must be confirmed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          This table is a purchasing comparison, not a ranking. Neither column is a universal “better” option, and the two designations should not be accepted as direct substitutes without checking the project file. When comparing suppliers, place offers against the same construction, standard, testing and document requirements so that commercial differences are not caused by an incomplete or different technical scope.
+        </p>
+
+        <h2>4. Confirm conductor material and construction</h2>
+        <p>
+          State the conductor material and the required conductor construction rather than relying on the cable name alone. If the specification calls for a flexible tinned copper conductor, include that wording in the RFQ together with the required conductor class or construction. Also identify any project-specific marking or colour requirement. Huanyu Cable can review the submitted construction for supply, but unprovided conductor details should not be inferred from a short product designation.
+        </p>
+        <p>
+          A clear conductor description also helps the buyer compare cable dimensions, termination compatibility and submitted technical documents on the same basis. If the project data sheet already defines the conductor, copy that requirement into the cable schedule or attach the original document instead of shortening it to “copper solar cable.” Any requested alternative should be shown separately and remain subject to project approval.
+        </p>
+
+        <h2>5. Confirm 4 mm² or 6 mm² cross-section</h2>
+        <p>
+          Solar cable enquiries frequently request 4 mm² or 6 mm², but a commonly requested size is not automatically the correct size for a particular circuit. The project designer should determine the cross-section using the circuit current, voltage drop, installation conditions, route, grouping, temperature and other applicable design criteria. For quotation, state the selected nominal cross-section and total length for each colour or circuit requirement.
+        </p>
+        <p>
+          If a cable schedule includes several circuit groups, separate the quantities by designation, cross-section and colour. Do not combine 4 mm² and 6 mm² requirements into one total. Huanyu Cable reviews the requested size for quotation and does not replace the project designer’s cable-sizing calculation or final approval responsibility.
+        </p>
+
+        <h2>6. Confirm standard and project document requirements</h2>
+        <p>
+          Provide the required standard, cable data sheet or technical specification and list the testing and document scope expected with the offer or delivery. If a certification is required, name it explicitly and request confirmation of its availability for the final product and supply arrangement. Standards and documentation requirements should be confirmed before quotation. A product designation alone should not be treated as proof of a specific certification.
+        </p>
+        <p>
+          The technical file should also identify any marking, colour, test-report, inspection or delivery-document requirement. If the BOQ and specification use different designations, ask the project engineer to resolve the conflict before commercial comparison. This avoids evaluating quotations built around different cable constructions or evidence packages.
+        </p>
+
+        <h2>7. Confirm quantity, packing and delivery information</h2>
+        <p>
+          State the total metres required for each size and colour, together with the preferred coil, reel or drum arrangement. Include any preferred packing length, delivery destination and required schedule. Packing can affect handling, shipment planning and the number of joints or terminations on site, so it should be reviewed with the final order rather than assumed from a generic product listing.
+        </p>
+        <p>
+          Where the destination has specific shipping marks, pallet, reel or import-document requirements, include them in the RFQ. The supplier can then confirm a proposed packing arrangement and delivery scope in the quotation. No fixed minimum order quantity or packing length should be assumed until the final size, quantity and supply arrangement have been reviewed.
+        </p>
+
+        <h2>8. Solar Cable RFQ Checklist</h2>
+        <ul className="buyer-guide-checklist">
+          <li>Cable designation required</li>
+          <li>Applicable standard / technical specification</li>
+          <li>Conductor material and construction</li>
+          <li>Cross-section, such as 4 mm² or 6 mm²</li>
+          <li>Colour / marking if specified</li>
+          <li>Quantity and packing length</li>
+          <li>Required testing / documentation</li>
+          <li>Delivery destination and schedule</li>
+        </ul>
+
+        <h2>9. Related product pages</h2>
+        <div className="buyer-guide-related">
+          <p>
+            Review the <Link href="/products/solar-cables">Solar Cables</Link> category and the individual <Link href="/products/pv1-f-solar-dc-cable">PV1-F Solar DC Cable</Link> and <Link href="/products/h1z2z2-k-solar-dc-cable">H1Z2Z2-K Solar DC Cable</Link> pages before preparing the RFQ. For a project-specific review, send the cable schedule and technical documents through the <Link href="/contact">Contact / RFQ</Link> page. Final construction, testing and documentation remain subject to the submitted project specification and quotation confirmation.
+          </p>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Send Your Solar Cable Specification</h2>
+        <p>Provide the designation or standard, cross-section, quantity, packing, destination and project technical documents for review before quotation.</p>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="solar-cables">Send Solar Cable Requirements</Link>
+      </div>
+    </GuideShell>
+  );
+}
+
 export default async function BuyerGuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const guide = getBuyerGuide(slug);
@@ -287,7 +412,9 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
   return (
     <>
       <BuyerGuideBreadcrumbJsonLd title={guide.title} slug={guide.slug} />
-      {slug === "sta-vs-swa-armoured-cable-guide" ? <StaVsSwaGuide /> : <MediumVoltageSelectionGuide />}
+      {slug === "sta-vs-swa-armoured-cable-guide" && <StaVsSwaGuide />}
+      {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
+      {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}
     </>
   );
 }

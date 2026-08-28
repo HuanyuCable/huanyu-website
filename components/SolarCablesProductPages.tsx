@@ -13,7 +13,7 @@ const solarProducts = [
     href: "/products/h1z2z2-k-solar-dc-cable",
     image: "/images/products/solar-cables/h1z2z2-k-solar-dc-cable.webp",
     imageAlt: "H1Z2Z2-K black solar DC cable with halogen-free insulation and tinned copper conductor",
-    tags: ["H1Z2Z2-K", "EN 50618:2014", "Primary PV cable"],
+    tags: ["H1Z2Z2-K", "EN 50618:2014", "EN 50618 projects"],
   },
   {
     title: "PV1-F Solar DC Cable",
@@ -229,7 +229,7 @@ export function SolarCablesCategoryPage() {
         <div className="container">
           <div className="section-heading">
             <div><span className="eyebrow">Solar DC cable range</span><h2>Available Solar Cable Types</h2></div>
-            <p>H1Z2Z2-K is the primary option for projects following EN 50618. PV1-F is available where that designation is specifically requested.</p>
+            <p>For projects referencing EN 50618, review H1Z2Z2-K requirements. PV1-F can be reviewed where that designation or the applicable project specification is requested.</p>
           </div>
           <div className="product-family-grid solar-product-family-grid">
             {solarProducts.map((product) => (
@@ -291,6 +291,9 @@ export function SolarCablesCategoryPage() {
             </table>
           </div>
           <div className="solar-guidance"><Link href="/products/h1z2z2-k-solar-dc-cable">For new projects following EN 50618, review H1Z2Z2-K Solar DC Cable. <span>-&gt;</span></Link></div>
+          <div className="solar-guidance">
+            <Link href="/resources/pv1-f-vs-h1z2z2-k-solar-cable-selection-guide">Need to compare PV1-F and H1Z2Z2-K requirements? Review the Solar Cable Selection Guide before preparing your RFQ. <span>-&gt;</span></Link>
+          </div>
         </div>
       </section>
 
@@ -393,6 +396,12 @@ export function SolarCableDetailPage({ variant }: { variant: SolarDetailVariant 
               {detail.applications.map(([title, description]) => <article key={title}><strong>{title}</strong><span>{description}</span></article>)}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section solar-guidance-section">
+        <div className="container solar-guidance solar-guidance-large">
+          <Link href="/resources/pv1-f-vs-h1z2z2-k-solar-cable-selection-guide">Compare PV1-F and H1Z2Z2-K project requirements in our Solar Cable Selection Guide. <span>-&gt;</span></Link>
         </div>
       </section>
 
