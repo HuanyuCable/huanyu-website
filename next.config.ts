@@ -19,6 +19,16 @@ const nextConfig: NextConfig = {
         destination: "/products/medium-voltage-xlpe-power-cables",
         statusCode: 301,
       },
+      {
+        source: "/products/yjv22-yjv23-low-voltage-armoured-power-cables",
+        destination: "/products/low-voltage-armoured-power-cables",
+        statusCode: 301,
+      },
+      {
+        source: "/products/low-voltage-unarmoured-power-cables",
+        destination: "/products/low-voltage-xlpe-power-cables",
+        statusCode: 301,
+      },
     ];
   },
   async headers() {
