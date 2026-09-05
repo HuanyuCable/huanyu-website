@@ -276,6 +276,218 @@ function MediumVoltageSelectionGuide() {
   );
 }
 
+function Mv35KvRfqGuide() {
+  return (
+    <GuideShell
+      title="What We Check When an MV Cable RFQ Only Says “35 kV”"
+      description="A practical quotation-readiness checklist for EPC teams, contractors and project buyers preparing a medium-voltage cable RFQ."
+    >
+      <div className="buyer-guide-body">
+        <h2>“35 kV cable” is a starting point — not a quotation-ready specification</h2>
+        <p className="lead">
+          “35 kV cable” identifies the general voltage class, but it does not define the complete cable construction, test scope, packing requirement or commercial basis needed for an accurate quotation.
+        </p>
+        <p>
+          Before preparing a quotation, we review the initial inquiry against a technical and commercial checklist and confirm any missing items with the buyer. Our quotation review focuses on turning the initial request into a complete technical and commercial checklist. For broader cable-selection and specification guidance, use the <Link href="/resources/medium-voltage-xlpe-cable-selection-guide">Medium Voltage XLPE Cable Selection Guide</Link>; this page focuses specifically on whether an inquiry is ready for quotation.
+        </p>
+
+        <h2>What can be reviewed immediately — and what still needs clarification?</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table">
+            <thead>
+              <tr>
+                <th>RFQ information received</th>
+                <th>Can technical review start?</th>
+                <th>Ready for final quotation?</th>
+                <th>What still needs clarification?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="RFQ information received">“35 kV cable” only</td>
+                <td data-label="Can technical review start?">Yes, very preliminary</td>
+                <td data-label="Ready for final quotation?">No</td>
+                <td data-label="What still needs clarification?">Full cable designation and construction</td>
+              </tr>
+              <tr>
+                <td data-label="RFQ information received">“35 kV, XLPE, 3×300 mm²”</td>
+                <td data-label="Can technical review start?">Yes</td>
+                <td data-label="Ready for final quotation?">Usually no</td>
+                <td data-label="What still needs clarification?">Voltage designation, screen, armour, sheath, standard, quantity and drum requirements</td>
+              </tr>
+              <tr>
+                <td data-label="RFQ information received">Full cable schedule and quantity</td>
+                <td data-label="Can technical review start?">Yes</td>
+                <td data-label="Ready for final quotation?">Usually close</td>
+                <td data-label="What still needs clarification?">Tests, documents, packing, destination and delivery</td>
+              </tr>
+              <tr>
+                <td data-label="RFQ information received">Approved technical specification and BOQ</td>
+                <td data-label="Can technical review start?">Yes</td>
+                <td data-label="Ready for final quotation?">Usually, subject to final commercial details</td>
+                <td data-label="What still needs clarification?">Commercial terms and final document scope</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>1. Confirm the exact voltage designation</h2>
+        <p>
+          Provide the project or system voltage information and the required cable voltage designation. Include the maximum system voltage, or Um, when it is stated in the project specification. Common project designations can include 21/35 kV and 26/35 kV, but they should not be treated as interchangeable without checking the project specification.
+        </p>
+        <p>
+          Do not select the cable designation from the words “35 kV” alone. If the BOQ, single-line diagram and technical specification use different voltage expressions, the discrepancy needs to be resolved before the offer is finalized.
+        </p>
+
+        <h2>2. Confirm conductor, cores and cross-section</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Typical information to confirm</th>
+                <th>Why it matters to quotation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Item">Conductor</td>
+                <td data-label="Typical information to confirm">Copper / aluminium</td>
+                <td data-label="Why it matters to quotation">Material and cable construction</td>
+              </tr>
+              <tr>
+                <td data-label="Item">Core configuration</td>
+                <td data-label="Typical information to confirm">Single-core / three-core</td>
+                <td data-label="Why it matters to quotation">Construction, armour and installation</td>
+              </tr>
+              <tr>
+                <td data-label="Item">Cross-section</td>
+                <td data-label="Typical information to confirm">Project-specified mm²</td>
+                <td data-label="Why it matters to quotation">Dimensions, material and design basis</td>
+              </tr>
+              <tr>
+                <td data-label="Item">Conductor requirement</td>
+                <td data-label="Typical information to confirm">According to the agreed standard</td>
+                <td data-label="Why it matters to quotation">Avoid assumptions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>3. Confirm screen construction — not just “copper screen”</h2>
+        <p>
+          “Copper screen” may still be incomplete. A project may also define the screen construction, cross-sectional area or fault-current requirement. Confirm the conductor screen, insulation screen and metallic screen information stated in the project documents.
+        </p>
+        <p>
+          Copper tape and copper wire are examples of metallic-screen forms, not defaults for every inquiry. If a specific metallic-screen area or short-circuit duty is required, include the project design basis or specified value so it can be reflected correctly in the quotation.
+        </p>
+
+        <h2>4. Confirm armour based on project construction</h2>
+        <p>
+          State whether the cable is armoured or unarmoured and describe the route or installation context. STA and SWA can be considered as project-dependent examples, but neither should be selected from the voltage class alone. Single-core armour may require special attention because electromagnetic considerations depend on the circuit arrangement, armour material and applicable specification.
+        </p>
+        <p>
+          Use the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA Armoured Cable Selection Guide</Link> to prepare route, mechanical-protection and pulling information. Final armour selection should follow the approved project specification and installation requirements.
+        </p>
+
+        <h2>5. Confirm sheath and special performance requirements</h2>
+        <p>
+          Confirm the required outer sheath, including PVC or PE where applicable. If flame-retardant, low-smoke halogen-free (LSZH), fire-resistant, water-blocking, colour or special marking requirements apply, state them explicitly in the RFQ. These requirements should come from the project specification rather than being assumed from the voltage class.
+        </p>
+
+        <h2>6. Confirm standard, tests and document scope</h2>
+        <p>
+          State the governing standard and the exact voltage designation. IEC 60502-2 applies within its specified voltage scope, while GB/T 12706.3 covers 35 kV (Um = 40.5 kV) cable ratings such as 21/35(40.5) kV and 26/35(40.5) kV where applicable. Project-specific requirements should be reviewed separately.
+        </p>
+        <p>
+          Product standards, certificates, test reports and inspection documents should be listed separately in the RFQ so that each requirement can be reviewed against the correct basis.
+        </p>
+        <p>
+          List the required routine test report, datasheet, drawings, inspection and document list. If third-party inspection is contractually required, identify the expected witness scope, acceptance basis and document requirements. The final test and document scope should follow the agreed project specification and purchase requirements.
+        </p>
+
+        <h2>7. Confirm quantity, drum length and destination</h2>
+        <p>
+          Provide the total quantity, requested continuous length, preferred drum length, destination, delivery schedule and packing requirement. Include shipping or handling constraints when they are available, especially where drum dimensions, weight or route access may affect the proposed arrangement.
+        </p>
+        <p>
+          Even with a technically complete cable construction, quotation still depends on quantity, drum arrangement, destination and delivery requirements.
+        </p>
+
+        <h2>Five RFQ gaps that can delay final quotation</h2>
+        <ol className="buyer-guide-blockers">
+          <li>Voltage class is given, but there is no exact cable designation.</li>
+          <li>“Copper screen” is stated, but the screen construction or area is missing.</li>
+          <li>The armour requirement is not defined.</li>
+          <li>Total quantity is given, but the preferred or required drum length is not stated.</li>
+          <li>A technical specification is provided, but the test or document scope is missing.</li>
+        </ol>
+
+        <h2>RFQ before and after</h2>
+        <div className="buyer-guide-related">
+          <span className="eyebrow">Illustrative RFQ example</span>
+          <h3>Incomplete RFQ</h3>
+          <p>35 kV XLPE cable, 3 × 300 mm², 2,000 m. Please quote.</p>
+          <h3>Quotation-ready checklist</h3>
+          <ul>
+            <li>Required cable voltage designation: [confirm]</li>
+            <li>Conductor: [Cu / Al]</li>
+            <li>Core configuration: [confirm]</li>
+            <li>Cross-section: 300 mm²</li>
+            <li>Insulation: XLPE</li>
+            <li>Screen construction / area: [confirm]</li>
+            <li>Armour: [confirm]</li>
+            <li>Outer sheath: [confirm]</li>
+            <li>Standard: [confirm]</li>
+            <li>Total quantity: 2,000 m</li>
+            <li>Drum length: [confirm]</li>
+            <li>Destination: [confirm]</li>
+            <li>Testing / documentation: [confirm]</li>
+            <li>Required delivery date: [confirm]</li>
+          </ul>
+          <p>
+            Example values are shown only to illustrate the information structure used for quotation review. Final requirements should follow the buyer’s approved specification.
+          </p>
+        </div>
+
+        <h2>35 kV RFQ quotation-readiness checklist</h2>
+        <ul className="buyer-guide-checklist">
+          <li>☐ Exact cable voltage designation</li>
+          <li>☐ Applicable project standard</li>
+          <li>☐ Copper or aluminium conductor</li>
+          <li>☐ Single-core or three-core</li>
+          <li>☐ Cross-section</li>
+          <li>☐ Screen construction / area</li>
+          <li>☐ Armour requirement</li>
+          <li>☐ Outer sheath / special performance</li>
+          <li>☐ Total quantity</li>
+          <li>☐ Drum length</li>
+          <li>☐ Destination</li>
+          <li>☐ Testing and inspection</li>
+          <li>☐ Documentation</li>
+          <li>☐ Required delivery date</li>
+        </ul>
+
+        <div className="buyer-guide-related">
+          <h2>Related technical pages</h2>
+          <p>
+            Review the <Link href="/products/medium-voltage-xlpe-power-cables">Medium Voltage XLPE Power Cables</Link> page for representative constructions, or return to the <Link href="/resources/medium-voltage-xlpe-cable-selection-guide">comprehensive MV cable selection guide</Link> when the cable design itself is still being prepared. Final cable construction should follow the approved project specification.
+          </p>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Is your 35 kV cable BOQ still missing technical details?</h2>
+        <p>Send the BOQ, cable schedule or project specification. We can review the missing construction, test, documentation and packing items before preparing a quotation.</p>
+        <div className="hero-actions">
+          <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="medium-voltage-xlpe-power-cables">Send Project Requirements</Link>
+          <Link className="button" href="/products/medium-voltage-xlpe-power-cables">View Medium Voltage Cables</Link>
+        </div>
+      </div>
+    </GuideShell>
+  );
+}
+
 function LowVoltageXlpeRfqChecklistGuide() {
   return (
     <GuideShell
@@ -688,6 +900,7 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
       <JsonLd data={createTechArticleJsonLd(guide)} />
       {slug === "sta-vs-swa-armoured-cable-guide" && <StaVsSwaGuide />}
       {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
+      {slug === "what-we-check-when-mv-cable-rfq-only-says-35-kv" && <Mv35KvRfqGuide />}
       {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}
       {slug === "low-voltage-xlpe-cable-rfq-checklist" && <LowVoltageXlpeRfqChecklistGuide />}
       {slug === "lszh-vs-flame-retardant-vs-fire-resistant-cable" && <LszhFlameFireComparisonGuide />}

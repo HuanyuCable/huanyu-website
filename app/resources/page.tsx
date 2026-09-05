@@ -46,7 +46,13 @@ export default function ResourcesPage() {
           <div className="resource-grid">
             {buyerGuides.map((guide) => (
               <article key={guide.slug}>
-                <span className="resource-type">Buyer Guide</span>
+                {guide.tags ? (
+                  <div className="resource-tags" aria-label="Guide topics">
+                    {guide.tags.map((tag) => <span className="resource-tag" key={tag}>{tag}</span>)}
+                  </div>
+                ) : (
+                  <span className="resource-type">Buyer Guide</span>
+                )}
                 <h2>{guide.shortTitle}</h2>
                 <p>{guide.excerpt}</p>
                 <Link className="text-link" href={`/resources/${guide.slug}`}>Read guide <span>-&gt;</span></Link>

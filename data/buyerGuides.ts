@@ -5,6 +5,7 @@ export type BuyerGuide = {
   metaTitle?: string;
   description: string;
   excerpt: string;
+  tags?: string[];
 };
 
 export const buyerGuides: BuyerGuide[] = [
@@ -25,6 +26,17 @@ export const buyerGuides: BuyerGuide[] = [
       "A buyer guide to MV XLPE cable voltage class, cores, conductor, screens, armour, sheath, testing, documents and IEC 60502-2 project review.",
     excerpt:
       "A specification and RFQ checklist for EPC teams and project buyers sourcing medium voltage XLPE power cables up to 35 kV.",
+  },
+  {
+    slug: "what-we-check-when-mv-cable-rfq-only-says-35-kv",
+    title: "What We Check When an MV Cable RFQ Only Says “35 kV”",
+    shortTitle: "35 kV Cable RFQ: What We Check Before Quotation",
+    metaTitle: "35 kV Cable RFQ: What We Check Before Quotation | HUANYU CABLE",
+    description:
+      "A 35 kV cable request is not enough for an accurate quotation. See the voltage, conductor, screen, armour, testing, drum and BOQ details that should be confirmed before an MV cable RFQ is quotation-ready.",
+    excerpt:
+      "A practical checklist for turning an incomplete “35 kV cable” inquiry into a quotation-ready MV cable specification.",
+    tags: ["Medium Voltage", "RFQ Guide", "EPC Procurement"],
   },
   {
     slug: "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide",
