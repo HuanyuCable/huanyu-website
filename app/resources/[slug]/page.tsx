@@ -654,6 +654,182 @@ function EpcDocumentsBeforeShipmentGuide() {
   );
 }
 
+function CableDrumLengthGuide() {
+  return (
+    <GuideShell
+      title="How Cable Drum Length Affects Packing, Handling and Export Freight"
+      description="A practical guide for EPC contractors and project buyers planning cable drum lengths, continuous runs, site handling and export shipment requirements."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          Cable drum length affects more than packing. It influences continuous cable runs, drum size, gross weight, handling equipment, container planning and the number of cable joints required on site.
+        </p>
+        <p>
+          For project orders, total quantity alone is not enough. Drum length needs to be considered together with cable size and weight, route requirements, site handling limits, unloading equipment, destination and shipping method before the final packing plan is confirmed.
+        </p>
+
+        <h2>What changes when drum length changes?</h2>
+        <ol className="buyer-guide-blockers">
+          <li><strong>Continuous cable length</strong><br />Longer drum lengths can reduce the number of cable joints, where the route and installation plan allow.</li>
+          <li><strong>Drum size</strong><br />More cable on one drum usually means a larger or heavier drum. The result depends on the cable diameter and unit weight.</li>
+          <li><strong>Gross drum weight</strong><br />Cable weight and drum tare weight together affect lifting, unloading and movement on site.</li>
+          <li><strong>Container or truck planning</strong><br />Drum dimensions, gross weight and drum count affect the loading arrangement and the available payload.</li>
+          <li><strong>Installation logistics</strong><br />Pulling sections, joint positions, site access and the installation sequence may limit the practical continuous length.</li>
+          <li><strong>Commercial quotation basis</strong><br />Drum quantity, packing and transport assumptions can affect whether the quotation covers the required shipment arrangement.</li>
+        </ol>
+
+        <h2>1. Total quantity and drum length are different requirements</h2>
+        <p>
+          When we prepare a cable quotation, total metres alone do not tell us how the order needs to be packed. The total ordered quantity defines how much cable is required. Drum length defines how that quantity is divided for production, packing, shipment and installation.
+        </p>
+        <p>
+          For example, a buyer may ask for 10,000 m, but that does not automatically mean ten 1,000 m drums. The order may contain different cable sections, route lengths, continuous runs, spare lengths or site-controlled drum limits. If the cable specification is also incomplete, the <Link href="/resources/what-we-check-when-mv-cable-rfq-only-says-35-kv">35 kV cable RFQ guide</Link> explains the other information needed before quotation.
+        </p>
+
+        <h2>2. Continuous length should follow the installation plan</h2>
+        <p>
+          A continuous run may be needed between two termination points or across a defined pulling section. The route could pass through a trench, tunnel, duct or cable tray, and the installation sequence may place practical limits on how each length is delivered.
+        </p>
+        <p>
+          If the project requires a continuous run between two defined points, the requested drum length should reflect the approved route and installation plan rather than being selected only for shipping convenience. Joint positions, termination points and spare length should come from the installation plan. The drum schedule should support that plan, not drive it.
+        </p>
+
+        <h2>3. Cable diameter and unit weight affect practical drum capacity</h2>
+        <p>
+          Cable overall diameter (OD) and unit weight change with conductor size and construction. They affect the required drum size, structural capacity, bending considerations and final packed weight.
+        </p>
+        <p>
+          A drum that is suitable for 1,000 m of one cable size may not be suitable for 1,000 m of a larger or heavier cable. In practice, the cable data and requested length have to be looked at together before a drum arrangement can be proposed.
+        </p>
+
+        <h2>4. Gross drum weight affects unloading and site handling</h2>
+        <p>
+          A longer drum can help maintain a continuous cable run, but it also makes the drum heavier and potentially more difficult to unload or move on site. Buyers may need to consider the forklift, crane, cable drum jack or other equipment available at the destination, together with site access and ground or floor conditions.
+        </p>
+        <p>
+          Before finalizing the drum plan, buyers should confirm whether the destination has suitable unloading and cable-handling equipment for the proposed drum size and gross weight. Any local handling limit needs to be stated before packing is fixed.
+        </p>
+
+        <h2>5. Drum dimensions and weight affect container planning</h2>
+        <p>
+          Container planning starts with the drum diameter, width, gross weight and number of drums. These details affect the loading arrangement, payload and dimensional constraints, as well as the securing plan prepared for shipment.
+        </p>
+        <p>
+          Container quantity cannot be estimated reliably from cable meters alone. The same total cable quantity can require different packing and container arrangements when the drum lengths change.
+        </p>
+
+        <h2>6. Longer drum length does not automatically mean lower freight</h2>
+        <p>
+          Longer drums may reduce the drum count and, where the installation plan allows, the number of site joints. But they can also increase drum diameter and gross weight, reduce loading flexibility or require heavier unloading equipment.
+        </p>
+        <p>
+          The lowest drum count is not always the lowest total logistics cost. There is no single “best” drum length: the right arrangement depends on the cable, the route, the site and the shipment.
+        </p>
+
+        <h2>7. What buyers should provide before drum planning</h2>
+        <p>
+          A useful drum discussion starts with the cable item and total quantity, then adds the length, site and shipment constraints that affect packing. The following information helps turn a metre total into a workable drum schedule:
+        </p>
+        <ul className="buyer-guide-checklist">
+          <li>☐ Cable item / designation</li>
+          <li>☐ Total quantity</li>
+          <li>☐ Requested continuous length</li>
+          <li>☐ Preferred drum length</li>
+          <li>☐ Route / section length, if relevant</li>
+          <li>☐ Maximum acceptable drum size, if site-controlled</li>
+          <li>☐ Maximum acceptable gross weight, if site-controlled</li>
+          <li>☐ Destination</li>
+          <li>☐ Unloading equipment / site restriction, if relevant</li>
+          <li>☐ Packing requirement</li>
+          <li>☐ Shipping method</li>
+          <li>☐ Required delivery schedule</li>
+        </ul>
+        <p>
+          Document and packing records for the shipment can then be aligned with the <Link href="/resources/cable-documents-epc-buyers-should-request-before-shipment">EPC pre-shipment document checklist</Link>.
+        </p>
+
+        <h2>Drum planning matrix</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table">
+            <thead>
+              <tr><th>Buyer input</th><th>Why it matters</th><th>Can it affect drum plan?</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Buyer input">Cable size / construction</td><td data-label="Why it matters">Determines OD and unit weight</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Total quantity</td><td data-label="Why it matters">Defines total cable volume</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Continuous run length</td><td data-label="Why it matters">Can determine minimum required drum length</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Preferred drum length</td><td data-label="Why it matters">Defines quantity split</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Site unloading limit</td><td data-label="Why it matters">May restrict drum weight / size</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Route / pulling section</td><td data-label="Why it matters">May affect practical continuous length</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Destination</td><td data-label="Why it matters">Affects logistics planning</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+              <tr><td data-label="Buyer input">Shipping method</td><td data-label="Why it matters">Affects packing / loading arrangement</td><td data-label="Can it affect drum plan?">Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Illustrative drum-planning example</h2>
+        <div className="buyer-guide-related">
+          <span className="eyebrow">ILLUSTRATIVE EXAMPLE</span>
+          <h3>Initial inquiry</h3>
+          <p>Cable: 3 × 240 mm²<br />Total quantity: 8,000 m<br />Please quote with export packing.</p>
+          <h3>Drum-planning information still needed</h3>
+          <ul>
+            <li>Required continuous run length: [confirm]</li>
+            <li>Preferred drum length: [confirm]</li>
+            <li>Route / section length: [if relevant]</li>
+            <li>Maximum drum size: [if site-controlled]</li>
+            <li>Maximum gross drum weight: [if site-controlled]</li>
+            <li>Destination: [confirm]</li>
+            <li>Unloading method: [if relevant]</li>
+            <li>Shipping method: [confirm]</li>
+            <li>Delivery schedule: [confirm]</li>
+          </ul>
+          <p>
+            Example values are illustrative only. Final drum length and packing should be confirmed against the ordered cable construction, project route, site handling requirements and shipping plan.
+          </p>
+        </div>
+
+        <h2>Five drum-planning gaps that can delay packing confirmation</h2>
+        <ol className="buyer-guide-blockers">
+          <li>Total quantity is given, but no continuous-length requirement is stated.</li>
+          <li>Drum length is requested without checking the cable size and unit weight.</li>
+          <li>Destination handling limits are unknown.</li>
+          <li>Route or pulling sections require long runs, but the drum plan is based only on shipping convenience.</li>
+          <li>Freight is estimated before drum dimensions and gross weight are confirmed.</li>
+        </ol>
+
+        <h2>Cable drum planning checklist for project buyers</h2>
+        <ul className="buyer-guide-checklist">
+          <li>☐ Cable item and construction confirmed</li>
+          <li>☐ Total quantity confirmed</li>
+          <li>☐ Continuous-length requirement confirmed</li>
+          <li>☐ Preferred drum length confirmed</li>
+          <li>☐ Route / pulling section reviewed where relevant</li>
+          <li>☐ Drum size limitation confirmed where applicable</li>
+          <li>☐ Gross weight limitation confirmed where applicable</li>
+          <li>☐ Destination confirmed</li>
+          <li>☐ Unloading / handling constraints confirmed where relevant</li>
+          <li>☐ Packing instruction confirmed</li>
+          <li>☐ Shipping method confirmed</li>
+          <li>☐ Delivery schedule confirmed</li>
+        </ul>
+        <p>
+          Browse the <Link href="/products">power cable product range</Link> for the relevant cable family, then send the cable schedule and shipment details through the <Link href="/contact">contact page</Link> when the drum arrangement needs to be included in the quotation.
+        </p>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Need help working out drum lengths for your cable quotation?</h2>
+        <p>Send the BOQ, cable schedule, required continuous lengths and destination details. We can review the information needed for drum planning, export packing and shipment preparation together with the cable quotation.</p>
+        <div className="hero-actions">
+          <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta">Send Project Requirements</Link>
+          <Link className="button" href="/products">View Power Cable Products</Link>
+        </div>
+      </div>
+    </GuideShell>
+  );
+}
+
 function LowVoltageXlpeRfqChecklistGuide() {
   return (
     <GuideShell
@@ -1068,6 +1244,7 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
       {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
       {slug === "what-we-check-when-mv-cable-rfq-only-says-35-kv" && <Mv35KvRfqGuide />}
       {slug === "cable-documents-epc-buyers-should-request-before-shipment" && <EpcDocumentsBeforeShipmentGuide />}
+      {slug === "how-cable-drum-length-affects-packing-handling-and-export-freight" && <CableDrumLengthGuide />}
       {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}
       {slug === "low-voltage-xlpe-cable-rfq-checklist" && <LowVoltageXlpeRfqChecklistGuide />}
       {slug === "lszh-vs-flame-retardant-vs-fire-resistant-cable" && <LszhFlameFireComparisonGuide />}

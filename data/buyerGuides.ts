@@ -52,6 +52,17 @@ export const buyerGuides: BuyerGuide[] = [
     tags: ["Buyer Guide", "EPC Procurement", "Pre-Shipment"],
   },
   {
+    slug: "how-cable-drum-length-affects-packing-handling-and-export-freight",
+    title: "How Cable Drum Length Affects Packing, Handling and Export Freight",
+    shortTitle: "How Cable Drum Length Affects Packing, Handling and Export Freight",
+    metaTitle: "How Cable Drum Length Affects Packing, Handling and Export Freight | HUANYU CABLE",
+    description:
+      "Learn how cable drum length affects drum size, gross weight, continuous cable length, handling, container planning and export freight for project cable orders.",
+    excerpt:
+      "A practical guide to continuous cable length, drum size, gross weight, handling limits and export packing for project cable orders.",
+    tags: ["Buyer Guide", "Packing & Logistics", "EPC Procurement"],
+  },
+  {
     slug: "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide",
     title: "PV1-F vs H1Z2Z2-K Solar Cable: Selection Guide for PV Projects",
     shortTitle: "PV1-F vs H1Z2Z2-K Solar Cable",
