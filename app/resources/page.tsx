@@ -27,7 +27,7 @@ export default function ResourcesPage() {
         <div className="container">
           <span className="eyebrow light">Resources</span>
           <h1>Technical Resources</h1>
-          <p>Practical cable selection guides for project buyers, EPC teams and specification reviewers. For a current product datasheet or project-specific review, send your requirements to our team.</p>
+          <p>Practical technical and procurement guides for project buyers, EPC teams and specification reviewers. For product datasheets or project-specific review, send your requirements to our team.</p>
           <div className="hero-actions">
             <Link className="button" href="/contact">Request Technical Information</Link>
           </div>
@@ -39,9 +39,9 @@ export default function ResourcesPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Buyer Guides</span>
-              <h2>Specification guidance for cable procurement</h2>
+              <h2>Technical guidance for cable procurement</h2>
             </div>
-            <p>Use these short guides to prepare the technical information required for cable selection and quotation review.</p>
+            <p>Use these guides to prepare cable specifications, RFQs, inspection requirements and project documentation for procurement review.</p>
           </div>
           <div className="resource-grid">
             {buyerGuides.map((guide) => (

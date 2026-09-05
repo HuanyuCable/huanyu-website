@@ -488,6 +488,172 @@ function Mv35KvRfqGuide() {
   );
 }
 
+function EpcDocumentsBeforeShipmentGuide() {
+  return (
+    <GuideShell
+      title="What Cable Documents Should an EPC Buyer Request Before Shipment?"
+      description="A practical document and inspection checklist for EPC contractors, project buyers and engineering procurement teams reviewing power cable orders before shipment."
+    >
+      <div className="buyer-guide-body">
+        <p className="lead">
+          Before shipment, EPC buyers should confirm not only the cable datasheet and routine test report, but also the agreed inspection records, drum schedule, packing information, marking details and any project-specific certificate or third-party inspection requirements.
+        </p>
+        <p>
+          The exact document package should be defined by the purchase order, approved technical specification and inspection plan. A generic “certificate package” is not a substitute for a project-specific document list.
+        </p>
+
+        <h2>Four document groups to confirm before shipment</h2>
+        <ol className="buyer-guide-blockers">
+          <li><strong>Technical approval documents</strong><br />Approved datasheet, cable construction and technical data, plus the cable schedule or item reference where applicable.</li>
+          <li><strong>Test and inspection documents</strong><br />Routine test report, agreed inspection records, witness or hold-point records if required, and a third-party inspection report only when contractually required.</li>
+          <li><strong>Packing and drum documents</strong><br />Drum schedule, drum number and length, packing list, weights where applicable, and agreed shipping marks.</li>
+          <li><strong>Compliance and project documents</strong><br />Certificates explicitly required by the order, agreed declarations or project forms, and country- or project-specific documents only when included in the contract scope.</li>
+        </ol>
+
+        <h2>1. Approved technical datasheet</h2>
+        <p>
+          The approved datasheet should identify the ordered cable construction, rather than only describing a generic product family. Confirm the cable designation, rated voltage, conductor material, number of cores and cross-section, insulation, screen, armour, sheath, applicable standard, marking and any special performance requirement stated in the order.
+        </p>
+        <p>
+          Buyers can compare the approved information with the relevant <Link href="/products/medium-voltage-xlpe-power-cables">Medium Voltage XLPE Power Cables</Link> or <Link href="/products/low-voltage-xlpe-power-cables">Low Voltage XLPE Power Cables</Link> product family, while the final construction remains subject to the approved project specification and order.
+        </p>
+
+        <h2>2. Routine test report</h2>
+        <p>
+          A routine test report should relate to the ordered product and be traceable to the cable item, production batch or other identification used by the agreed project document system. The test scope and acceptance basis should follow the applicable standard and approved technical specification.
+        </p>
+        <p>
+          Report format, identification fields and submission requirements may vary by project and should be agreed through the document register or inspection plan.
+        </p>
+
+        <h2>3. Inspection and witness records</h2>
+        <p>
+          Inspection may be performed by the factory, the buyer or an appointed third party according to the agreed inspection and test plan. Where the project defines witness points, hold points or a release note, the responsible party and required record should be identified before production and shipment.
+        </p>
+        <p>
+          Third-party inspection, where required, should be defined in the inspection and test plan, purchase order or project specification.
+        </p>
+
+        <h2>4. Drum schedule and cable-length records</h2>
+        <p>
+          A project drum schedule can identify the drum number, cable item, length, drum count, continuous-length requirement, packing reference and destination or site reference where required. The exact fields should align with the buyer’s receiving, storage and installation process.
+        </p>
+        <p>
+          For project cable orders, the drum schedule is often the bridge between the BOQ, production packing and site receiving process.
+        </p>
+
+        <h2>5. Packing list and shipping marks</h2>
+        <p>
+          The packing list should identify the cable and drum information needed to check the dispatch against the order. Shipping marks, handling marks and consignee or destination references should follow the agreed packing and shipping instruction.
+        </p>
+        <p>
+          Commercial shipping documents are handled according to the agreed trade and logistics terms, while this checklist focuses on cable-specific technical and packing records.
+        </p>
+
+        <h2>6. Certificates and compliance documents</h2>
+        <h3>Company-level documents</h3>
+        <p>
+          Company management-system documents describe the certified management-system scope shown on the relevant certificate. Review the <Link href="/quality">Quality &amp; Testing</Link> page and, where requested, the <Link href="/quality/credentials/management-systems">Management Systems</Link> records as company-level information.
+        </p>
+        <h3>Product- or order-level documents</h3>
+        <p>
+          Product certificates, declarations and project forms should be checked against the exact cable item, standard, scope and order requirement. The <Link href="/quality/credentials/product-compliance">Product Compliance</Link> page summarizes the product-related credentials currently published by Huanyu and their stated scope.
+        </p>
+        <p>
+          A company management-system certificate should not be treated as proof that every cable item carries the same product certification.
+        </p>
+
+        <h2>7. Define the project-specific document list</h2>
+        <p>
+          The final submission package should be assembled from the documents that govern the order. Aligning these sources before production helps the buyer, supplier and inspection parties work from the same document obligations.
+        </p>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table">
+            <thead>
+              <tr><th>Project document</th><th>What it defines</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Project document">Purchase order</td><td data-label="What it defines">Commercial/order document obligations</td></tr>
+              <tr><td data-label="Project document">Approved technical specification</td><td data-label="What it defines">Cable construction and technical requirements</td></tr>
+              <tr><td data-label="Project document">ITP / inspection plan</td><td data-label="What it defines">Inspection, witness and hold points</td></tr>
+              <tr><td data-label="Project document">Document register</td><td data-label="What it defines">Required submissions and approval status</td></tr>
+              <tr><td data-label="Project document">Packing / shipping instruction</td><td data-label="What it defines">Drum, marking and dispatch records</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Document readiness matrix</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table">
+            <thead>
+              <tr><th>Document</th><th>Define requirement before order</th><th>Verify before shipment</th><th>Include in final package</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Document">Approved datasheet</td><td data-label="Define requirement before order">Yes</td><td data-label="Verify before shipment">Yes</td><td data-label="Include in final package">As required</td></tr>
+              <tr><td data-label="Document">Routine test report</td><td data-label="Define requirement before order">Yes</td><td data-label="Verify before shipment">Yes</td><td data-label="Include in final package">As required by PO / specification</td></tr>
+              <tr><td data-label="Document">Inspection record</td><td data-label="Define requirement before order">If required</td><td data-label="Verify before shipment">If required</td><td data-label="Include in final package">If required</td></tr>
+              <tr><td data-label="Document">Third-party inspection report</td><td data-label="Define requirement before order">Only if required</td><td data-label="Verify before shipment">Only if required</td><td data-label="Include in final package">Only if required</td></tr>
+              <tr><td data-label="Document">Drum schedule</td><td data-label="Define requirement before order">Often</td><td data-label="Verify before shipment">Yes</td><td data-label="Include in final package">As required</td></tr>
+              <tr><td data-label="Document">Packing list</td><td data-label="Define requirement before order">Yes</td><td data-label="Verify before shipment">Yes</td><td data-label="Include in final package">Yes</td></tr>
+              <tr><td data-label="Document">Product certificate</td><td data-label="Define requirement before order">Only if applicable / required</td><td data-label="Verify before shipment">If required</td><td data-label="Include in final package">If required</td></tr>
+              <tr><td data-label="Document">Management system certificate</td><td data-label="Define requirement before order">Company-level</td><td data-label="Verify before shipment">Usually no</td><td data-label="Include in final package">If requested</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Five document gaps that can delay shipment approval</h2>
+        <ol className="buyer-guide-blockers">
+          <li>The approved cable datasheet does not clearly match the ordered item or latest technical revision.</li>
+          <li>The routine test report cannot be traced to the cable item or agreed production identification.</li>
+          <li>A witness, hold point or third-party inspection requirement was raised without an agreed inspection plan.</li>
+          <li>The drum schedule does not align with the ordered quantities, cable lengths or site receiving references.</li>
+          <li>A generic certificate package is submitted without checking the product- and project-specific document register.</li>
+        </ol>
+
+        <div className="buyer-guide-related">
+          <span className="eyebrow">ILLUSTRATIVE DOCUMENT CHECKLIST</span>
+          <h3>Technical</h3>
+          <ul><li>Approved cable datasheet</li><li>Construction and technical data</li><li>Cable schedule / item reference, where applicable</li></ul>
+          <h3>Testing / Inspection</h3>
+          <ul><li>Routine test report</li><li>Agreed inspection or witness records</li><li>Third-party report, only if contractually required</li></ul>
+          <h3>Packing</h3>
+          <ul><li>Drum schedule and cable-length records</li><li>Packing list</li><li>Agreed shipping and handling marks</li></ul>
+          <h3>Compliance</h3>
+          <ul><li>Applicable product certificate or declaration</li><li>Project-specific forms and records</li><li>Company-level certificate only if requested</li></ul>
+          <p>
+            This is an example document structure only. The final submission list should follow the project purchase order, approved specification and document register.
+          </p>
+        </div>
+
+        <h2>Cable shipment document checklist for EPC buyers</h2>
+        <ul className="buyer-guide-checklist">
+          <li>☐ Approved datasheet matches the ordered cable item</li>
+          <li>☐ Cable designation and voltage rating are confirmed</li>
+          <li>☐ Conductor, cores, cross-section and construction are confirmed</li>
+          <li>☐ Applicable standard and special performance requirements are listed</li>
+          <li>☐ Routine test report scope and traceability are confirmed</li>
+          <li>☐ Inspection, witness and hold points follow the agreed ITP</li>
+          <li>☐ Third-party inspection is included only when required</li>
+          <li>☐ Drum numbers, lengths and quantities align with the order</li>
+          <li>☐ Packing list and shipping marks follow the agreed instruction</li>
+          <li>☐ Product certificates are applicable to the specified item and scope</li>
+          <li>☐ Company-level and product-level credentials are kept separate</li>
+          <li>☐ Final submissions match the document register and approval status</li>
+        </ul>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta">
+        <h2>Need to define the document package before placing a cable order?</h2>
+        <p>Send the BOQ, project specification, ITP or document list together with the cable requirements. We can review which technical, test, inspection and packing documents need to be included in the quotation and order scope.</p>
+        <div className="hero-actions">
+          <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta">Send Project Requirements</Link>
+          <Link className="button" href="/quality">View Quality &amp; Testing</Link>
+        </div>
+      </div>
+    </GuideShell>
+  );
+}
+
 function LowVoltageXlpeRfqChecklistGuide() {
   return (
     <GuideShell
@@ -901,6 +1067,7 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
       {slug === "sta-vs-swa-armoured-cable-guide" && <StaVsSwaGuide />}
       {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
       {slug === "what-we-check-when-mv-cable-rfq-only-says-35-kv" && <Mv35KvRfqGuide />}
+      {slug === "cable-documents-epc-buyers-should-request-before-shipment" && <EpcDocumentsBeforeShipmentGuide />}
       {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}
       {slug === "low-voltage-xlpe-cable-rfq-checklist" && <LowVoltageXlpeRfqChecklistGuide />}
       {slug === "lszh-vs-flame-retardant-vs-fire-resistant-cable" && <LszhFlameFireComparisonGuide />}

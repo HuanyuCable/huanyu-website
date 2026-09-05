@@ -17,6 +17,7 @@ export const buyerGuides: BuyerGuide[] = [
       "Compare STA and SWA armoured power cables by route, mechanical protection, pulling conditions, core configuration and project specification.",
     excerpt:
       "A practical procurement guide to selecting steel tape armour or steel wire armour and preparing a clear cable RFQ.",
+    tags: ["Buyer Guide", "Armoured Cable"],
   },
   {
     slug: "medium-voltage-xlpe-cable-selection-guide",
@@ -26,6 +27,7 @@ export const buyerGuides: BuyerGuide[] = [
       "A buyer guide to MV XLPE cable voltage class, cores, conductor, screens, armour, sheath, testing, documents and IEC 60502-2 project review.",
     excerpt:
       "A specification and RFQ checklist for EPC teams and project buyers sourcing medium voltage XLPE power cables up to 35 kV.",
+    tags: ["Buyer Guide", "Medium Voltage"],
   },
   {
     slug: "what-we-check-when-mv-cable-rfq-only-says-35-kv",
@@ -36,7 +38,18 @@ export const buyerGuides: BuyerGuide[] = [
       "A 35 kV cable request is not enough for an accurate quotation. See the voltage, conductor, screen, armour, testing, drum and BOQ details that should be confirmed before an MV cable RFQ is quotation-ready.",
     excerpt:
       "A practical checklist for turning an incomplete “35 kV cable” inquiry into a quotation-ready MV cable specification.",
-    tags: ["Medium Voltage", "RFQ Guide", "EPC Procurement"],
+    tags: ["Buyer Guide", "Medium Voltage", "RFQ Guide"],
+  },
+  {
+    slug: "cable-documents-epc-buyers-should-request-before-shipment",
+    title: "What Cable Documents Should an EPC Buyer Request Before Shipment?",
+    shortTitle: "Cable Documents EPC Buyers Should Request Before Shipment",
+    metaTitle: "Cable Documents EPC Buyers Should Request Before Shipment | HUANYU CABLE",
+    description:
+      "A practical checklist of cable datasheets, routine test reports, inspection records, drum schedules, packing documents and project certificates EPC buyers should confirm before shipment.",
+    excerpt:
+      "A practical checklist for reviewing cable datasheets, test reports, inspection records, drum schedules and project-required documents before shipment.",
+    tags: ["Buyer Guide", "EPC Procurement", "Pre-Shipment"],
   },
   {
     slug: "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide",
@@ -47,6 +60,7 @@ export const buyerGuides: BuyerGuide[] = [
       "Compare PV1-F and H1Z2Z2-K solar DC cable requirements for PV projects, including conductor, 4 mm² / 6 mm² sizing, standards, packing and RFQ information.",
     excerpt:
       "A practical guide for comparing solar DC cable designation, conductor, size, standards and RFQ information before quotation.",
+    tags: ["Buyer Guide", "Solar Cable"],
   },
   {
     slug: "low-voltage-xlpe-cable-rfq-checklist",
@@ -57,6 +71,7 @@ export const buyerGuides: BuyerGuide[] = [
       "A practical RFQ checklist for project buyers sourcing 0.6/1 kV XLPE power cables, covering conductor material, cable construction, armour, sheath, standards and quotation information.",
     excerpt:
       "A practical checklist for confirming 0.6/1 kV cable construction, conductor, armour, sheath, standards and quotation information.",
+    tags: ["Buyer Guide", "Low Voltage", "RFQ Guide"],
   },
   {
     slug: "lszh-vs-flame-retardant-vs-fire-resistant-cable",
@@ -67,6 +82,7 @@ export const buyerGuides: BuyerGuide[] = [
       "A practical procurement guide explaining the difference between LSZH, flame-retardant and fire-resistant cable requirements, and what project buyers should confirm before requesting a quotation.",
     excerpt:
       "A procurement guide explaining the difference between smoke, flame-propagation and circuit-integrity requirements.",
+    tags: ["Buyer Guide", "Fire Performance"],
   },
 ];
 
