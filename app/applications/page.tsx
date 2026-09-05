@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "Cable Applications | Power Distribution, Buildings and Infrastructure" },
+export const metadata = createPageMetadata({
+  title: "Cable Applications | Power Distribution, Buildings and Infrastructure",
   description:
     "Huanyu Cable supports cable supply for power distribution, solar photovoltaic systems, buildings, industrial facilities, infrastructure and project-based engineering applications.",
-  alternates: { canonical: "/applications" },
-};
+  path: "/applications",
+  image: "/images/site/heroes/applications-hero-global-energy-bg.webp",
+  imageAlt: "Cable applications for power and infrastructure projects",
+});
 
 type Application = {
   title: string;

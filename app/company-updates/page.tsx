@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
 import { CompanyUpdateCard } from "@/components/CompanyUpdateCard";
 import { companyUpdates } from "@/data/companyUpdates";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Company Updates",
+export const metadata = createPageMetadata({
+  title: "Company Updates | HUANYU CABLE",
   description: "Follow Huanyu Cable company updates related to manufacturing development, operations and quality responsibility.",
-  alternates: { canonical: "/company-updates" },
-};
+  path: "/company-updates",
+  image: "/images/site/heroes/resources-hero-manufacturing-development-v2.webp",
+  imageAlt: "Huanyu Cable company updates",
+});
 
 export default function CompanyUpdatesPage() {
   return (

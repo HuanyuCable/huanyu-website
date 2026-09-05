@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { site } from "@/lib/site";
 import { Analytics } from "@/components/Analytics";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -54,7 +55,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         alternateName: "HUANYU CABLE",
         url: site.url,
         logo: site.logoUrl,
-        brand: { "@type": "Brand", name: "HUANYU CABLE" },
+        brand: { "@type": "Brand", "@id": site.brandId, name: "HUANYU CABLE" },
         foundingDate: site.founded,
         address: {
           "@type": "PostalAddress",
@@ -83,7 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main>{children}</main>
         <Footer />
         <Analytics />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <JsonLd data={structuredData} />
       </body>
     </html>
   );

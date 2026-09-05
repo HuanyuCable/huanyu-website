@@ -3,7 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CredentialCard } from "@/components/CredentialCard";
+import { JsonLd } from "@/components/JsonLd";
 import { credentialGroups, getCredentialGroupBySlug, getCredentialsByCategory } from "@/data/credentials";
+import { createPageMetadata } from "@/lib/metadata";
+import { site } from "@/lib/site";
+import { createBreadcrumbJsonLd } from "@/lib/structuredData";
 
 type CategoryPageProps = {
   params: Promise<{ category: string }>;
@@ -18,11 +22,13 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const group = getCredentialGroupBySlug(category);
   if (!group) return {};
 
-  return {
-    title: `${group.title} | Quality Credentials`,
+  return createPageMetadata({
+    title: `${group.title} | Quality Credentials | HUANYU CABLE`,
     description: group.summary,
-    alternates: { canonical: `/quality/credentials/${group.slug}` },
-  };
+    path: `/quality/credentials/${group.slug}`,
+    image: "/images/og-cover.svg",
+    imageAlt: "Huanyu Cable quality credentials",
+  });
 }
 
 export default async function CredentialCategoryPage({ params }: CategoryPageProps) {
@@ -32,9 +38,17 @@ export default async function CredentialCategoryPage({ params }: CategoryPagePro
 
   const credentials = getCredentialsByCategory(group.id);
   const documentCount = credentials.length + (group.id === "product-compliance" ? 1 : 0);
+  const url = `${site.url}/quality/credentials/${group.slug}`;
 
   return (
     <>
+      <JsonLd
+        data={createBreadcrumbJsonLd([
+          { name: "Home", item: site.url },
+          { name: "Quality", item: `${site.url}/quality` },
+          { name: group.title, item: url },
+        ])}
+      />
       <section className="credential-category-hero">
         <div className="container">
           <Link className="credential-breadcrumb" href="/quality#credentials">Quality / Credentials</Link>

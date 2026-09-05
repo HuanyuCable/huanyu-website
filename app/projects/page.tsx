@@ -1,22 +1,18 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ProjectReferenceCarousel, type ProjectReference } from "@/components/ProjectReferenceCarousel";
+import { createPageMetadata } from "@/lib/metadata";
 
 const title = "Project References | Utility, Industrial & Infrastructure | HUANYU CABLE";
 const description =
   "Explore selected historical cable supply references from Huanyu Cable across power utilities, industrial facilities, public infrastructure and commercial developments in China.";
 
-export const metadata: Metadata = {
-  title: { absolute: title },
+export const metadata = createPageMetadata({
+  title,
   description,
-  alternates: { canonical: "/projects" },
-  openGraph: {
-    type: "website",
-    title,
-    description,
-    url: "/projects",
-  },
-};
+  path: "/projects",
+  image: "/images/projects/project-references-hero.png",
+  imageAlt: "Huanyu Cable project references",
+});
 
 type ProjectSector = {
   number: string;

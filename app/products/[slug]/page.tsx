@@ -14,6 +14,12 @@ import { SolarCableDetailPage, SolarCablesCategoryPage } from "@/components/Sola
 import { getProduct, products } from "@/data/products";
 import { site } from "@/lib/site";
 import { TrackedLink } from "@/components/TrackedLink";
+import { JsonLd } from "@/components/JsonLd";
+import {
+  createBreadcrumbJsonLd,
+  createProductJsonLd,
+  shouldAddProductSchema,
+} from "@/lib/structuredData";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -46,69 +52,71 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-function ProductBreadcrumbJsonLd({ name, slug }: { name: string; slug: string }) {
-  const itemListElement = [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Products", item: `${site.url}/products` },
-    { "@type": "ListItem", position: 3, name, item: `${site.url}/products/${slug}` },
-  ];
-
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement }) }} />;
-}
-
 export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const product = getProduct(slug);
   if (!product) notFound();
-  const breadcrumb = <ProductBreadcrumbJsonLd name={product.name} slug={product.slug} />;
+  const url = `${site.url}/products/${product.slug}`;
+  const structuredData = (
+    <>
+      <JsonLd
+        data={createBreadcrumbJsonLd([
+          { name: "Home", item: site.url },
+          { name: "Products", item: `${site.url}/products` },
+          { name: product.name, item: url },
+        ])}
+      />
+      {shouldAddProductSchema(product.slug) && <JsonLd data={createProductJsonLd(product)} />}
+    </>
+  );
 
   if (product.slug === "low-voltage-armoured-power-cables") {
-    return <>{breadcrumb}<LowVoltageArmouredProductPage /></>;
+    return <>{structuredData}<LowVoltageArmouredProductPage /></>;
   }
 
   if (product.detailVariant === "yjv22-yjv23") {
-    return <>{breadcrumb}<Yjv22Yjv23ProductPage /></>;
+    return <>{structuredData}<Yjv22Yjv23ProductPage /></>;
   }
 
   if (product.detailVariant === "low-voltage-xlpe-family") {
-    return <>{breadcrumb}<LowVoltageXlpeFamilyProductPage /></>;
+    return <>{structuredData}<LowVoltageXlpeFamilyProductPage /></>;
   }
 
   if (product.detailVariant === "medium-voltage-xlpe") {
-    return <>{breadcrumb}<MediumVoltageXlpeProductPage /></>;
+    return <>{structuredData}<MediumVoltageXlpeProductPage /></>;
   }
 
   if (product.detailVariant === "lszh-fire-safe") {
-    return <>{breadcrumb}<LszhFireSafeProductPage /></>;
+    return <>{structuredData}<LszhFireSafeProductPage /></>;
   }
 
   if (product.detailVariant === "overhead-insulated-cables") {
-    return <>{breadcrumb}<OverheadInsulatedCablesProductPage /></>;
+    return <>{structuredData}<OverheadInsulatedCablesProductPage /></>;
   }
 
   if (product.detailVariant === "acsr-bare-overhead-conductors") {
-    return <>{breadcrumb}<AcsrBareOverheadConductorsProductPage /></>;
+    return <>{structuredData}<AcsrBareOverheadConductorsProductPage /></>;
   }
 
   if (product.detailVariant === "building-wires-flexible-cables") {
-    return <>{breadcrumb}<BuildingWiresFlexibleCablesPage /></>;
+    return <>{structuredData}<BuildingWiresFlexibleCablesPage /></>;
   }
 
   if (product.detailVariant === "control-instrumentation-cables") {
-    return <>{breadcrumb}<ControlCablesProductPage /></>;
+    return <>{structuredData}<ControlCablesProductPage /></>;
   }
 
   if (product.detailVariant === "solar-cables") {
-    return <>{breadcrumb}<SolarCablesCategoryPage /></>;
+    return <>{structuredData}<SolarCablesCategoryPage /></>;
   }
 
   if (product.detailVariant === "solar-pv1-f" || product.detailVariant === "solar-h1z2z2-k") {
-    return <>{breadcrumb}<SolarCableDetailPage variant={product.detailVariant} /></>;
+    return <>{structuredData}<SolarCableDetailPage variant={product.detailVariant} /></>;
   }
 
   return (
     <>
-      {breadcrumb}
+      {structuredData}
       <section className="product-detail-hero">
         <div className="container product-detail-grid">
           <div>

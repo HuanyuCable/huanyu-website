@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { buyerGuides } from "@/data/buyerGuides";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "Cable Resources | Technical Notes and Company Updates" },
+export const metadata = createPageMetadata({
+  title: "Cable Resources | Technical Notes and Company Updates",
   description:
     "Read Huanyu Cable technical resources, product notes and company updates for cable buyers and engineering project teams.",
-  alternates: { canonical: "/resources" },
-};
+  path: "/resources",
+  image: "/images/site/heroes/resources-hero-manufacturing-development-v2.webp",
+  imageAlt: "Huanyu Cable technical resources",
+});
 
 export default function ResourcesPage() {
   return (

@@ -1,13 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "Cable Products | Power, Solar, LSZH, Control and Overhead Cables" },
+export const metadata = createPageMetadata({
+  title: "Cable Products | Power, Solar, LSZH, Control and Overhead Cables",
   description:
     "Explore Huanyu Cable product families including low voltage and medium voltage power cables, solar cables, LSZH and fire-safe cables, building wires, control cables and overhead line products.",
-  alternates: { canonical: "/products" },
-};
+  path: "/products",
+  image: "/images/site/heroes/products-hero-copper-production.webp",
+  imageAlt: "Huanyu Cable product portfolio",
+});
 
 const productCategories = [
   {

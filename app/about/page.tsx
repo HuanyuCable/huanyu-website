@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SelectedCredentialsCarousel } from "@/components/SelectedCredentialsCarousel";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "About Huanyu Cable | Hefei Cable Manufacturer Since 1995" },
+export const metadata = createPageMetadata({
+  title: "About Huanyu Cable | Hefei Cable Manufacturer Since 1995",
   description:
     "Learn about Huanyu Cable, a Hefei-based wire and cable manufacturer focused on practical project supply, quality control and export documentation for overseas engineering buyers.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  image: "/images/site/heroes/about-hero-factory-entrance.webp",
+  imageAlt: "Huanyu Cable manufacturing base in Hefei",
+});
 
 const strengths = [
   {

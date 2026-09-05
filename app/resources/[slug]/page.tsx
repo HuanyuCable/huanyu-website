@@ -3,7 +3,9 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { buyerGuides, getBuyerGuide } from "@/data/buyerGuides";
+import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
+import { createBreadcrumbJsonLd, createTechArticleJsonLd } from "@/lib/structuredData";
 
 export function generateStaticParams() {
   return buyerGuides.map((guide) => ({ slug: guide.slug }));
@@ -26,23 +28,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description: guide.description,
       url,
+      images: [{
+        url: "/images/site/heroes/resources-hero-manufacturing-development-v2.webp",
+        alt: "Huanyu Cable technical buyer guides",
+      }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description: guide.description,
+      images: ["/images/site/heroes/resources-hero-manufacturing-development-v2.webp"],
     },
   };
-}
-
-function BuyerGuideBreadcrumbJsonLd({ title, slug }: { title: string; slug: string }) {
-  const itemListElement = [
-    { "@type": "ListItem", position: 1, name: "Home", item: site.url },
-    { "@type": "ListItem", position: 2, name: "Resources", item: `${site.url}/resources` },
-    { "@type": "ListItem", position: 3, name: title, item: `${site.url}/resources/${slug}` },
-  ];
-
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement }) }} />;
 }
 
 function GuideShell({ title, description, children }: { title: string; description: string; children: ReactNode }) {
@@ -681,7 +678,14 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
 
   return (
     <>
-      <BuyerGuideBreadcrumbJsonLd title={guide.title} slug={guide.slug} />
+      <JsonLd
+        data={createBreadcrumbJsonLd([
+          { name: "Home", item: site.url },
+          { name: "Resources", item: `${site.url}/resources` },
+          { name: guide.title, item: `${site.url}/resources/${guide.slug}` },
+        ])}
+      />
+      <JsonLd data={createTechArticleJsonLd(guide)} />
       {slug === "sta-vs-swa-armoured-cable-guide" && <StaVsSwaGuide />}
       {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
       {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}

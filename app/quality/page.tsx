@@ -1,15 +1,17 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CredentialGroupCard } from "@/components/CredentialGroupCard";
 import { credentialGroups } from "@/data/credentials";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "Quality & Testing | HUANYU CABLE" },
+export const metadata = createPageMetadata({
+  title: "Quality & Testing | HUANYU CABLE",
   description:
     "Huanyu Cable provides project-oriented quality control, routine testing and documentation support for wire and cable supply.",
-  alternates: { canonical: "/quality" },
-};
+  path: "/quality",
+  image: "/images/site/heroes/quality-hero-cable-testing-bg.webp",
+  imageAlt: "Huanyu Cable quality testing equipment",
+});
 
 export default function QualityPage() {
   return (

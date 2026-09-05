@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { companyUpdates, formatUpdateDate, getCompanyUpdate } from "@/data/companyUpdates";
+import { site } from "@/lib/site";
+import { createBreadcrumbJsonLd, createCompanyUpdateArticleJsonLd } from "@/lib/structuredData";
 
 export function generateStaticParams() {
   return companyUpdates.map((update) => ({ slug: update.slug }));
@@ -12,14 +15,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const update = getCompanyUpdate(slug);
   if (!update) return {};
+  const title = `${update.title} | HUANYU CABLE`;
+  const url = `/company-updates/${update.slug}`;
   return {
-    title: update.title,
+    title: { absolute: title },
     description: update.metaDescription,
-    alternates: { canonical: `/company-updates/${update.slug}` },
+    alternates: { canonical: url },
     openGraph: {
-      title: update.title,
+      type: "article",
+      title,
       description: update.metaDescription,
+      url,
       images: [{ url: update.image, width: 1200, height: 716, alt: update.imageAlt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: update.metaDescription,
+      images: [update.image],
     },
   };
 }
@@ -29,8 +42,19 @@ export default async function CompanyUpdateDetailPage({ params }: { params: Prom
   const update = getCompanyUpdate(slug);
   if (!update) notFound();
 
+  const url = `${site.url}/company-updates/${update.slug}`;
+
   return (
-    <article className="update-article">
+    <>
+      <JsonLd
+        data={createBreadcrumbJsonLd([
+          { name: "Home", item: site.url },
+          { name: "Company Updates", item: `${site.url}/company-updates` },
+          { name: update.title, item: url },
+        ])}
+      />
+      <JsonLd data={createCompanyUpdateArticleJsonLd(update)} />
+      <article className="update-article">
       <section className="page-hero update-detail-hero">
         <div className="container">
           <Link className="back-link" href="/company-updates">Back to Company Updates</Link>
@@ -54,6 +78,7 @@ export default async function CompanyUpdateDetailPage({ params }: { params: Prom
           </div>
         </div>
       </section>
-    </article>
+      </article>
+    </>
   );
 }

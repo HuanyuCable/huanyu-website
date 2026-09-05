@@ -1,14 +1,16 @@
-import type { Metadata } from "next";
 import { InquiryForm } from "@/components/InquiryForm";
 import { TrackedLink } from "@/components/TrackedLink";
+import { createPageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: { absolute: "Contact Huanyu Cable | Request a Cable Quotation" },
+export const metadata = createPageMetadata({
+  title: "Contact Huanyu Cable | Request a Cable Quotation",
   description:
     "Contact Huanyu Cable to request a quotation for low voltage cables, medium voltage XLPE cables, LSZH cables, overhead line products and building wires.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+  image: "/images/site/heroes/contact-hero-office-reception.webp",
+  imageAlt: "Contact Huanyu Cable for project quotation review",
+});
 
 export default function ContactPage() {
   return (

@@ -3,6 +3,7 @@ export const site = {
   legalName: "Hefei Huanyu Wire & Cable Co., Ltd.",
   url: "https://www.huanyucable.com",
   organizationId: "https://www.huanyucable.com/#organization",
+  brandId: "https://www.huanyucable.com/#brand",
   websiteId: "https://www.huanyucable.com/#website",
   logoUrl: "https://www.huanyucable.com/icons/icon-512.png",
   email: "ziheng@huanyucable.com",
