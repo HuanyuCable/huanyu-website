@@ -8,7 +8,7 @@ import { LowVoltageXlpeFamilyProductPage, Yjv22Yjv23ProductPage } from "@/compon
 import { MediumVoltageXlpeProductPage } from "@/components/MediumVoltageXlpeProductPage";
 import { LszhFireSafeProductPage } from "@/components/LszhFireSafeProductPage";
 import { AcsrBareOverheadConductorsProductPage, OverheadInsulatedCablesProductPage } from "@/components/OverheadAcsrProductPages";
-import { BuildingWiresFlexibleCablesPage } from "@/components/BuildingWiresFlexibleCablesPage";
+import { BuildingWiresHubPage, BvBuildingWirePage, BvrBuildingWirePage } from "@/components/BuildingWireProductPages";
 import { ControlCablesProductPage } from "@/components/ControlCablesProductPage";
 import { SolarCableDetailPage, SolarCablesCategoryPage } from "@/components/SolarCablesProductPages";
 import { getProduct, products } from "@/data/products";
@@ -99,7 +99,15 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   }
 
   if (product.detailVariant === "building-wires-flexible-cables") {
-    return <>{structuredData}<BuildingWiresFlexibleCablesPage /></>;
+    return <>{structuredData}<BuildingWiresHubPage /></>;
+  }
+
+  if (product.detailVariant === "single-core-pvc-building-wire") {
+    return <>{structuredData}<BvBuildingWirePage /></>;
+  }
+
+  if (product.detailVariant === "flexible-pvc-building-wire") {
+    return <>{structuredData}<BvrBuildingWirePage /></>;
   }
 
   if (product.detailVariant === "control-instrumentation-cables") {
