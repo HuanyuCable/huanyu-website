@@ -552,10 +552,20 @@ p { margin: 0 0 22px; color: var(--muted); }
 .bw-section-intro { max-width: 820px; margin-bottom: 34px; }
 .bw-section-intro p { max-width: 720px; color: var(--muted); }
 .bw-family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.bw-family-card { display: flex; flex-direction: column; min-height: 390px; padding: 30px; border: 1px solid var(--line); border-top: 4px solid var(--navy); background: white; }
+.bw-family-card { display: flex; flex-direction: column; min-height: 390px; padding: 30px; border: 1px solid var(--line); border-top: 4px solid var(--navy); background: white; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
 .bw-family-card h3 { font-size: 25px; }
 .bw-family-card p { color: var(--muted); }
 .bw-family-card .text-link { margin-top: auto; padding-top: 24px; }
+.bw-family-image-link { display: flex; align-items: center; justify-content: center; height: 180px; margin-bottom: 24px; overflow: hidden; border: 1px solid var(--line); background: var(--soft); }
+.bw-family-image-link img { width: 100%; height: 100%; padding: 10px; object-fit: contain; transition: transform .2s ease; }
+.bw-family-title-link { transition: color .2s ease; }
+.bw-family-title-link:hover { color: var(--orange-dark); }
+.bw-family-cta { align-self: flex-start; margin-top: auto; }
+.bw-family-image-link:focus-visible, .bw-family-title-link:focus-visible, .bw-family-cta:focus-visible { outline: 3px solid rgba(232,111,44,.5); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) {
+  .bw-family-card:hover, .bw-family-card:focus-within { border-color: rgba(232,111,44,.55); box-shadow: 0 14px 34px rgba(14,39,65,.12); transform: translateY(-3px); }
+  .bw-family-card:hover .bw-family-image-link img { transform: scale(1.025); }
+}
 .bw-chip-row { display: flex; flex-wrap: wrap; gap: 9px; margin: 20px 0; }
 .bw-chip-row span { padding: 8px 11px; border: 1px solid var(--line); background: white; color: var(--navy); font-size: 13px; font-weight: 800; }
 .bw-card-grid { display: grid; gap: 18px; }
@@ -1033,6 +1043,8 @@ p { margin: 0 0 22px; color: var(--muted); }
   .buyer-guide-table { min-width: 640px; }
   .bw-family-grid, .bw-card-grid, .bw-size-grid, .bw-number-grid, .bw-four-grid { grid-template-columns: 1fr; }
   .bw-family-card { min-height: 0; padding: 24px; }
+  .bw-family-image-link { height: 170px; margin-bottom: 20px; }
+  .bw-family-cta { width: 100%; min-height: 48px; }
   .bw-card-grid article, .bw-number-grid article { min-height: 0; }
   .bw-choice-grid article { flex-direction: column; gap: 5px; }
   .bw-choice-grid span { text-align: left; }
