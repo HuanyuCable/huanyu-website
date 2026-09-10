@@ -103,6 +103,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section home-building-wire-feature">
+        <div className="container home-building-wire-grid">
+          <div className="home-building-wire-copy">
+            <span className="eyebrow">Featured Building Wire Supply</span>
+            <h2>Building Wires for Residential &amp; Commercial Fixed Wiring</h2>
+            <p>PVC insulated copper building wires covering rigid single-core BV, flexible stranded BVR and flat sheathed BVVB constructions. Sizes, colours, coil length, marking and export packing are reviewed against the buyer&apos;s specification.</p>
+            <div className="home-building-wire-facts" aria-label="Building wire quick facts">
+              {["450/750V BV & BVR", "300/500V BVVB", "Rigid / Flexible / Flat", "Copper Conductor", "PVC Insulated"].map((fact) => <span key={fact}>{fact}</span>)}
+            </div>
+            <Link className="button" href="/products/building-wires-flexible-cables">Explore Building Wires <span>→</span></Link>
+          </div>
+          <div className="home-building-wire-image">
+            <Image
+              src="/images/products/building-wires/bw-hub-hero.png"
+              alt="Huanyu BV, BVR and BVVB PVC insulated building wires"
+              width={1792}
+              height={896}
+              sizes="(max-width: 980px) 100vw, 48vw"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="section applications-section">
         <div className="container">
           <div className="section-heading light-heading home-section-heading">
@@ -113,8 +136,8 @@ export default function HomePage() {
             {[
               ["Power Distribution", "Utility, substation and local distribution networks."],
               ["Industrial Facilities", "Plants, mining, manufacturing and process infrastructure."],
-              ["Commercial Buildings", "Hospitals, data centres, public and high-occupancy buildings."],
-              ["Infrastructure", "Rail, airports, municipal and large construction projects."],
+              ["Residential & General Interior Wiring", "Building wires for houses, apartments and general commercial interiors."],
+              ["Commercial & Public Buildings", "Hospitals, data centres, public and high-occupancy buildings."],
             ].map(([title, text], index) => (
               <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>
             ))}

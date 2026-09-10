@@ -110,6 +110,37 @@ const productCategories = [
     ],
   },
   {
+    id: "building-wires-flexible-cables",
+    title: "Building Wires & House Wiring Cables",
+    label: "Featured category",
+    image: "/images/products/building-wires/bw-hub-hero.png",
+    imageAlt: "Huanyu BV, BVR and BVVB PVC insulated building wire product family",
+    description: "PVC insulated building wires for residential, commercial and general fixed wiring, covering rigid single-core, flexible stranded and flat sheathed constructions.",
+    href: "/products/building-wires-flexible-cables",
+    cta: "Explore Building Wires",
+    keywords: ["BV", "BVR", "BVVB", "Copper conductor"],
+    subItems: [
+      {
+        title: "BV — rigid single-core PVC insulated building wire",
+        models: "BV",
+        href: "/products/single-core-pvc-building-wire",
+        note: "View BV Details →",
+      },
+      {
+        title: "BVR — flexible stranded PVC insulated building wire",
+        models: "BVR",
+        href: "/products/flexible-pvc-building-wire",
+        note: "View BVR Details →",
+      },
+      {
+        title: "BVVB — flat PVC insulated & sheathed building cable",
+        models: "BVVB",
+        href: "/products/building-wires-flexible-cables#bvvb",
+        note: "View BVVB Sizes →",
+      },
+    ],
+  },
+  {
     id: "overhead-line-products",
     title: "Overhead Line Products",
     label: "Supporting category",
@@ -131,37 +162,6 @@ const productCategories = [
         models: "LGJ / ACSR",
         href: "/products/acsr-bare-overhead-conductors",
         note: "Steel reinforced aluminium bare conductors for overhead line projects",
-      },
-    ],
-  },
-  {
-    id: "building-wires-flexible-cables",
-    title: "Building Wires & Flexible Cables",
-    label: "Supporting category",
-    image: "/images/products/building-wires-flexible/building-wires-bv-bvr-hero.png",
-    imageAlt: "BV and BVR copper PVC building wire product category",
-    description: "PVC insulated building wires and flexible copper conductor cables for residential wiring and interior distribution.",
-    href: "/products/building-wires-flexible-cables",
-    cta: "View building wire page",
-    keywords: ["BV", "BVR", "PVC insulation", "Copper conductor"],
-    subItems: [
-      {
-        title: "Copper Conductor PVC Insulated Wire",
-        models: "BV",
-        href: "/products/building-wires-flexible-cables",
-        note: "Fixed building wiring for lighting, socket and interior distribution circuits",
-      },
-      {
-        title: "Copper Conductor PVC Insulated Flexible Wire",
-        models: "BVR",
-        href: "/products/building-wires-flexible-cables",
-        note: "Flexible stranded copper wire for distribution boards and easier routing",
-      },
-      {
-        title: "Other Flexible Wire Options",
-        models: "RV / RVV / RVVB",
-        href: "/products/building-wires-flexible-cables",
-        note: "Project-dependent flexible wire options discussed according to requirements",
       },
     ],
   },
@@ -239,14 +239,14 @@ export default function ProductsPage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Product category directory</span>
-              <h2>Primary and Supporting Product Categories</h2>
+              <h2>Primary, Featured and Supporting Product Categories</h2>
             </div>
             <p>Each category shows its representative product families or models so buyers can move from a high-level category to the relevant detail page. Where Chinese model references are shown, they are used for construction comparison. Final cable designation follows the applicable project specification.</p>
           </div>
 
           <div className="product-family-grid product-category-grid">
             {productCategories.map((category, index) => (
-              <article className="product-family-card product-category-card" id={category.id} key={category.title}>
+              <article className={`product-family-card product-category-card${category.label === "Featured category" ? " product-category-card-featured" : ""}`} id={category.id} key={category.title}>
                 <div className={`product-family-image${category.image.startsWith("/images/products/final-refined/") ? " product-family-image-refined" : ""}`}>
                   <Image
                     src={category.image}
@@ -266,7 +266,7 @@ export default function ProductsPage() {
                       <span key={keyword}>{keyword}</span>
                     ))}
                   </div>
-                  <div className="model-link-list">
+                  <div className={`model-link-list${category.label === "Featured category" ? " model-link-list-featured" : ""}`}>
                     {category.subItems.map((item) =>
                       item.href ? (
                         <Link href={item.href} key={item.title} className="model-link-card">
@@ -283,8 +283,8 @@ export default function ProductsPage() {
                       ),
                     )}
                   </div>
-                  <Link className="text-link" href={category.href}>
-                    {category.cta} <span>-&gt;</span>
+                  <Link className={category.label === "Featured category" ? "button button-small product-featured-cta" : "text-link"} href={category.href}>
+                    {category.cta} <span>{category.label === "Featured category" ? "→" : "->"}</span>
                   </Link>
                 </div>
               </article>

@@ -43,6 +43,19 @@ const applications: Application[] = [
     ],
   },
   {
+    title: "Residential & General Interior Wiring",
+    products: "BV, BVR and BVVB building wires",
+    text: "Interior fixed wiring, lighting circuits, socket circuits, conduit installations and distribution-board wiring for houses, apartments and general commercial interiors, subject to the applicable local electrical code and project specification.",
+    image: "/images/products/building-wires/bw-hub-hero.png",
+    relatedProducts: [
+      ["Building Wires & House Wiring Cables", "/products/building-wires-flexible-cables"],
+      ["BV Single-Core Building Wire", "/products/single-core-pvc-building-wire"],
+      ["BVR Flexible Building Wire", "/products/flexible-pvc-building-wire"],
+    ],
+    ctaLabel: "Explore Building Wires",
+    ctaHref: "/products/building-wires-flexible-cables",
+  },
+  {
     title: "Commercial & Public Buildings",
     products: "LSZH, flame-retardant and fire-resistant cables",
     text: "Hospitals, data centres, transport hubs and high-occupancy buildings where fire performance is part of the design basis.",
@@ -84,7 +97,7 @@ export default function ApplicationsPage() {
       <section className="section">
         <div className="container application-showcase-list">
           {applications.map((item, index) => (
-            <article className="application-showcase-row" key={item.title} style={{ backgroundImage: `url(${item.image})` }}>
+            <article className={`application-showcase-row${item.title === "Residential & General Interior Wiring" ? " application-showcase-row-building-wires" : ""}`} key={item.title} style={{ backgroundImage: `url(${item.image})` }}>
               <div className="application-showcase-content">
                 <span>0{index + 1}</span>
                 <h2>{item.title}</h2>

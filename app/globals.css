@@ -115,6 +115,14 @@ p { margin: 0 0 22px; color: var(--muted); }
 .model-link-card:hover, .model-link-card:focus-visible { border-color: var(--orange); outline: 0; }
 .model-link-card.no-link:hover { border-color: var(--line); }
 .product-family-body > .text-link { margin-top: auto; }
+.product-category-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); border-top: 4px solid var(--orange); }
+.product-category-card-featured .product-family-image { aspect-ratio: auto; }
+.product-category-card-featured .product-family-image img { padding: 24px; }
+.product-category-card-featured .product-family-body h3, .product-category-card-featured .product-family-body p { min-height: 0; }
+.product-category-card-featured .model-link-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.model-link-list-featured .model-link-card { padding: 12px 14px; }
+.product-featured-cta { align-self: flex-start; margin-top: auto; }
+.product-featured-cta span { margin-left: 8px; }
 .product-card { display: block; background: white; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(7,24,40,.05); overflow: hidden; transition: transform .25s, box-shadow .25s; }
 .product-card:hover, .product-card:focus-visible { transform: translateY(-5px); box-shadow: var(--shadow); outline: 3px solid rgba(232,111,44,.6); outline-offset: 3px; }
 .product-image-wrap { position: relative; aspect-ratio: 4/3; background: #dbe3e9; overflow: hidden; }
@@ -155,6 +163,16 @@ p { margin: 0 0 22px; color: var(--muted); }
 .home-capability-band h2 { font-size: clamp(34px, 2.7vw, 46px); }
 .home-capability-band .process-grid p { color: rgba(255,255,255,.74); font-size: 15.5px; line-height: 1.6; }
 .home-quality-preview .lead { color: #526171; font-size: 18.5px; line-height: 1.7; }
+.home-building-wire-feature { padding: 58px 0; }
+.home-building-wire-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 52px; align-items: center; }
+.home-building-wire-copy h2 { max-width: 680px; font-size: clamp(34px, 3.2vw, 48px); }
+.home-building-wire-copy > p { max-width: 700px; color: #526171; font-size: 17px; line-height: 1.68; }
+.home-building-wire-facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0; }
+.home-building-wire-facts span { padding: 8px 11px; background: var(--soft); color: var(--blue); font-size: 12px; font-weight: 800; }
+.home-building-wire-copy > .button { width: fit-content; }
+.home-building-wire-copy > .button span { margin-left: 9px; }
+.home-building-wire-image { overflow: hidden; padding: 12px; border: 1px solid var(--line); background: white; box-shadow: 0 10px 30px rgba(7,24,40,.06); }
+.home-building-wire-image img { display: block; width: 100%; height: auto; object-fit: contain; }
 
 .applications-section { background: var(--navy-2); color: white; }
 .light-heading h2 { color: white; }
@@ -779,6 +797,7 @@ p { margin: 0 0 22px; color: var(--muted); }
 .application-showcase-list { display: grid; gap: 22px; }
 .application-showcase-row { position: relative; min-height: 360px; display: flex; align-items: stretch; overflow: hidden; background-position: center; background-size: cover; border: 1px solid rgba(7,24,40,.16); box-shadow: 0 14px 36px rgba(7,24,40,.08); }
 .application-showcase-row::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,18,29,.91) 0%, rgba(4,18,29,.74) 42%, rgba(4,18,29,.24) 100%); }
+.application-showcase-row-building-wires::before { background: linear-gradient(90deg, rgba(4,18,29,.97) 0%, rgba(4,18,29,.89) 42%, rgba(4,18,29,.58) 72%, rgba(4,18,29,.3) 100%); }
 .application-showcase-content { position: relative; z-index: 1; width: min(620px, 100%); display: flex; flex-direction: column; justify-content: center; padding: 44px; color: white; }
 .application-showcase-content span { color: #ffad7c; font-weight: 900; }
 .application-showcase-content h2 { margin-top: 40px; color: white; font-size: clamp(34px, 3.4vw, 52px); }
@@ -947,6 +966,9 @@ p { margin: 0 0 22px; color: var(--muted); }
   .process-evidence-images img { min-height: 220px; }
   .credential-detail-grid { grid-template-columns: 1fr; }
   .product-section-grid, .product-section-grid-wide { grid-template-columns: 1fr; }
+  .product-category-card-featured { grid-template-columns: 1fr; }
+  .product-category-card-featured .product-family-image { aspect-ratio: 4 / 3; }
+  .product-category-card-featured .model-link-list { grid-template-columns: 1fr; }
   .product-spec-layout, .xlpe-construction-grid, .xlpe-spec-layout { grid-template-columns: 1fr; }
   .spec-aside { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -958,6 +980,7 @@ p { margin: 0 0 22px; color: var(--muted); }
   .project-reference-heading > span { grid-column: 1 / -1; }
   .projects-cta-grid { grid-template-columns: 1fr; gap: 34px; }
   .projects-cta-actions { justify-content: flex-start; }
+  .home-building-wire-grid { grid-template-columns: 1fr; gap: 34px; }
   .bw-family-grid, .bw-five-grid, .bw-number-grid { grid-template-columns: repeat(2, 1fr); }
   .bw-media-grid, .bw-two-column, .bw-quality-grid { grid-template-columns: 1fr; }
   .bw-example-row { grid-template-columns: 1fr; }
@@ -987,6 +1010,12 @@ p { margin: 0 0 22px; color: var(--muted); }
   .home-capability-band .process-grid p,
   .home-application-grid p { font-size: 16px; line-height: 1.62; }
   .home-quality-preview .lead { font-size: 16px; line-height: 1.68; }
+  .home-building-wire-feature { padding: 52px 0; }
+  .home-building-wire-copy h2 { font-size: 32px; }
+  .home-building-wire-copy > p { font-size: 16px; line-height: 1.62; }
+  .home-building-wire-facts { margin: 22px 0; }
+  .home-building-wire-copy > .button, .product-featured-cta { width: 100%; }
+  .home-building-wire-image { padding: 8px; }
   .product-family-body h3, .product-family-body p { min-height: 0; }
   .product-family-body { padding: 22px; }
   .building-wire-product-image { height: 230px; }
