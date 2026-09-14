@@ -1,6 +1,31 @@
 import Link from "next/link";
-import { buyerGuides } from "@/data/buyerGuides";
+import { buyerGuides, type BuyerGuide } from "@/data/buyerGuides";
 import { createPageMetadata } from "@/lib/metadata";
+
+const buildingWireGuideSlugs = new Set([
+  "bv-vs-bvr-building-wire-guide",
+  "building-wire-size-guide",
+  "awg-to-mm2-building-wire-guide",
+]);
+
+function BuyerGuideCard({ guide, headingLevel = "h2" }: { guide: BuyerGuide; headingLevel?: "h2" | "h3" }) {
+  const Heading = headingLevel;
+
+  return (
+    <article>
+      {guide.tags ? (
+        <div className="resource-tags" aria-label="Guide topics">
+          {guide.tags.map((tag) => <span className="resource-tag" key={tag}>{tag}</span>)}
+        </div>
+      ) : (
+        <span className="resource-type">Buyer Guide</span>
+      )}
+      <Heading>{guide.shortTitle}</Heading>
+      <p>{guide.excerpt}</p>
+      <Link className="text-link" href={`/resources/${guide.slug}`}>Read guide <span>-&gt;</span></Link>
+    </article>
+  );
+}
 
 export const metadata = createPageMetadata({
   title: "Cable Resources | Technical Notes and Company Updates",
@@ -12,6 +37,9 @@ export const metadata = createPageMetadata({
 });
 
 export default function ResourcesPage() {
+  const generalBuyerGuides = buyerGuides.filter((guide) => !buildingWireGuideSlugs.has(guide.slug));
+  const buildingWireGuides = buyerGuides.filter((guide) => buildingWireGuideSlugs.has(guide.slug));
+
   return (
     <>
       <section
@@ -44,21 +72,19 @@ export default function ResourcesPage() {
             <p>Use these guides to prepare cable specifications, RFQs, inspection requirements and project documentation for procurement review.</p>
           </div>
           <div className="resource-grid">
-            {buyerGuides.map((guide) => (
-              <article key={guide.slug}>
-                {guide.tags ? (
-                  <div className="resource-tags" aria-label="Guide topics">
-                    {guide.tags.map((tag) => <span className="resource-tag" key={tag}>{tag}</span>)}
-                  </div>
-                ) : (
-                  <span className="resource-type">Buyer Guide</span>
-                )}
-                <h2>{guide.shortTitle}</h2>
-                <p>{guide.excerpt}</p>
-                <Link className="text-link" href={`/resources/${guide.slug}`}>Read guide <span>-&gt;</span></Link>
-              </article>
-            ))}
+            {generalBuyerGuides.map((guide) => <BuyerGuideCard guide={guide} key={guide.slug} />)}
           </div>
+
+          <section className="building-wire-guide-cluster" aria-labelledby="building-wire-guide-cluster-title">
+            <div className="building-wire-guide-cluster-heading">
+              <span className="eyebrow">BUILDING WIRE GUIDES</span>
+              <h2 id="building-wire-guide-cluster-title">Building Wire Buyer Guides</h2>
+              <p>Practical guidance for comparing building-wire constructions, metric conductor sizes and international wire-size specifications before preparing an RFQ.</p>
+            </div>
+            <div className="resource-grid building-wire-guide-grid">
+              {buildingWireGuides.map((guide) => <BuyerGuideCard guide={guide} headingLevel="h3" key={guide.slug} />)}
+            </div>
+          </section>
         </div>
       </section>
     </>

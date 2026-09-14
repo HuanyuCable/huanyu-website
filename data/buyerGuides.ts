@@ -95,6 +95,39 @@ export const buyerGuides: BuyerGuide[] = [
       "A procurement guide explaining the difference between smoke, flame-propagation and circuit-integrity requirements.",
     tags: ["Buyer Guide", "Fire Performance"],
   },
+  {
+    slug: "bv-vs-bvr-building-wire-guide",
+    title: "BV vs BVR Cable: Meaning, Differences & Buyer Guide",
+    shortTitle: "BV vs BVR Building Wire: Meaning, Differences & Buyer Guide",
+    metaTitle: "BV vs BVR Cable: Meaning, Differences & Buyer Guide",
+    description:
+      "Understand what BV and BVR mean, how rigid and flexible conductor constructions differ, and what international buyers should confirm before ordering PVC building wire.",
+    excerpt:
+      "A practical guide to BV and BVR building-wire designations, rigid versus flexible conductor construction and the specification details buyers should confirm before quotation.",
+    tags: ["Buyer Guide", "Building Wire"],
+  },
+  {
+    slug: "building-wire-size-guide",
+    title: "Building Wire Size Guide: What 1.5, 2.5, 4, 6 and 10 mm² Actually Mean",
+    shortTitle: "Building Wire Size Guide: 1.5, 2.5, 4, 6 & 10 mm²",
+    metaTitle: "Building Wire Sizes: 1.5, 2.5, 4, 6 & 10 mm² | Huanyu Cable",
+    description:
+      "Understand what 1.5, 2.5, 4, 6 and 10 mm² mean for PVC building wire, how conductor construction changes, and what buyers should confirm before RFQ.",
+    excerpt:
+      "A buyer guide to 1.5, 2.5, 4, 6 and 10 mm² building-wire sizes, nominal conductor area, BV/BVR construction and what buyers should confirm before quotation.",
+    tags: ["Buyer Guide", "Building Wire", "Size Guide"],
+  },
+  {
+    slug: "awg-to-mm2-building-wire-guide",
+    title: "AWG to mm² Building Wire Guide: Size Chart & Buyer Checks",
+    shortTitle: "AWG to mm² Building Wire: Size Chart & Buyer Guide",
+    metaTitle: "AWG to mm² Wire Size Chart for Building Wire | Huanyu Cable",
+    description:
+      "Compare 16–8 AWG with metric mm² building-wire sizes, nominal conductor areas and buyer checks before substituting an AWG specification.",
+    excerpt:
+      "Compare AWG nominal conductor areas with metric building-wire sizes and learn what must be checked before an AWG specification is replaced by a metric product.",
+    tags: ["Buyer Guide", "Building Wire", "AWG / MM²"],
+  },
 ];
 
 export function getBuyerGuide(slug: string): BuyerGuide | undefined {

@@ -1225,6 +1225,893 @@ function SolarCableSelectionGuide() {
   );
 }
 
+function BvVsBvrBuildingWireGuide() {
+  return (
+    <GuideShell
+      title="BV vs BVR Building Wire: Meaning, Construction and Key Differences"
+      description="A practical guide to Chinese BV and BVR building-wire designations, conductor construction and the specification details international buyers should confirm."
+    >
+      <div className="buyer-guide-body bv-bvr-guide">
+        <p className="lead">
+          BV and BVR are Chinese product designations for single-core PVC insulated copper building wires. For international procurement, the designation alone is not a complete specification: BV uses a rigid-conductor construction, while BVR uses a flexible stranded-conductor construction. The applicable standard, conductor class, project specification and required documentation must still be confirmed before quotation.
+        </p>
+
+        <h2>What Does BV Cable Mean?</h2>
+        <p>
+          BV identifies a Chinese building-wire product family with a single copper core and PVC insulation. It is used for fixed wiring and has a rigid conductor, which may be solid or stranded depending on the conductor size and confirmed construction. It should therefore not be simplified as a product that always uses one solid conductor.
+        </p>
+        <p>
+          A 450/750V reference applies where confirmed for the requested BV construction. The designation <span className="technical-term">60227 IEC 01 (BV)</span> and the Chinese technical reference <span className="technical-term">GB/T 5023.3-2008</span> may be used where applicable, but the Chinese reference does not by itself prove compliance with an overseas destination-market standard. See the <Link href="/products/single-core-pvc-building-wire">BV building wire page</Link> for product details and available construction information.
+        </p>
+
+        <h2>What Does BVR Cable Mean?</h2>
+        <p>
+          BVR is a Chinese designation for 450/750V single-core PVC insulated building wire with a flexible stranded copper conductor. Its multi-strand construction provides easier bending and routing in applicable fixed-wiring systems than a rigid-conductor building wire.
+        </p>
+        <p>
+          Huanyu publishes BVR technical reference data for sizes from 2.5–70 mm². Additional requirements remain subject to technical review. <span className="technical-term">JB/T 8734.2-2016</span> may be shown as a Chinese technical reference, but BVR is not automatically equivalent to an overseas designation. See the <Link href="/products/flexible-pvc-building-wire">BVR flexible building wire page</Link> for product details and construction information.
+        </p>
+
+        <h2>BV vs BVR: What Is the Actual Difference?</h2>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table bv-bvr-comparison-table">
+            <thead>
+              <tr>
+                <th>Review point</th>
+                <th>BV</th>
+                <th>BVR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Review point">Product family</td>
+                <td data-label="BV">PVC insulated building wire</td>
+                <td data-label="BVR">PVC insulated building wire</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Core</td>
+                <td data-label="BV">Single core</td>
+                <td data-label="BVR">Single core</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Conductor material</td>
+                <td data-label="BV">Copper</td>
+                <td data-label="BVR">Copper</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Conductor construction</td>
+                <td data-label="BV">Rigid; solid or stranded depending on size and confirmed construction</td>
+                <td data-label="BVR">Flexible stranded</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Insulation</td>
+                <td data-label="BV">PVC</td>
+                <td data-label="BVR">PVC</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Huanyu voltage reference</td>
+                <td data-label="BV">450/750V where applicable</td>
+                <td data-label="BVR">450/750V</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Typical installation characteristic</td>
+                <td data-label="BV">Rigid construction for applicable fixed-wiring routes</td>
+                <td data-label="BVR">Easier bending and routing in applicable fixed-wiring systems</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Chinese designation</td>
+                <td data-label="BV">BV; 60227 IEC 01 (BV) where applicable</td>
+                <td data-label="BVR">BVR</td>
+              </tr>
+              <tr>
+                <td data-label="Review point">Overseas designation status</td>
+                <td data-label="BV">No automatic one-to-one equivalence</td>
+                <td data-label="BVR">No automatic one-to-one equivalence</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <aside className="buyer-guide-takeaway">
+          <strong>Procurement takeaway</strong>
+          <p>The useful procurement distinction is conductor construction, not simply “hard” versus “soft” wire.</p>
+        </aside>
+
+        <h2>Same Wire Size Does Not Mean the Same Conductor Construction</h2>
+        <p>
+          A nominal section describes conductor cross-sectional area; it does not state how many strands make up the conductor. The following 2.5 mm² examples show why the complete construction matters when identifying a product.
+        </p>
+        <div className="conductor-comparison-grid" aria-label="Representative 2.5 square millimetre conductor constructions">
+          <article>
+            <span>BV</span>
+            <h3>Rigid, solid</h3>
+            <strong>1 × 1.78 mm</strong>
+          </article>
+          <article>
+            <span>BV</span>
+            <h3>Rigid, stranded</h3>
+            <strong>7 × 0.68 mm</strong>
+          </article>
+          <article>
+            <span>BVR</span>
+            <h3>Flexible, stranded</h3>
+            <strong>19 × 0.41 mm</strong>
+          </article>
+        </div>
+        <p className="construction-note">
+          These are representative Huanyu construction references for product identification. Final construction, dimensions and applicable standard requirements must be confirmed before quotation.
+        </p>
+
+        <h2>Rigid vs Flexible Conductor: Which One Should a Buyer Specify?</h2>
+        <p>
+          The project specification comes first. Installation flexibility is one review point, but it does not replace the electrical design, local code or standard requirement. Buyers should give the supplier enough information to review the requested conductor construction in its full project context.
+        </p>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table buyer-check-table">
+            <thead>
+              <tr>
+                <th>Buyer check</th>
+                <th>What to confirm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="Buyer check">Applicable standard</td><td data-label="What to confirm">Exact standard and edition required by the project</td></tr>
+              <tr><td data-label="Buyer check">Required conductor class</td><td data-label="What to confirm">Rigid solid, rigid stranded or flexible stranded construction</td></tr>
+              <tr><td data-label="Buyer check">Nominal section</td><td data-label="What to confirm">Required conductor cross-section for each circuit</td></tr>
+              <tr><td data-label="Buyer check">Installation method</td><td data-label="What to confirm">Conduit, protected route, board wiring or other approved method</td></tr>
+              <tr><td data-label="Buyer check">Rated voltage</td><td data-label="What to confirm">Cable rating required by the system and specification</td></tr>
+              <tr><td data-label="Buyer check">Local electrical code / project specification</td><td data-label="What to confirm">Installation and product requirements applicable at destination</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          The correct question is not simply “Which is better, BV or BVR?” but “Which conductor construction and standard does the project require?”
+        </p>
+
+        <h2>Can BV and BVR Be Treated as H07V-U, H07V-R or H07V-K?</h2>
+        <aside className="buyer-guide-caution">
+          <strong>Not automatically.</strong>
+          <p>Similar voltage ratings, insulation materials or conductor constructions do not prove automatic equivalence.</p>
+        </aside>
+        <p>
+          H07V-U, H07V-R and H07V-K are overseas product designations used within their applicable standards. IEC, EN, BS and other national fixed-wiring designations must be reviewed against the exact project requirement instead of being inferred from a Chinese BV or BVR name.
+        </p>
+        <ul className="buyer-guide-checklist technical-comparison-checklist">
+          <li>Exact standard and edition</li>
+          <li>Required conductor class</li>
+          <li>Nominal section</li>
+          <li>Rated voltage</li>
+          <li>Dimensions and DC resistance limits</li>
+          <li>Required tests</li>
+          <li>Product marking</li>
+          <li>Certification and documentation</li>
+        </ul>
+
+        <h2>What Building-Wire Buyers Should Confirm Before Ordering</h2>
+        <p>
+          A Chinese designation is useful when known, but it is not mandatory; an international buyer can send the required specification for technical review.
+        </p>
+        <div className="buyer-guide-table-wrap">
+          <table className="buyer-guide-table rfq-stacked-table building-wire-rfq-table">
+            <thead>
+              <tr>
+                <th>RFQ field</th>
+                <th>Information to provide</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td data-label="RFQ field">Product / designation</td><td data-label="Information to provide">BV, BVR, overseas designation or a complete construction description</td></tr>
+              <tr><td data-label="RFQ field">Required standard</td><td data-label="Information to provide">Exact standard, edition or project specification</td></tr>
+              <tr><td data-label="RFQ field">Rated voltage</td><td data-label="Information to provide">Required cable voltage rating</td></tr>
+              <tr><td data-label="RFQ field">Conductor construction</td><td data-label="Information to provide">Rigid solid, rigid stranded or flexible stranded</td></tr>
+              <tr><td data-label="RFQ field">Nominal section</td><td data-label="Information to provide">Required mm² for each item</td></tr>
+              <tr><td data-label="RFQ field">Colour</td><td data-label="Information to provide">Colour schedule and quantity by colour</td></tr>
+              <tr><td data-label="RFQ field">Coil length</td><td data-label="Information to provide">Required metres per coil or other packing length</td></tr>
+              <tr><td data-label="RFQ field">Quantity</td><td data-label="Information to provide">Total metres by size and colour</td></tr>
+              <tr><td data-label="RFQ field">Marking</td><td data-label="Information to provide">Cable print and label requirements</td></tr>
+              <tr><td data-label="RFQ field">Packing</td><td data-label="Information to provide">Coil, reel, carton or export packing requirement</td></tr>
+              <tr><td data-label="RFQ field">Documentation</td><td data-label="Information to provide">Datasheets, reports and project-required documents</td></tr>
+              <tr><td data-label="RFQ field">Destination</td><td data-label="Information to provide">Country, port or delivery location</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Huanyu Building Wire References</h2>
+        <div className="building-wire-reference-grid">
+          <article>
+            <span>Rigid conductor</span>
+            <h3>BV</h3>
+            <p>Single-core copper conductor with PVC insulation for applicable fixed wiring.</p>
+            <Link href="/products/single-core-pvc-building-wire">View BV Building Wire</Link>
+          </article>
+          <article>
+            <span>Flexible stranded</span>
+            <h3>BVR</h3>
+            <p>Single-core flexible stranded copper conductor with PVC insulation.</p>
+            <Link href="/products/flexible-pvc-building-wire">View BVR Flexible Building Wire</Link>
+          </article>
+          <article>
+            <span>Flat two-core</span>
+            <h3>BVVB</h3>
+            <p>PVC insulated and sheathed flat building cable for applicable fixed wiring.</p>
+            <Link href="/products/building-wires-flexible-cables#bvvb">View BVVB Building Cable</Link>
+          </article>
+        </div>
+        <p className="building-wire-range-link">
+          <Link href="/products/building-wires-flexible-cables">Explore the complete Building Wires &amp; House Wiring Cables range</Link>
+        </p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div className="buyer-guide-faq">
+          <article>
+            <h3>Is BV wire always a solid conductor?</h3>
+            <p>No. BV belongs to the rigid-conductor family, but the rigid conductor may be solid or stranded depending on the size and confirmed construction.</p>
+          </article>
+          <article>
+            <h3>Is BVR the same as flexible cable?</h3>
+            <p>BVR is a Chinese designation for a specific single-core PVC insulated building wire with a flexible stranded copper conductor. The broad term “flexible cable” can describe many other cable constructions, so it is not a complete substitute for the BVR designation or specification.</p>
+          </article>
+          <article>
+            <h3>What is the main difference between BV and BVR?</h3>
+            <p>BV uses a rigid-conductor construction; BVR uses a flexible stranded-conductor construction. Both still require confirmation of the applicable standard and project specification.</p>
+          </article>
+          <article>
+            <h3>Can I order BV or BVR without knowing the Chinese designation?</h3>
+            <p>Yes. Send the required standard, rated voltage, conductor class, nominal section, colour, packing and destination for technical review.</p>
+          </article>
+          <article>
+            <h3>Is BV equivalent to H07V-U and BVR equivalent to H07V-K?</h3>
+            <p>No automatic equivalence should be assumed. The exact standard, conductor class, dimensions, resistance limits, tests, marking and documentation must be compared before any product match is confirmed.</p>
+          </article>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta bv-bvr-guide-cta">
+        <h2>Have a BV, BVR or Building-Wire Specification?</h2>
+        <p>Send the required standard, conductor construction, nominal section, colour, coil length, quantity and destination. Huanyu Cable can review the requested construction and documentation requirements before preparing a quotation.</p>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="building-wires-flexible-cables">Send Your Building Wire Specification</Link>
+        <div className="buyer-guide-cta-links" aria-label="Related building wire links">
+          <Link href="/products/building-wires-flexible-cables">Explore Building Wires</Link>
+          <Link href="/products/single-core-pvc-building-wire">View BV Building Wire</Link>
+          <Link href="/products/flexible-pvc-building-wire">View BVR Flexible Building Wire</Link>
+        </div>
+      </div>
+    </GuideShell>
+  );
+}
+
+const buildingWireSizeRows = [
+  {
+    size: "1.5 mm²",
+    bv: "Commonly requested",
+    bvr: "Not included in Huanyu's published BVR reference range (2.5–70 mm²)",
+    check: "Confirm conductor construction, standard, voltage and project requirement",
+  },
+  {
+    size: "2.5 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm rigid vs flexible stranded construction, standard and installation requirement",
+  },
+  {
+    size: "4 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm conductor construction, standard and installation requirement",
+  },
+  {
+    size: "6 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm conductor construction, standard and installation requirement",
+  },
+  {
+    size: "10 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm conductor construction, standard and installation requirement",
+  },
+  {
+    size: "16 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm project specification and conductor construction",
+  },
+  {
+    size: "25 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm project specification and conductor construction",
+  },
+  {
+    size: "35 mm²",
+    bv: "Commonly requested",
+    bvr: "Within published BVR reference range",
+    check: "Confirm project specification and conductor construction",
+  },
+];
+
+const buildingWireRfqFields = [
+  ["Product / designation", "BV, BVR, BVVB, overseas designation or complete construction description"],
+  ["Nominal section", "Required mm² for each item"],
+  ["Number of cores", "Single core, 2 core or other confirmed construction"],
+  ["Conductor construction", "Rigid solid, rigid stranded or flexible stranded where required"],
+  ["Rated voltage", "Required voltage designation"],
+  ["Applicable standard", "Exact standard and edition or project specification"],
+  ["Colour", "Required colour schedule and quantity by colour"],
+  ["Coil length", "Required metres per coil or other packing length"],
+  ["Quantity", "Total metres by size and colour"],
+  ["Marking", "Cable printing and label requirements"],
+  ["Packing", "Coil, carton or export packing requirement"],
+  ["Documentation", "Datasheets, reports and project-required documents"],
+  ["Destination", "Country, port or delivery location"],
+];
+
+function BuildingWireSizeGuide() {
+  return (
+    <GuideShell
+      title="Building Wire Size Guide: What 1.5, 2.5, 4, 6 and 10 mm² Actually Mean"
+      description="A practical guide to nominal conductor area, BV and BVR construction, and the size details building-wire buyers should confirm before RFQ."
+    >
+      <div className="buyer-guide-body building-wire-size-guide">
+        <p className="lead">
+          Building-wire buyers often start with a number such as <strong>1.5 mm², 2.5 mm², 4 mm², 6 mm² or 10 mm²</strong>. That number is important, but it is not a complete cable specification.
+        </p>
+        <p>
+          The nominal size describes the conductor cross-sectional area. It does not, by itself, tell the buyer whether the conductor is solid, rigid stranded or flexible stranded, what standard applies, what the finished wire diameter will be, or what current the wire may carry in a specific installation.
+        </p>
+        <p>
+          For international procurement, the useful question is therefore not only <strong>“What size wire do I need?”</strong> but also <strong>“What construction and standard does the project require at that size?”</strong>
+        </p>
+
+        <h2>What Does 1.5, 2.5 or 4 mm² Mean on Building Wire?</h2>
+        <p>
+          <span className="technical-term">mm²</span> means square millimetres and is used to describe the <strong>nominal cross-sectional area of the conductor</strong>.
+        </p>
+        <p>
+          A <span className="technical-term">2.5 mm²</span> wire does <strong>not</strong> mean that the copper conductor is 2.5 mm in diameter.
+        </p>
+        <p>
+          The same nominal cross-sectional area may be produced with different conductor constructions. A rigid-conductor building wire may use one solid conductor or several larger strands, while a flexible conductor uses more, smaller strands.
+        </p>
+        <aside className="buyer-guide-takeaway">
+          <strong>Buyer takeaway</strong>
+          <p>Nominal area identifies conductor size; conductor construction identifies how that area is physically formed.</p>
+        </aside>
+
+        <h2>Common Building-Wire Sizes Buyers Ask For</h2>
+        <div className="buyer-guide-table-wrap size-guide-desktop-table-wrap">
+          <table className="buyer-guide-table size-guide-table">
+            <thead>
+              <tr>
+                <th>Nominal section</th>
+                <th>BV reference</th>
+                <th>BVR reference</th>
+                <th>Buyer check</th>
+              </tr>
+            </thead>
+            <tbody>
+              {buildingWireSizeRows.map((row) => (
+                <tr key={row.size}>
+                  <th scope="row">{row.size}</th>
+                  <td>{row.bv}</td>
+                  <td>{row.bvr}</td>
+                  <td>{row.check}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="size-guide-mobile-list" aria-label="Common building-wire size references">
+          {buildingWireSizeRows.map((row) => (
+            <article key={row.size}>
+              <h3>{row.size}</h3>
+              <p><strong>BV</strong>{row.bv}</p>
+              <p><strong>BVR</strong>{row.bvr}</p>
+              <p className="size-guide-confirm">{row.check}</p>
+            </article>
+          ))}
+        </div>
+        <p>
+          Huanyu lists additional BV sizes beyond 35 mm², while published BVR technical reference data covers 2.5–70 mm². Final availability, conductor construction and the applicable standard are confirmed against the RFQ.
+        </p>
+
+        <h2>Same 2.5 mm² Size, Different Conductor Construction</h2>
+        <div className="conductor-comparison-grid size-guide-conductor-grid" aria-label="Representative 2.5 square millimetre conductor constructions">
+          <article>
+            <span>BV — rigid, solid</span>
+            <h3>2.5 mm²</h3>
+            <strong>1 × 1.78 mm</strong>
+          </article>
+          <article>
+            <span>BV — rigid, stranded</span>
+            <h3>2.5 mm²</h3>
+            <strong>7 × 0.68 mm</strong>
+          </article>
+          <article>
+            <span>BVR — flexible, stranded</span>
+            <h3>2.5 mm²</h3>
+            <strong>19 × 0.41 mm</strong>
+          </article>
+        </div>
+        <p>
+          All three examples refer to the same nominal cross-sectional area category, but the strand construction is different. This is why a buyer should not identify a building wire by size alone. See the <Link href="/resources/bv-vs-bvr-building-wire-guide">BV vs BVR building wire comparison</Link> for the full conductor-construction distinction.
+        </p>
+        <p className="construction-note">
+          These are representative construction references for product identification. Final construction, dimensions and applicable standard requirements are confirmed against the applicable specification before quotation.
+        </p>
+
+        <h2>Does a Larger mm² Number Always Mean Higher Current Capacity?</h2>
+        <p>
+          For conductors of the same material at the same temperature, resistance per unit length generally decreases as conductor cross-sectional area increases. However, a project&apos;s allowable current cannot be selected from nominal conductor area alone.
+        </p>
+        <p>The required current-carrying capacity must be checked against the applicable standard and installation conditions, including:</p>
+        <ul className="buyer-guide-checklist">
+          <li>Conductor construction</li>
+          <li>Insulation system and temperature rating</li>
+          <li>Installation method</li>
+          <li>Conduit or enclosure conditions</li>
+          <li>Grouping with other circuits</li>
+          <li>Ambient conditions</li>
+          <li>Local electrical code</li>
+          <li>Project design requirements</li>
+        </ul>
+        <aside className="buyer-guide-caution">
+          <strong>Do not use this page as an ampacity table.</strong>
+          <p>Send the required standard, installation method and project electrical requirement for technical review.</p>
+        </aside>
+
+        <h2>BV or BVR: Does the Same Size Mean the Same Product?</h2>
+        <p>No. BV and BVR can share the same nominal conductor area, but they represent different conductor-construction families.</p>
+        <div className="size-guide-two-column">
+          <article>
+            <h3>BV</h3>
+            <ul>
+              <li>Rigid conductor</li>
+              <li>May be solid or stranded rigid depending on confirmed construction</li>
+              <li>Intended for applicable fixed-wiring arrangements</li>
+            </ul>
+            <p>Review the <Link href="/products/single-core-pvc-building-wire">BV building wire page</Link>.</p>
+          </article>
+          <article>
+            <h3>BVR</h3>
+            <ul>
+              <li>Flexible stranded copper conductor</li>
+              <li>Easier bending and routing where the project specification permits this construction</li>
+              <li>Published Huanyu reference range: 2.5–70 mm²</li>
+            </ul>
+            <p>Review the <Link href="/products/flexible-pvc-building-wire">BVR flexible building wire page</Link>.</p>
+          </article>
+        </div>
+        <p>
+          Neither designation should be treated as automatically equivalent to an IEC, EN, BS or H07V designation. The exact standard and product construction must be reviewed.
+        </p>
+
+        <h2>Why Finished Wire Diameter Is Not the Same as Nominal Conductor Size</h2>
+        <p>
+          Nominal conductor section and finished wire diameter are different measurements. The finished outside diameter depends on the confirmed conductor construction and insulation dimensions. Two wires with the same nominal conductor area can therefore have different physical dimensions.
+        </p>
+        <p>For buyers, this matters when the project has:</p>
+        <ul className="buyer-guide-checklist">
+          <li>Conduit or raceway space limits</li>
+          <li>Terminal or gland constraints</li>
+          <li>Panel wiring space requirements</li>
+          <li>Packing or coil requirements</li>
+          <li>Dimensional inspection criteria</li>
+        </ul>
+        <p>The supplier should confirm finished dimensions against the applicable product specification before quotation or production.</p>
+
+        <h2>How to Write Building-Wire Size in an RFQ</h2>
+        <div className="rfq-format-grid">
+          <article>
+            <h3>Single-core wire</h3>
+            <ul className="rfq-format-examples">
+              <li>BV, 1 × 2.5 mm², 450/750V</li>
+              <li>BVR, 1 × 6 mm², 450/750V</li>
+            </ul>
+            <p>These examples show RFQ formatting only. The applicable standard, conductor construction and project requirements still need to be confirmed.</p>
+          </article>
+          <article>
+            <h3>Flat two-core building cable</h3>
+            <ul className="rfq-format-examples">
+              <li>BVVB, 2 × 1.5 mm²</li>
+              <li>BVVB, 2 × 2.5 mm²</li>
+              <li>BVVB, 2 × 4 mm²</li>
+            </ul>
+            <p>In a multicore or flat two-core construction, the first number identifies the number of insulated conductors and the second identifies the nominal conductor area of each core.</p>
+          </article>
+        </div>
+        <p>
+          See Huanyu Cable&apos;s <Link href="/products/building-wires-flexible-cables">Building Wires &amp; House Wiring Cables</Link> range for related product options before preparing the RFQ.
+        </p>
+
+        <h2>mm² vs AWG: Do Not Convert the Purchase Specification by Size Alone</h2>
+        <p>
+          Some markets specify conductor size in AWG rather than square millimetres. A rounded cross-sectional-area comparison may help initial discussion, but it should not be used to declare two finished wire products automatically equivalent.
+        </p>
+        <p>Before substituting an AWG-designated product with a metric building wire, confirm:</p>
+        <ul className="buyer-guide-checklist">
+          <li>Applicable product standard</li>
+          <li>Conductor class / construction</li>
+          <li>Nominal conductor requirement</li>
+          <li>Resistance limits</li>
+          <li>Insulation requirement</li>
+          <li>Rated voltage</li>
+          <li>Dimensions</li>
+          <li>Required tests and documentation</li>
+        </ul>
+        <p>
+          Do not replace an AWG designation with a rounded mm² value without checking the applicable standard and required conductor construction.
+        </p>
+
+        <h2>What Building-Wire Buyers Should Confirm Before Quotation</h2>
+        <div className="buyer-guide-table-wrap size-guide-desktop-rfq-wrap">
+          <table className="buyer-guide-table size-guide-rfq-table">
+            <thead>
+              <tr><th>RFQ field</th><th>Information to provide</th></tr>
+            </thead>
+            <tbody>
+              {buildingWireRfqFields.map(([field, requirement]) => (
+                <tr key={field}><th scope="row">{field}</th><td>{requirement}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="size-guide-mobile-rfq" aria-label="Building-wire RFQ fields">
+          {buildingWireRfqFields.map(([field, requirement]) => (
+            <article key={field}><h3>{field}</h3><p>{requirement}</p></article>
+          ))}
+        </div>
+
+        <h2>Huanyu Building Wire Size References</h2>
+        <div className="building-wire-reference-grid size-guide-reference-grid">
+          <article>
+            <span>Rigid-conductor PVC insulated building wire</span>
+            <h3>BV</h3>
+            <p>Huanyu&apos;s BV range includes commonly requested sizes of 1.5 / 2.5 / 4 / 6 / 10 / 16 / 25 / 35 mm², with additional listed sizes up to 300 mm², subject to confirmed construction and specification.</p>
+            <Link href="/products/single-core-pvc-building-wire">View BV Building Wire</Link>
+          </article>
+          <article>
+            <span>Flexible stranded PVC insulated building wire</span>
+            <h3>BVR</h3>
+            <p>Huanyu publishes BVR technical reference data for 2.5–70 mm².</p>
+            <Link href="/products/flexible-pvc-building-wire">View BVR Flexible Building Wire</Link>
+          </article>
+          <article>
+            <span>Flat two-core PVC insulated and sheathed building cable</span>
+            <h3>BVVB</h3>
+            <p>BVVB is presented in Huanyu&apos;s product range as a PVC insulated and sheathed flat building cable with a 300/500V reference. Final construction is subject to the applicable specification.</p>
+            <Link href="/products/building-wires-flexible-cables#bvvb">Explore Building Wires</Link>
+          </article>
+        </div>
+        <p className="building-wire-range-link">
+          <Link href="/products/building-wires-flexible-cables">Explore the complete Building Wires &amp; House Wiring Cables range</Link>
+        </p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div className="buyer-guide-faq">
+          <article>
+            <h3>What does 2.5 mm² mean on electrical wire?</h3>
+            <p>It identifies the nominal cross-sectional area of the conductor. It does not mean the conductor is 2.5 mm in diameter and does not, by itself, define strand construction, finished wire diameter or allowable current in a specific installation.</p>
+          </article>
+          <article>
+            <h3>Is 2.5 mm² wire always the same construction?</h3>
+            <p>No. A 2.5 mm² conductor can use different strand constructions depending on the product family and applicable specification. Huanyu&apos;s reference examples include rigid solid, rigid stranded and flexible stranded constructions.</p>
+          </article>
+          <article>
+            <h3>Can I choose house wire only by mm² size?</h3>
+            <p>No. The required standard, rated voltage, conductor construction, installation method, resistance and dimensional requirements should also be confirmed.</p>
+          </article>
+          <article>
+            <h3>What is the difference between BV and BVR at the same mm² size?</h3>
+            <p>BV is a rigid-conductor building-wire family, while BVR uses a flexible stranded conductor. The same nominal area therefore does not make the two products identical.</p>
+          </article>
+          <article>
+            <h3>Does Huanyu supply building wire above 10 mm²?</h3>
+            <p>Huanyu lists BV sizes above 10 mm², with additional listed sizes up to 300 mm², subject to confirmed construction and specification. Published BVR technical reference data covers 2.5–70 mm². Final availability is confirmed against the RFQ.</p>
+          </article>
+          <article>
+            <h3>Can I send an AWG requirement instead of mm²?</h3>
+            <p>Yes, but the exact product should be reviewed against the applicable standard and conductor construction. Do not assume a rounded AWG-to-mm² area conversion proves product equivalence.</p>
+          </article>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta bv-bvr-guide-cta">
+        <h2>Have a Building-Wire Size List or BOQ?</h2>
+        <p>Send the required wire size, product designation, standard, voltage, colour, coil length, quantity and destination. Huanyu Cable can review the requested construction and documentation requirements before quotation.</p>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="building-wires-flexible-cables">Send Your Building Wire Specification</Link>
+        <div className="buyer-guide-cta-links" aria-label="Related building wire links">
+          <Link href="/products/building-wires-flexible-cables">Explore Building Wires</Link>
+          <Link href="/products/single-core-pvc-building-wire">View BV Building Wire</Link>
+          <Link href="/products/flexible-pvc-building-wire">View BVR Flexible Building Wire</Link>
+          <Link href="/resources/bv-vs-bvr-building-wire-guide">BV vs BVR Building Wire Comparison</Link>
+        </div>
+      </div>
+    </GuideShell>
+  );
+}
+
+const awgNominalAreaRows = [
+  ["18 AWG", "0.823 mm²"],
+  ["17 AWG", "1.04 mm²"],
+  ["16 AWG", "1.31 mm²"],
+  ["15 AWG", "1.65 mm²"],
+  ["14 AWG", "2.08 mm²"],
+  ["13 AWG", "2.62 mm²"],
+  ["12 AWG", "3.31 mm²"],
+  ["11 AWG", "4.17 mm²"],
+  ["10 AWG", "5.26 mm²"],
+  ["9 AWG", "6.63 mm²"],
+  ["8 AWG", "8.37 mm²"],
+  ["7 AWG", "10.55 mm²"],
+  ["6 AWG", "13.30 mm²"],
+  ["5 AWG", "16.77 mm²"],
+  ["4 AWG", "21.15 mm²"],
+  ["3 AWG", "26.67 mm²"],
+  ["2 AWG", "33.62 mm²"],
+  ["1 AWG", "42.41 mm²"],
+];
+
+const metricAwgPositionRows = [
+  ["1.5 mm²", "between 16 AWG (1.31 mm²) and 15 AWG (1.65 mm²)"],
+  ["2.5 mm²", "between 14 AWG (2.08 mm²) and 13 AWG (2.62 mm²)"],
+  ["4 mm²", "between 12 AWG (3.31 mm²) and 11 AWG (4.17 mm²)"],
+  ["6 mm²", "between 10 AWG (5.26 mm²) and 9 AWG (6.63 mm²)"],
+  ["10 mm²", "between 8 AWG (8.37 mm²) and 7 AWG (10.55 mm²)"],
+  ["16 mm²", "between 6 AWG (13.30 mm²) and 5 AWG (16.77 mm²)"],
+  ["25 mm²", "between 4 AWG (21.15 mm²) and 3 AWG (26.67 mm²)"],
+  ["35 mm²", "between 2 AWG (33.62 mm²) and 1 AWG (42.41 mm²)"],
+];
+
+const quickAwgReferences = [
+  ["16 AWG", "1.31 mm²", "A 1.5 mm² metric product has a larger nominal conductor area, but product equivalence still depends on the required specification."],
+  ["14 AWG", "2.08 mm²", "2.5 mm² is a nearby common metric nominal size, not an exact mathematical equivalent."],
+  ["12 AWG", "3.31 mm²", "It falls between common 2.5 mm² and 4 mm² metric conductor sizes."],
+  ["10 AWG", "5.26 mm²", "It falls between common 4 mm² and 6 mm² metric conductor sizes."],
+  ["8 AWG", "8.37 mm²", "It falls between common 6 mm² and 10 mm² metric conductor sizes."],
+];
+
+const awgRfqFields = [
+  ["Original wire designation", "Keep the original AWG size or full product designation."],
+  ["Required standard and edition", "Provide the exact project, national or international standard where specified."],
+  ["Conductor construction", "Solid, rigid stranded, flexible stranded or specified conductor class."],
+  ["Conductor material", "Copper or other specified conductor material."],
+  ["Rated voltage", "Provide the required voltage designation."],
+  ["Insulation requirement", "Material, temperature requirement and any other specified performance requirement."],
+  ["Installation / application", "Conduit, fixed building wiring, panel wiring or other approved installation condition."],
+  ["Quantity", "Total metres / feet by size and colour."],
+  ["Colour schedule", "Required colour and quantity by colour."],
+  ["Coil / reel length", "Required packing length."],
+  ["Marking", "Wire printing and label requirements."],
+  ["Tests / documentation", "Datasheet, test report, inspection and certification requirements."],
+  ["Destination", "Country, port or delivery location."],
+];
+
+function AwgToMm2BuildingWireGuide() {
+  return (
+    <GuideShell
+      title="AWG to mm² Building Wire Guide: Size Chart & Buyer Checks"
+      description="A practical comparison of AWG nominal conductor areas, common metric commercial cross-references and the specification checks required before product substitution."
+    >
+      <div className="buyer-guide-body awg-mm2-guide">
+        <p className="lead">
+          International wire RFQs often mix two size systems: <strong>American Wire Gauge (AWG)</strong> and metric conductor area in <strong>mm²</strong>. A buyer may send a requirement such as 14 AWG or 12 AWG, while a supplier&apos;s building-wire range is organized around 1.5 mm², 2.5 mm², 4 mm², 6 mm² and other metric nominal sizes.
+        </p>
+        <p>In RFQs and technical correspondence, <strong>mm² may also be written as mm2</strong>; both refer to square millimetres.</p>
+        <p>
+          The two systems can be compared by conductor area, but that comparison is only the first step. A rounded AWG-to-mm² cross-reference does not prove that two finished wire products use the same conductor construction, insulation, standard, resistance limits, voltage rating or dimensions.
+        </p>
+        <p>
+          For procurement, the useful question is therefore not only <strong>“What mm² is this AWG?”</strong> but also <strong>“What metric construction satisfies the original project specification?”</strong>
+        </p>
+
+        <div className="awg-concept-grid" aria-label="Three AWG and metric comparison concepts">
+          <article>
+            <span>01</span>
+            <h3>AWG nominal area reference</h3>
+            <p>The nominal cross-sectional area associated with an AWG gauge number.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Common commercial cross-reference</h3>
+            <p>A procurement reference that may pair an AWG size with a familiar nearby metric nominal size.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Finished-wire product equivalence</h3>
+            <p>A technical decision that cannot be confirmed from conductor area alone.</p>
+          </article>
+        </div>
+
+        <h2>What Is the Difference Between AWG and mm²?</h2>
+        <div className="awg-system-grid">
+          <article>
+            <span>AWG</span>
+            <h3>Gauge-number system</h3>
+            <ul>
+              <li>smaller AWG number = larger nominal conductor</li>
+              <li>gauge number does not state finished insulated-wire diameter</li>
+            </ul>
+          </article>
+          <article>
+            <span>mm²</span>
+            <h3>Nominal conductor area</h3>
+            <ul>
+              <li>directly states conductor cross-sectional area category</li>
+              <li>does not by itself define strand construction or finished wire diameter</li>
+            </ul>
+          </article>
+        </div>
+        <p>
+          A buyer therefore should not compare only the printed size. The applicable standard and complete conductor construction still matter. See the <Link href="/resources/building-wire-size-guide">building wire size guide</Link> for guidance on common metric conductor sizes.
+        </p>
+
+        <h2>AWG to mm² Chart: Nominal Conductor Area Reference</h2>
+        <div className="buyer-guide-table-wrap awg-desktop-reference-wrap">
+          <table className="buyer-guide-table awg-reference-table">
+            <thead><tr><th>AWG</th><th>Nominal area reference</th></tr></thead>
+            <tbody>
+              {awgNominalAreaRows.map(([awg, area]) => (
+                <tr key={awg}><th scope="row">{awg}</th><td>{area}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="awg-mobile-reference-list" aria-label="AWG nominal conductor area reference">
+          {awgNominalAreaRows.map(([awg, area]) => (
+            <article key={awg}><strong>{awg}</strong><span>{area}</span></article>
+          ))}
+        </div>
+        <aside className="buyer-guide-caution awg-area-warning">
+          <strong>Area reference only.</strong>
+          <p>The table compares nominal conductor area associated with AWG gauge sizes. It does not establish that an AWG-designated finished wire and a metric mm² building wire are interchangeable.</p>
+        </aside>
+        <p>The values are useful when an RFQ, drawing or datasheet uses AWG and the buyer needs to understand the approximate conductor-area scale. They should not be used as a finished-product substitution table.</p>
+
+        <h2>Why Do Some AWG-to-mm² Charts Show 14 AWG as 2.5 mm²?</h2>
+        <p>
+          Some commercial cable cross-reference charts pair common AWG sizes with nearby metric nominal sizes — for example, 14 AWG with 2.5 mm², 12 AWG with 4 mm² or 10 AWG with 6 mm².
+        </p>
+        <p>That type of chart is usually used as a <strong>commercial cross-reference between two commonly used size series</strong>, not as a statement that the conductor areas are mathematically identical.</p>
+        <div className="awg-example-comparison" aria-label="14 AWG commercial cross-reference explanation">
+          <article><span>14 AWG nominal area reference</span><strong>approximately 2.08 mm²</strong></article>
+          <article><span>Common metric size often discussed nearby</span><strong>2.5 mm²</strong></article>
+        </div>
+        <p>Those two numbers are not equal.</p>
+        <aside className="buyer-guide-takeaway">
+          <strong>Buyer takeaway</strong>
+          <p>Exact AWG area and common metric cross-reference are different concepts. Keep the original project specification when asking a supplier to review a metric alternative.</p>
+        </aside>
+
+        <h2>Where 1.5, 2.5, 4, 6 and 10 mm² Sit Against AWG Sizes</h2>
+        <div className="buyer-guide-table-wrap awg-desktop-metric-wrap">
+          <table className="buyer-guide-table awg-metric-table">
+            <thead><tr><th>Metric size</th><th>AWG nominal-area position</th></tr></thead>
+            <tbody>
+              {metricAwgPositionRows.map(([size, position], index) => (
+                <tr className={index < 5 ? "is-priority" : undefined} key={size}><th scope="row">{size}</th><td>{position}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="awg-mobile-metric-list" aria-label="Metric building-wire sizes by AWG nominal-area position">
+          {metricAwgPositionRows.map(([size, position], index) => (
+            <article className={index < 5 ? "is-priority" : undefined} key={size}><h3>{size}</h3><p>{position}</p></article>
+          ))}
+        </div>
+        <p>
+          A metric size may sit numerically between two AWG nominal areas. Selecting a metric product is therefore a specification decision, not simply a mathematical rounding exercise. Review the <Link href="/resources/building-wire-size-guide">1.5, 2.5, 4, 6 and 10 mm² building-wire sizes</Link> before preparing the metric portion of an RFQ.
+        </p>
+
+        <h2>16, 14, 12, 10 and 8 AWG: Quick Buyer Reference</h2>
+        <div className="awg-quick-grid">
+          {quickAwgReferences.map(([awg, area, copy]) => (
+            <article key={awg}>
+              <h3>{awg}</h3>
+              <strong>Nominal area reference: {area}</strong>
+              <p>{copy}</p>
+            </article>
+          ))}
+        </div>
+        <aside className="buyer-guide-takeaway">
+          <strong>Buyer takeaway</strong>
+          <p>A “next larger” metric size may have more nominal conductor area, but that alone does not prove compliance with the original AWG wire specification.</p>
+        </aside>
+
+        <h2>Same mm² Size Can Still Mean Different Building-Wire Construction</h2>
+        <div className="conductor-comparison-grid awg-conductor-grid" aria-label="Representative 2.5 square millimetre conductor constructions">
+          <article><span>BV — rigid, solid</span><h3>2.5 mm²</h3><strong>1 × 1.78 mm</strong></article>
+          <article><span>BV — rigid, stranded</span><h3>2.5 mm²</h3><strong>7 × 0.68 mm</strong></article>
+          <article><span>BVR — flexible, stranded</span><h3>2.5 mm²</h3><strong>19 × 0.41 mm</strong></article>
+        </div>
+        <p>
+          All three references sit in the same nominal 2.5 mm² conductor-area category, but their strand construction is different. This is why AWG-to-mm² area comparison cannot replace conductor-construction review. See the <Link href="/resources/bv-vs-bvr-building-wire-guide">BV vs BVR building wire comparison</Link> for the full construction distinction.
+        </p>
+
+        <h2>Can AWG and mm² Be Compared by Current Capacity?</h2>
+        <p><strong>Not by size conversion alone.</strong></p>
+        <p>Current-carrying capacity depends on the applicable cable standard and installation conditions. Nominal conductor area is important, but a project review may also need to consider:</p>
+        <ul className="buyer-guide-checklist">
+          <li>Conductor material</li>
+          <li>Conductor construction</li>
+          <li>Insulation system and temperature rating</li>
+          <li>Installation method</li>
+          <li>Conduit or enclosure conditions</li>
+          <li>Grouping with other circuits</li>
+          <li>Ambient conditions</li>
+          <li>Local electrical code</li>
+          <li>Project design requirements</li>
+        </ul>
+        <aside className="buyer-guide-caution">
+          <strong>Do not use an AWG-to-mm² chart as an ampacity table.</strong>
+          <p>Send the required standard and installation requirement for technical review.</p>
+        </aside>
+
+        <h2>How to Send an AWG Building-Wire Requirement to a Metric Supplier</h2>
+        <p>If your RFQ is written in AWG, keep the original designation and required standard. Huanyu can review whether an available metric building-wire construction is technically suitable for the project.</p>
+        <div className="awg-rfq-grid" aria-label="AWG building-wire RFQ checklist">
+          {awgRfqFields.map(([field, requirement]) => (
+            <article key={field}><h3>{field}</h3><p>{requirement}</p></article>
+          ))}
+        </div>
+        <aside className="buyer-guide-takeaway">
+          <strong>Buyer takeaway</strong>
+          <p>Keep the original AWG requirement in the RFQ. The supplier can then review whether a metric construction is technically acceptable instead of converting the size without a specification review.</p>
+        </aside>
+
+        <h2>Huanyu Building Wire References</h2>
+        <div className="building-wire-reference-grid awg-reference-product-grid">
+          <article>
+            <span>Rigid-conductor PVC insulated building wire</span>
+            <h3>BV</h3>
+            <p>Huanyu&apos;s BV range includes commonly requested metric building-wire sizes. Final conductor construction and the applicable specification are confirmed against the RFQ.</p>
+            <Link href="/products/single-core-pvc-building-wire">View BV Building Wire</Link>
+          </article>
+          <article>
+            <span>Flexible stranded PVC insulated building wire</span>
+            <h3>BVR</h3>
+            <p>Huanyu publishes BVR technical reference data for <strong>2.5–70 mm²</strong>. Final project suitability remains subject to the requested standard and construction.</p>
+            <Link href="/products/flexible-pvc-building-wire">View BVR Flexible Building Wire</Link>
+          </article>
+          <article>
+            <span>Building Wires &amp; House Wiring Cables</span>
+            <h3>Building Wire family</h3>
+            <p>Explore Huanyu&apos;s BV, BVR and BVVB building-wire range before sending your project specification.</p>
+            <Link href="/products/building-wires-flexible-cables">Explore Building Wires</Link>
+          </article>
+        </div>
+        <p className="awg-reference-links"><Link href="/resources/bv-vs-bvr-building-wire-guide">Read the BV vs BVR Building Wire Buyer Guide</Link></p>
+        <p className="awg-reference-links"><Link href="/resources/building-wire-size-guide">Read the Building Wire Size Guide</Link></p>
+
+        <h2>Frequently Asked Questions</h2>
+        <div className="buyer-guide-faq">
+          <article><h3>How many mm² is 16 AWG?</h3><p>The nominal conductor-area reference for 16 AWG is approximately <strong>1.31 mm²</strong>. A 1.5 mm² metric wire is a different nominal size and should not be described as mathematically identical.</p></article>
+          <article><h3>How many mm² is 14 AWG?</h3><p>The nominal conductor-area reference for 14 AWG is approximately <strong>2.08 mm²</strong>. Some commercial cross-reference charts pair 14 AWG with 2.5 mm², but that is not an exact area equality.</p></article>
+          <article><h3>How many mm² is 12 AWG?</h3><p>The nominal conductor-area reference for 12 AWG is approximately <strong>3.31 mm²</strong>. It sits between common 2.5 mm² and 4 mm² metric sizes.</p></article>
+          <article><h3>How many mm² is 10 AWG?</h3><p>The nominal conductor-area reference for 10 AWG is approximately <strong>5.26 mm²</strong>. It sits between common 4 mm² and 6 mm² metric sizes.</p></article>
+          <article><h3>How many mm² is 8 AWG?</h3><p>The nominal conductor-area reference for 8 AWG is approximately <strong>8.37 mm²</strong>. It sits between common 6 mm² and 10 mm² metric sizes.</p></article>
+          <article><h3>Is 2.5 mm² the same as 14 AWG?</h3><p>No. 14 AWG is approximately 2.08 mm² in nominal conductor area. A 2.5 mm² metric product is a different nominal conductor size.</p></article>
+          <article><h3>Is 4 mm² the same as 12 AWG?</h3><p>No. 12 AWG is approximately 3.31 mm². A 4 mm² product may have a larger nominal conductor area, but that does not prove product equivalence.</p></article>
+          <article><h3>Can I convert an AWG purchase specification directly to mm²?</h3><p>Use the area comparison only as an initial reference. Keep the original wire specification and confirm the applicable standard, conductor construction, insulation, voltage rating, resistance limits, dimensions, tests and documentation before changing the designation.</p></article>
+        </div>
+      </div>
+
+      <div className="update-article-cta buyer-guide-cta bv-bvr-guide-cta awg-guide-cta">
+        <h2>Have an AWG Building-Wire Specification or BOQ?</h2>
+        <p>Send the original AWG designation, required standard, conductor construction, voltage rating, colour, packing, quantity and destination. Huanyu Cable can review whether an available metric building-wire construction fits the requested technical and documentation requirements before quotation.</p>
+        <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta" data-ga-product-slug="building-wires-flexible-cables">Send Your Building Wire Specification</Link>
+        <div className="buyer-guide-cta-links" aria-label="Related building wire links">
+          <Link href="/products/building-wires-flexible-cables">Explore Building Wires</Link>
+          <Link href="/products/single-core-pvc-building-wire">View BV Building Wire</Link>
+          <Link href="/products/flexible-pvc-building-wire">View BVR Flexible Building Wire</Link>
+          <Link href="/resources/bv-vs-bvr-building-wire-guide">BV vs BVR Building Wire Comparison</Link>
+          <Link href="/resources/building-wire-size-guide">Building Wire Size Guide</Link>
+        </div>
+      </div>
+    </GuideShell>
+  );
+}
+
 export default async function BuyerGuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const guide = getBuyerGuide(slug);
@@ -1248,6 +2135,9 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
       {slug === "pv1-f-vs-h1z2z2-k-solar-cable-selection-guide" && <SolarCableSelectionGuide />}
       {slug === "low-voltage-xlpe-cable-rfq-checklist" && <LowVoltageXlpeRfqChecklistGuide />}
       {slug === "lszh-vs-flame-retardant-vs-fire-resistant-cable" && <LszhFlameFireComparisonGuide />}
+      {slug === "bv-vs-bvr-building-wire-guide" && <BvVsBvrBuildingWireGuide />}
+      {slug === "building-wire-size-guide" && <BuildingWireSizeGuide />}
+      {slug === "awg-to-mm2-building-wire-guide" && <AwgToMm2BuildingWireGuide />}
     </>
   );
 }
