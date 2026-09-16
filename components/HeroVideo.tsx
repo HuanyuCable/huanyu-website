@@ -8,21 +8,28 @@ const poster = "/media/video/huanyu-factory-poster.webp";
 
 export function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const playRequestedRef = useRef(false);
   const [paused, setPaused] = useState(false);
   const [failed, setFailed] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [videoSrc, setVideoSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReducedMotion(prefersReducedMotion);
+    if (!prefersReducedMotion) {
+      setVideoSrc(window.matchMedia("(max-width: 720px)").matches ? mobile : desktop);
+    }
   }, []);
 
   useEffect(() => {
-    if (reducedMotion) return;
+    if (!videoSrc || reducedMotion || playRequestedRef.current) return;
     const video = videoRef.current;
     if (!video) return;
+    playRequestedRef.current = true;
     video.play().catch(() => setPaused(true));
-  }, [reducedMotion]);
+  }, [reducedMotion, videoSrc]);
 
   function togglePlayback() {
     const video = videoRef.current;
@@ -43,6 +50,7 @@ export function HeroVideo() {
     <div className="hero-media">
       <video
         ref={videoRef}
+        src={videoSrc ?? undefined}
         autoPlay
         muted
         loop
@@ -52,10 +60,7 @@ export function HeroVideo() {
         onError={() => setFailed(true)}
         onCanPlay={() => setLoaded(true)}
         aria-label="Huanyu Cable factory production view"
-      >
-        <source src={mobile} media="(max-width: 720px)" type="video/mp4" />
-        <source src={desktop} type="video/mp4" />
-      </video>
+      />
       {loaded && (
         <button className="video-control" type="button" onClick={togglePlayback} aria-label={paused ? "Play background video" : "Pause background video"}>
           {paused ? "Play" : "Pause"}
