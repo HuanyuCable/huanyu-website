@@ -1,12 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { preload } from "react-dom";
 
 const desktop = "/media/video/huanyu-factory-desktop.mp4";
 const mobile = "/media/video/huanyu-factory-mobile.mp4";
 const poster = "/media/video/huanyu-factory-poster.webp";
 
 export function HeroVideo() {
+  preload(poster, {
+    as: "image",
+    type: "image/webp",
+    fetchPriority: "high",
+  });
+
   const videoRef = useRef<HTMLVideoElement>(null);
   const playRequestedRef = useRef(false);
   const [paused, setPaused] = useState(false);
