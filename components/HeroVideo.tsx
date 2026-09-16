@@ -42,12 +42,8 @@ export function HeroVideo() {
     }
   }
 
-  if (failed || reducedMotion) {
-    return <div className="hero-media hero-fallback" style={{ backgroundImage: `url(${poster})` }} />;
-  }
-
   return (
-    <div className="hero-media">
+    <div className="hero-media hero-fallback" style={{ backgroundImage: `url(${poster})` }}>
       <video
         ref={videoRef}
         src={videoSrc ?? undefined}
@@ -60,8 +56,9 @@ export function HeroVideo() {
         onError={() => setFailed(true)}
         onCanPlay={() => setLoaded(true)}
         aria-label="Huanyu Cable factory production view"
+        style={{ visibility: failed || reducedMotion ? "hidden" : undefined }}
       />
-      {loaded && (
+      {loaded && !failed && !reducedMotion && (
         <button className="video-control" type="button" onClick={togglePlayback} aria-label={paused ? "Play background video" : "Pause background video"}>
           {paused ? "Play" : "Pause"}
         </button>
