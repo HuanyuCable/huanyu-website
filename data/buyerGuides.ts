@@ -10,6 +10,17 @@ export type BuyerGuide = {
 
 export const buyerGuides: BuyerGuide[] = [
   {
+    slug: "cable-procurement-strategy",
+    title: "Cable Procurement Strategy: How to Choose, Compare and Buy Power Cables",
+    shortTitle: "Cable Procurement Strategy & Power Cable Buying Guide",
+    metaTitle: "Power Cable Procurement Strategy & Buying Guide | Huanyu Cable",
+    description:
+      "Practical cable buying guide for distributors, contractors and EPC buyers: cable types, price factors, RFQs, quality checks and quotation comparison.",
+    excerpt:
+      "A practical guide to cable types, price factors, quality checks, RFQs, quotation comparison, supplier review, packing and delivery for bulk and project buyers.",
+    tags: ["Buyer Guide", "Cable Procurement"],
+  },
+  {
     slug: "sta-vs-swa-armoured-cable-guide",
     title: "STA vs SWA Armoured Cable: Selection Guide for Underground Power Projects",
     shortTitle: "STA vs SWA Armoured Cable",

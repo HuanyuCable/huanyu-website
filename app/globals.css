@@ -897,6 +897,41 @@ p { margin: 0 0 22px; color: var(--muted); }
 .buyer-guide-cta-links { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 24px; }
 .buyer-guide-cta-links a { color: var(--navy); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 .buyer-guide-cta-links a:hover, .buyer-guide-cta-links a:focus-visible { color: var(--orange-dark); }
+.procurement-guide .lead { color: #33414d; font-size: 19px; line-height: 1.75; }
+.procurement-guide > h2 { scroll-margin-top: 110px; }
+.procurement-guide > p { margin-bottom: 22px; }
+.procurement-seven-checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0; list-style: none; counter-reset: procurement-check; }
+.procurement-seven-checks li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 3px 11px; padding: 18px; border-top: 3px solid var(--navy); background: var(--soft); counter-increment: procurement-check; }
+.procurement-seven-checks li::before { content: counter(procurement-check, decimal-leading-zero); grid-row: span 2; color: var(--orange-dark); font-size: 15px; font-weight: 900; }
+.procurement-seven-checks strong { color: var(--navy); line-height: 1.35; }
+.procurement-seven-checks span { color: #33414d; line-height: 1.55; }
+.procurement-seven-checks > li:last-child, .procurement-paths > article:last-child, .procurement-buyers > article:last-child { grid-column: 1 / -1; }
+.procurement-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 26px 0 36px; }
+.procurement-card-grid article { padding: 23px; border-top: 4px solid var(--navy); background: var(--soft); min-width: 0; }
+.procurement-card-grid article > span { color: var(--orange-dark); font-size: 12px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.procurement-card-grid h3 { margin: 9px 0 12px; font-size: 21px; overflow-wrap: anywhere; }
+.procurement-card-grid p { margin: 0; color: #33414d; line-height: 1.65; }
+.procurement-table { min-width: 0; }
+.procurement-table td:first-child { color: var(--navy); font-weight: 700; }
+.procurement-table a { color: inherit; font-weight: 400; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.procurement-table a:hover, .procurement-table a:focus-visible { color: var(--orange-dark); }
+.procurement-example-list, .procurement-question-list { display: grid; gap: 12px; margin: 25px 0 36px; }
+.procurement-example-list article, .procurement-question-list p { margin: 0; padding: 20px 22px; border-left: 3px solid var(--navy); background: var(--soft); }
+.procurement-example-list h3 { margin: 0 0 9px; font-size: 20px; }
+.procurement-example-list p, .procurement-question-list p { color: #33414d; line-height: 1.65; }
+.procurement-example-list p { margin: 0; }
+.procurement-example-list code { white-space: normal; overflow-wrap: anywhere; }
+.procurement-quality-list { display: grid; gap: 12px; padding-left: 26px; }
+.procurement-quality-list li { padding: 14px 18px; background: var(--soft); }
+.procurement-quality-list strong { color: var(--navy); }
+.procurement-quality-list p { margin: 5px 0 0; color: #33414d; line-height: 1.6; }
+.procurement-rfq-list, .procurement-mistakes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 24px; padding-left: 26px; }
+.procurement-rfq-list li, .procurement-mistakes li { padding: 8px 8px 8px 0; color: #33414d; line-height: 1.55; }
+.procurement-related-guides { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; padding: 0; list-style: none; }
+.procurement-related-guides li { padding: 15px 17px; border-left: 3px solid var(--navy); background: var(--soft); }
+.procurement-related-guides a, .procurement-cta .buyer-guide-cta-links a { color: inherit; font-weight: 400; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.procurement-related-guides a:hover, .procurement-related-guides a:focus-visible, .procurement-cta .buyer-guide-cta-links a:hover, .procurement-cta .buyer-guide-cta-links a:focus-visible { color: var(--orange-dark); }
+.procurement-cta h2 { overflow-wrap: anywhere; }
 .size-guide-mobile-list, .size-guide-mobile-rfq { display: none; }
 .size-guide-table { table-layout: fixed; }
 .size-guide-table th:first-child { width: 16%; }
@@ -946,6 +981,8 @@ p { margin: 0 0 22px; color: var(--muted); }
 .awg-guide-cta .buyer-guide-cta-links a { color: inherit; font-weight: 400; }
 .awg-guide-cta .buyer-guide-cta-links a:hover, .awg-guide-cta .buyer-guide-cta-links a:focus-visible { color: var(--orange-dark); }
 .review-note .related-guide-link { color: var(--orange-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+.review-note .xlpe-rfq-link { color: inherit; font-weight: 400; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.review-note .xlpe-rfq-link:hover, .review-note .xlpe-rfq-link:focus-visible { color: var(--orange-dark); }
 .model-link-card.related-guide-link strong { color: var(--orange-dark); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
 .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
 .contact-checklist { padding-left: 25px; margin: 28px 0 40px; }
@@ -1158,6 +1195,26 @@ p { margin: 0 0 22px; color: var(--muted); }
   .buyer-guide-body > p { font-size: 17px; }
   .buyer-guide-body > h2 { margin-top: 42px; }
   .buyer-guide-table { min-width: 640px; }
+  .buyer-guide:has(.procurement-guide) .buyer-guide-hero h1 { font-size: 34px; overflow-wrap: normal; }
+  .procurement-guide .lead { font-size: 17px; }
+  .procurement-seven-checks, .procurement-card-grid, .procurement-rfq-list, .procurement-mistakes, .procurement-related-guides { grid-template-columns: 1fr; }
+  .procurement-seven-checks > li:last-child, .procurement-paths > article:last-child, .procurement-buyers > article:last-child { grid-column: auto; }
+  .procurement-card-grid { gap: 12px; }
+  .procurement-card-grid article { padding: 19px; }
+  .procurement-table-wrap { overflow: visible; border: 0; background: transparent; }
+  .buyer-guide-table.procurement-table, .procurement-table tbody, .procurement-table tr, .procurement-table td { display: block; width: 100%; min-width: 0; }
+  .procurement-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  .procurement-table tbody { display: grid; gap: 12px; }
+  .procurement-table tr { padding: 16px 18px; border-top: 3px solid var(--navy); background: var(--soft); }
+  .procurement-table td { padding: 0; border: 0; overflow-wrap: anywhere; }
+  .procurement-table td:first-child { margin-bottom: 7px; font-size: 17px; }
+  .procurement-table td + td { margin-top: 7px; color: #33414d; }
+  .procurement-family-table td:nth-child(2) { color: var(--navy); }
+  .procurement-family-table td:nth-child(3) { padding-top: 9px; border-top: 1px solid var(--line); }
+  .procurement-workflow-table td:nth-child(3) { color: var(--muted); }
+  .procurement-quality-list { padding-left: 22px; }
+  .procurement-rfq-list, .procurement-mistakes { gap: 2px; }
+  .procurement-cta .button { width: 100%; max-width: 100%; padding-right: 15px; padding-left: 15px; white-space: normal; text-align: center; }
   .technical-term { white-space: normal; }
   .conductor-comparison-grid, .building-wire-reference-grid { grid-template-columns: 1fr; }
   .conductor-comparison-grid { gap: 12px; }

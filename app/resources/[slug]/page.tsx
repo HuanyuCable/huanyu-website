@@ -6,6 +6,7 @@ import { buyerGuides, getBuyerGuide } from "@/data/buyerGuides";
 import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 import { createBreadcrumbJsonLd, createTechArticleJsonLd } from "@/lib/structuredData";
+import { CableProcurementGuide } from "./CableProcurementGuide";
 
 export function generateStaticParams() {
   return buyerGuides.map((guide) => ({ slug: guide.slug }));
@@ -2127,6 +2128,14 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
         ])}
       />
       <JsonLd data={createTechArticleJsonLd(guide)} />
+      {slug === "cable-procurement-strategy" && (
+        <GuideShell
+          title="Cable Procurement Strategy: How to Choose, Compare and Buy Power Cables"
+          description="A practical power cable buying guide for distributors, contractors, engineering buyers and EPC procurement teams."
+        >
+          <CableProcurementGuide />
+        </GuideShell>
+      )}
       {slug === "sta-vs-swa-armoured-cable-guide" && <StaVsSwaGuide />}
       {slug === "medium-voltage-xlpe-cable-selection-guide" && <MediumVoltageSelectionGuide />}
       {slug === "what-we-check-when-mv-cable-rfq-only-says-35-kv" && <Mv35KvRfqGuide />}

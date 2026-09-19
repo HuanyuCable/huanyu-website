@@ -329,7 +329,7 @@ export function LowVoltageXlpeFamilyProductPage() {
           <div className="review-note">
             For quotation, please confirm the voltage rating (0.6/1 kV or 1.8/3 kV), conductor material, core arrangement, cross-section, sheath, armour requirement and installation route. Applicable IEC 60502-1, GB/T or project-specific requirements, together with required tests and delivery documents, are reviewed before the final cable construction is confirmed. <TrackedLink className="text-link" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-xlpe-power-cables" }}>Email BOQ / Specs <span>-&gt;</span></TrackedLink>
             <p>For a practical armour comparison, read the <Link href="/resources/sta-vs-swa-armoured-cable-guide">STA vs SWA armoured cable selection guide</Link>.</p>
-            <p>Preparing a 0.6/1 kV enquiry? Review the <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.</p>
+            <p>Preparing a 0.6/1 kV enquiry? Review the <Link className="xlpe-rfq-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.</p>
           </div>
         </div>
       </section>
