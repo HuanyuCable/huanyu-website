@@ -7,9 +7,16 @@ import { site } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", "/products", "/applications", "/projects", "/quality", "/about", "/resources", "/company-updates", "/contact"];
+  const standaloneProductPages = [
+    "/products/energy-storage-cables",
+    "/products/ev-charging-cables",
+    "/products/communication-elv-cables",
+    "/products/rubber-sheathed-flexible-cables",
+  ];
   return [
     ...pages.map((path) => ({ url: `${site.url}${path}`, changeFrequency: path === "" ? "weekly" as const : "monthly" as const, priority: path === "" ? 1 : 0.7 })),
     ...products.filter((product) => !product.excludeFromSitemap).map((product) => ({ url: `${site.url}/products/${product.slug}`, changeFrequency: "monthly" as const, priority: product.category === "Core" ? 0.9 : 0.6 })),
+    ...standaloneProductPages.map((path) => ({ url: `${site.url}${path}`, changeFrequency: "monthly" as const, priority: 0.6 })),
     ...buyerGuides.map((guide) => ({ url: `${site.url}/resources/${guide.slug}`, changeFrequency: "monthly" as const, priority: 0.7 })),
     ...companyUpdates.map((update) => ({ url: `${site.url}/company-updates/${update.slug}`, changeFrequency: "monthly" as const, priority: 0.6 })),
     ...credentialGroups.map((group) => ({ url: `${site.url}/quality/credentials/${group.slug}`, changeFrequency: "monthly" as const, priority: 0.6 })),
