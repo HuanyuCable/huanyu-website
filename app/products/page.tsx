@@ -190,9 +190,18 @@ export default function ProductsPage() {
             <p>HUANYU CABLE supplies low- and medium-voltage power cables and supports project requirements across building wiring, renewable energy, industrial control, communication &amp; ELV, and selected special cable applications.</p>
           </div>
         </div>
+        <div className={styles.heroImageMobile}>
+          <Image
+            src="/images/products/products-main-v3/products_hero_cable_reel_worker_HUANYU_MOBILE.webp"
+            alt="Cable manufacturing scene with a large cable reel and Huanyu Cable worker"
+            fill
+            sizes="(max-width: 720px) 100vw, 1px"
+            className={styles.heroMobileImage}
+          />
+        </div>
       </section>
 
-      <section className={`${styles.section} ${styles.powerSection}`} aria-labelledby="power-products-title">
+      <section id="power-infrastructure" className={`${styles.section} ${styles.powerSection}`} aria-labelledby="power-products-title">
         <div className="container">
           <div className={styles.sectionHeading}>
             <div>
@@ -207,7 +216,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.buildingSection}`} aria-labelledby="building-products-title">
+      <section id="building-construction" className={`${styles.section} ${styles.buildingSection}`} aria-labelledby="building-products-title">
         <div className="container">
           <div className={styles.sectionHeading}>
             <div>
@@ -222,7 +231,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.renewableSection}`} aria-labelledby="renewable-products-title">
+      <section id="renewable-energy" className={`${styles.section} ${styles.renewableSection}`} aria-labelledby="renewable-products-title">
         <div className="container">
           <div className={styles.sectionHeading}>
             <div>
@@ -240,7 +249,7 @@ export default function ProductsPage() {
       <section className={styles.featureSection} aria-label="Industrial control and communication cable families">
         <div className={`container ${styles.featureGrid}`}>
           {featureProducts.map((product) => (
-            <article className={styles.featureCard} key={product.href}>
+            <article id={product.number === "04" ? "industrial-control-automation" : "communication-elv"} className={styles.featureCard} key={product.href}>
               <Image
                 src={product.image}
                 alt={product.imageAlt}
@@ -262,7 +271,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className={styles.rubberSection} aria-labelledby="rubber-products-title">
+      <section id="special-cable-solutions" className={styles.rubberSection} aria-labelledby="rubber-products-title">
         <div className="container">
           <article className={styles.rubberCard}>
             <Image

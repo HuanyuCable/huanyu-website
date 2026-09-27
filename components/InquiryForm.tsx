@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { usePathname } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
+import { productInterestGroups } from "@/data/inquiry";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -66,17 +67,12 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
         <label>
           Product Family / Interest
           <select name="product" defaultValue="">
-            <option value="">Select a product family if applicable</option>
-            <option>Low Voltage Armoured Power Cables</option>
-            <option>Low Voltage XLPE Power Cables</option>
-            <option>Medium Voltage Power Cables</option>
-            <option>LSZH & Fire-safe Cables</option>
-            <option>Building Wires & Flexible Cables</option>
-            <option>Control & Instrumentation Cables</option>
-            <option>Solar Cables / PV Cables</option>
-            <option>Overhead Insulated Cables</option>
-            <option>ACSR Bare Overhead Conductors</option>
-            <option>Other / Project-specific Requirement</option>
+            <option value="" disabled hidden>Select a product family if applicable</option>
+            {productInterestGroups.map((group) => (
+              <optgroup key={group.label} label={group.label}>
+                {group.options.map((option) => <option key={option}>{option}</option>)}
+              </optgroup>
+            ))}
           </select>
         </label>
       </div>

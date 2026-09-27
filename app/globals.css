@@ -65,6 +65,13 @@ p { margin: 0 0 22px; color: var(--muted); }
 .nav-dropdown a { display: block; padding: 10px 12px; color: rgba(255,255,255,.76); font-size: 13px; line-height: 1.3; }
 .nav-dropdown a:hover, .nav-dropdown a:focus-visible { color: white; background: rgba(255,255,255,.08); outline: 0; }
 .nav-dropdown-heading { display: block; padding: 12px 12px 6px; color: #ffad7c; font-size: 11px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.nav-dropdown-products { min-width: 360px; padding: 8px; }
+.nav-dropdown-products .nav-dropdown-overview { margin-bottom: 3px; padding: 9px 11px 10px; border-bottom: 1px solid rgba(255,255,255,.14); color: #ffad7c; font-weight: 850; }
+.nav-dropdown-products .nav-dropdown-category { padding: 8px 11px; }
+.nav-dropdown-category strong, .nav-dropdown-category small { display: block; }
+.nav-dropdown-category strong { color: rgba(255,255,255,.92); font-size: 13px; line-height: 1.3; }
+.nav-dropdown-category small { margin-top: 3px; color: rgba(255,255,255,.5); font-size: 10.5px; font-weight: 600; line-height: 1.35; white-space: nowrap; }
+.nav-dropdown-category:hover small, .nav-dropdown-category:focus-visible small { color: rgba(255,255,255,.7); }
 .menu-button { display: none; width: 42px; height: 42px; border: 0; background: transparent; }
 .menu-button span { display: block; height: 2px; background: white; margin: 6px; }
 
@@ -1061,6 +1068,9 @@ p { margin: 0 0 22px; color: var(--muted); }
   .nav-item > a::after { display: none; }
   .nav-dropdown { position: static; display: grid; gap: 0; min-width: 0; padding: 0 0 10px 12px; background: transparent; border: 0; box-shadow: none; opacity: 1; visibility: visible; transform: none; }
   .nav-dropdown a { padding: 7px 0; color: rgba(255,255,255,.6); }
+  .nav-dropdown-products .nav-dropdown-overview { margin-bottom: 2px; padding: 9px 0; }
+  .nav-dropdown-products .nav-dropdown-category { padding: 7px 0; }
+  .nav-dropdown-category small { white-space: normal; }
   .nav-dropdown-heading { padding: 12px 0 5px; }
   .main-nav > .button { margin-top: 16px; width: 100%; }
   .menu-button { display: block; }

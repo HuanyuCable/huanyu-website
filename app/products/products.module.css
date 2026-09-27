@@ -7,7 +7,7 @@
   padding: 0;
   color: #fff;
   background-color: #061827;
-  background-image: url('/images/products/products-main-v3/products_hero_desktop_FINAL_APPROVED.png');
+  background-image: url('/images/products/products-main-v3/products_hero_cable_reel_worker_HUANYU_FINAL.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,18 +17,23 @@
   display: none;
 }
 
-.heroInner { position: relative; z-index: 1; }
+.heroInner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 78px;
+}
 .heroText {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+  max-width: 790px;
+}
+.heroImageMobile {
+  display: none;
+}
+.heroMobileImage {
+  object-fit: cover;
+  object-position: center;
 }
 .heroEyebrow, .sectionEyebrow, .featureContent > span, .rubberContent > span {
   display: block;
@@ -251,18 +256,20 @@
 @media (max-width: 720px) {
   .hero {
     aspect-ratio: auto;
-    min-height: 370px;
-    display: flex;
-    align-items: flex-end;
-    padding: 104px 0 42px;
-    background-image:
-      linear-gradient(90deg, rgba(3,17,29,.95) 0%, rgba(3,17,29,.8) 58%, rgba(3,17,29,.34) 100%),
-      linear-gradient(0deg, rgba(3,17,29,.58), transparent 58%),
-      url('/images/products/products-main-v3/HUANYU_PRODUCTS_V3_MOBILE_HERO_RIGHT_SHIFT_FINAL.png');
-    background-position: center, center, center;
+    min-height: 0;
+    display: block;
+    padding: 0;
+    background-image: linear-gradient(135deg, #061827 0%, #0a2639 58%, #061827 100%);
+    background-position: center;
     background-size: cover;
   }
   .hero::after { display: none; }
+  .heroInner {
+    height: auto;
+    display: block;
+    padding-top: 96px;
+    padding-bottom: 34px;
+  }
   .heroText {
     position: static;
     width: auto;
@@ -274,6 +281,16 @@
     clip-path: none;
     white-space: normal;
   }
+  .heroImageMobile {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: clamp(195px, 56vw, 230px);
+    overflow: hidden;
+    border-top: 1px solid rgba(255,255,255,.12);
+    background: #081c2c;
+  }
+  .heroMobileImage { object-position: center; }
   .hero h1 { max-width: 345px; font-size: clamp(38px, 11vw, 48px); line-height: 1.02; }
   .hero p { max-width: 355px; font-size: 15px; line-height: 1.55; }
   .heroEyebrow { margin-bottom: 9px; }

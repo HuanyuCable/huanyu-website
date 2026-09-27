@@ -7,3 +7,10 @@ out
 .DS_Store
 npm-debug.log*
 *.tsbuildinfo
+
+# Local working artifacts
+artifacts/
+output/
+reports/
+review/
+temp/

@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroVideo } from "@/components/HeroVideo";
+import { HomeProductPortfolio } from "@/components/HomeProductPortfolio";
 import { InquiryForm } from "@/components/InquiryForm";
 import { CompanyUpdateCard } from "@/components/CompanyUpdateCard";
-import { ProductCard } from "@/components/ProductCard";
 import { companyUpdates } from "@/data/companyUpdates";
-import { coreProducts } from "@/data/products";
 
 export const metadata: Metadata = {
   title: { absolute: "HUANYU CABLE | Power Cable Manufacturer in China" },
@@ -37,6 +36,8 @@ export default function HomePage() {
           <div><strong>OEM</strong><span>Specification-based production</span></div>
         </div>
       </section>
+
+      <HomeProductPortfolio />
 
       <section className="section">
         <div className="container">
@@ -87,18 +88,6 @@ export default function HomePage() {
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-muted">
-        <div className="container">
-          <div className="section-heading home-section-heading">
-            <div><span className="eyebrow">Focused Product Portfolio</span><h2>A focused power cable portfolio.</h2></div>
-            <p>Our product portfolio is organized around three core cable families, supported by selected complementary ranges for project supply.</p>
-          </div>
-          <div className="product-grid core-grid home-product-grid">
-            {coreProducts.map((product) => <ProductCard key={product.slug} product={product} numbered />)}
           </div>
         </div>
       </section>

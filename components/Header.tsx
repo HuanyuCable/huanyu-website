@@ -7,7 +7,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 type NavDropdownItem =
   | { kind: "group"; label: string }
-  | { href: string; label: string };
+  | { href: string; label: string; keywords?: string };
 
 type NavItem = {
   href: string;
@@ -21,14 +21,37 @@ const nav: NavItem[] = [
     href: "/products",
     label: "Products",
     items: [
-      { href: "/products/low-voltage-armoured-power-cables", label: "Low Voltage Armoured Power Cables" },
-      { href: "/products/low-voltage-xlpe-power-cables", label: "Low Voltage XLPE Power Cables" },
-      { href: "/products/medium-voltage-xlpe-power-cables", label: "Medium Voltage Power Cables" },
-      { href: "/products/lszh-fire-safe-cables", label: "LSZH & Fire-safe Cables" },
-      { href: "/products/overhead-insulated-cables", label: "Overhead Line Products" },
-      { href: "/products/building-wires-flexible-cables", label: "Building Wires & Flexible Cables" },
-      { href: "/products/control-instrumentation-cables", label: "Control & Instrumentation Cables" },
-      { href: "/products/solar-cables", label: "Solar Cables" },
+      { href: "/products", label: "All Cable Products" },
+      {
+        href: "/products#power-infrastructure",
+        label: "Power & Infrastructure",
+        keywords: "LV Armoured · LV XLPE · MV XLPE · LSZH · Overhead",
+      },
+      {
+        href: "/products#building-construction",
+        label: "Building & Construction",
+        keywords: "Building Wires · BV · BVR",
+      },
+      {
+        href: "/products#renewable-energy",
+        label: "Renewable Energy",
+        keywords: "Solar · Energy Storage · EV Charging",
+      },
+      {
+        href: "/products#industrial-control-automation",
+        label: "Industrial Control & Automation",
+        keywords: "Control · Screened · RS485 · Motion",
+      },
+      {
+        href: "/products#communication-elv",
+        label: "Communication & ELV",
+        keywords: "Network · CCTV & RF · Fire Alarm · Audio & PA",
+      },
+      {
+        href: "/products#special-cable-solutions",
+        label: "Special Cable Solutions",
+        keywords: "Rubber-Sheathed Flexible · IEC 60245",
+      },
     ],
   },
   { href: "/applications", label: "Applications" },
@@ -172,11 +195,21 @@ export function Header() {
                   {item.label}
                 </Link>
                 {item.items && (
-                  <div className="nav-dropdown" id={dropdownId}>
+                  <div className={item.label === "Products" ? "nav-dropdown nav-dropdown-products" : "nav-dropdown"} id={dropdownId}>
                     {item.items.map((child) =>
                       "href" in child ? (
-                        <Link href={child.href} key={`${item.label}-${child.label}`} onClick={closeAllNavigation}>
-                          {child.label}
+                        <Link
+                          className={child.keywords ? "nav-dropdown-category" : item.label === "Products" ? "nav-dropdown-overview" : undefined}
+                          href={child.href}
+                          key={`${item.label}-${child.label}`}
+                          onClick={closeAllNavigation}
+                        >
+                          {child.keywords ? (
+                            <>
+                              <strong>{child.label}</strong>
+                              <small>{child.keywords}</small>
+                            </>
+                          ) : child.label}
                         </Link>
                       ) : (
                         <span className="nav-dropdown-heading" key={`${item.label}-${child.label}`}>
