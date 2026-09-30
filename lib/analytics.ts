@@ -7,7 +7,9 @@ export type AnalyticsEventName =
   | "whatsapp_click"
   | "catalog_download"
   | "product_specification_download"
-  | "rfq_click";
+  | "rfq_click"
+  | "rfq_form_start"
+  | "rfq_submit_success";
 
 type AnalyticsParameters = Record<string, string | number | boolean | undefined>;
 

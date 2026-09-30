@@ -57,7 +57,7 @@ export async function POST(request: Request) {
 
     const { error } = await resend.emails.send({ from, to: [to], replyTo: email, subject, html });
     if (error) throw new Error(error.message);
-    return NextResponse.json({ ok: true });
+    return NextResponse.json({ ok: true, submissionConfirmed: true });
   } catch (error) {
     console.error("Inquiry submission error", error);
     return NextResponse.json({ error: `Unable to send the inquiry. Please email ${site.email} directly.` }, { status: 500 });

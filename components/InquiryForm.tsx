@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
 import { productInterestGroups } from "@/data/inquiry";
@@ -10,10 +10,48 @@ type Status = "idle" | "sending" | "success" | "error";
 export function InquiryForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  const [confirmedSuccessCount, setConfirmedSuccessCount] = useState(0);
   const pathname = usePathname();
+  const formStarted = useRef(false);
+  const submitting = useRef(false);
+  const trackedSuccessCount = useRef(0);
+  const formContext = pathname === "/"
+    ? "home_inquiry"
+    : pathname === "/contact"
+      ? "contact_inquiry"
+      : pathname.startsWith("/products/")
+        ? "product_inquiry"
+        : "site_inquiry";
+
+  useEffect(() => {
+    if (status !== "success" || confirmedSuccessCount === trackedSuccessCount.current) return;
+    trackedSuccessCount.current = confirmedSuccessCount;
+    try {
+      trackEvent("rfq_submit_success", { form_context: formContext });
+    } catch {
+      // Analytics must not affect the inquiry result shown to the visitor.
+    }
+  }, [status, confirmedSuccessCount, formContext]);
+
+  function startOnMeaningfulChange(event: FormEvent<HTMLFormElement>) {
+    if (formStarted.current) return;
+    const field = event.target;
+    if (!(field instanceof HTMLInputElement || field instanceof HTMLTextAreaElement || field instanceof HTMLSelectElement)) return;
+    if (!(["name", "company", "email", "country", "phone", "product", "requirements"].includes(field.name))) return;
+    if (!field.value.trim()) return;
+
+    formStarted.current = true;
+    try {
+      trackEvent("rfq_form_start", { form_context: formContext });
+    } catch {
+      // Analytics must not interrupt typing or form submission.
+    }
+  }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (submitting.current) return;
+    submitting.current = true;
     setStatus("sending");
     setMessage("");
     const form = event.currentTarget;
@@ -29,20 +67,18 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
       if (!response.ok) throw new Error(result.error || "Unable to send inquiry.");
       form.reset();
       setStatus("success");
-      const productSlug = pathname.startsWith("/products/") ? pathname.split("/")[2] : undefined;
-      trackEvent("contact_form_submit", {
-        form_name: productSlug ? "product_inquiry" : "contact_inquiry",
-        product_slug: productSlug,
-      });
       setMessage("Your request has been received. Our team will review the specification and respond by email.");
+      if (result?.submissionConfirmed === true) setConfirmedSuccessCount((count) => count + 1);
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Unable to send inquiry.");
+    } finally {
+      submitting.current = false;
     }
   }
 
   return (
-    <form className={compact ? "inquiry-form compact" : "inquiry-form"} onSubmit={submit}>
+    <form className={compact ? "inquiry-form compact" : "inquiry-form"} onSubmit={submit} onInput={startOnMeaningfulChange} onChange={startOnMeaningfulChange}>
       <div className="form-grid">
         <label>
           Name *
