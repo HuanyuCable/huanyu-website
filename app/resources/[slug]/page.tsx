@@ -18,11 +18,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!guide) return {};
 
   const title = guide.metaTitle ?? `${guide.shortTitle} | HUANYU CABLE`;
+  const seoTitle = slug === "cable-procurement-strategy" ? "Cable Procurement Strategy: Power Cable RFQ Guide" : title;
+  const seoDescription = slug === "cable-procurement-strategy"
+    ? "Practical guide for EPC buyers to define power cable specs, prepare RFQs, compare quotes, evaluate suppliers, and confirm testing and delivery."
+    : guide.description;
   const url = `${site.url}/resources/${guide.slug}`;
 
   return {
-    title: { absolute: title },
-    description: guide.description,
+    title: { absolute: seoTitle },
+    description: seoDescription,
     alternates: { canonical: `/resources/${guide.slug}` },
     openGraph: {
       type: "article",
