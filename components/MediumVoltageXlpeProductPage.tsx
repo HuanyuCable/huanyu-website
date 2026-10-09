@@ -142,10 +142,10 @@ export function MediumVoltageXlpeProductPage() {
         <div className="container product-detail-grid">
           <div>
             <Link className="back-link" href="/products">Back to all products</Link>
-            <span className="eyebrow light">Medium Voltage Power Cables</span>
-            <h1>Medium Voltage Power Cables</h1>
+            <span className="eyebrow light">Medium Voltage XLPE Power Cables</span>
+            <h1>Medium Voltage XLPE Power Cables</h1>
             <p>
-              Medium voltage XLPE power cables for 3.6/6 kV to 35 kV project power distribution in substations, industrial facilities and utility networks, reviewed against the project specification and BOQ before quotation.
+              Huanyu Cable manufactures medium voltage XLPE power cables from 3.6/6 kV up to 26/35 kV for substations, industrial facilities, utility distribution and infrastructure projects. Copper and aluminium conductor, unarmoured, STA and SWA constructions are reviewed against IEC 60502-2, applicable GB/T requirements or the confirmed project specification.
             </p>
             <div className="xlpe-hero-badges">
               {["3.6/6 kV to 35 kV", "XLPE insulated MV cables", "Unarmoured / STA / SWA", "Project-based specification review"].map((badge) => (

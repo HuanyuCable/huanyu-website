@@ -212,7 +212,7 @@ export function SolarCablesCategoryPage() {
             <Link className="back-link" href="/products">Back to all products</Link>
             <span className="eyebrow light">Supporting product category</span>
             <h1>Solar Cables</h1>
-            <p>Huanyu Cable supplies H1Z2Z2-K and PV1-F solar DC cable for photovoltaic module, string, combiner box and inverter connections.</p>
+            <p>Huanyu Cable supplies H1Z2Z2-K and PV1-F solar DC cables for photovoltaic projects, EPC contractors, distributors and project buyers, covering module, string, combiner box and inverter connections.</p>
             <p>Available product constructions include flexible tinned copper conductors, cross-linked insulation and sheath materials, and designs for long-term outdoor photovoltaic service.</p>
             <div className="hero-actions">
               <Link className="button" href="#available-solar-cables">View Available Types</Link>

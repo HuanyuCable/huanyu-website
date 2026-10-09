@@ -32,9 +32,9 @@ export const products: Product[] = [
     tagline: "Project-ready steel tape and steel wire armoured power cables.",
     description:
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
-    metaTitle: "Low Voltage Armoured Power Cables | STA & SWA | HUANYU CABLE",
+    metaTitle: "Armoured Cable Manufacturer | STA & SWA 0.6/1kV | HUANYU CABLE",
     metaDescription:
-      "Low-voltage armoured power cables with STA and SWA options for power distribution, industrial plants and infrastructure projects. Send specifications for review.",
+      "0.6/1kV armoured power cables with STA and SWA constructions for underground, industrial and infrastructure projects. YJV22/YJV32 specifications reviewed before quotation.",
     imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     imageAlt: "Low-voltage armoured power cable product family",
@@ -55,9 +55,9 @@ export const products: Product[] = [
     tagline: "XLPE insulated medium voltage power cables for distribution networks, substations and industrial projects from 3.6/6 kV up to 35 kV.",
     description:
       "Medium voltage XLPE power cables for distribution networks, substations and industrial projects, including unarmoured, steel tape armoured and steel wire armoured designs reviewed per project.",
-    metaTitle: "Medium Voltage XLPE Power Cables up to 35 kV | HUANYU CABLE",
+    metaTitle: "Medium Voltage XLPE Cable Manufacturer | Up to 35kV | HUANYU CABLE",
     metaDescription:
-      "Medium-voltage XLPE power cables from 3.6/6 kV to 35 kV for substations and industrial distribution. Send BOQ and specifications for project review.",
+      "Medium voltage XLPE power cables from 3.6/6 kV to 26/35 kV for utility, industrial and infrastructure projects, reviewed against IEC 60502-2 specifications.",
     detailVariant: "medium-voltage-xlpe",
     imagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
     detailImagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
@@ -108,9 +108,9 @@ export const products: Product[] = [
     tagline: "Selected PV cable solutions for photovoltaic DC connections.",
     description:
       "Huanyu Cable supplies H1Z2Z2-K and PV1-F solar DC cable for photovoltaic module, string, combiner box and inverter connections.",
-    metaTitle: "Solar Cables | PV1-F & H1Z2Z2-K | HUANYU CABLE",
+    metaTitle: "Solar Cable Supplier | PV1-F & H1Z2Z2-K | HUANYU CABLE",
     metaDescription:
-      "Solar cable solutions including PV1-F and H1Z2Z2-K for photovoltaic DC systems. Review standards, conductor options and project requirements.",
+      "Solar DC cable supplier for PV projects, EPC contractors and distributors. PV1-F and H1Z2Z2-K requirements reviewed against the confirmed project specification before quotation.",
     detailVariant: "solar-cables",
     imagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
     detailImagePath: "/images/products/solar-cables/pv1-f-solar-dc-cable.webp",
@@ -177,9 +177,9 @@ export const products: Product[] = [
     tagline: "JKYJ and JKLYJ XLPE insulated overhead cables for overhead distribution routes.",
     description:
       "JKYJ and JKLYJ XLPE insulated overhead cables with copper or aluminium conductors for overhead distribution line projects.",
-    metaTitle: "Overhead Insulated Cables | JKYJ and JKLYJ | HUANYU CABLE",
+    metaTitle: "Overhead Insulated Cable Manufacturer | 1kV & 10kV | HUANYU CABLE",
     metaDescription:
-      "Overhead insulated cable products including JKYJ and JKLYJ options for distribution line projects, reviewed according to route and specification requirements.",
+      "Copper and aluminium XLPE overhead insulated cables for 1kV and 10kV distribution networks. JKYJ and JKLYJ specifications reviewed before quotation.",
     detailVariant: "overhead-insulated-cables",
     imagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
     detailImagePath: "/images/products/overhead-acsr/overhead-insulated-cables-hero.png",
@@ -250,9 +250,9 @@ export const products: Product[] = [
     tagline: "Combined family of YJV, YJY, YJLV and YJLV22 low-voltage XLPE insulated power cables with copper or aluminium conductors.",
     description:
       "Combined product family page for low-voltage XLPE power cables including YJV, YJY, YJLV and YJLV22, covering copper and aluminium conductor options, PVC or PE sheath options, and unarmoured or steel tape armoured constructions.",
-    metaTitle: "Low Voltage XLPE Power Cables 0.6/1 kV | HUANYU CABLE",
+    metaTitle: "Low Voltage XLPE Cable Manufacturer | 0.6/1kV | HUANYU CABLE",
     metaDescription:
-      "0.6/1 kV low-voltage XLPE power cables with Cu/Al conductors and PVC/PE sheath options, with cable constructions reviewed against applicable IEC 60502-1, GB/T or project requirements.",
+      "0.6/1kV low voltage XLPE power cables with copper or aluminium conductors, PVC/PE sheath and IEC 60502-1 project review. Send BOQ for quotation.",
     detailVariant: "low-voltage-xlpe-family",
     imagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
     detailImagePath: "/images/products/low-voltage-xlpe/xlpe-family-hero-yjv-yjy-yjlv-yjlv22.png",
@@ -293,9 +293,9 @@ export const products: Product[] = [
     priority: 4,
     tagline: "BV, BVR and BVVB copper conductor PVC insulated building wires for fixed wiring.",
     description: "PVC insulated building wires from Huanyu Cable, including 450/750V BV and BVR single-core wires and 300/500V BVVB flat building cable.",
-    metaTitle: "Building Wires & House Wiring Cables | BV, BVR & BVVB | HUANYU CABLE",
+    metaTitle: "Building Wire Manufacturer | BV, BVR & House Wire | HUANYU CABLE",
     metaDescription:
-      "PVC insulated building wires from Huanyu Cable, including 450/750V BV and BVR single-core wires and 300/500V BVVB flat building cable.",
+      "China building wire manufacturer supplying BV, BVR and BVVB PVC insulated house wiring cables for distributors, contractors and project buyers. Request a quotation.",
     detailVariant: "building-wires-flexible-cables",
     imagePath: "/images/products/building-wires/bw-hub-hero.png",
     detailImagePath: "/images/products/building-wires/bw-hub-hero.png",

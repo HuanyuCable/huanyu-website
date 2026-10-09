@@ -209,7 +209,7 @@ export function CableProcurementGuide() {
         <h2>Not Sure How to Specify the Cable? Send What You Have.</h2>
         <p>Send your BOQ, cable schedule, model number, cable marking, clear photos, drawing or available specification together with quantity and destination. Huanyu Cable can review the available information, identify missing quotation details and clarify the supply scope before preparing an offer.</p>
         <Link className="button" href="/contact" data-ga-event="rfq_click" data-ga-cta-location="buyer_guide_cta">Send Your Cable Requirements</Link>
-        <div className="buyer-guide-cta-links" aria-label="Further cable resources"><Link href="/products/low-voltage-xlpe-power-cables">View Low Voltage XLPE Cables</Link><Link href="/products/medium-voltage-xlpe-power-cables">View Medium Voltage XLPE Cables</Link><Link href="/resources">Explore Technical Resources</Link></div>
+        <div className="buyer-guide-cta-links" aria-label="Further cable resources"><Link href="/products/low-voltage-xlpe-power-cables">View Low Voltage XLPE Cables</Link><Link href="/products/medium-voltage-xlpe-power-cables">View Medium Voltage XLPE Cables</Link><Link href="/products">Explore Cable Products</Link><Link href="/resources">Explore Technical Resources</Link></div>
       </div>
     </>
   );

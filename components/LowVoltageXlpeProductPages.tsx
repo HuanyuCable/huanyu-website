@@ -308,8 +308,8 @@ export function LowVoltageXlpeFamilyProductPage() {
       <ProductHero
         eyebrow="Low Voltage XLPE Power Cables"
         title="Low Voltage XLPE Power Cables – 0.6/1 kV"
-        description="Low voltage XLPE power cables for 0.6/1 kV fixed power distribution, with copper or aluminium conductors and PVC or PE sheath options. Unarmoured and project-confirmed armoured constructions are reviewed against the applicable standard and project specification."
-        badges={["0.6/1 kV", "Copper / Aluminium", "PVC / PE Sheath", "Unarmoured / STA Armoured"]}
+        description="Huanyu Cable manufactures 0.6/1 kV low voltage XLPE power cables in China, with copper or aluminium conductors and PVC or PE sheath options for distributors, EPC contractors and project buyers. Construction, testing and documentation are reviewed against IEC 60502-1, applicable GB/T requirements or the confirmed project specification before quotation."
+        badges={["Copper / Aluminium", "PVC / PE Sheath", "IEC 60502-1"]}
         image={familyImages.hero}
         imageAlt="YJV, YJY, YJLV and YJLV22 low-voltage XLPE power cable family"
         primaryHref="#model-family"

@@ -160,7 +160,7 @@ export function OverheadInsulatedCablesProductPage() {
       <ProductHero
         eyebrow="Overhead Insulated Cables"
         title="Overhead Insulated Cables"
-        description="Copper and aluminium conductor XLPE insulated overhead cables for 1 kV and 10 kV overhead power distribution applications."
+        description="Huanyu Cable manufactures copper and aluminium conductor XLPE insulated overhead cables for 1 kV and 10 kV distribution networks. JKYJ and JKLYJ are Chinese model references; overseas enquiries may describe related requirements as overhead insulated cable or aerial insulated cable, with final construction confirmed against the project specification."
         badges={["JKYJ / JKLYJ", "1 kV / 10 kV", "XLPE Insulation", "Black Insulation"]}
         image={overheadImages.hero}
         imageAlt="JKYJ and JKLYJ overhead insulated cable product family"

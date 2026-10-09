@@ -83,7 +83,7 @@ export function LowVoltageArmouredProductPage() {
             <span className="eyebrow light">Core Product | Low Voltage Armoured Cable</span>
             <h1>Low Voltage Armoured Power Cables</h1>
             <p>
-              XLPE insulated armoured power cables for underground distribution, industrial power systems and infrastructure projects. Main constructions include YJV22, YJV23, YJV32 and YJV33 with steel tape armour or steel wire armour.
+              Huanyu Cable manufactures low voltage armoured power cables for underground distribution, industrial plants and infrastructure projects, including STA and SWA constructions for 0.6/1 kV systems. Common Chinese model references include YJV22, YJV23, YJV32 and YJV33; final construction is confirmed against the required standard and project specification.
             </p>
             <div className="xlpe-hero-badges">
               {["0.6/1 kV main range", "YJV22 / YJV23", "YJV32 / YJV33", "STA / SWA"].map((badge) => (
