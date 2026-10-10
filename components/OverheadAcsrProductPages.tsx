@@ -38,7 +38,7 @@ const overheadParameterRows = [
   ["Insulation Colour", "Mainly black"],
   ["Core Type", "Single core"],
   ["Typical Application", "Urban and rural overhead distribution lines"],
-  ["Standards", "Applicable GB/T or project-specified standards, subject to voltage grade and customer requirements"],
+  ["Standards", "For specification review: GB/T 12527-2008 (≤1 kV) and GB/T 14049-2008 (10 kV), or the buyer's applicable project standard. Production scope, conformity and test documents must be confirmed for the specific order."],
 ];
 
 const overheadApplications = [
@@ -160,7 +160,7 @@ export function OverheadInsulatedCablesProductPage() {
       <ProductHero
         eyebrow="Overhead Insulated Cables"
         title="Overhead Insulated Cables"
-        description="Huanyu Cable manufactures copper and aluminium conductor XLPE insulated overhead cables for 1 kV and 10 kV distribution networks. JKYJ and JKLYJ are Chinese model references; overseas enquiries may describe related requirements as overhead insulated cable or aerial insulated cable, with final construction confirmed against the project specification."
+        description="JKYJ (copper) and JKLYJ (aluminium) are Chinese model references for XLPE-insulated overhead cable constructions. This page shows representative single-core options for overhead distribution lines. Huanyu Cable reviews project specifications and confirms the suitable manufacturing and supply arrangement before quotation. Overseas enquiries may describe related requirements as overhead insulated cable or aerial insulated cable, with final construction confirmed against the project specification."
         badges={["JKYJ / JKLYJ", "1 kV / 10 kV", "XLPE Insulation", "Black Insulation"]}
         image={overheadImages.hero}
         imageAlt="JKYJ and JKLYJ overhead insulated cable product family"
@@ -175,14 +175,14 @@ export function OverheadInsulatedCablesProductPage() {
             <span className="eyebrow">Product overview</span>
             <h2>JKYJ and JKLYJ for insulated overhead distribution</h2>
             <p>
-              JKYJ and JKLYJ are Chinese model references for overhead insulated cable construction families. Huanyu Cable supplies these single-core overhead cables with black XLPE insulation for urban and rural power distribution lines where insulated line construction is required. Final cable designation follows the applicable project specification.
+              JKYJ (copper) and JKLYJ (aluminium) are Chinese model references for XLPE-insulated overhead cable constructions. This page shows representative single-core options for overhead distribution lines. Huanyu Cable reviews project specifications and confirms the suitable manufacturing and supply arrangement before quotation.
             </p>
           </article>
           <article className="xlpe-info-card">
             <span className="eyebrow">Supply focus</span>
             <h2>Copper and aluminium conductor options</h2>
             <p>
-              JKYJ uses a copper conductor, while JKLYJ uses an aluminium conductor. Both are designed for overhead installation, with 1 kV and 10 kV as commonly supplied voltage grades.
+              JKYJ uses a copper conductor, while JKLYJ uses an aluminium conductor. This page references 1 kV and 10 kV overhead cable requirements; final voltage designation and supply feasibility are verified for each project.
             </p>
           </article>
         </div>
@@ -273,7 +273,7 @@ export function OverheadInsulatedCablesProductPage() {
             <span className="eyebrow">Related option</span>
             <h2>Aerial bundled cable discussion</h2>
             <p>
-              Related aerial bundled cable options can be discussed according to project requirements, while this page focuses on JKYJ and JKLYJ overhead insulated cable supply.
+              Aerial Bundled Cable (ABC) is a separate bundled construction, not an automatic substitute for the representative single-core JKYJ/JKLYJ options shown above. ABC enquiries can be reviewed through manufacturing partners once the cable schedule, conductor/core arrangement, supporting or neutral details (if applicable), and required standard are confirmed.
             </p>
           </article>
           </aside>
@@ -304,6 +304,7 @@ export function OverheadInsulatedCablesProductPage() {
           </div>
           <ul className="detail-list">
             <li>System voltage / cable voltage designation</li>
+            <li>Requested construction: representative single-core overhead cable or a bundled arrangement (if applicable); provide the applicable cable schedule</li>
             <li>Conductor material</li>
             <li>Nominal cross-section</li>
             <li>Insulation / covering requirement</li>
