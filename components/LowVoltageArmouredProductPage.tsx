@@ -235,7 +235,9 @@ export function LowVoltageArmouredProductPage() {
               ))}
             </ul>
             <div className="review-note">
-              Preparing a 0.6/1 kV enquiry? Review the <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.
+              <p>Preparing a 0.6/1 kV enquiry? Review the <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.</p>
+              <p>Need help comparing steel tape and steel wire armour?</p>
+              <p><Link className="text-link related-guide-link" href="/resources/sta-vs-swa-armoured-cable-guide"><strong>Compare STA vs SWA Armour</strong><span aria-hidden="true">→</span></Link></p>
             </div>
           </div>
           <aside className="spec-aside">

@@ -202,6 +202,9 @@ function MediumVoltageSelectionGuide() {
           Start with the system nominal voltage, maximum system voltage where specified, earthing arrangement and the cable voltage designation required by the project. Common project classes can include 3.6/6 kV, 6/10 kV, 8.7/15 kV, 12/20 kV, 18/30 kV, 21/35 kV and 26/35 kV, but these designations are not automatically interchangeable. The cable rating must follow the confirmed system and project specification.
         </p>
         <p>
+          International RFQs may describe a project simply as an “11 kV cable” or “33 kV cable” requirement. Those system-voltage labels alone do not confirm the cable&apos;s U₀/U(Um) designation, required insulation level or test scope. Please provide the approved project cable schedule or specification, including the requested voltage designation and earthing assumptions where stated, before an equivalent cable construction is reviewed.
+        </p>
+        <p>
           IEC 60502-2 is commonly referenced for medium-voltage power cable project specifications within its applicable scope. IEC 60502-2-based project requirements can be reviewed against the confirmed cable design, testing scope and documentation requirements. This is a specification-review statement, not a certification claim.
         </p>
 

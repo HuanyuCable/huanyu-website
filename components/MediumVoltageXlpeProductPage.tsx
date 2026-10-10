@@ -291,6 +291,8 @@ export function MediumVoltageXlpeProductPage() {
               <li>Outer sheath, cable length and packing</li>
               <li>Required tests, standards and delivery documents</li>
             </ul>
+            <p>Need help confirming a project voltage designation, armour or test-document requirement?</p>
+            <p><Link className="text-link related-guide-link" href="/resources/medium-voltage-xlpe-cable-selection-guide"><strong>View MV XLPE Cable Selection Guide</strong><span aria-hidden="true">→</span></Link></p>
             <p>For a project file or BOQ, <TrackedLink className="text-link" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "medium-voltage-xlpe-power-cables" }}>Email BOQ / Specs <span>-&gt;</span></TrackedLink></p>
           </div>
           <div className="review-note">
