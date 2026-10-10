@@ -15,11 +15,7 @@ import { getProduct, products } from "@/data/products";
 import { site } from "@/lib/site";
 import { TrackedLink } from "@/components/TrackedLink";
 import { JsonLd } from "@/components/JsonLd";
-import {
-  createBreadcrumbJsonLd,
-  createProductJsonLd,
-  shouldAddProductSchema,
-} from "@/lib/structuredData";
+import { createBreadcrumbJsonLd } from "@/lib/structuredData";
 
 export function generateStaticParams() {
   return products.map((product) => ({ slug: product.slug }));
@@ -57,6 +53,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const product = getProduct(slug);
   if (!product) notFound();
   const url = `${site.url}/products/${product.slug}`;
+  // Product JSON-LD is opt-in per single-product page and requires real, verified eligibility data; never use placeholder Offer, price, availability, review, or rating values.
   const structuredData = (
     <>
       <JsonLd
@@ -66,7 +63,6 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           { name: product.name, item: url },
         ])}
       />
-      {shouldAddProductSchema(product.slug) && <JsonLd data={createProductJsonLd(product)} />}
     </>
   );
 
