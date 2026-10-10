@@ -204,6 +204,9 @@ export function LszhFireSafeProductPage() {
               </article>
             ))}
           </div>
+          <div className="review-note">
+            Not sure which fire-performance requirement your project specifies? <Link className="text-link related-guide-link" href="/resources/lszh-vs-flame-retardant-vs-fire-resistant-cable"><strong>Compare LSZH, Flame-Retardant &amp; Fire-Resistant Requirements</strong><span aria-hidden="true">→</span></Link>
+          </div>
         </div>
       </section>
 
