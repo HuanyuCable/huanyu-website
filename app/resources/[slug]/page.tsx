@@ -1246,7 +1246,7 @@ function BvVsBvrBuildingWireGuide() {
           BV identifies a Chinese building-wire product family with a single copper core and PVC insulation. It is used for fixed wiring and has a rigid conductor, which may be solid or stranded depending on the conductor size and confirmed construction. It should therefore not be simplified as a product that always uses one solid conductor.
         </p>
         <p>
-          A 450/750V reference applies where confirmed for the requested BV construction. The designation <span className="technical-term">60227 IEC 01 (BV)</span> and the Chinese technical reference <span className="technical-term">GB/T 5023.3-2008</span> may be used where applicable, but the Chinese reference does not by itself prove compliance with an overseas destination-market standard. See the <Link href="/products/single-core-pvc-building-wire">BV building wire page</Link> for product details and available construction information.
+          A 450/750V reference applies where confirmed for the requested BV construction. The designation <span className="technical-term">60227 IEC 01 (BV)</span> and the Chinese technical reference <span className="technical-term">GB/T 5023.3-2008</span> may be used where applicable, but the Chinese reference does not by itself prove compliance with an overseas destination-market standard. See the <Link href="/products/single-core-pvc-building-wire">BV rigid-conductor wire specifications</Link> for product details and available construction information.
         </p>
 
         <h2>What Does BVR Cable Mean?</h2>
@@ -1254,7 +1254,7 @@ function BvVsBvrBuildingWireGuide() {
           BVR is a Chinese designation for 450/750V single-core PVC insulated building wire with a flexible stranded copper conductor. Its multi-strand construction provides easier bending and routing in applicable fixed-wiring systems than a rigid-conductor building wire.
         </p>
         <p>
-          Huanyu publishes BVR technical reference data for sizes from 2.5–70 mm². Additional requirements remain subject to technical review. <span className="technical-term">JB/T 8734.2-2016</span> may be shown as a Chinese technical reference, but BVR is not automatically equivalent to an overseas designation. See the <Link href="/products/flexible-pvc-building-wire">BVR flexible building wire page</Link> for product details and construction information.
+          Huanyu publishes BVR technical reference data for sizes from 2.5–70 mm². Additional requirements remain subject to technical review. <span className="technical-term">JB/T 8734.2-2016</span> may be shown as a Chinese technical reference, but BVR is not automatically equivalent to an overseas designation. See the <Link href="/products/flexible-pvc-building-wire">BVR flexible stranded wire specifications</Link> for product details and construction information.
         </p>
 
         <h2>BV vs BVR: What Is the Actual Difference?</h2>
