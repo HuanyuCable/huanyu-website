@@ -19,8 +19,16 @@ declare global {
   }
 }
 
+export function isProductionAnalyticsHost(hostname: string): boolean {
+  return hostname === "www.huanyucable.com";
+}
+
 export function trackEvent(eventName: AnalyticsEventName, parameters: AnalyticsParameters = {}) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  if (
+    typeof window === "undefined" ||
+    !isProductionAnalyticsHost(window.location.hostname) ||
+    typeof window.gtag !== "function"
+  ) return;
 
   const definedParameters = Object.fromEntries(
     Object.entries(parameters).filter(([, value]) => value !== undefined),

@@ -1,15 +1,19 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
-import { trackEvent } from "@/lib/analytics";
+import { useEffect, useState } from "react";
+import { isProductionAnalyticsHost, trackEvent } from "@/lib/analytics";
 
 const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const hasValidMeasurementId = Boolean(measurementId && /^G-[A-Z0-9]+$/i.test(measurementId));
 
 export function Analytics() {
+  const [isApprovedHost, setIsApprovedHost] = useState(false);
+
   useEffect(() => {
-    if (!hasValidMeasurementId) return;
+    if (!hasValidMeasurementId || !isProductionAnalyticsHost(window.location.hostname)) return;
+
+    setIsApprovedHost(true);
 
     function handleTrackedClick(event: MouseEvent) {
       if (!(event.target instanceof Element)) return;
@@ -27,7 +31,7 @@ export function Analytics() {
     return () => document.removeEventListener("click", handleTrackedClick);
   }, []);
 
-  if (!hasValidMeasurementId) return null;
+  if (!hasValidMeasurementId || !isApprovedHost) return null;
 
   return (
     <>
