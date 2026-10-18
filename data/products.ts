@@ -57,7 +57,7 @@ export const products: Product[] = [
       "Medium voltage XLPE power cables for distribution networks, substations and industrial projects, including unarmoured, steel tape armoured and steel wire armoured designs reviewed per project.",
     metaTitle: "Medium Voltage XLPE Cable Manufacturer | Up to 35kV | HUANYU CABLE",
     metaDescription:
-      "Medium voltage XLPE power cables from 3.6/6 kV to 26/35 kV for utility, industrial and infrastructure projects, reviewed against IEC 60502-2 specifications.",
+      "Medium voltage XLPE cables from 3.6/6 to 26/35 kV. IEC 60502-2 applies only within its voltage scope; 35 kV designs require separate standards review.",
     detailVariant: "medium-voltage-xlpe",
     imagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
     detailImagePath: "/images/products/medium-voltage-xlpe/mv-xlpe-hero.png",
