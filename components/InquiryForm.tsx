@@ -55,7 +55,10 @@ export function InquiryForm({ compact = false }: { compact?: boolean }) {
     setStatus("sending");
     setMessage("");
     const form = event.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const data = {
+      ...Object.fromEntries(new FormData(form).entries()),
+      ...(pathname.startsWith("/") ? { sourcePage: pathname } : {}),
+    };
 
     try {
       const response = await fetch("/api/inquiry", {

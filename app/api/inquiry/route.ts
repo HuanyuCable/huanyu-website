@@ -12,6 +12,11 @@ function escapeHtml(value: string): string {
   return value.replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" })[char] || char);
 }
 
+function cleanSourcePage(value: unknown): string {
+  if (typeof value !== "string" || value.length > 512) return "";
+  return /^\/(?:[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*\/?)?$/.test(value) ? value : "";
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -23,6 +28,7 @@ export async function POST(request: Request) {
     const product = clean(body.product, 200);
     const requirements = clean(body.requirements, 5000);
     const website = clean(body.website, 200);
+    const sourcePage = cleanSourcePage(body.sourcePage);
 
     if (website) return NextResponse.json({ ok: true });
     if (!name || !company || !email || !country || !requirements) {
@@ -50,6 +56,7 @@ export async function POST(request: Request) {
         <tr><td><strong>Country</strong></td><td>${escapeHtml(country)}</td></tr>
         <tr><td><strong>Phone / WhatsApp</strong></td><td>${escapeHtml(phone || "Not provided")}</td></tr>
         <tr><td><strong>Product</strong></td><td>${escapeHtml(product || "Not selected")}</td></tr>
+        <tr><td><strong>Source Page</strong></td><td>${escapeHtml(sourcePage || "Not provided")}</td></tr>
       </table>
       <h3>Requirements</h3>
       <p style="white-space:pre-wrap">${escapeHtml(requirements)}</p>
