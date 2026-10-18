@@ -442,6 +442,31 @@ export function LowVoltageXlpeFamilyProductPage() {
       </section>
 
       <section className="section">
+        <div className="container xlpe-positioning">
+          <h2>XLPE vs PVC: Insulation, Sheath and Cable Selection</h2>
+
+          <h3>What is the difference between XLPE and PVC cable insulation?</h3>
+          <p>
+            XLPE (cross-linked polyethylene) is a thermoset insulation material, while conventional PVC (polyvinyl chloride) insulation is thermoplastic. XLPE generally offers higher thermal endurance, but the appropriate insulation depends on the full cable construction, voltage rating, applicable standard and installation conditions. For low-voltage power cables within its scope, IEC 60502-1 specifies construction, dimensions and testing requirements; citing the standard does not, by itself, establish product certification.
+          </p>
+
+          <h3>Does a PVC outer sheath mean the cable is PVC-insulated?</h3>
+          <p>
+            No. Electrical insulation surrounds each conductor, while the outer sheath encloses and protects the cable assembly. For example, YJV uses XLPE insulation with a PVC outer sheath, whereas YJY uses XLPE insulation with a PE outer sheath. A PVC outer sheath does not make an XLPE-insulated cable a PVC-insulated cable.
+          </p>
+
+          <h3>Can I request a quotation without a complete cable specification?</h3>
+          <p>
+            Yes. You can share the information currently available, even when your project specification is incomplete. For example, &quot;5 × 10 mm² cable&quot; typically indicates five cores, each with a nominal conductor cross-section of 10 mm², but does not identify the conductor material, voltage rating, insulation, outer sheath or armour requirements.
+          </p>
+          <p>
+            Our team can review your intended application or available project documents and help identify the missing details. If enough information is available, preliminary budget guidance may be possible based on clearly stated assumptions. An accurate specification-based quotation requires confirmation of the cable construction, applicable requirements, quantity and delivery terms.
+          </p>
+          <p>If available, please share your BOQ, cable schedule or technical specification for review.</p>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container xlpe-overview-grid">
           <article className="xlpe-info-card">
             <span className="eyebrow">Product Overview</span>
