@@ -192,6 +192,9 @@ export function LowVoltageArmouredProductPage() {
               </div>
             ))}
           </div>
+          <p className="review-note">
+            <strong>Single-core AC armour considerations:</strong> For single-core cables within the scope of IEC 60502-1 and intended for AC service, the armour is required to be non-magnetic unless a special construction is chosen. Steel tape or steel wire armour arrangements commonly used on multicore cables should not automatically be specified for single-core AC circuits. Please confirm whether the circuit is AC or DC and provide the core configuration and project specification so the armour material and final cable construction can be reviewed.
+          </p>
           <div className="review-note">
             For detailed low-smoke, halogen-free, flame-retardant and fire-resistant cable options, please refer to the <Link href="/products/lszh-fire-safe-cables">LSZH & Fire-safe Cables</Link> range.
           </div>
