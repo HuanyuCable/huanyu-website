@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { site } from "@/lib/site";
 import { createBreadcrumbJsonLd, createTechArticleJsonLd } from "@/lib/structuredData";
 import { CableProcurementGuide } from "./CableProcurementGuide";
+import { KnowledgeHubArticle } from "../KnowledgeHubArticle";
 
 export function generateStaticParams() {
   return buyerGuides.map((guide) => ({ slug: guide.slug }));
@@ -2135,6 +2136,9 @@ export default async function BuyerGuidePage({ params }: { params: Promise<{ slu
         ])}
       />
       <JsonLd data={createTechArticleJsonLd(guide)} />
+      {slug === "cable-standards-vs-certifications" && <KnowledgeHubArticle guide={guide} />}
+      {slug === "how-to-identify-cable-specifications" && <KnowledgeHubArticle guide={guide} />}
+      {slug === "shielded-vs-unshielded-control-instrumentation-cables" && <KnowledgeHubArticle guide={guide} />}
       {slug === "cable-procurement-strategy" && (
         <GuideShell
           title="Cable Procurement Strategy: How to Choose, Compare and Buy Power Cables"

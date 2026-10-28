@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { buyerGuides, type BuyerGuide } from "@/data/buyerGuides";
 import { createPageMetadata } from "@/lib/metadata";
+import styles from "./resources.module.css";
 
 const buildingWireGuideSlugs = new Set([
   "bv-vs-bvr-building-wire-guide",
   "building-wire-size-guide",
   "awg-to-mm2-building-wire-guide",
+]);
+
+const knowledgeHubSlugs = new Set([
+  "cable-standards-vs-certifications",
+  "how-to-identify-cable-specifications",
+  "shielded-vs-unshielded-control-instrumentation-cables",
 ]);
 
 function BuyerGuideCard({ guide, headingLevel = "h2" }: { guide: BuyerGuide; headingLevel?: "h2" | "h3" }) {
@@ -37,8 +44,9 @@ export const metadata = createPageMetadata({
 });
 
 export default function ResourcesPage() {
-  const generalBuyerGuides = buyerGuides.filter((guide) => !buildingWireGuideSlugs.has(guide.slug));
+  const generalBuyerGuides = buyerGuides.filter((guide) => !buildingWireGuideSlugs.has(guide.slug) && !knowledgeHubSlugs.has(guide.slug));
   const buildingWireGuides = buyerGuides.filter((guide) => buildingWireGuideSlugs.has(guide.slug));
+  const knowledgeHubGuides = buyerGuides.filter((guide) => knowledgeHubSlugs.has(guide.slug));
 
   return (
     <>
@@ -83,6 +91,17 @@ export default function ResourcesPage() {
             </div>
             <div className="resource-grid building-wire-guide-grid">
               {buildingWireGuides.map((guide) => <BuyerGuideCard guide={guide} headingLevel="h3" key={guide.slug} />)}
+            </div>
+          </section>
+
+          <section className="building-wire-guide-cluster" aria-labelledby="knowledge-hub-guide-cluster-title">
+            <div className="building-wire-guide-cluster-heading">
+              <span className="eyebrow">TECHNICAL BUYER GUIDES</span>
+              <h2 id="knowledge-hub-guide-cluster-title">Standards &amp; Specification Guides</h2>
+              <p>Clarify cable standards, incomplete specifications and screening requirements before requesting a project quotation.</p>
+            </div>
+            <div className={"resource-grid building-wire-guide-grid " + styles.knowledgeGrid}>
+              {knowledgeHubGuides.map((guide) => <BuyerGuideCard guide={guide} headingLevel="h3" key={guide.slug} />)}
             </div>
           </section>
         </div>

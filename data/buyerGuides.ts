@@ -10,6 +10,39 @@ export type BuyerGuide = {
 
 export const buyerGuides: BuyerGuide[] = [
   {
+    slug: "cable-standards-vs-certifications",
+    title: "Cable Standards vs Certifications: What International Cable Buyers Need to Know",
+    shortTitle: "Cable Standards vs Certifications",
+    metaTitle: "Cable Standards vs Certifications: IEC, EN, UL & CE | HUANYU CABLE",
+    description:
+      "IEC, EN, BS, UL, CE, TÜV and EAC are not interchangeable. Learn how to distinguish cable standards, test reports, certification and market requirements.",
+    excerpt:
+      "Understand the difference between cable standards, test evidence, product certification and market conformity markings before approving an RFQ.",
+    tags: ["Buyer Guide", "Standards & Certification"],
+  },
+  {
+    slug: "how-to-identify-cable-specifications",
+    title: "How to Identify a Cable Specification When You Only Have a Size, Marking or Photo",
+    shortTitle: "How to Identify Cable Specifications",
+    metaTitle: "How to Identify Cable Specifications from Size or Marking | HUANYU CABLE",
+    description:
+      "Is “10mm cable” enough for a quote? Learn to identify conductor size, cores, voltage, insulation, screen, armour and missing cable RFQ details.",
+    excerpt:
+      "Turn an incomplete size, marking or photo into a list of confirmed details and questions for your engineering team.",
+    tags: ["Buyer Guide", "Cable Specifications"],
+  },
+  {
+    slug: "shielded-vs-unshielded-control-instrumentation-cables",
+    title: "Shielded vs Unshielded Control and Instrumentation Cables: A Buyer's Specification Guide",
+    shortTitle: "Shielded vs Unshielded Instrumentation Cables",
+    metaTitle: "Shielded vs Unshielded Instrumentation Cables | HUANYU CABLE",
+    description:
+      "Overall screen, individual pair screen, foil or braid? Learn what buyers should confirm for shielded control and instrumentation cable RFQs.",
+    excerpt:
+      "Compare screen placement, foil and braid construction, and the questions to resolve before a control or instrumentation cable RFQ.",
+    tags: ["Buyer Guide", "Screening & Construction"],
+  },
+  {
     slug: "cable-procurement-strategy",
     title: "Cable Procurement Strategy: How to Choose, Compare and Buy Power Cables",
     shortTitle: "Cable Procurement Strategy & Power Cable Buying Guide",

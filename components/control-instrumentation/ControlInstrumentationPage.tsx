@@ -268,6 +268,7 @@ export function ControlInstrumentationPage() {
             <h2>Representative Cable Constructions</h2>
             <p>Different connection tasks may require different conductor, core, shielding and sheath arrangements. The examples below are provided for construction review reference only.</p>
             <p className={styles.constructionBoundary}>Representative examples only — actual conductor construction, core or pair arrangement, shielding, materials, dimensions and performance requirements shall be confirmed according to the selected cable type and project specification.</p>
+            <p className={styles.guideLink}>For buyer questions about overall and individual screens, foil, braid and armour, read our <Link href="/resources/shielded-vs-unshielded-control-instrumentation-cables">screening specification guide</Link>.</p>
             <div className={styles.constructionGrid}>
               {constructions.map((item, index) => (
                 <article className={styles.constructionItem} key={item.title}>
