@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { InquiryForm } from "@/components/InquiryForm";
 import { TrackedLink } from "@/components/TrackedLink";
 import { site } from "@/lib/site";
+import styles from "./LowVoltageArmouredProductPage.module.css";
 
 const heroImage = "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png";
+const constructionImage = "/images/products/low-voltage-armoured/HUANYU_LV_Armoured_Construction_Official_Guose_Logo.webp";
 
 const cableTypes = [
   ["YJV22", "STA + PVC sheath", "XLPE insulated, steel tape armoured, PVC sheathed power cable."],
@@ -14,101 +17,79 @@ const cableTypes = [
 ];
 
 const constructionRows = [
-  [
-    "Conductor",
-    "Copper conductor is commonly supplied; aluminium conductor can be reviewed for suitable project requirements.",
-    "Cu or Al conductor, conductor class and cross-section.",
-  ],
-  [
-    "Insulation",
-    "XLPE insulation for low voltage power cable construction.",
-    "Rated voltage and insulation requirement.",
-  ],
-  [
-    "Armour",
-    "Steel tape armour and steel wire armour are reviewed according to installation method and mechanical protection requirements.",
-    "STA or SWA, installation route, trench, duct or direct burial condition.",
-  ],
-  [
-    "Outer sheath",
-    "PVC sheath is commonly used for general installation; PE sheath can be reviewed where project conditions require it.",
-    "PVC or PE sheath, moisture exposure, soil condition and corrosion consideration.",
-  ],
+  ["Rated voltage", "Mainly 0.6/1kV; 1.8/3kV constructions can be reviewed according to project requirements."],
+  ["Conductor", "Copper is commonly supplied; aluminium can be reviewed only where the project specification permits. Some tenders require copper conductors only."],
+  ["Insulation", "XLPE is the established range; PVC-insulated armoured options can be reviewed."],
+  ["Armour", "Steel tape armour (STA) or steel wire armour (SWA), selected according to cable construction and installation requirements."],
+  ["Outer sheath", "PVC or PE according to the cable design and project conditions."],
+  ["Core configuration", "Single-core and multicore options, subject to the final cable design."],
 ];
 
-const technicalRows = [
-  ["Rated voltage", "Mainly 0.6/1 kV; 1.8/3 kV construction reviewed according to project requirements."],
-  ["Core configuration", "Single-core and multi-core designs such as 2-core, 3-core, 4-core, 5-core, 3+1-core, 3+2-core and 4+1-core."],
-  ["Size expression", "3 x 120 mm2 means three cores, each with a nominal cross-sectional area of 120 mm2. 3 x 240 + 1 x 120 mm2 means three main cores of 240 mm2 plus one reduced-size core of 120 mm2."],
-  ["Referenced standards", "Commonly referenced standards include GB/T 12706.1 and IEC 60502-1. Final construction and testing requirements should be reviewed according to project specifications."],
-  ["Performance options", "Flame-retardant, fire-resistant and LSZH versions can be reviewed when required by the project."],
+const technicalRows: [string, ReactNode][] = [
+  ["Rated voltage", <ul key="voltage"><li>0.6/1kV (600/1000V) — main range</li><li>1.8/3kV — subject to project requirements and confirmed production capability</li></ul>],
+  ["Core configuration", <div key="cores">Available arrangements include: single-core, 2-core, 3-core, 4-core, 5-core, 3+1-core, 3+2-core and 4+1-core.</div>],
+  ["Cable size expression", <div key="sizes">Examples of how cable sizes are expressed: <strong>3 × 120 mm²</strong> means three cores, each with a nominal cross-sectional area of 120 mm². <strong>3 × 240 + 1 × 120 mm²</strong> means three main cores of 240 mm² plus one reduced-size core of 120 mm². These examples explain cable size notation only. Actual size availability is confirmed against the required cable design and production capability.</div>],
+  ["Referenced standards", <div key="standards">Commonly referenced cable standards include IEC 60502-1 and GB/T 12706.1. IEC 60228 covers conductor requirements and may be referenced where relevant; the complete cable design should be specified against the applicable cable standard. Final conductor resistance, insulation thickness, armour dimensions, sheath thickness, tests and documents must be confirmed against the applicable cable specification.</div>],
 ];
 
 const applications = [
-  ["Underground power distribution", "Distribution networks and local power supply routes."],
-  ["Industrial plants", "Factory, workshop and industrial facility power feeders."],
-  ["Infrastructure projects", "Utility, municipal and project-based power installations."],
-  ["Cable trench installation", "Fixed installation routes requiring additional mechanical protection."],
-  ["Duct installation", "Cable routes with controlled pulling and route protection."],
-  ["Direct burial where suitable", "Reviewed according to soil condition, sheath material, armour type and project specification."],
+  ["Underground power distribution", "For fixed power distribution routes where additional mechanical protection is required."],
+  ["Industrial plants", "For power feeders and electrical distribution within factories, workshops and industrial facilities."],
+  ["Infrastructure projects", "For utility, municipal and project-based power installations."],
+  ["Cable trench installation", "For fixed cable routes installed in trenches and other protected systems."],
+  ["Duct installation", "For cable routes installed in ducts with suitable pulling and route protection arrangements."],
+  ["Direct burial where suitable", "Direct burial suitability depends on cable construction, sheath material, soil conditions and project specification. Confirm these details before selecting a cable."],
 ];
 
 const inquiryItems = [
-  "Rated voltage",
-  "Cable type or armour type",
-  "Core number and conductor size",
-  "Copper or aluminium conductor",
-  "PVC or PE sheath",
-  "Installation environment",
-  "Referenced standard",
-  "Quantity and delivery plan",
+  ["Rated voltage", "for example, 0.6/1kV or 600/1000V."],
+  ["Cable size and core configuration", "for example, 4-core × 95mm², if specified."],
+  ["Conductor material", "copper or aluminium, if known."],
+  ["Insulation material", "XLPE or PVC, if specified."],
+  ["Armour type", "steel tape armour (STA) or steel wire armour (SWA), if specified."],
+  ["Outer sheath", "PVC or PE, if specified."],
+  ["Required quantity", "total cable length and preferred delivery schedule."],
+  ["Destination", "country and destination port."],
+  ["Applicable standard", "IEC, GB/T, national standard or project specification, if available."],
 ];
 
-const faqs = [
-  ["What is the difference between YJV22 and YJV23?", "Both use XLPE insulation and steel tape armour. YJV22 uses a PVC outer sheath, while YJV23 uses a PE outer sheath."],
-  ["What is the difference between YJV32 and YJV33?", "Both use XLPE insulation and steel wire armour. YJV32 uses a PVC outer sheath, while YJV33 uses a PE outer sheath."],
-  ["What is the difference between steel tape armour and steel wire armour?", "Steel tape armour and steel wire armour are selected according to installation method, mechanical protection requirements and project specifications."],
-  ["Can aluminium conductor versions be supplied?", "Copper conductor is commonly supplied. Aluminium conductor versions can be reviewed according to suitable project requirements."],
-  ["Can the cable be supplied according to IEC or GB/T standards?", "GB/T 12706.1 and IEC 60502-1 are commonly referenced for low voltage XLPE power cables. Final construction and testing requirements should be reviewed according to project specifications."],
-  ["Can flame-retardant, fire-resistant or LSZH versions be considered?", "Yes. Flame-retardant, fire-resistant and LSZH versions can be reviewed when required by the project. Detailed safety cable requirements are handled under the LSZH & Fire-safe Cables range."],
+const faqs: [string, ReactNode][] = [
+  ["What is a 0.6/1kV armoured power cable used for?", "0.6/1kV armoured power cables are used for fixed power distribution in underground networks, industrial plants and infrastructure projects where additional mechanical protection is required."],
+  ["What is the difference between STA and SWA armoured cables?", "STA uses steel tape armour, while SWA uses steel wire armour. The suitable construction depends on the cable design, installation route and project requirements."],
+  ["What is the difference between XLPE and PVC insulated armoured cables?", "XLPE generally supports a higher conductor operating temperature than standard PVC insulation. PVC is widely used in conventional power distribution. The correct option depends on the required cable performance and applicable standard."],
+  ["Can I request a quotation without a complete cable specification?", "Yes. Share the information you already have, such as voltage, cable size, core configuration, quantity or project documents. We can identify missing details before confirming the final construction and quotation."],
+  ["Can copper and aluminium conductor armoured cables be supplied?", "Copper conductor cables are commonly supplied. Aluminium conductor constructions can be reviewed for suitable project requirements."],
+  ["Can you review cables according to IEC 60502-1 or local project standards?", "Yes. We can review the requested cable construction, applicable standard, tests and documents against your project specification before confirming the supply proposal. A standards reference is not itself a certification claim."],
+  ["Can flame-retardant, fire-resistant or LSZH versions be considered?", <>These options can be reviewed where required by the project and subject to the confirmed cable construction. For detailed low-smoke, halogen-free, flame-retardant and fire-resistant cable options, see our <Link href="/products/lszh-fire-safe-cables">LSZH &amp; Fire-safe Cables</Link> range.</>],
+  ["Can single-core AC cables use steel armour?", "Single-core AC cables require special consideration when selecting armour materials. Conventional magnetic steel armour should not be specified automatically. The circuit type and required armour construction must be confirmed before quotation."],
 ];
 
 export function LowVoltageArmouredProductPage() {
   return (
     <>
-      <section className="product-detail-hero xlpe-product-hero">
-        <div className="container product-detail-grid">
+      <section className={`product-detail-hero xlpe-product-hero ${styles.hero}`}>
+        <div className={`container product-detail-grid ${styles.heroGrid}`}>
           <div>
             <Link className="back-link" href="/products">Back to all products</Link>
-            <span className="eyebrow light">Core Product | Low Voltage Armoured Cable</span>
+            <span className="eyebrow light">LOW VOLTAGE POWER CABLES</span>
             <h1>Low Voltage Armoured Power Cables</h1>
-            <p>
-              Huanyu Cable manufactures low voltage armoured power cables for underground distribution, industrial plants and infrastructure projects, including STA and SWA constructions for 0.6/1 kV systems. Common Chinese model references include YJV22, YJV23, YJV32 and YJV33; final construction is confirmed against the required standard and project specification.
-            </p>
-            <div className="xlpe-hero-badges">
-              {["0.6/1 kV main range", "YJV22 / YJV23", "YJV32 / YJV33", "STA / SWA"].map((badge) => (
-                <span key={badge}>{badge}</span>
-              ))}
-            </div>
+            <p>0.6/1kV (600/1000V) Armoured Cables for Underground Distribution, Industrial Plants &amp; Infrastructure Projects</p>
+            <p>Huanyu Cable supplies 0.6/1kV armoured power cables for importers, distributors and project buyers. Our range includes XLPE-insulated STA and SWA cables, with PVC-insulated options available for project review.</p>
+            <p>Share your cable size, quantity or BOQ for an initial quotation.</p>
             <div className="hero-actions">
               <Link className="button" href="#inquiry" data-ga-event="rfq_click" data-ga-cta-location="product_hero" data-ga-product-slug="low-voltage-armoured-power-cables">Request Technical Review</Link>
               <TrackedLink className="button button-ghost" href={`mailto:${site.email}`} eventName="email_click" eventParameters={{ product_slug: "low-voltage-armoured-power-cables" }}>Email BOQ / Specs</TrackedLink>
             </div>
-          </div>
-          <div className="xlpe-image-stack">
-            <div className="product-detail-image xlpe-hero-image">
-              <Image src={heroImage} alt="Low voltage armoured XLPE power cable" width={1200} height={900} sizes="(max-width: 980px) 100vw, 45vw" priority />
+            <div className={`xlpe-hero-badges ${styles.heroBadges}`}>
+              {["0.6/1kV (600/1000V)", "XLPE / PVC Options", "STA / SWA Armour", "Copper / Aluminium Options"].map((badge) => (
+                <span key={badge}>{badge}</span>
+              ))}
             </div>
-            <aside className="spec-aside">
-              <h3>Typical Project Review Points</h3>
-              <ol>
-                <li>0.6/1 kV as the main low voltage range</li>
-                <li>1.8/3 kV construction reviewed according to project requirements</li>
-                <li>Steel tape armour or steel wire armour</li>
-                <li>PVC or PE outer sheath options</li>
-                <li>GB/T 12706.1 and IEC 60502-1 commonly referenced</li>
-              </ol>
-            </aside>
+          </div>
+          <div className={`xlpe-image-stack ${styles.heroImageColumn}`}>
+            <div className={`product-detail-image xlpe-hero-image ${styles.heroImageFrame}`}>
+              <Image src={heroImage} alt="Low voltage armoured XLPE power cable" width={1254} height={1254} sizes="(max-width: 980px) 100vw, 48vw" priority />
+            </div>
           </div>
         </div>
       </section>
@@ -117,12 +98,37 @@ export function LowVoltageArmouredProductPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Product Scope</span>
-              <h2>Low Voltage Armoured Cables for Fixed Power Distribution</h2>
+              <span className="eyebrow">ARMOURED CABLE TYPES</span>
+              <h2>0.6/1kV Armoured Cable Types</h2>
             </div>
-            <p>
-              Huanyu Cable supplies low voltage armoured power cables for fixed installation where mechanical protection is required. Cable construction, testing requirements and compliance documents should be reviewed according to the project specification.
-            </p>
+            <div>
+              <p>Choose the cable according to its insulation material, armour construction, outer sheath and project requirements.</p>
+              <p>The Chinese model references below help identify common cable constructions. Final design, production availability and applicable standards are confirmed against the project specification.</p>
+            </div>
+          </div>
+          <div className="xlpe-overview-grid xlpe-two-note-grid">
+            <article className="xlpe-info-card">
+              <h3>XLPE Insulated Steel Tape Armoured Cable</h3>
+              <p><strong>Model references:</strong> YJV22 / YJV23</p>
+              <ul>
+                <li>XLPE insulation</li>
+                <li>Steel tape armour (STA)</li>
+                <li>PVC outer sheath for YJV22</li>
+                <li>PE outer sheath for YJV23</li>
+              </ul>
+              <p>For fixed power distribution installations where steel tape armour is specified.</p>
+            </article>
+            <article className="xlpe-info-card">
+              <h3>XLPE Insulated Steel Wire Armoured Cable</h3>
+              <p><strong>Model references:</strong> YJV32 / YJV33</p>
+              <ul>
+                <li>XLPE insulation</li>
+                <li>Steel wire armour (SWA)</li>
+                <li>PVC outer sheath for YJV32</li>
+                <li>PE outer sheath for YJV33</li>
+              </ul>
+              <p>For fixed power distribution routes requiring additional mechanical protection.</p>
+            </article>
           </div>
           <div className="xlpe-model-grid">
             {cableTypes.map(([type, label, description]) => (
@@ -133,8 +139,19 @@ export function LowVoltageArmouredProductPage() {
               </article>
             ))}
           </div>
+          <div className="xlpe-overview-grid xlpe-two-note-grid">
+            <article className="xlpe-info-card">
+              <h3>PVC Insulated Steel Tape Armoured Cable — VV22</h3>
+              <p>PVC-insulated cable with steel tape armour (STA) and PVC outer sheath, subject to confirmation of the required construction and production availability.</p>
+            </article>
+            <article className="xlpe-info-card">
+              <h3>PVC Insulated Steel Wire Armoured Cable — VV32</h3>
+              <p>PVC-insulated cable with steel wire armour (SWA) and PVC outer sheath, subject to confirmation of the required construction and production availability.</p>
+            </article>
+          </div>
           <div className="review-note">
-            Not sure which armour construction is suitable? Share the voltage, core configuration, conductor size, installation route and pulling conditions. The final armour and sheath combination is reviewed against the project specification before quotation. YJV22, YJV23, YJV32 and YJV33 are Chinese model references used for construction comparison; final cable designation follows the applicable project specification.
+            <p>VV22 and VV32 are Chinese model references for common PVC-insulated armoured cable constructions. Availability, final design, testing and documentation are confirmed against each project specification before quotation.</p>
+            <p>YJV22, YJV23, YJV32, YJV33, VV22 and VV32 are Chinese model references. They are not automatic equivalents to IEC, BS, EN or other national cable designations. Confirm the actual cable design and applicable project specification before quotation.</p>
           </div>
         </div>
       </section>
@@ -143,32 +160,56 @@ export function LowVoltageArmouredProductPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Construction Options</span>
-              <h2>Armour and Sheath Options for Project Installation</h2>
+              <span className="eyebrow">CABLE SELECTION GUIDE</span>
+              <h2>Compare Insulation, Armour and Sheath Options</h2>
             </div>
             <p>
-              Steel tape armour, steel wire armour, PVC sheath and PE sheath are selected according to cable route, mechanical protection requirements, moisture exposure, soil conditions and project specifications.
+              The right armoured cable depends on the installation route, required mechanical protection and project specification. You do not need to know every technical detail before making an enquiry.
             </p>
           </div>
           <div className="xlpe-table-wrap">
             <table className="xlpe-table">
               <thead>
                 <tr>
-                  <th>Item</th>
-                  <th>Typical options</th>
-                  <th>Information to specify</th>
+                  <th>Product feature</th>
+                  <th>Options and buyer guidance</th>
                 </tr>
               </thead>
               <tbody>
-                {constructionRows.map(([item, options, information]) => (
+                {constructionRows.map(([item, guidance]) => (
                   <tr key={item}>
                     <td>{item}</td>
-                    <td>{options}</td>
-                    <td>{information}</td>
+                    <td>{guidance}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+          <figure className={styles.constructionFigure}>
+            <Image
+              src={constructionImage}
+              alt="Typical four-core copper XLPE steel wire armoured power cable with PVC outer sheath"
+              width={1536}
+              height={1024}
+              sizes="(max-width: 640px) calc(100vw - 28px), (max-width: 1200px) 90vw, 1100px"
+            />
+            <figcaption>The layer labelled &quot;Bedding Tape&quot; represents the bedding / inner covering beneath the armour. Depending on the specified cable design and applicable standard, this layer may be an extruded inner sheath or a lapped bedding layer. For STA versions, steel tape armour replaces the steel wire armour shown.</figcaption>
+          </figure>
+          <div className="spec-table xlpe-spec-table">
+            <div>
+              <strong>XLPE or PVC insulation?</strong>
+              <span>XLPE and PVC are both used as insulation materials in low-voltage power cables. XLPE generally supports a higher conductor operating temperature than standard PVC insulation, while PVC is widely used in conventional power distribution. The applicable temperature rating must always follow the actual cable design and product standard.</span>
+            </div>
+            <div>
+              <strong>Steel tape or steel wire armour?</strong>
+              <span>Steel tape armour (STA) and steel wire armour (SWA) are different mechanical protection constructions. The suitable option depends on the cable design, installation route and project requirements. They should not be treated as automatic substitutes.</span>
+            </div>
+          </div>
+          <p className="review-note">
+            <strong>Single-core AC cable note:</strong> For single-core cables used in AC circuits, armour material requires special consideration. Conventional magnetic steel armour must not be specified automatically. Confirm the circuit type and required non-magnetic armour construction before quotation.
+          </p>
+          <div className="review-note">
+            <strong>Performance options and related cable range:</strong> Flame-retardant, fire-resistant and LSZH versions can be reviewed when required by the project and subject to the confirmed cable construction. For detailed low-smoke, halogen-free, flame-retardant and fire-resistant cable options, see our <Link href="/products/lszh-fire-safe-cables">LSZH &amp; Fire-safe Cables</Link> range.
           </div>
         </div>
       </section>
@@ -177,26 +218,20 @@ export function LowVoltageArmouredProductPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Technical Range</span>
-              <h2>Typical Technical Parameters for Review</h2>
+              <span className="eyebrow">TECHNICAL SPECIFICATIONS</span>
+              <h2>Typical Specifications for Low Voltage Armoured Cables</h2>
             </div>
             <p>
-              The following specification fields are commonly reviewed before quotation, including voltage grade, conductor material, core configuration, armour type, sheath material and referenced standards.
+              The following information is commonly reviewed when preparing an armoured cable quotation.
             </p>
           </div>
           <div className="spec-table xlpe-spec-table">
             {technicalRows.map(([label, value]) => (
               <div key={label}>
                 <strong>{label}</strong>
-                <span>{value}</span>
+                <div>{value}</div>
               </div>
             ))}
-          </div>
-          <p className="review-note">
-            <strong>Single-core AC armour considerations:</strong> For single-core cables within the scope of IEC 60502-1 and intended for AC service, the armour is required to be non-magnetic unless a special construction is chosen. Steel tape or steel wire armour arrangements commonly used on multicore cables should not automatically be specified for single-core AC circuits. Please confirm whether the circuit is AC or DC and provide the core configuration and project specification so the armour material and final cable construction can be reviewed.
-          </p>
-          <div className="review-note">
-            For detailed low-smoke, halogen-free, flame-retardant and fire-resistant cable options, please refer to the <Link href="/products/lszh-fire-safe-cables">LSZH & Fire-safe Cables</Link> range.
           </div>
         </div>
       </section>
@@ -205,8 +240,26 @@ export function LowVoltageArmouredProductPage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Applications</span>
-              <h2>Common Applications for Low Voltage Armoured Power Cables</h2>
+              <span className="eyebrow">STANDARDS &amp; PROJECT REQUIREMENTS</span>
+              <h2>Review Cable Standards for Your Project Market</h2>
+            </div>
+            <p>Requirements vary by country, utility and project. Confirm the applicable standard and cable design against the tender documents and installation conditions.</p>
+          </div>
+          <div className="spec-table xlpe-spec-table">
+            <div><strong>Nigeria</strong><span>NESIS 2015 lists armoured PVC-insulated cables and XLPE cables with reference to NIS IEC 60502-1 for fixed wiring. Its voltage-grading provisions identify 600/1000V grades for PVC-insulated, PVC-sheathed armoured cable and XLPE-insulated, PVC-sheathed armoured cable under NIS IEC 60502.</span></div>
+            <div><strong>Ethiopia</strong><span>A published Addis Ababa building-project specification references ES 1483 and ES 1563 and requires 0.6/1kV cable with copper conductors for that particular project.</span></div>
+            <div><strong>Zambia</strong><span>A ZAMEFA 600/1000V armoured PVC cable listing cites SANS 1507 and ZABS 688.</span></div>
+          </div>
+          <p className="review-note"><strong>Compliance note:</strong> These are examples, not universal requirements or HUANYU certification claims. Confirm the current edition, conductor material, cable design, tests and documentation for each tender.</p>
+        </div>
+      </section>
+
+      <section className="section section-muted">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">TYPICAL APPLICATIONS</span>
+              <h2>Armoured Power Cables for Distribution and Industrial Projects</h2>
             </div>
             <p>
               Low voltage armoured cables are commonly used in fixed power distribution routes where mechanical protection is required.
@@ -227,18 +280,18 @@ export function LowVoltageArmouredProductPage() {
       <section className="section" id="inquiry-preparation">
         <div className="container product-spec-layout">
           <div className="spec-main">
-            <span className="eyebrow">RFQ Essentials</span>
-            <h2>Information Needed for Technical Review and Quotation</h2>
-            <p>
-              For a faster technical review and quotation, please provide the main project requirements such as rated voltage, core configuration, conductor size, armour type, sheath material, installation environment and quantity.
-            </p>
+            <span className="eyebrow">RFQ PREPARATION</span>
+            <h2>What Information Do We Need for an Armoured Cable Quotation?</h2>
+            <p>You do not need to have every technical detail ready before contacting us.</p>
+            <p>To prepare an initial quotation, please share the information you already have:</p>
             <ul className="check-list">
-              {inquiryItems.map((item) => (
-                <li key={item}>{item}</li>
+              {inquiryItems.map(([item, detail]) => (
+                <li key={item}><strong>{item}</strong> — {detail}</li>
               ))}
             </ul>
             <div className="review-note">
-              <p>Preparing a 0.6/1 kV enquiry? Review the <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link>.</p>
+              <p><strong>Don&apos;t have a complete specification?</strong> That&apos;s fine. Email your BOQ, cable schedule, technical datasheet, project description or a photo of the existing cable marking to <a href={`mailto:${site.email}`}>{site.email}</a>. We can review the information and identify the details that need confirmation before quotation.</p>
+              <p>Preparing an XLPE cable enquiry? Use our <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link> to organize the key information before quotation.</p>
               <p>Need help comparing steel tape and steel wire armour?</p>
               <p><Link className="text-link related-guide-link" href="/resources/sta-vs-swa-armoured-cable-guide"><strong>Compare STA vs SWA Armour</strong><span aria-hidden="true">→</span></Link></p>
             </div>
@@ -246,8 +299,8 @@ export function LowVoltageArmouredProductPage() {
           <aside className="spec-aside">
             <h3>Quotation focus</h3>
             <ol>
-              <li>Confirm YJV22, YJV23, YJV32 or YJV33.</li>
-              <li>Specify STA or SWA with PVC or PE sheath.</li>
+              <li>Confirm an XLPE model or review a PVC-insulated option.</li>
+              <li>Specify STA or SWA, insulation and outer sheath.</li>
               <li>Share route, installation and project standard requirements.</li>
             </ol>
           </aside>
@@ -277,9 +330,12 @@ export function LowVoltageArmouredProductPage() {
       <section className="section quote-section" id="inquiry">
         <div className="container quote-grid">
           <div>
-            <span className="eyebrow light">Quotation review</span>
-            <h2>Send the cable type, size and project requirement for review.</h2>
-            <p>Huanyu Cable will confirm available construction, standard, quantity and document requirements before quotation.</p>
+            <span className="eyebrow light">REQUEST A QUOTE</span>
+            <h2>Request a Quote for 0.6/1kV Armoured Power Cables</h2>
+            <p>Looking for a low-voltage armoured cable manufacturer in China?</p>
+            <p>Send us your cable type, rated voltage, core configuration, conductor size, quantity and destination.</p>
+            <p>If you have a BOQ, drawings, cable schedule or technical specification, please email them to <a href={`mailto:${site.email}`}>{site.email}</a>. If some details are not available, share the information you already have. We will review the requirements and confirm the suitable cable construction, applicable standard and quotation basis.</p>
+            <p>Partial project information is also welcome for an initial review.</p>
           </div>
           <InquiryForm compact />
         </div>
