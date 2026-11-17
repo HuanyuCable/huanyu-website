@@ -206,7 +206,7 @@ export function LowVoltageArmouredProductPage() {
             </div>
           </div>
           <p className="review-note">
-            <strong>Single-core AC cable note:</strong> For single-core cables used in AC circuits, armour material requires special consideration. Conventional magnetic steel armour must not be specified automatically. Confirm the circuit type and required non-magnetic armour construction before quotation.
+            <strong>Single-core AC cable note:</strong> For single-core cables used in AC circuits, armour material requires special consideration. Conventional magnetic steel armour must not be specified automatically. Confirm the circuit type and required non-magnetic armour construction before quotation. Aluminium wire armour (AWA) is one non-magnetic armour option that may be specified for single-core AC cable designs where mechanical protection is required. The final armour material and cable construction must be confirmed against the circuit arrangement, installation conditions and applicable project specification.
           </p>
           <div className="review-note">
             <strong>Performance options and related cable range:</strong> Flame-retardant, fire-resistant and LSZH versions can be reviewed when required by the project and subject to the confirmed cable construction. For detailed low-smoke, halogen-free, flame-retardant and fire-resistant cable options, see our <Link href="/products/lszh-fire-safe-cables">LSZH &amp; Fire-safe Cables</Link> range.
@@ -293,7 +293,7 @@ export function LowVoltageArmouredProductPage() {
               <p><strong>Don&apos;t have a complete specification?</strong> That&apos;s fine. Email your BOQ, cable schedule, technical datasheet, project description or a photo of the existing cable marking to <a href={`mailto:${site.email}`}>{site.email}</a>. We can review the information and identify the details that need confirmation before quotation.</p>
               <p>Preparing an XLPE cable enquiry? Use our <Link className="related-guide-link" href="/resources/low-voltage-xlpe-cable-rfq-checklist">Low Voltage XLPE Cable RFQ Checklist</Link> to organize the key information before quotation.</p>
               <p>Need help comparing steel tape and steel wire armour?</p>
-              <p><Link className="text-link related-guide-link" href="/resources/sta-vs-swa-armoured-cable-guide"><strong>Compare STA vs SWA Armour</strong><span aria-hidden="true">→</span></Link></p>
+              <p><Link className="text-link related-guide-link" href="/resources/sta-vs-swa-armoured-cable-guide"><strong>STA vs SWA Armoured Cable Selection Guide</strong><span aria-hidden="true">→</span></Link></p>
             </div>
           </div>
           <aside className="spec-aside">

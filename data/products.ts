@@ -34,7 +34,7 @@ export const products: Product[] = [
       "Our primary product family for underground distribution, industrial facilities and infrastructure projects. Configurations can be developed around conductor, insulation, armour, sheath and project specification requirements.",
     metaTitle: "Armoured Cable Manufacturer | STA & SWA 0.6/1kV | HUANYU CABLE",
     metaDescription:
-      "0.6/1kV armoured power cables with STA and SWA constructions for underground, industrial and infrastructure projects. YJV22/YJV32 specifications reviewed before quotation.",
+      "0.6/1kV armoured power cables for underground, industrial and infrastructure projects: XLPE-insulated YJV22 (STA)/YJV32 (SWA), plus PVC-insulated VV22/VV32.",
     imagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     detailImagePath: "/images/products/low-voltage-xlpe/yjv22-yjv23-hero.png",
     imageAlt: "Low-voltage armoured power cable product family",
